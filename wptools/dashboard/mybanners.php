@@ -9,6 +9,67 @@ namespace bill_banners;
 if (!defined("ABSPATH")) {
     die("Invalid request.");
 }
+
+// Exibe vídeos e informações adicionais
+//if (empty($wptools_checkversion)) {
+// Only Free
+echo '<ul>';
+$x = rand(1, 3);
+if ($x == 1) {
+    $url = WPTOOLSURL . "assets/videos/tools1.mp4";
+    $title_ad = esc_attr__("Get More Features", "wptools");
+}
+if ($x == 2) {
+    $url = WPTOOLSURL . "assets/videos/tools2.mp4";
+    $title_ad = esc_attr__("Access Exclusive Tools", "wptools");
+}
+if ($x == 3) {
+    $url = WPTOOLSURL . "assets/videos/tools3.mp4";
+    $title_ad  = esc_attr__("Enhance Your Site", "wptools");
+}
+
+echo '<h2>' . esc_attr($title_ad) . '</h2>';
+
+?>
+<video id="bill-banner-2" style="margin:-30px 0px -15px -12px; padding:0px;" width="400" height="230" muted>
+    <source src="<?php echo esc_url($url); ?>" type="video/mp4">
+</video>
+
+
+
+<!--
+<li><?php esc_attr_e("Lifetime license: One-time payment of just $17.99!", "wptools"); ?></li>
+-->
+<li>
+    <?php
+    esc_attr_e('features are not included in the free version:', 'wptools');
+    echo '</li>';
+    esc_attr_e('- Fix damaged tables', 'wptools');
+    echo '<br>';
+    esc_attr_e('- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit', 'wptools');
+    echo '<br>';
+
+    esc_attr_e('- Delete cron jobs without actions', 'wptools');
+    echo '<br>';
+    esc_attr_e('- Delete expired or all transients', 'wptools');
+    echo '<br>';
+    esc_attr_e('- Show the top 100 folders by disk usage', 'wptools');
+    echo '<br>';
+    esc_attr_e('- Display all files with wrong permissions', 'wptools');
+    echo '<br>';
+    esc_attr_e('- Edit and save robots.txt', 'wptools');
+    echo '<br>';
+    esc_attr_e('- and more...', 'wptools');
+
+    ?>
+
+<li><?php esc_attr_e("Dedicated Premium Support", "wptools"); ?></li>
+
+<a href="https://wptoolsplugin.com/premium/" class="button button-medium button-primary"><?php _e('Learn More', 'wptools'); ?></a>
+<?php
+echo '</ul>';
+
+
 ob_start();
 // Define the expiration time for transients (1 day)
 $transient_expiration = DAY_IN_SECONDS;
@@ -172,62 +233,16 @@ if ($cached_coupon_data !== '' && $cached_coupon_data !== false) {
         echo '</ul>';
     }
 }
-// Exibe vídeos e informações adicionais
-//if (empty($wptools_checkversion)) {
-// Only Free
-echo '<ul>';
-$x = rand(1, 3);
-if ($x == 1)
-    $url = WPTOOLSURL . "assets/videos/tools1.mp4";
-if ($x == 2)
-    $url = WPTOOLSURL . "assets/videos/tools2.mp4";
-if ($x == 3)
-    $url = WPTOOLSURL . "assets/videos/tools3.mp4";
-?>
-<video id="bill-banner-2" style="margin:-20px 0px -15px -12px; padding:0px;" width="400" height="230" muted>
-    <source src="<?php echo esc_url($url); ?>" type="video/mp4">
-</video>
-<li><?php esc_attr_e("Lifetime license with premium enhancements: One-time payment of just $17.99!", "wptools"); ?></li>
 
-<li>
-<?php
-esc_attr_e( 'Many additional features are not included in the free version. For example:', 'wptools' ); 
-echo '</li>';
-esc_attr_e( '- Fix damaged tables', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit', 'wptools' );
-echo '<br>';
-
-esc_attr_e( '- Delete cron jobs without actions', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Delete expired or all transients', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Show the top 100 folders by disk usage', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Display all files with wrong permissions', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit', 'wptools' );
-echo '<br>';
-esc_attr_e( '- Edit and save robots.txt', 'wptools' );
-echo '<br>';
-esc_attr_e( '- and more...', 'wptools' );
-
-?>
-<li><?php esc_attr_e("Take Your Site to the Next Level", "wptools"); ?></li>
-<li><?php esc_attr_e("Improve your WordPress site's performance", "wptools"); ?></li>
-
-<li><?php esc_attr_e("Dedicated Premium Support", "wptools"); ?></li>
-
-<br />
-<a href="https://wptoolsplugin.com/premium/" class="button button-medium button-primary"><?php _e('Learn More', 'wptools'); ?></a>
-<?php
-echo '</ul>';
 //}
 // Always...
 echo '<ul>';
+
 $x = rand(1, 3);
 if ($x < 2) {
     echo '<h2>' . esc_attr__("Like This Plugin?", "wptools") . '</h2>';
+    echo '<img src="' . esc_url(WPTOOLSIMAGES) . '/help3.jpg' . '" style="width: 100%; height: auto;" />';
+
     esc_attr_e('If you like this product, please write a few words about it. It will help other people find this useful plugin more quickly.Thank you!', 'wptools');
 ?>
     <br /><br />
@@ -235,6 +250,8 @@ if ($x < 2) {
 <?php
 } else {
     echo '<h2>' . esc_attr__("Please help us keep the plugin live & up-to-date!", "wptools") . '</h2>';
+    echo '<img src="' . esc_url(WPTOOLSIMAGES) . '/help1.jpg' . '" style="width: 100%; height: auto;" />';
+
     esc_attr_e('If you use & enjoy WP Tools Plugin, please rate it on WordPress.org. It only takes a second and helps us keep the plugin live and maintained. Thank you!', 'wptools');
 ?>
     <br /><br />

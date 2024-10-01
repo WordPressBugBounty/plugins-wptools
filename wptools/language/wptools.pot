@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 11:54+0100\n"
+"POT-Creation-Date: 2024-09-25 08:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -395,91 +395,93 @@ msgid ""
 "free to check back later."
 msgstr ""
 
-#: dashboard/mybanners.php:190
-msgid ""
-"Lifetime license with premium enhancements: One-time payment of just $17.99!"
+#: dashboard/mybanners.php:20
+msgid "Get More Features"
 msgstr ""
 
-#: dashboard/mybanners.php:194
-msgid ""
-"Many additional features are not included in the free version. For example:"
+#: dashboard/mybanners.php:24
+msgid "Access Exclusive Tools"
 msgstr ""
 
-#: dashboard/mybanners.php:196
+#: dashboard/mybanners.php:28
+msgid "Enhance Your Site"
+msgstr ""
+
+#: dashboard/mybanners.php:41
+msgid "Lifetime license: One-time payment of just $17.99!"
+msgstr ""
+
+#: dashboard/mybanners.php:45
+msgid "features are not included in the free version:"
+msgstr ""
+
+#: dashboard/mybanners.php:47
 msgid "- Fix damaged tables"
 msgstr ""
 
-#: dashboard/mybanners.php:198 dashboard/mybanners.php:209
+#: dashboard/mybanners.php:49
 msgid ""
 "- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit"
 msgstr ""
 
-#: dashboard/mybanners.php:201
+#: dashboard/mybanners.php:52
 msgid "- Delete cron jobs without actions"
 msgstr ""
 
-#: dashboard/mybanners.php:203
+#: dashboard/mybanners.php:54
 msgid "- Delete expired or all transients"
 msgstr ""
 
-#: dashboard/mybanners.php:205
+#: dashboard/mybanners.php:56
 msgid "- Show the top 100 folders by disk usage"
 msgstr ""
 
-#: dashboard/mybanners.php:207
+#: dashboard/mybanners.php:58
 msgid "- Display all files with wrong permissions"
 msgstr ""
 
-#: dashboard/mybanners.php:211
+#: dashboard/mybanners.php:60
 msgid "- Edit and save robots.txt"
 msgstr ""
 
-#: dashboard/mybanners.php:213
+#: dashboard/mybanners.php:62
 msgid "- and more..."
 msgstr ""
 
-#: dashboard/mybanners.php:216
-msgid "Take Your Site to the Next Level"
-msgstr ""
-
-#: dashboard/mybanners.php:217
-msgid "Improve your WordPress site's performance"
-msgstr ""
-
-#: dashboard/mybanners.php:219
+#: dashboard/mybanners.php:66
 msgid "Dedicated Premium Support"
 msgstr ""
 
-#: dashboard/mybanners.php:222 functions/functions_transiente_manager.php:58
+#: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
 msgid "Learn More"
 msgstr ""
 
-#: dashboard/mybanners.php:230
+#: dashboard/mybanners.php:243
 msgid "Like This Plugin?"
 msgstr ""
 
-#: dashboard/mybanners.php:231
+#: dashboard/mybanners.php:246
 msgid ""
 "If you like this product, please write a few words about it. It will help "
 "other people find this useful plugin more quickly.Thank you!"
 msgstr ""
 
-#: dashboard/mybanners.php:234
+#: dashboard/mybanners.php:249
 msgid "Rate or Share"
 msgstr ""
 
-#: dashboard/mybanners.php:237
+#: dashboard/mybanners.php:252
 msgid "Please help us keep the plugin live & up-to-date!"
 msgstr ""
 
-#: dashboard/mybanners.php:238
+#: dashboard/mybanners.php:255
 msgid ""
 "If you use & enjoy WP Tools Plugin, please rate it on WordPress.org. It only "
 "takes a second and helps us keep the plugin live and maintained. Thank you!"
 msgstr ""
 
-#: dashboard/mybanners.php:241
+#: dashboard/mybanners.php:258
 msgid "Rate"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 11:58+0100\n"
-"PO-Revision-Date: 2024-09-24 12:12+0100\n"
+"POT-Creation-Date: 2024-09-25 08:43+0100\n"
+"PO-Revision-Date: 2024-09-25 08:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -103,8 +103,7 @@ msgstr "Kritisch"
 #: _wptools.php:1354 wptools.php:1396
 msgid "Code and hosting errors can destroy your site and the user experience."
 msgstr ""
-"Code- und Hostingfehler können Ihre Website und das Benutzererlebnis "
-"zerstören."
+"Code- und Hostingfehler können Ihre Website und das Benutzererlebnis zerstören."
 
 #: _wptools.php:1361 wptools.php:1403
 msgid "Visit the WP Tools show errors page"
@@ -120,8 +119,8 @@ msgstr "Wöchentliche Zusammenfassung der Probleme auf der Website:"
 
 #: _wptools.php:1499 wptools.php:1542
 msgid ""
-"This is a weekly summary of errors, warnings, or notices that occurred on "
-"your site assisted by the wpTools plugin."
+"This is a weekly summary of errors, warnings, or notices that occurred on your "
+"site assisted by the wpTools plugin."
 msgstr ""
 "Dies ist eine wöchentliche Zusammenfassung von Fehlern, Warnungen oder "
 "Hinweisen, die mithilfe des Plugins wpTools auf Ihrer Site aufgetreten sind."
@@ -172,13 +171,13 @@ msgstr "Wöchentliche Seitenladezeit:"
 
 #: _wptools.php:1613 wptools.php:1658
 msgid ""
-"Google recommends that the page loading time be less than 3 seconds. A "
-"faster-loading website is more likely to rank higher, potentially attracting "
-"more visitors."
+"Google recommends that the page loading time be less than 3 seconds. A faster-"
+"loading website is more likely to rank higher, potentially attracting more "
+"visitors."
 msgstr ""
-"Google empfiehlt, dass die Seitenladezeit weniger als 3 Sekunden beträgt. "
-"Eine Website mit schnellerer Ladezeit wird wahrscheinlich höher eingestuft "
-"und zieht möglicherweise mehr Besucher an."
+"Google empfiehlt, dass die Seitenladezeit weniger als 3 Sekunden beträgt. Eine "
+"Website mit schnellerer Ladezeit wird wahrscheinlich höher eingestuft und "
+"zieht möglicherweise mehr Besucher an."
 
 #: _wptools.php:1618 wptools.php:1663
 msgid "Date:"
@@ -190,9 +189,8 @@ msgid "Dashboard => WP tools => Settings"
 msgstr "Dashboard => WP Tools => Einstellungen"
 
 #: dashboard/dashboard.php:22
-#, fuzzy
 msgid "WP Tools Server Performance"
-msgstr "Nehmen Sie an der Community Server Performance teil."
+msgstr "WP Tools Server-Leistung"
 
 #: dashboard/dashboard.php:38 functions/__functions.php:159
 #: functions/__functions.php:1144 functions/_functions.php:148
@@ -281,8 +279,7 @@ msgstr "Mehr erfahren"
 
 #: dashboard/dashboard.php:238
 msgid ""
-"Top 10 Front End Pages with the Highest Average Load Time Over the Last 7 "
-"Days"
+"Top 10 Front End Pages with the Highest Average Load Time Over the Last 7 Days"
 msgstr ""
 "Top 10 Frontend-Seiten mit der höchsten durchschnittlichen Ladezeit in den "
 "letzten 7 Tagen"
@@ -300,8 +297,8 @@ msgid ""
 "No data found. Please try again later. Allow us some time to gather the "
 "information."
 msgstr ""
-"Keine Daten gefunden. Bitte versuchen Sie es später noch einmal. Geben Sie "
-"uns etwas Zeit, um die Informationen zusammenzustellen."
+"Keine Daten gefunden. Bitte versuchen Sie es später noch einmal. Geben Sie uns "
+"etwas Zeit, um die Informationen zusammenzustellen."
 
 #: dashboard/dashboard.php:307
 #, fuzzy
@@ -417,8 +414,8 @@ msgstr "Blog, Unterstützung..."
 #: dashboard/dashboard.php:687
 #, fuzzy
 msgid ""
-"You will find our Blog with tips about this tool, link to support and more "
-"in our site."
+"You will find our Blog with tips about this tool, link to support and more in "
+"our site."
 msgstr ""
 "Sie finden unseren Blog mit Tipps zu diesem Tool, Links zum Support und mehr "
 "auf unserer Website."
@@ -434,8 +431,8 @@ msgid ""
 "Use old WP version, Low memory, some plugin with Javascript error are some "
 "possible problems."
 msgstr ""
-"Die Verwendung einer alten WP-Version, geringer Speicherplatz, ein Plugin "
-"mit Javascript-Fehler sind einige mögliche Probleme."
+"Die Verwendung einer alten WP-Version, geringer Speicherplatz, ein Plugin mit "
+"Javascript-Fehler sind einige mögliche Probleme."
 
 #: dashboard/dashboard.php:701
 #, fuzzy
@@ -460,8 +457,8 @@ msgstr "Mehr Werkzeuge"
 #: dashboard/dashboard_container.php:23 functions/__functions.php:218
 #: functions/_functions.php:207 functions/functions.php:218
 #: settings/options/plugin_options_tabbed.php:715
-#: settings/options/plugin_options_tabbed.php:732
-#: settings/page-builders.php:320 settings/page-builders.php:331
+#: settings/options/plugin_options_tabbed.php:732 settings/page-builders.php:320
+#: settings/page-builders.php:331
 msgid "Go Pro"
 msgstr "Pro erwerben"
 
@@ -470,121 +467,123 @@ msgid ""
 "No errors have been caught yet. Please bear with us as we work on it. Feel "
 "free to check back later."
 msgstr ""
-"Es wurden noch keine Fehler festgestellt. Bitte haben Sie Geduld, während "
-"wir daran arbeiten. Schauen Sie später noch einmal vorbei."
+"Es wurden noch keine Fehler festgestellt. Bitte haben Sie Geduld, während wir "
+"daran arbeiten. Schauen Sie später noch einmal vorbei."
 
-#: dashboard/mybanners.php:190
-msgid ""
-"Lifetime license with premium enhancements: One-time payment of just $17.99!"
+#: dashboard/mybanners.php:20
+#, fuzzy
+#| msgid "Premium Features"
+msgid "Get More Features"
+msgstr "Premium Funktionen"
+
+#: dashboard/mybanners.php:24
+msgid "Access Exclusive Tools"
+msgstr "Zugriff auf exklusive Tools"
+
+#: dashboard/mybanners.php:28
+msgid "Enhance Your Site"
+msgstr "Verbessern Sie Ihre Site"
+
+#: dashboard/mybanners.php:41
+#, fuzzy
+#| msgid ""
+#| "Lifetime license with premium enhancements: One-time payment of just $17.99!"
+msgid "Lifetime license: One-time payment of just $17.99!"
 msgstr ""
 "Lebenslange Lizenz mit Premium-Erweiterungen: Einmalzahlung von nur 17,99 $!"
 
-#: dashboard/mybanners.php:194
+#: dashboard/mybanners.php:45
 #, fuzzy
 #| msgid ""
-#| "Many extra features are not included in the free version. For example, "
-#| "fixing damaged tables, etc."
-msgid ""
-"Many additional features are not included in the free version. For example:"
-msgstr ""
-"Viele Zusatzfunktionen sind in der kostenlosen Version nicht enthalten. "
-"Beispielsweise das Reparieren beschädigter Tabellen usw."
+#| "Many additional features are not included in the free version. For example:"
+msgid "features are not included in the free version:"
+msgstr " "
 
-#: dashboard/mybanners.php:196
+#: dashboard/mybanners.php:47
 msgid "- Fix damaged tables"
 msgstr "- Beschädigte Tabellen reparieren"
 
-#: dashboard/mybanners.php:198 dashboard/mybanners.php:209
+#: dashboard/mybanners.php:49
 msgid ""
 "- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit"
 msgstr ""
-"- Maximales Speicherlimit, maximales Ausführungszeitlimit und maximales "
-"Limit für die Upload-Dateigröße hinzufügen"
+"- Maximales Speicherlimit, maximales Ausführungszeitlimit und maximales Limit "
+"für die Upload-Dateigröße hinzufügen"
 
-#: dashboard/mybanners.php:201
+#: dashboard/mybanners.php:52
 #, fuzzy
 msgid "- Delete cron jobs without actions"
 msgstr "Alle Cron-Jobs ohne Aktionen löschen"
 
-#: dashboard/mybanners.php:203
+#: dashboard/mybanners.php:54
 #, fuzzy
 #| msgid "Delete All Transients"
 msgid "- Delete expired or all transients"
 msgstr "Lösche alle Transients"
 
-#: dashboard/mybanners.php:205
+#: dashboard/mybanners.php:56
 msgid "- Show the top 100 folders by disk usage"
 msgstr "- Zeigen Sie die Top 100 Ordner nach Festplattennutzung an"
 
-#: dashboard/mybanners.php:207
+#: dashboard/mybanners.php:58
 msgid "- Display all files with wrong permissions"
 msgstr " - Alle Dateien mit falschen Berechtigungen anzeigen"
 
-#: dashboard/mybanners.php:211
+#: dashboard/mybanners.php:60
 #, fuzzy
 msgid "- Edit and save robots.txt"
 msgstr "Robots txt bearbeiten"
 
-#: dashboard/mybanners.php:213
+#: dashboard/mybanners.php:62
 #, fuzzy
 #| msgid "Learn more."
 msgid "- and more..."
 msgstr "Mehr erfahren."
 
-#: dashboard/mybanners.php:216
-#, fuzzy
-msgid "Take Your Site to the Next Level"
-msgstr "Bringen Sie Ihre Website auf die nächste Stufe"
-
-#: dashboard/mybanners.php:217
-msgid "Improve your WordPress site's performance"
-msgstr "Verbessern Sie die Leistung Ihrer WordPress-Site"
-
-#: dashboard/mybanners.php:219
+#: dashboard/mybanners.php:66
 #, fuzzy
 msgid "Dedicated Premium Support"
 msgstr "Dedizierter Premium-Support"
 
-#: dashboard/mybanners.php:222 functions/functions_transiente_manager.php:58
+#: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
 msgid "Learn More"
 msgstr "Mehr erfahren"
 
-#: dashboard/mybanners.php:230
+#: dashboard/mybanners.php:243
 msgid "Like This Plugin?"
 msgstr "Sie mögen dieses Plugin?"
 
-#: dashboard/mybanners.php:231
-#, fuzzy
+#: dashboard/mybanners.php:246
 msgid ""
 "If you like this product, please write a few words about it. It will help "
 "other people find this useful plugin more quickly.Thank you!"
 msgstr ""
-"Wenn Sie dieses Produkt mögen, schreiben Sie bitte ein paar Worte darüber. "
-"Es wird anderen Menschen helfen, dieses nützliche Plugin schneller zu finden."
-"<br><b>Vielen Dank!</b>"
+" Wenn Ihnen dieses Produkt gefällt, schreiben Sie bitte ein paar Worte "
+"darüber. Es wird anderen Menschen helfen, dieses nützliche Plugin schneller zu "
+"finden. Vielen Dank!"
 
-#: dashboard/mybanners.php:234
+#: dashboard/mybanners.php:249
 #, fuzzy
 msgid "Rate or Share"
 msgstr "Bewerten oder teilen"
 
-#: dashboard/mybanners.php:237
+#: dashboard/mybanners.php:252
 #, fuzzy
 msgid "Please help us keep the plugin live & up-to-date!"
 msgstr "Bitte helfen Sie uns, das Plugin live und aktuell zu halten!"
 
-#: dashboard/mybanners.php:238
+#: dashboard/mybanners.php:255
 #, fuzzy
 msgid ""
 "If you use & enjoy WP Tools Plugin, please rate it on WordPress.org. It only "
 "takes a second and helps us keep the plugin live and maintained. Thank you!"
 msgstr ""
 "Wenn Sie das WP Tools Plugin verwenden und es Ihnen gefällt, bewerten Sie es "
-"bitte auf WordPress.org. Es dauert nur eine Sekunde und hilft uns, das "
-"Plugin am Leben zu erhalten und zu pflegen. Dankeschön!"
+"bitte auf WordPress.org. Es dauert nur eine Sekunde und hilft uns, das Plugin "
+"am Leben zu erhalten und zu pflegen. Dankeschön!"
 
-#: dashboard/mybanners.php:241
+#: dashboard/mybanners.php:258
 msgid "Rate"
 msgstr "Bewerten"
 
@@ -986,8 +985,8 @@ msgstr "Unbekannt"
 #: functions/functions.php:1197
 #, fuzzy
 msgid ""
-"This plugin can benchmarks your server's performance through a variety of "
-"PHP and MySql tests."
+"This plugin can benchmarks your server's performance through a variety of PHP "
+"and MySql tests."
 msgstr ""
 "Dieses Plugin kann die Leistung Ihres Servers durch eine Reihe von PHP- und "
 "MySql-Tests messen."
@@ -1013,8 +1012,8 @@ msgid ""
 "Enabling this feature causes your site to share only server performance data "
 "with WP Tools Plugin."
 msgstr ""
-"Die Aktivierung dieser Funktion bewirkt, dass Ihre Website nur Daten über "
-"die Serverleistung mit dem WP Tools Plugin austauscht."
+"Die Aktivierung dieser Funktion bewirkt, dass Ihre Website nur Daten über die "
+"Serverleistung mit dem WP Tools Plugin austauscht."
 
 #: functions/__functions.php:1179 functions/_functions.php:1160
 #: functions/functions.php:1228
@@ -1052,8 +1051,8 @@ msgstr "TabellenInformationen"
 #, fuzzy
 msgid "Open Database Page if you find errors on tables (status not ok)"
 msgstr ""
-"Öffnen Sie die Datenbank-Seite, wenn Sie Fehler in den Tabellen finden "
-"(Status nicht ok)"
+"Öffnen Sie die Datenbank-Seite, wenn Sie Fehler in den Tabellen finden (Status "
+"nicht ok)"
 
 #: functions/__functions.php:1341 functions/_functions.php:1322
 #: functions/functions.php:1390
@@ -1092,8 +1091,8 @@ msgstr "Datenlänge (annähernd)"
 #, fuzzy
 msgid "For more info about your database, look the page SHOW PHP INFO."
 msgstr ""
-"Weitere Informationen über Ihre Datenbank erhalten Sie auf der Seite SHOW "
-"PHP INFO."
+"Weitere Informationen über Ihre Datenbank erhalten Sie auf der Seite SHOW PHP "
+"INFO."
 
 #: functions/__functions.php:1526 functions/_functions.php:1507
 #: functions/functions.php:1575
@@ -1113,24 +1112,23 @@ msgid ""
 "may lead to visual problems or disrupt functionality, from minor glitches to "
 "critical site failures. Promptly address these issues before continuing "
 "because these problems will persist even if you deactivate our plugin.Notice "
-"that the PHP error system does not capture JavaScript errors. Only our "
-"plugin captures them."
+"that the PHP error system does not capture JavaScript errors. Only our plugin "
+"captures them."
 msgstr ""
 "Unser Plugin kann nicht wie vorgesehen funktionieren. Fehler, einschließlich "
 "JavaScript-Fehler, können zu visuellen Problemen führen oder die "
 "Funktionalität beeinträchtigen, von geringfügigen Störungen bis hin zu "
 "kritischen Ausfällen der Website. Beheben Sie diese Probleme umgehend, bevor "
 "Sie fortfahren, da diese Probleme auch dann bestehen bleiben, wenn Sie unser "
-"Plugin deaktivieren. Beachten Sie, dass das PHP-Fehlersystem keine "
-"JavaScript-Fehler erfasst. Nur unser Plugin erfasst sie."
+"Plugin deaktivieren. Beachten Sie, dass das PHP-Fehlersystem keine JavaScript-"
+"Fehler erfasst. Nur unser Plugin erfasst sie."
 
 #: functions/__functions.php:1552 functions/_functions.php:1533
 #: functions/functions.php:1601
 #, fuzzy
 msgid "For bigger files, download and open them in your local computer."
 msgstr ""
-"Größere Dateien können Sie herunterladen und auf Ihrem lokalen Computer "
-"öffnen."
+"Größere Dateien können Sie herunterladen und auf Ihrem lokalen Computer öffnen."
 
 #: functions/__functions.php:1559 functions/_functions.php:1540
 #: functions/functions.php:1608
@@ -1161,8 +1159,8 @@ msgstr "Dateipfad:"
 #, fuzzy
 msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
 msgstr ""
-"Datei wp-config.php nicht gefunden. Fragen Sie Ihr Hosting-Unternehmen, ob "
-"sie versteckt ist."
+"Datei wp-config.php nicht gefunden. Fragen Sie Ihr Hosting-Unternehmen, ob sie "
+"versteckt ist."
 
 #: functions/__functions.php:2251 functions/_functions.php:2222
 #: functions/functions.php:2468
@@ -1433,11 +1431,10 @@ msgstr "Speichernutzung < als 1'"
 #: functions/functions.php:3301
 #, fuzzy
 msgid ""
-"Possible error: On file wp-config.php memory symbol should be M or MB or G "
-"or GB."
+"Possible error: On file wp-config.php memory symbol should be M or MB or G or "
+"GB."
 msgstr ""
-"Möglicher Fehler: In der Datei wp-config.php sollte das Speichersymbol M "
-"sein."
+"Möglicher Fehler: In der Datei wp-config.php sollte das Speichersymbol M sein."
 
 #: functions/__functions.php:3089 functions/_functions.php:3116
 #: functions/functions.php:3306
@@ -1534,8 +1531,8 @@ msgstr ""
 #: functions/functions.php:3417
 #, fuzzy
 msgid ""
-"PHP function sys_getloadavg not enabled. Talk with your hosting and request "
-"to enable it."
+"PHP function sys_getloadavg not enabled. Talk with your hosting and request to "
+"enable it."
 msgstr ""
 "Die PHP-Funktion sys_getloadavg ist nicht aktiviert. Wenden Sie sich an Ihr "
 "Hosting und bitten Sie darum, sie zu aktivieren."
@@ -1547,8 +1544,8 @@ msgid ""
 "/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
 "it."
 msgstr ""
-"/proc/cpuinfo ist nicht lesbar. Sprechen Sie mit Ihrem Hosting und bitten "
-"Sie darum, es zu aktivieren."
+"/proc/cpuinfo ist nicht lesbar. Sprechen Sie mit Ihrem Hosting und bitten Sie "
+"darum, es zu aktivieren."
 
 #: functions/__functions.php:3233 functions/_functions.php:3260
 #: functions/functions.php:3449
@@ -1583,8 +1580,8 @@ msgstr ""
 #: functions/functions.php:3513
 #, fuzzy
 msgid ""
-"/etc/os-release doesn't readable. Talk with your hosting and request to "
-"enable it."
+"/etc/os-release doesn't readable. Talk with your hosting and request to enable "
+"it."
 msgstr ""
 "/etc/os-release ist nicht lesbar. Sprechen Sie mit Ihrem Hosting und bitten "
 "Sie darum, es zu aktivieren."
@@ -1604,11 +1601,11 @@ msgstr "Ihr Hosting blockiert die PHP-Funktion sys_getloadavg()."
 #: functions/functions.php:3560
 #, fuzzy
 msgid ""
-"if you can see warnings or empty fields on your dashboard, means your "
-"hosting company is blocking some php functions."
+"if you can see warnings or empty fields on your dashboard, means your hosting "
+"company is blocking some php functions."
 msgstr ""
-"wenn Sie Warnungen oder leere Felder auf Ihrem Dashboard sehen, bedeutet "
-"das, dass Ihr Hosting-Unternehmen einige PHP-Funktionen blockiert."
+"wenn Sie Warnungen oder leere Felder auf Ihrem Dashboard sehen, bedeutet das, "
+"dass Ihr Hosting-Unternehmen einige PHP-Funktionen blockiert."
 
 #: functions/__functions.php:3355 functions/_functions.php:3382
 #: functions/functions.php:3567
@@ -1624,15 +1621,15 @@ msgstr ""
 msgid ""
 "If we are wrong, please, contact our support at: https://wptoolsplugin.com"
 msgstr ""
-"Sollten wir uns irren, wenden Sie sich bitte an unseren Support unter: "
-"https://wptoolsplugin.com"
+"Sollten wir uns irren, wenden Sie sich bitte an unseren Support unter: https://"
+"wptoolsplugin.com"
 
 #: functions/__functions.php:3529 functions/_functions.php:3556
 #: functions/functions.php:3737
 msgid ""
-"The `.maintenance` file in WordPress signals maintenance mode during "
-"updates, displaying a message to visitors. Created in the root directory, it "
-"is automatically removed after updates are completed."
+"The `.maintenance` file in WordPress signals maintenance mode during updates, "
+"displaying a message to visitors. Created in the root directory, it is "
+"automatically removed after updates are completed."
 msgstr ""
 "Die `.maintenance`-Datei in WordPress signalisiert den Wartungsmodus während "
 "Updates und zeigt Besuchern eine Meldung an. Sie wird im Stammverzeichnis "
@@ -1641,8 +1638,8 @@ msgstr ""
 #: functions/__functions.php:3531 functions/_functions.php:3558
 #: functions/functions.php:3739
 msgid ""
-"Manual removal may be necessary if the file persists, causing the site to "
-"stay in maintenance mode."
+"Manual removal may be necessary if the file persists, causing the site to stay "
+"in maintenance mode."
 msgstr ""
 "Eine manuelle Entfernung kann erforderlich sein, wenn die Datei weiterhin "
 "vorhanden ist und die Site dadurch im Wartungsmodus verbleibt."
@@ -1777,8 +1774,8 @@ msgstr "Bearbeiten Sie die Datei und klicken Sie auf SAVE"
 #: functions/functions.php:3945
 #, fuzzy
 msgid ""
-"Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
-"in case to fail to save."
+"Suggestion: Before to click SAVE, copy the content to your clipboard. Just in "
+"case to fail to save."
 msgstr ""
 "Anregung: Bevor Sie auf SPEICHERN klicken, kopieren Sie den Inhalt in Ihre "
 "Zwischenablage. Nur für den Fall, dass Sie nicht speichern können."
@@ -1992,8 +1989,8 @@ msgid ""
 "Option to delete inactive Cron Jobs (without actions) available in Premium "
 "Version."
 msgstr ""
-"Option zum Löschen inaktiver Cron Jobs (ohne Aktionen) in der Premium "
-"Version verfügbar."
+"Option zum Löschen inaktiver Cron Jobs (ohne Aktionen) in der Premium Version "
+"verfügbar."
 
 #: functions/functions_cron_manager.php:48
 #, fuzzy
@@ -2012,8 +2009,8 @@ msgstr ""
 #: functions/functions_cron_manager.php:55
 #, fuzzy
 msgid ""
-"This is often caused by plugins that don't clean up their cron events when "
-"you deactivate them."
+"This is often caused by plugins that don't clean up their cron events when you "
+"deactivate them."
 msgstr ""
 "Dies wird oft durch Plugins verursacht, die ihre Cron-Ereignisse nicht "
 "aufräumen, wenn Sie sie deaktivieren."
@@ -2108,8 +2105,8 @@ msgid ""
 "browser). Just click Show PHP Erros voice at the menu"
 msgstr ""
 "Zeigen Sie die PHP-Fehler an, begrenzt auf die letzten 200 Fehler (um ein "
-"Einfrieren des Browsers zu vermeiden). Klicken Sie einfach auf Show PHP "
-"Erros voice im Menü"
+"Einfrieren des Browsers zu vermeiden). Klicken Sie einfach auf Show PHP Erros "
+"voice im Menü"
 
 #: guide/guide.php:14
 #, fuzzy
@@ -2153,8 +2150,8 @@ msgid ""
 "Disables the default notification email sent by a site after an automatic "
 "core, theme or plugin update."
 msgstr ""
-"Deaktiviert die Standard-Benachrichtigungs-E-Mail, die von einer Website "
-"nach einem automatischen Core-, Theme- oder Plugin-Update gesendet wird."
+"Deaktiviert die Standard-Benachrichtigungs-E-Mail, die von einer Website nach "
+"einem automatischen Core-, Theme- oder Plugin-Update gesendet wird."
 
 #: guide/guide.php:24
 #, fuzzy
@@ -2166,8 +2163,8 @@ msgstr ""
 #: guide/guide.php:26
 #, fuzzy
 msgid ""
-"Add Google Search Central (formerly Google Webmasters) HTML TAG and Bing "
-"Meta Name"
+"Add Google Search Central (formerly Google Webmasters) HTML TAG and Bing Meta "
+"Name"
 msgstr ""
 "Fügen Sie Google Search Central (früher Google Webmasters) HTML TAG hinzu."
 
@@ -2249,8 +2246,8 @@ msgstr "Datei wp-config.php anzeigen"
 #: guide/guide.php:54
 #, fuzzy
 msgid ""
-"Restores the previous (\"classic\") widgets settings screens and disables "
-"the block editor from managing widgets."
+"Restores the previous (\"classic\") widgets settings screens and disables the "
+"block editor from managing widgets."
 msgstr ""
 "Stellt die vorherigen (\"klassischen\") Einstellungsbildschirme für Widgets "
 "wieder her und deaktiviert den Block-Editor für die Verwaltung von Widgets."
@@ -2284,8 +2281,7 @@ msgstr "JQuery und Migrationsversionen anzeigen (siehe Javascript und JQuery)."
 #: guide/guide.php:64
 #, fuzzy
 msgid "Erase readme.html and licence.txt files at root folder."
-msgstr ""
-"Löschen Sie die Dateien readme.html und license.txt im Stammverzeichnis."
+msgstr "Löschen Sie die Dateien readme.html und license.txt im Stammverzeichnis."
 
 #: guide/guide.php:66
 #, fuzzy
@@ -2316,8 +2312,8 @@ msgid ""
 "Show the mySQL  (database info) with a lot of info about your mySQL server "
 "configuration."
 msgstr ""
-"Zeigen Sie die mySQL (Datenbankinfo) mit vielen Informationen über Ihre "
-"mySQL-Serverkonfiguration an."
+"Zeigen Sie die mySQL (Datenbankinfo) mit vielen Informationen über Ihre mySQL-"
+"Serverkonfiguration an."
 
 #: guide/guide.php:76
 #, fuzzy
@@ -2338,8 +2334,8 @@ msgstr "Transienten anzeigen und löschen."
 #: guide/guide.php:82
 #, fuzzy
 msgid ""
-"Enables the WordPress database tools to optimize and repair InnoDB and "
-"MyISAM database tables."
+"Enables the WordPress database tools to optimize and repair InnoDB and MyISAM "
+"database tables."
 msgstr ""
 "Ermöglicht den WordPress-Datenbank-Tools die Optimierung und Reparatur von "
 "InnoDB- und MyISAM-Datenbanktabellen."
@@ -2391,8 +2387,8 @@ msgstr "Datei .maintenance löschen."
 #: guide/guide.php:107
 msgid "Fix Incompatible Archive issue when installing plugins from zip files."
 msgstr ""
-"Beheben Sie das Problem mit inkompatiblen Archiven beim Installieren von "
-"Plug-Ins aus ZIP-Dateien."
+"Beheben Sie das Problem mit inkompatiblen Archiven beim Installieren von Plug-"
+"Ins aus ZIP-Dateien."
 
 #: guide/guide.php:109
 msgid "Improve Dashboard Performance and Clean up WordPress admin dashboard."
@@ -2403,8 +2399,7 @@ msgstr ""
 #: guide/guide.php:117
 #, fuzzy
 msgid "Go to other TABS and enable that you want."
-msgstr ""
-"Gehen Sie zu anderen TABS und aktivieren Sie die gewünschten Funktionen."
+msgstr "Gehen Sie zu anderen TABS und aktivieren Sie die gewünschten Funktionen."
 
 #: guide/guide.php:120
 #, fuzzy
@@ -2428,12 +2423,11 @@ msgstr "Wir bedauern Ihr Weggehen."
 
 #: includes/feedback-last/feedback-last.php:252
 msgid ""
-"Thank you for using our products. Before you deactivate, we'd like to offer "
-"a few options to improve your experience:"
+"Thank you for using our products. Before you deactivate, we'd like to offer a "
+"few options to improve your experience:"
 msgstr ""
 "Vielen Dank, dass Sie unsere Produkte verwenden. Bevor Sie sie deaktivieren, "
-"möchten wir Ihnen einige Optionen zur Verbesserung Ihres Erlebnisses "
-"anbieten:"
+"möchten wir Ihnen einige Optionen zur Verbesserung Ihres Erlebnisses anbieten:"
 
 #: includes/feedback-last/feedback-last.php:255
 msgid "Explore more plugins - Discover our other free plugins and themes."
@@ -2460,8 +2454,8 @@ msgid ""
 "Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
 "supercharge your site's security, functionality, and backups."
 msgstr ""
-"Mehr als 50.000 Benutzer vertrauen auf unsere über 20 kostenlosen Plug-Ins "
-"und 6 Designs, die die Sicherheit, Funktionalität und Backups Ihrer Site "
+"Mehr als 50.000 Benutzer vertrauen auf unsere über 20 kostenlosen Plug-Ins und "
+"6 Designs, die die Sicherheit, Funktionalität und Backups Ihrer Site "
 "optimieren können."
 
 #: includes/feedback-last/feedback-last.php:266
@@ -2541,8 +2535,8 @@ msgstr "und Einstellungen, Anleitung zur Fehlerbehebung und Support-Seite."
 #: includes/help/help.php:52
 #, fuzzy
 msgid ""
-"Here are the link to our free blog with a lot of tips and tricks and about "
-"how to use this tool."
+"Here are the link to our free blog with a lot of tips and tricks and about how "
+"to use this tool."
 msgstr ""
 "Hier finden Sie den Link zu unserem kostenlosen Blog mit vielen Tipps und "
 "Tricks und zur Verwendung dieses Tools."
@@ -2567,8 +2561,8 @@ msgid ""
 "time to open each tab and mark that you want."
 msgstr ""
 "Dort finden Sie auch Felder und Steuerelemente, um das Plugin zu "
-"konfigurieren. Nehmen Sie sich etwas Zeit, um jede Registerkarte zu öffnen "
-"und zu markieren, was Sie möchten."
+"konfigurieren. Nehmen Sie sich etwas Zeit, um jede Registerkarte zu öffnen und "
+"zu markieren, was Sie möchten."
 
 #: includes/help/help.php:73
 #, fuzzy
@@ -2609,15 +2603,15 @@ msgstr "Startup-Leitfaden"
 #: settings/options/plugin_options_tabbed.php:26
 #, fuzzy
 msgid ""
-"You can increase the memory limit, time limit and max upload filesize "
-"without editing any PHP or WordPress files. If your PHP init define a bigger "
-"amount, our plugin doesn't reduce it. Choose Select to don't change it."
+"You can increase the memory limit, time limit and max upload filesize without "
+"editing any PHP or WordPress files. If your PHP init define a bigger amount, "
+"our plugin doesn't reduce it. Choose Select to don't change it."
 msgstr ""
 "Sie können das Speicherlimit, das Zeitlimit und die maximale Dateigröße für "
 "den Upload erhöhen, ohne irgendwelche PHP- oder WordPress-Dateien zu "
-"bearbeiten. Wenn Ihre PHP-Initialisierung einen größeren Wert definiert, "
-"wird dieser von unserem Plugin nicht reduziert. Wählen Sie Select, um es "
-"nicht zu ändern."
+"bearbeiten. Wenn Ihre PHP-Initialisierung einen größeren Wert definiert, wird "
+"dieser von unserem Plugin nicht reduziert. Wählen Sie Select, um es nicht zu "
+"ändern."
 
 #: settings/options/plugin_options_tabbed.php:28
 #, fuzzy
@@ -2625,8 +2619,7 @@ msgid "Then click SAVE CHANGES."
 msgstr "Klicken Sie dann auf ÄNDERUNGEN SPEICHERN."
 
 #: settings/options/plugin_options_tabbed.php:32
-#: settings/options/plugin_options_tabbed.php:412
-#: settings/page-builders.php:317
+#: settings/options/plugin_options_tabbed.php:412 settings/page-builders.php:317
 msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
@@ -2855,13 +2848,11 @@ msgstr "Nein"
 #: settings/options/plugin_options_tabbed.php:269
 #, fuzzy
 msgid "Deactivate Lazy Load functionality (added in WP version 5.5)."
-msgstr ""
-"Deaktivieren Sie die Funktion Lazy Load (hinzugefügt in WP Version 5.5)."
+msgstr "Deaktivieren Sie die Funktion Lazy Load (hinzugefügt in WP Version 5.5)."
 
 #: settings/options/plugin_options_tabbed.php:278
 #, fuzzy
-msgid ""
-"Deactivate Emojis functionality (support for emoji's in older browsers)?"
+msgid "Deactivate Emojis functionality (support for emoji's in older browsers)?"
 msgstr ""
 "Deaktivieren Sie die Emojis-Funktionalität (Unterstützung für Emojis in "
 "älteren Browsern)?"
@@ -2915,8 +2906,8 @@ msgstr ""
 #, fuzzy
 msgid "Replace WordPress logo at login form. Just paste a URL of the new logo."
 msgstr ""
-"Ersetzen Sie das WordPress-Logo im Anmeldeformular. Fügen Sie einfach eine "
-"URL des neuen Logos ein."
+"Ersetzen Sie das WordPress-Logo im Anmeldeformular. Fügen Sie einfach eine URL "
+"des neuen Logos ein."
 
 #: settings/options/plugin_options_tabbed.php:337
 #, fuzzy
@@ -2951,9 +2942,9 @@ msgstr "Deaktivieren Sie Pingbacks zu Ihrer eigenen Website (Self Pingback)."
 
 #: settings/options/plugin_options_tabbed.php:389
 msgid ""
-"Resolve 'Incompatible Archive' issue when installing plugins from zip files "
-"by using PclZip instead of ZipArchive. Consider using this option only for "
-"new plugin installations."
+"Resolve 'Incompatible Archive' issue when installing plugins from zip files by "
+"using PclZip instead of ZipArchive. Consider using this option only for new "
+"plugin installations."
 msgstr ""
 "Beheben Sie das Problem „Inkompatibles Archiv“ bei der Installation von "
 "Plugins aus Zip-Dateien, indem Sie PclZip statt ZipArchive verwenden. "
@@ -2972,8 +2963,8 @@ msgstr ""
 msgid ""
 "Show Server Load Average (CPU Usage) for the last minute at top admin bar."
 msgstr ""
-"Anzeige der durchschnittlichen Serverlast (CPU-Auslastung) der letzten "
-"Minute in der oberen Verwaltungsleiste."
+"Anzeige der durchschnittlichen Serverlast (CPU-Auslastung) der letzten Minute "
+"in der oberen Verwaltungsleiste."
 
 #: settings/options/plugin_options_tabbed.php:429
 #: settings/options/plugin_options_tabbed.php:447
@@ -2993,14 +2984,12 @@ msgid ""
 "info from your server. Server requirements:"
 msgstr ""
 "Wenn Sie immer 0 (Null) sehen oder warten können, liegt das daran, dass wir "
-"diese Information nicht von Ihrem Server erhalten können. Server-"
-"Anforderungen:"
+"diese Information nicht von Ihrem Server erhalten können. Server-Anforderungen:"
 
 #: settings/options/plugin_options_tabbed.php:435
 #, fuzzy
 msgid ""
-"shell_exec enabled on your PHP (ask for your hosting to enable it if "
-"necessary."
+"shell_exec enabled on your PHP (ask for your hosting to enable it if necessary."
 msgstr ""
 "shell_exec auf Ihrem PHP aktiviert haben (fragen Sie Ihr Hosting, um es zu "
 "aktivieren, falls nötig."
@@ -3021,8 +3010,7 @@ msgid "Higher numbers represent a problem or an overloaded machine."
 msgstr "Höhere Zahlen bedeuten ein Problem oder eine überlastete Maschine."
 
 #: settings/options/plugin_options_tabbed.php:444
-#: settings/options/plugin_options_tabbed.php:547
-#: settings/page-builders.php:318
+#: settings/options/plugin_options_tabbed.php:547 settings/page-builders.php:318
 #, fuzzy
 msgid "Processor Load"
 msgstr "Belastung des Prozessors"
@@ -3035,8 +3023,8 @@ msgstr "Festplattenverwendung anzeigen."
 #: settings/options/plugin_options_tabbed.php:449
 #, fuzzy
 msgid ""
-"We use the PHP function disk_total_space(). Talk with your hosting if "
-"doesn't work."
+"We use the PHP function disk_total_space(). Talk with your hosting if doesn't "
+"work."
 msgstr ""
 "Wir verwenden die PHP-Funktion disk_total_space(). Sprechen Sie mit Ihrem "
 "Hosting, wenn das nicht funktioniert."
@@ -3181,15 +3169,13 @@ msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:625
 #, fuzzy
-msgid ""
-"Left Blank to use your default Wordpress email.Then, click save changes."
+msgid "Left Blank to use your default Wordpress email.Then, click save changes."
 msgstr ""
 "Leer lassen, um Ihre Standard-Wordpress-E-Mail zu verwenden, und dann auf "
 "Änderungen speichern klicken."
 
 #: settings/options/plugin_options_tabbed.php:628
-#: settings/options/plugin_options_tabbed.php:664
-#: settings/page-builders.php:319
+#: settings/options/plugin_options_tabbed.php:664 settings/page-builders.php:319
 msgid "Notifications"
 msgstr "Benachrichtigungen"
 
@@ -3199,8 +3185,8 @@ msgid ""
 "Send email notification when notices/warnings or erros occurs? (limited at 1 "
 "email each 15 minutes)"
 msgstr ""
-"E-Mail-Benachrichtigung bei Hinweisen/Warnungen oder Fehlern senden? "
-"(begrenzt auf 10 Emails alle 5 Minuten)"
+"E-Mail-Benachrichtigung bei Hinweisen/Warnungen oder Fehlern senden? (begrenzt "
+"auf 10 Emails alle 5 Minuten)"
 
 #: settings/options/plugin_options_tabbed.php:647
 #, fuzzy
@@ -3213,12 +3199,12 @@ msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:656
 msgid ""
-"Receive a weekly email with a summary of my website's page load times?  "
-"(Alert only if average exceeds 3 seconds.)"
+"Receive a weekly email with a summary of my website's page load times?  (Alert "
+"only if average exceeds 3 seconds.)"
 msgstr ""
-"Wöchentlich eine E-Mail mit einer Zusammenfassung der Seitenladezeiten "
-"meiner Website erhalten? (Benachrichtigung nur, wenn der Durchschnitt 3 "
-"Sekunden überschreitet.)"
+"Wöchentlich eine E-Mail mit einer Zusammenfassung der Seitenladezeiten meiner "
+"Website erhalten? (Benachrichtigung nur, wenn der Durchschnitt 3 Sekunden "
+"überschreitet.)"
 
 #: settings/options/plugin_options_tabbed.php:678
 #, fuzzy

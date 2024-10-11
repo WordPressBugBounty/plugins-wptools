@@ -1575,34 +1575,39 @@ function wptools_options()
     echo "<h1>" . esc_attr__("Errors", "wptools") . "</h1>";
     echo "<center>";
 
-    echo "<h2>";
-    echo esc_attr__(
-        "Your site has errors. Here are the last lines of the error log files.",
-        "wptools"
-    );
-    echo "</h2>";
-
-    //2023
-    //die(var_export(wptools_errors_today(2)));
 
     if (wptools_errors_today(2, 'javascript') or wptools_errors_today(2)) {
+
+        echo "<h2>";
+        echo esc_attr__(
+            "Your site has errors. Here are the last lines of the error log files.",
+            "wptools"
+        );
+        echo "</h2>";
+
+
+
+
         echo '<h3 style="color: red;">';
         echo esc_attr__(
             "Our plugin can't function as intended. Errors, including JavaScript errors, may lead to visual problems or disrupt functionality, from minor glitches to critical site failures. Promptly address these issues before continuing because these problems will persist even if you deactivate our plugin.Notice that the PHP error system does not capture JavaScript errors. Only our plugin captures them.",
             "wptools"
         );
         echo "</h3>";
+
+        //end 2023
+
+        echo "</center>";
+        echo "<h4>";
+        echo esc_attr__(
+            "For bigger files, download and open them in your local computer.",
+            "wptools"
+        );
+
+        echo "<br />";
     }
-    //end 2023
 
-    echo "</center>";
-    echo "<h4>";
-    echo esc_attr__(
-        "For bigger files, download and open them in your local computer.",
-        "wptools"
-    );
 
-    echo "<br />";
 
     echo '<a href="https://wptoolsplugin.com/site-language-error-can-crash-your-site/" >';
     echo esc_attr(__("Learn more about errors and warnings...", "wptools")) .
@@ -2240,7 +2245,7 @@ function wptools_read_file_2023($file, $lines)
     return $text;
 }
 
-function wptools_read_file($file, $lines)
+function wptools_read_file_bad($file, $lines)
 {
 
     $handle = fopen($file, "r");
@@ -2302,6 +2307,64 @@ function wptools_read_file($file, $lines)
     fclose($handle);
 
     // Reverte o array para retornar as linhas na ordem correta
+    return $text;
+}
+
+
+function wptools_read_file($file, $lines)
+{
+    $handle = fopen($file, "r");
+
+    if (!$handle) {
+        return "";
+    }
+
+    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
+    $text = [];
+    $currentChunk = '';
+    $linecounter = 0;
+
+    // Move para o final do arquivo e começa a leitura para trás
+    fseek($handle, 0, SEEK_END);
+    $filesize = ftell($handle); // Tamanho do arquivo
+
+    // Ajustar bufferSize para o tamanho do arquivo se for menor que 8KB
+    if ($filesize < $bufferSize) {
+        $bufferSize = $filesize;
+    }
+
+    $pos = $filesize - $bufferSize;
+
+    while ($pos >= 0 && $linecounter < $lines) {
+        if ($pos < 0) {
+            $pos = 0;
+        }
+
+        fseek($handle, $pos);
+
+        $chunk = fread($handle, $bufferSize);
+        $currentChunk = $chunk . $currentChunk;
+
+        $linesInChunk = explode("\n", $currentChunk);
+        $currentChunk = array_shift($linesInChunk);
+
+        foreach (array_reverse($linesInChunk) as $line) {
+            $text[] = $line;
+            $linecounter++;
+            if ($linecounter >= $lines) {
+                break 2;
+            }
+        }
+
+        $pos -= $bufferSize;
+    }
+
+    if (!empty($currentChunk)) {
+        $text[] = $currentChunk;
+    }
+
+    fclose($handle);
+
     return $text;
 }
 

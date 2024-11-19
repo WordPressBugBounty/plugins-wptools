@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     4.71
+Version:     4.73
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -1924,3 +1924,162 @@ if ($date_format) {
 }
 debug2($formattedMessage);
 */
+
+// --------------- 
+
+
+
+
+
+
+add_action('admin_menu', function () {
+	// Declare the global $submenu array
+	global $submenu;
+
+	// Check if the submenu already exists
+	if (!isset($submenu['plugins.php']['mu-plugins'])) {
+		add_submenu_page(
+			'plugins.php',                              // Parent page (Plugins)
+			esc_html__('MU Plugins', 'wptools'),          // Page title
+			esc_html__('MU Plugins', 'wptools'),          // Menu name
+			'manage_options',                            // Required capability
+			'mu-plugins',                                // Slug for the page
+			'exibir_mu_plugins'                          // Callback function
+		);
+	}
+});
+
+
+
+
+function exibir_mu_plugins()
+{
+	echo '<div class="wrap"><h1>' . esc_html__('Loaded MU Plugins', 'wptools') . '</h1><ul>';
+
+	echo '<strong>';
+	esc_html_e('MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be activated or deactivated through the admin panel. The premium version of our plugin WP Tools allows you to activate and deactivate them.', 'wptools');
+
+
+	echo '</strong><br>';
+	echo '<p><a href="https://wptoolsplugin.com/understanding-mu-plugins-in-wordpress-a-key-to-site-security/" target="_blank">' . esc_attr__('Learn More', 'wptools') . '</a></p>';
+
+	echo '<br><br>';
+
+	$mu_plugins = listar_mu_plugins();
+
+	$count = 0; // Background alternation counter
+	foreach ($mu_plugins as $plugin => $details) {
+		$plugin_path = WPMU_PLUGIN_DIR . '/' . $plugin;
+		$file_name = basename($plugin); // Plugin file name
+		$background_style = ($count % 2 == 0) ? 'background-color: #d3d3d3;' : '';
+
+		echo '<li style="' . esc_attr($background_style) . '">';
+		echo '<strong>' . esc_html($details['Name']) . '</strong>';
+		echo ' - ' . esc_html($details['Description']) . '<br>';
+
+		// Author
+		if (!empty($details['Author'])) {
+			echo esc_html__('Author:', 'wptools') . ' ' . esc_html($details['Author']) . '<br>';
+		}
+
+		// Author URI
+		if (!empty($details['AuthorURI'])) {
+			echo ' (<a href="' . esc_url($details['AuthorURI']) . '" target="_blank">' . esc_html__('Author Site', 'wptools') . '</a>)<br>';
+		}
+
+		// Version
+		if (!empty($details['Version'])) {
+			echo esc_html__('Version:', 'wptools') . ' ' . esc_html($details['Version']) . '<br>';
+		}
+
+		// File Name
+		echo esc_html__('File Name:', 'wptools') . ' ' . esc_html($file_name) . '<br>';
+
+		// File Path
+		if (!empty($plugin_path)) {
+			echo esc_html__('File Path:', 'wptools') . ' ' . esc_html($plugin_path) . '<br>';
+		}
+
+		// Check if the file exists and get the modification date
+		if (file_exists($plugin_path)) {
+			$modification_time = filemtime($plugin_path);
+			echo esc_html__('Last Modified:', 'wptools') . ' ' . esc_html(date('d/m/Y H:i:s', $modification_time)) . '<br>';
+		} else {
+			echo esc_html__('Modification date not available.', 'wptools') . '<br>';
+		}
+
+
+		// Add the link to deactivate or reactivate the plugin
+		if (str_ends_with($plugin, '.php')) {
+			/*
+			echo '<a href="' . esc_url(admin_url('admin-post.php?action=deactivate_mu_plugin&plugin=' . urlencode($plugin))) . '" 
+                    onclick="return confirm(\'' . esc_js(esc_attr__('Are you sure you want to deactivate this plugin?', 'wptools')) . '\');">
+                    ' . esc_html__('Deactivate Plugin', 'wptools') . '</a>';
+					*/
+			esc_attr_e('Status: Activated', 'wptools');
+		} elseif (str_ends_with($plugin, '.disabled')) {
+
+			/*
+			echo '<a href="' . esc_url(admin_url('admin-post.php?action=activate_mu_plugin&plugin=' . urlencode($plugin))) . '" 
+                    onclick="return confirm(\'' . esc_js(esc_attr__('Are you sure you want to reactivate this plugin?', 'wptools')) . '\');">
+                    ' . esc_html__('Reactivate Plugin', 'wptools') . '</a>';
+					*/
+			esc_attr_e('Status: Deactivated', 'wptools');
+		}
+
+
+		echo '</li>';
+		$count++;
+	}
+
+	echo '</ul></div>';
+}
+
+// Function to list MU plugins, including .php and .disabled files
+function listar_mu_plugins()
+{
+	$mu_plugins = [];
+	$plugin_files = array_merge(
+		glob(WPMU_PLUGIN_DIR . '/*.php'),
+		glob(WPMU_PLUGIN_DIR . '/*.disabled')
+	);
+
+	foreach ($plugin_files as $plugin_file) {
+		$plugin_data = get_plugin_data($plugin_file, false, false);
+		$mu_plugins[basename($plugin_file)] = $plugin_data;
+	}
+
+	return $mu_plugins;
+}
+
+// Action to deactivate the plugin
+add_action('admin_post_deactivate_mu_plugin', 'deactivate_mu_plugin');
+function deactivate_mu_plugin()
+{
+	if (current_user_can('activate_plugins')) {
+		$plugin = isset($_GET['plugin']) ? sanitize_text_field($_GET['plugin']) : '';
+		$plugin_path = WPMU_PLUGIN_DIR . '/' . $plugin;
+		$new_path = $plugin_path . '.disabled';
+
+		if (file_exists($plugin_path) && rename($plugin_path, $new_path)) {
+			wp_redirect(admin_url('admin.php?page=mu-plugins&status=deactivated'));
+			exit;
+		}
+	}
+}
+
+// Action to reactivate the plugin
+add_action('admin_post_activate_mu_plugin', 'activate_mu_plugin');
+function activate_mu_plugin()
+{
+	if (current_user_can('activate_plugins')) {
+		$plugin = isset($_GET['plugin']) ? sanitize_text_field($_GET['plugin']) : '';
+		$plugin_path = WPMU_PLUGIN_DIR . '/' . $plugin;
+		$new_path = str_replace('.disabled', '', $plugin_path);
+
+		if (file_exists($plugin_path) && rename($plugin_path, $new_path)) {
+			wp_redirect(admin_url('admin.php?page=mu-plugins&status=activated'));
+			exit;
+		}
+	}
+}

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-25 08:45+0100\n"
-"PO-Revision-Date: 2024-09-25 08:59+0100\n"
+"POT-Creation-Date: 2024-12-20 14:02+0000\n"
+"PO-Revision-Date: 2024-12-20 14:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.5\n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
 "esc_html__;esc_html_e;esc_html_x\n"
@@ -23,122 +23,124 @@ msgid ""
 "Unable to remove file read.me and/or license.txt. Talk with your hosting "
 "company."
 msgstr ""
-"Kan bestand read.me en/of license.txt niet verwijderen. Neem contact op met uw "
-"hostingbedrijf."
+"Kan bestand read.me en/of license.txt niet verwijderen. Neem contact op met "
+"uw hostingbedrijf."
 
 #: _wptools.php:292 _wptools.php:342 wptools.php:296 wptools.php:346
 msgid "Site Errors"
 msgstr "Sitefouten"
 
-#: _wptools.php:843 wptools.php:841
+#: _wptools.php:843 wptools.php:859
 msgid "Page Load Info: "
 msgstr "Informatie over het laden van de pagina:"
 
-#: _wptools.php:845 wptools.php:843
+#: _wptools.php:845 wptools.php:861
 msgid "queries and loaded in"
 msgstr "vragen en geladen in"
 
-#: _wptools.php:847 wptools.php:845
+#: _wptools.php:847 wptools.php:863
 msgid "seconds"
 msgstr "seconden"
 
 #: _wptools.php:872 _wptools.php:875 _wptools.php:1480 _wptools.php:1483
-#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:871
-#: wptools.php:874 wptools.php:1523 wptools.php:1526 wptools.php:1529
-#: wptools.php:1642 wptools.php:1645
+#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:889
+#: wptools.php:892 wptools.php:1541 wptools.php:1544 wptools.php:1547
+#: wptools.php:1660 wptools.php:1663
 msgid "Site Name unavailable"
 msgstr "Sitenaam niet beschikbaar"
 
-#: _wptools.php:882 wptools.php:881
+#: _wptools.php:882 wptools.php:899
 msgid "Notification about errors and warnings at: "
 msgstr "Melding over fouten en waarschuwingen op:"
 
-#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:882
-#: wptools.php:1541 wptools.php:1661
+#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:900
+#: wptools.php:1559 wptools.php:1679
 msgid "This email was sent from your website"
 msgstr "Deze e-mail is verzonden vanaf uw website"
 
-#: _wptools.php:884 _wptools.php:1617 wptools.php:883 wptools.php:1662
+#: _wptools.php:884 _wptools.php:1617 wptools.php:901 wptools.php:1680
 msgid "by the wpTools plugin."
 msgstr "door de wpTools plugin."
 
-#: _wptools.php:885 wptools.php:884
+#: _wptools.php:885 wptools.php:902
 msgid "Date"
 msgstr "Datum"
 
-#: _wptools.php:886 wptools.php:885
+#: _wptools.php:886 wptools.php:903
 msgid "Errors and Warnings:"
 msgstr "Fouten en waarschuwingen:"
 
-#: _wptools.php:892 wptools.php:891
+#: _wptools.php:892 wptools.php:909
 msgid "You can stop emails at the Notifications Tab."
 msgstr "U kunt e-mails stopzetten via het tabblad Meldingen."
 
-#: _wptools.php:893 _wptools.php:1504 wptools.php:892 wptools.php:1547
+#: _wptools.php:893 _wptools.php:1504 wptools.php:910 wptools.php:1565
 msgid "Dashboard => WP tools=> Settings"
 msgstr "Dashboard => WP-hulpmiddelen => Instellingen"
 
-#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1102
+#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1120
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: _wptools.php:1346 wptools.php:1388
+#: _wptools.php:1346 wptools.php:1406
 msgid "WP Tools found errors on your site"
 msgstr "WP Tools heeft fouten op uw site gevonden"
 
-#: _wptools.php:1349 wptools.php:1391
+#: _wptools.php:1349 wptools.php:1409
 msgid "Critical"
 msgstr "Kritisch"
 
-#: _wptools.php:1354 wptools.php:1396
+#: _wptools.php:1354 wptools.php:1414
 msgid "Code and hosting errors can destroy your site and the user experience."
-msgstr "Code- en hostingfouten kunnen uw site en de gebruikerservaring ruïneren."
+msgstr ""
+"Code- en hostingfouten kunnen uw site en de gebruikerservaring ruïneren."
 
-#: _wptools.php:1361 wptools.php:1403
+#: _wptools.php:1361 wptools.php:1421
 msgid "Visit the WP Tools show errors page"
 msgstr "Bezoek de WP Tools show errors-pagina"
 
-#: _wptools.php:1495 wptools.php:1538
+#: _wptools.php:1495 wptools.php:1556
 msgid "Hello"
 msgstr "Hallo"
 
-#: _wptools.php:1497 wptools.php:1540
+#: _wptools.php:1497 wptools.php:1558
 msgid "Weekly summary of issues on the site: "
 msgstr "Wekelijks overzicht van problemen op de site:"
 
-#: _wptools.php:1499 wptools.php:1542
+#: _wptools.php:1499 wptools.php:1560
 msgid ""
-"This is a weekly summary of errors, warnings, or notices that occurred on your "
-"site assisted by the wpTools plugin."
+"This is a weekly summary of errors, warnings, or notices that occurred on "
+"your site assisted by the wpTools plugin."
 msgstr ""
-"Dit is een wekelijks overzicht van fouten, waarschuwingen of meldingen die op "
-"uw site zijn opgetreden met behulp van de wpTools-plug-in."
+"Dit is een wekelijks overzicht van fouten, waarschuwingen of meldingen die "
+"op uw site zijn opgetreden met behulp van de wpTools-plug-in."
 
-#: _wptools.php:1500 wptools.php:1543
+#: _wptools.php:1500 wptools.php:1561
 msgid "Total number of issues"
 msgstr "Totaal aantal problemen"
 
-#: _wptools.php:1501 _wptools.php:1614 wptools.php:1544 wptools.php:1659
+#: _wptools.php:1501 _wptools.php:1614 wptools.php:1562 wptools.php:1677
 msgid "Please visit your site for more details:"
 msgstr "Bezoek onze site voor meer informatie:"
 
-#: _wptools.php:1502 _wptools.php:1615 wptools.php:1545 wptools.php:1660
+#: _wptools.php:1502 _wptools.php:1615 wptools.php:1563 wptools.php:1678
 msgid "Dashboard => wpTools => Dashboard"
 msgstr "Dashboard => wpTools => Dashboard"
 
-#: _wptools.php:1503 _wptools.php:1620 wptools.php:1546 wptools.php:1665
+#: _wptools.php:1503 _wptools.php:1620 wptools.php:1564 wptools.php:1683
 msgid "You can stop weekly emails at the Notifications Tab:"
 msgstr "U kunt de wekelijkse e-mails stopzetten via het tabblad Meldingen:"
 
-#: _wptools.php:1609 wptools.php:1654
+#: _wptools.php:1609 wptools.php:1672
 msgid "Weekly summary of Page Load on the site: "
 msgstr "Wekelijks overzicht van problemen op de site: "
 
-#: _wptools.php:1610 includes/feedback-last/feedback-last.php:248 wptools.php:1655
+#: _wptools.php:1610 includes/feedback-last/feedback-last.php:248
+#: wptools.php:1673
 msgid "Hello,"
 msgstr "Hallo,"
 
-#: _wptools.php:1611 wptools.php:1656
+#: _wptools.php:1611 wptools.php:1674
 msgid ""
 "This is a weekly summary of Page Load seconds that occurred on your site "
 "assisted by the wpTools plugin:"
@@ -146,25 +148,25 @@ msgstr ""
 "Dit is een wekelijks overzicht van de paginalaadseconden die op uw site "
 "plaatsvonden, ondersteund door de wpTools-plugin:"
 
-#: _wptools.php:1612 wptools.php:1657
+#: _wptools.php:1612 wptools.php:1675
 msgid "Weekly Page Load Time:"
 msgstr "Wekelijkse paginalaadtijd:"
 
-#: _wptools.php:1613 wptools.php:1658
+#: _wptools.php:1613 wptools.php:1676
 msgid ""
-"Google recommends that the page loading time be less than 3 seconds. A faster-"
-"loading website is more likely to rank higher, potentially attracting more "
-"visitors."
+"Google recommends that the page loading time be less than 3 seconds. A "
+"faster-loading website is more likely to rank higher, potentially attracting "
+"more visitors."
 msgstr ""
-"Google raadt aan dat de laadtijd van de pagina minder dan 3 seconden bedraagt. "
-"Een sneller ladende website heeft meer kans om hoger te scoren, wat potentieel "
-"meer bezoekers trekt."
+"Google raadt aan dat de laadtijd van de pagina minder dan 3 seconden "
+"bedraagt. Een sneller ladende website heeft meer kans om hoger te scoren, "
+"wat potentieel meer bezoekers trekt."
 
-#: _wptools.php:1618 wptools.php:1663
+#: _wptools.php:1618 wptools.php:1681
 msgid "Date:"
 msgstr "Datum:"
 
-#: _wptools.php:1621 wptools.php:1666
+#: _wptools.php:1621 wptools.php:1684
 msgid "Dashboard => WP tools => Settings"
 msgstr "Dashboard => wpTools => Dashboard"
 
@@ -193,8 +195,8 @@ msgstr "Processorgebruik"
 
 #: dashboard/dashboard.php:85
 msgid ""
-"Your hosting is blocking the PHP function sys_getloadavg(). Look the tab Server "
-"Check and Requirements"
+"Your hosting is blocking the PHP function sys_getloadavg(). Look the tab "
+"Server Check and Requirements"
 msgstr ""
 "Uw hosting blokkeert de PHP-functie sys_getloadavg(). Kijk op het tabblad "
 "Servercontrole en vereisten"
@@ -213,7 +215,7 @@ msgstr "WP Tools-dashboard"
 
 #: dashboard/dashboard.php:136 dashboard/dashboard.php:169
 #: functions/__functions.php:2222 functions/_functions.php:2193
-#: functions/functions.php:2439 settings/options/plugin_options_tabbed.php:594
+#: functions/functions.php:2537 settings/options/plugin_options_tabbed.php:594
 msgid "Memory Usage"
 msgstr "Geheugengebruik"
 
@@ -248,10 +250,11 @@ msgstr "Meer informatie,"
 
 #: dashboard/dashboard.php:238
 msgid ""
-"Top 10 Front End Pages with the Highest Average Load Time Over the Last 7 Days"
+"Top 10 Front End Pages with the Highest Average Load Time Over the Last 7 "
+"Days"
 msgstr ""
-"Top 10 Front End-pagina's met de hoogste gemiddelde laadtijd in de afgelopen 7 "
-"dagen"
+"Top 10 Front End-pagina's met de hoogste gemiddelde laadtijd in de afgelopen "
+"7 dagen"
 
 #: dashboard/dashboard.php:258
 msgid "Page"
@@ -274,7 +277,7 @@ msgid "OS type & version"
 msgstr "OS-type en -versie"
 
 #: dashboard/dashboard.php:311 functions/__functions.php:3791
-#: functions/_functions.php:3818 functions/functions.php:3999
+#: functions/_functions.php:3818 functions/functions.php:4097
 msgid "PHP Version"
 msgstr "PHP-versie"
 
@@ -291,10 +294,11 @@ msgid "Server CPU cores and architecture"
 msgstr "Server-CPU-cores en -architectuur"
 
 #: dashboard/dashboard.php:374
-#, fuzzy
 #| msgid "Server CPU cores and architecture"
 msgid "Info about Server CPU cores and architecture blocked by hosting"
-msgstr "Server-CPU-cores en -architectuur"
+msgstr ""
+"Informatie over server-CPU-cores en -architectuur die door hosting worden "
+"geblokkeerd"
 
 #: dashboard/dashboard.php:380 dashboard/dashboard.php:396
 msgid "MySQL database uptime"
@@ -369,8 +373,8 @@ msgstr "Blog, Ondersteuning..."
 
 #: dashboard/dashboard.php:687
 msgid ""
-"You will find our Blog with tips about this tool, link to support and more in "
-"our site."
+"You will find our Blog with tips about this tool, link to support and more "
+"in our site."
 msgstr ""
 "Op onze site vindt u onze blog met tips over deze tool, links naar "
 "ondersteuning en meer."
@@ -384,15 +388,15 @@ msgid ""
 "Use old WP version, Low memory, some plugin with Javascript error are some "
 "possible problems."
 msgstr ""
-"Mogelijke problemen zijn het gebruik van een oude WP-versie, te weinig geheugen "
-"en een plugin met Javascript-fouten."
+"Mogelijke problemen zijn het gebruik van een oude WP-versie, te weinig "
+"geheugen en een plugin met Javascript-fouten."
 
 #: dashboard/dashboard.php:701
 msgid "Troubleshooting Page"
 msgstr "Probleemoplossingspagina"
 
 #: dashboard/dashboard_container.php:18 functions/__functions.php:2995
-#: functions/_functions.php:3022 functions/functions.php:3212
+#: functions/_functions.php:3022 functions/functions.php:3310
 msgid "Server Check & Requirements"
 msgstr "Servercontrole en vereisten"
 
@@ -407,24 +411,23 @@ msgstr "Meer hulpmiddelen"
 #: dashboard/dashboard_container.php:23 functions/__functions.php:218
 #: functions/_functions.php:207 functions/functions.php:218
 #: settings/options/plugin_options_tabbed.php:715
-#: settings/options/plugin_options_tabbed.php:732 settings/page-builders.php:320
-#: settings/page-builders.php:331
+#: settings/options/plugin_options_tabbed.php:732
+#: settings/page-builders.php:320 settings/page-builders.php:331
 msgid "Go Pro"
 msgstr "Ga Pro"
 
 #: dashboard/errorsgraph.php:9 dashboard/loadsgraph.php:9
 msgid ""
-"No errors have been caught yet. Please bear with us as we work on it. Feel free "
-"to check back later."
+"No errors have been caught yet. Please bear with us as we work on it. Feel "
+"free to check back later."
 msgstr ""
-"Er zijn nog geen fouten gevonden. Heb geduld met ons terwijl we eraan werken. "
-"Kom gerust later nog eens terug."
+"Er zijn nog geen fouten gevonden. Heb geduld met ons terwijl we eraan "
+"werken. Kom gerust later nog eens terug."
 
 #: dashboard/mybanners.php:20
-#, fuzzy
 #| msgid "Premium Features"
 msgid "Get More Features"
-msgstr "Premiumfuncties"
+msgstr "Krijg meer functies"
 
 #: dashboard/mybanners.php:24
 msgid "Access Exclusive Tools"
@@ -435,13 +438,11 @@ msgid "Enhance Your Site"
 msgstr "Verbeter uw site"
 
 #: dashboard/mybanners.php:41
-#, fuzzy
 #| msgid ""
-#| "Lifetime license with premium enhancements: One-time payment of just $17.99!"
+#| "Lifetime license with premium enhancements: One-time payment of just "
+#| "$17.99!"
 msgid "Lifetime license: One-time payment of just $17.99!"
-msgstr ""
-"Levenslange licentie met premiumverbeteringen: eenmalige betaling van slechts $ "
-"17,99!"
+msgstr "Levenslange licentie: eenmalige betaling van slechts $ 17,99!"
 
 #: dashboard/mybanners.php:45
 msgid "features are not included in the free version:"
@@ -459,16 +460,14 @@ msgstr ""
 "uploadbestandsgroottelimiet toe"
 
 #: dashboard/mybanners.php:52
-#, fuzzy
 #| msgid "Delete All Cron Jobs Without Actions"
 msgid "- Delete cron jobs without actions"
-msgstr "Verwijder alle cron-taken zonder acties"
+msgstr "- Cron-taken verwijderen zonder acties"
 
 #: dashboard/mybanners.php:54
-#, fuzzy
 #| msgid "Delete All Transients"
 msgid "- Delete expired or all transients"
-msgstr "Verwijder alle transienten"
+msgstr "- Verwijder verlopen of alle transients"
 
 #: dashboard/mybanners.php:56
 msgid "- Show the top 100 folders by disk usage"
@@ -479,16 +478,14 @@ msgid "- Display all files with wrong permissions"
 msgstr " - Geef alle bestanden met verkeerde rechten weer"
 
 #: dashboard/mybanners.php:60
-#, fuzzy
 #| msgid "Edit robots txt"
 msgid "- Edit and save robots.txt"
-msgstr "Bewerken robots txt"
+msgstr "- Bewerk en bewaar robots.txt"
 
 #: dashboard/mybanners.php:62
-#, fuzzy
 #| msgid "Learn more."
 msgid "- and more..."
-msgstr "Meer informatie."
+msgstr "- en meer..."
 
 #: dashboard/mybanners.php:66
 msgid "Dedicated Premium Support"
@@ -496,6 +493,7 @@ msgstr "Toegewijde Premium-ondersteuning"
 
 #: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
+#: wptools.php:1981
 msgid "Learn More"
 msgstr "Meer informatie"
 
@@ -505,8 +503,8 @@ msgstr "Vindt u deze plugin leuk?"
 
 #: dashboard/mybanners.php:246
 msgid ""
-"If you like this product, please write a few words about it. It will help other "
-"people find this useful plugin more quickly.Thank you!"
+"If you like this product, please write a few words about it. It will help "
+"other people find this useful plugin more quickly.Thank you!"
 msgstr ""
 "Als u dit product leuk vindt, schrijf er dan een paar woorden over. Het zal "
 "andere mensen helpen deze nuttige plugin sneller te vinden. Dank u wel!"
@@ -524,9 +522,9 @@ msgid ""
 "If you use & enjoy WP Tools Plugin, please rate it on WordPress.org. It only "
 "takes a second and helps us keep the plugin live and maintained. Thank you!"
 msgstr ""
-"Als u WP Tools Plugin gebruikt en ervan geniet, beoordeel het dan op WordPress."
-"org. Het kost maar een seconde en helpt ons de plugin live te houden en te "
-"onderhouden. Bedankt!"
+"Als u WP Tools Plugin gebruikt en ervan geniet, beoordeel het dan op "
+"WordPress.org. Het kost maar een seconde en helpt ons de plugin live te "
+"houden en te onderhouden. Bedankt!"
 
 #: dashboard/mybanners.php:258
 msgid "Rate"
@@ -537,16 +535,15 @@ msgid "Go to Plugin Dashboard:"
 msgstr "WP Tools-dashboard:"
 
 #: dashboard/requirements.php:11
-#, fuzzy
 #| msgid "Dashboard => WP Tools => Settings"
 msgid "Dashboard => WP Tools => Dashboard"
-msgstr "Dashboard => WP Tools => Instellingen"
+msgstr "Dashboard => WP-hulpmiddelen => Dashboard"
 
 #: dashboard/tools.php:14
 msgid "If you need support, please, copy and paste the info below in our"
 msgstr ""
-"Als u ondersteuning nodig hebt, kopieer en plak dan de onderstaande informatie "
-"in ons"
+"Als u ondersteuning nodig hebt, kopieer en plak dan de onderstaande "
+"informatie in ons"
 
 #: dashboard/tools.php:16
 msgid "Support Site"
@@ -604,7 +601,7 @@ msgstr "Bestandsrechten weergeven"
 
 #: functions/__functions.php:150 functions/__functions.php:2277
 #: functions/_functions.php:139 functions/_functions.php:2248
-#: functions/functions.php:150 functions/functions.php:2494 guide/guide.php:52
+#: functions/functions.php:150 functions/functions.php:2592 guide/guide.php:52
 msgid "Show Cookies"
 msgstr "Cookies weergeven"
 
@@ -649,9 +646,9 @@ msgstr "jQuery Migrate-versie"
 #: functions/_functions.php:356 functions/_functions.php:2204
 #: functions/_functions.php:2250 functions/_functions.php:2298
 #: functions/_functions.php:2748 functions/_functions.php:3646
-#: functions/functions.php:423 functions/functions.php:2450
-#: functions/functions.php:2496 functions/functions.php:2544
-#: functions/functions.php:2994 functions/functions.php:3827
+#: functions/functions.php:423 functions/functions.php:2548
+#: functions/functions.php:2594 functions/functions.php:2642
+#: functions/functions.php:3092 functions/functions.php:3925
 msgid "Visit plugin's site for detais"
 msgstr "Bezoek de site van de plugin voor meer informatie"
 
@@ -676,8 +673,8 @@ msgstr "Meer informatie over sitecodefouten..."
 #: functions/functions.php:665
 msgid "No Javascript errors found last 3000 entries of log_error file."
 msgstr ""
-"Er zijn geen Javascript-fouten gevonden in de laatste 3000 vermeldingen van het "
-"log_error-bestand."
+"Er zijn geen Javascript-fouten gevonden in de laatste 3000 vermeldingen van "
+"het log_error-bestand."
 
 #: functions/__functions.php:643 functions/_functions.php:624
 #: functions/functions.php:696
@@ -722,7 +719,7 @@ msgstr "Database-informatie"
 
 #: functions/__functions.php:694 functions/__functions.php:3782
 #: functions/_functions.php:675 functions/_functions.php:3809
-#: functions/functions.php:747 functions/functions.php:3990
+#: functions/functions.php:747 functions/functions.php:4088
 msgid "Basic Information"
 msgstr "Basis Informatie"
 
@@ -743,7 +740,7 @@ msgstr "Variabele naam"
 #: functions/_functions.php:2258 functions/_functions.php:3813
 #: functions/functions.php:752 functions/functions.php:758
 #: functions/functions.php:863 functions/functions.php:869
-#: functions/functions.php:2504 functions/functions.php:3994
+#: functions/functions.php:2602 functions/functions.php:4092
 msgid "Value"
 msgstr "Waarde"
 
@@ -887,8 +884,8 @@ msgstr "Onbekend"
 #: functions/__functions.php:1148 functions/_functions.php:1129
 #: functions/functions.php:1197
 msgid ""
-"This plugin can benchmarks your server's performance through a variety of PHP "
-"and MySql tests."
+"This plugin can benchmarks your server's performance through a variety of "
+"PHP and MySql tests."
 msgstr ""
 "Met deze plugin kunt u de prestaties van uw server testen met behulp van "
 "diverse PHP- en MySql-tests."
@@ -915,10 +912,11 @@ msgstr ""
 #: functions/__functions.php:1179 functions/_functions.php:1160
 #: functions/functions.php:1228
 msgid ""
-"In return your WordPress site receives Updated Aggregated Industry Average Data."
+"In return your WordPress site receives Updated Aggregated Industry Average "
+"Data."
 msgstr ""
-"In ruil daarvoor ontvangt uw WordPress-site bijgewerkte, geaggregeerde gegevens "
-"over het gemiddelde in de sector."
+"In ruil daarvoor ontvangt uw WordPress-site bijgewerkte, geaggregeerde "
+"gegevens over het gemiddelde in de sector."
 
 #: functions/__functions.php:1184 functions/_functions.php:1165
 #: functions/functions.php:1233
@@ -978,7 +976,8 @@ msgstr "Gegevenslengte (bij benadering)"
 #: functions/__functions.php:1391 functions/_functions.php:1372
 #: functions/functions.php:1440
 msgid "For more info about your database, look the page SHOW PHP INFO."
-msgstr "Voor meer informatie over uw database, kijk op de pagina SHOW PHP INFO."
+msgstr ""
+"Voor meer informatie over uw database, kijk op de pagina SHOW PHP INFO."
 
 #: functions/__functions.php:1526 functions/_functions.php:1507
 #: functions/functions.php:1575
@@ -986,71 +985,73 @@ msgid "Errors"
 msgstr "Fouten"
 
 #: functions/__functions.php:1531 functions/_functions.php:1512
-#: functions/functions.php:1580
+#: functions/functions.php:1583
 msgid "Your site has errors. Here are the last lines of the error log files."
 msgstr ""
-"Er zijn fouten op uw site. Hier zijn de laatste regels van de foutlogbestanden."
+"Er zijn fouten op uw site. Hier zijn de laatste regels van de "
+"foutlogbestanden."
 
 #: functions/__functions.php:1542 functions/_functions.php:1523
-#: functions/functions.php:1591
+#: functions/functions.php:1593
 msgid ""
-"Our plugin can't function as intended. Errors, including JavaScript errors, may "
-"lead to visual problems or disrupt functionality, from minor glitches to "
-"critical site failures. Promptly address these issues before continuing because "
-"these problems will persist even if you deactivate our plugin.Notice that the "
-"PHP error system does not capture JavaScript errors. Only our plugin captures "
-"them."
+"Our plugin can't function as intended. Errors, including JavaScript errors, "
+"may lead to visual problems or disrupt functionality, from minor glitches to "
+"critical site failures. Promptly address these issues before continuing "
+"because these problems will persist even if you deactivate our plugin.Notice "
+"that the PHP error system does not capture JavaScript errors. Only our "
+"plugin captures them."
 msgstr ""
-"Onze plugin kan niet functioneren zoals bedoeld. Fouten, waaronder JavaScript-"
-"fouten, kunnen leiden tot visuele problemen of de functionaliteit verstoren, "
-"van kleine storingen tot kritieke sitestoringen. Los deze problemen "
-"onmiddellijk op voordat u verdergaat, want deze problemen blijven bestaan, "
-"zelfs als u onze plugin deactiveert. Let op: het PHP-foutsysteem registreert "
-"geen JavaScript-fouten. Alleen onze plugin registreert ze."
+"Onze plugin kan niet functioneren zoals bedoeld. Fouten, waaronder "
+"JavaScript-fouten, kunnen leiden tot visuele problemen of de functionaliteit "
+"verstoren, van kleine storingen tot kritieke sitestoringen. Los deze "
+"problemen onmiddellijk op voordat u verdergaat, want deze problemen blijven "
+"bestaan, zelfs als u onze plugin deactiveert. Let op: het PHP-foutsysteem "
+"registreert geen JavaScript-fouten. Alleen onze plugin registreert ze."
 
 #: functions/__functions.php:1552 functions/_functions.php:1533
-#: functions/functions.php:1601
+#: functions/functions.php:1636
 msgid "For bigger files, download and open them in your local computer."
 msgstr ""
-"Voor grotere bestanden kunt u deze downloaden en openen op uw lokale computer."
+"Voor grotere bestanden kunt u deze downloaden en openen op uw lokale "
+"computer."
 
 #: functions/__functions.php:1559 functions/_functions.php:1540
-#: functions/functions.php:1608
+#: functions/functions.php:1646
 msgid "Learn more about errors and warnings..."
 msgstr "Meer informatie over fouten en waarschuwingen..."
 
 #: functions/__functions.php:2038 functions/_functions.php:2009
-#: functions/functions.php:2076
+#: functions/functions.php:2116
 msgid "Log Files found"
 msgstr "Logbestanden gevonden"
 
 #: functions/__functions.php:2231 functions/_functions.php:2202
-#: functions/functions.php:2448
+#: functions/functions.php:2546
 msgid "wp-config.php"
 msgstr "wp-config.php"
 
 #: functions/__functions.php:2238 functions/__functions.php:2782
 #: functions/_functions.php:2209 functions/_functions.php:2753
-#: functions/functions.php:2455 functions/functions.php:2999
+#: functions/functions.php:2553 functions/functions.php:3097
 msgid "File path:"
 msgstr "Bestandspad:"
 
 #: functions/__functions.php:2243 functions/_functions.php:2214
-#: functions/functions.php:2460
+#: functions/functions.php:2558
 msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
 msgstr ""
 "Bestand wp-config.php niet gevonden. Vraag aan uw hostingbedrijf of het "
 "verborgen is."
 
 #: functions/__functions.php:2251 functions/_functions.php:2222
-#: functions/functions.php:2468
+#: functions/functions.php:2566
 msgid "Unable to read the file wp-config.php! Ask to your hosting company."
 msgstr ""
 "Kan het bestand wp-config.php niet lezen! Vraag het aan uw hostingbedrijf."
 
 #: functions/__functions.php:2286 functions/__functions.php:3785
 #: functions/_functions.php:2257 functions/_functions.php:3812
-#: functions/functions.php:2503 functions/functions.php:3993
+#: functions/functions.php:2601 functions/functions.php:4091
 #: functions/functions_transiente_manager.php:159
 msgid "Name"
 msgstr "Naam"
@@ -1058,287 +1059,286 @@ msgstr "Naam"
 #: functions/__functions.php:2304 functions/__functions.php:2421
 #: functions/__functions.php:2583 functions/_functions.php:2275
 #: functions/_functions.php:2392 functions/_functions.php:2554
-#: functions/functions.php:2521 functions/functions.php:2638
-#: functions/functions.php:2800
+#: functions/functions.php:2619 functions/functions.php:2736
+#: functions/functions.php:2898
 msgid "Permission Scheme for WordPress"
 msgstr "Toestemmingsschema voor WordPress"
 
 #: functions/__functions.php:2306 functions/__functions.php:2423
 #: functions/__functions.php:2585 functions/_functions.php:2277
 #: functions/_functions.php:2394 functions/_functions.php:2556
-#: functions/functions.php:2523 functions/functions.php:2640
-#: functions/functions.php:2802
+#: functions/functions.php:2621 functions/functions.php:2738
+#: functions/functions.php:2900
 msgid "Typically"
 msgstr "Typisch"
 
 #: functions/__functions.php:2309 functions/__functions.php:2425
 #: functions/__functions.php:2586 functions/_functions.php:2280
 #: functions/_functions.php:2396 functions/_functions.php:2557
-#: functions/functions.php:2526 functions/functions.php:2642
-#: functions/functions.php:2803
+#: functions/functions.php:2624 functions/functions.php:2740
+#: functions/functions.php:2901
 msgid "Files"
 msgstr "Bestanden"
 
 #: functions/__functions.php:2312 functions/__functions.php:2427
 #: functions/__functions.php:2587 functions/_functions.php:2283
 #: functions/_functions.php:2398 functions/_functions.php:2558
-#: functions/functions.php:2529 functions/functions.php:2644
-#: functions/functions.php:2804
+#: functions/functions.php:2627 functions/functions.php:2742
+#: functions/functions.php:2902
 msgid "Folders"
 msgstr "Mappen"
 
 #: functions/__functions.php:2315 functions/__functions.php:2429
 #: functions/__functions.php:2588 functions/_functions.php:2286
 #: functions/_functions.php:2400 functions/_functions.php:2559
-#: functions/functions.php:2532 functions/functions.php:2646
-#: functions/functions.php:2805
+#: functions/functions.php:2630 functions/functions.php:2744
+#: functions/functions.php:2903
 msgid "File wp-config.php: 660"
 msgstr "Bestand wp-config.php: 660"
 
 #: functions/__functions.php:2320 functions/_functions.php:2291
-#: functions/functions.php:2537
+#: functions/functions.php:2635
 msgid "wp-config.php currently permissions:"
 msgstr "wp-config.php huidige rechten:"
 
 #: functions/__functions.php:2332 functions/__functions.php:2443
 #: functions/__functions.php:2602 functions/_functions.php:2303
 #: functions/_functions.php:2414 functions/_functions.php:2573
-#: functions/functions.php:2549 functions/functions.php:2660
-#: functions/functions.php:2819
+#: functions/functions.php:2647 functions/functions.php:2758
+#: functions/functions.php:2917
 msgid "Unable to read files"
 msgstr "Kan bestanden niet lezen"
 
 #: functions/__functions.php:2338 functions/__functions.php:2460
 #: functions/__functions.php:2619 functions/_functions.php:2309
 #: functions/_functions.php:2431 functions/_functions.php:2590
-#: functions/functions.php:2555 functions/functions.php:2677
-#: functions/functions.php:2836
+#: functions/functions.php:2653 functions/functions.php:2775
+#: functions/functions.php:2934
 msgid "Permissions"
 msgstr "Machtigingen"
 
 #: functions/__functions.php:2339 functions/__functions.php:2461
 #: functions/__functions.php:2620 functions/_functions.php:2310
 #: functions/_functions.php:2432 functions/_functions.php:2591
-#: functions/functions.php:2556 functions/functions.php:2678
-#: functions/functions.php:2837
+#: functions/functions.php:2654 functions/functions.php:2776
+#: functions/functions.php:2935
 msgid "Files / Folders"
 msgstr "Bestanden / Mappen"
 
 #: functions/__functions.php:2394 functions/_functions.php:2365
-#: functions/functions.php:2611
+#: functions/functions.php:2709
 msgid "Files with wrong permissions. This plugin will show max 50."
 msgstr "Bestanden met verkeerde rechten. Deze plugin toont max 50."
 
 #: functions/__functions.php:2398 functions/__functions.php:2510
 #: functions/__functions.php:2728 functions/_functions.php:2369
 #: functions/_functions.php:2481 functions/_functions.php:2699
-#: functions/functions.php:2615 functions/functions.php:2727
-#: functions/functions.php:2945
+#: functions/functions.php:2713 functions/functions.php:2825
+#: functions/functions.php:3043
 msgid "No files found with wrong permissions."
 msgstr "Er zijn geen bestanden met verkeerde rechten gevonden."
 
 #: functions/__functions.php:2407 functions/_functions.php:2378
-#: functions/functions.php:2624
+#: functions/functions.php:2722
 msgid "Folders with wrong permissions. This plugin will show max 50."
 msgstr "Mappen met verkeerde rechten. Deze plugin toont er max 50."
 
 #: functions/__functions.php:2412 functions/__functions.php:2523
 #: functions/__functions.php:2739 functions/_functions.php:2383
 #: functions/_functions.php:2494 functions/_functions.php:2710
-#: functions/functions.php:2629 functions/functions.php:2740
-#: functions/functions.php:2956
+#: functions/functions.php:2727 functions/functions.php:2838
+#: functions/functions.php:3054
 msgid "No folders found with wrong permissions."
 msgstr "Er zijn geen mappen met onjuiste rechten gevonden."
 
 #: functions/__functions.php:2432 functions/__functions.php:2591
 #: functions/_functions.php:2403 functions/_functions.php:2562
-#: functions/functions.php:2649 functions/functions.php:2808
+#: functions/functions.php:2747 functions/functions.php:2906
 msgid "wp-config.php current permissions:"
 msgstr "wp-config.php huidige rechten:"
 
 #: functions/__functions.php:2438 functions/__functions.php:2597
 #: functions/_functions.php:2409 functions/_functions.php:2568
-#: functions/functions.php:2655 functions/functions.php:2814
+#: functions/functions.php:2753 functions/functions.php:2912
 msgid "Visit plugin's site for details"
 msgstr "Bezoek de site van de plugin voor meer informatie"
 
 #: functions/__functions.php:2506 functions/__functions.php:2726
 #: functions/_functions.php:2477 functions/_functions.php:2697
-#: functions/functions.php:2723 functions/functions.php:2943
+#: functions/functions.php:2821 functions/functions.php:3041
 msgid "Files with wrong permissions."
 msgstr "Bestanden met verkeerde machtigingen."
 
 #: functions/__functions.php:2508 functions/__functions.php:2520
 #: functions/_functions.php:2479 functions/_functions.php:2491
-#: functions/functions.php:2725 functions/functions.php:2737
+#: functions/functions.php:2823 functions/functions.php:2835
 msgid "This plugin will show max 50."
 msgstr "Deze plugin toont maximaal 50."
 
 #: functions/__functions.php:2518 functions/__functions.php:2736
 #: functions/_functions.php:2489 functions/_functions.php:2707
-#: functions/functions.php:2735 functions/functions.php:2953
+#: functions/functions.php:2833 functions/functions.php:3051
 msgid "Folders with wrong permissions."
 msgstr "Mappen met verkeerde machtigingen."
 
 #: functions/__functions.php:2669 functions/_functions.php:2640
-#: functions/functions.php:2886
+#: functions/functions.php:2984
 msgid "Free version limited to a maximum of 50 files."
 msgstr "Gratis versie, beperkt tot maximaal 50 bestanden."
 
 #: functions/__functions.php:2775 functions/_functions.php:2746
-#: functions/functions.php:2992
+#: functions/functions.php:3090
 msgid ".htaccess"
 msgstr ".htaccess"
 
 #: functions/__functions.php:2786 functions/_functions.php:2757
-#: functions/functions.php:3003
+#: functions/functions.php:3101
 msgid "File .htaccess not found."
 msgstr "Bestand .htaccess niet gevonden."
 
 #: functions/__functions.php:2791 functions/_functions.php:2762
-#: functions/functions.php:3008
+#: functions/functions.php:3106
 msgid "Empty file .htaccess!"
 msgstr "Leeg bestand .htaccess!"
 
 #: functions/__functions.php:3005 functions/_functions.php:3032
-#: functions/functions.php:3222
+#: functions/functions.php:3320
 msgid "Step 1 - Check Memory"
 msgstr "Stap 1 - Controleer het geheugen"
 
 #: functions/__functions.php:3014 functions/__functions.php:3108
 #: functions/_functions.php:3041 functions/_functions.php:3135
-#: functions/functions.php:3231 functions/functions.php:3325
+#: functions/functions.php:3329 functions/functions.php:3423
 msgid "General Failure (7) to get memory information."
 msgstr "Algemeen falen (7) bij het verkrijgen van geheugeninformatie."
 
 #: functions/__functions.php:3025 functions/_functions.php:3052
-#: functions/functions.php:3242
+#: functions/functions.php:3340
 msgid ""
 "Your site free memory is too low and can happens memory fault error, also "
 "without install our plugin."
 msgstr ""
-"Er is te weinig vrij geheugen op uw site en er kan een geheugenfout optreden, "
-"ook als u onze plugin niet installeert."
+"Er is te weinig vrij geheugen op uw site en er kan een geheugenfout "
+"optreden, ook als u onze plugin niet installeert."
 
 #: functions/__functions.php:3029 functions/_functions.php:3056
-#: functions/functions.php:3246
+#: functions/functions.php:3344
 msgid "The WordPress Memory Limit is"
 msgstr "De geheugenlimiet van WordPress is"
 
 #: functions/__functions.php:3032 functions/_functions.php:3059
-#: functions/functions.php:3249
+#: functions/functions.php:3347
 msgid "The WordPress Memory Usage is"
 msgstr "Het geheugengebruik van WordPress is"
 
 #: functions/__functions.php:3042 functions/__functions.php:3045
 #: functions/__functions.php:3117 functions/_functions.php:3069
 #: functions/_functions.php:3072 functions/_functions.php:3144
-#: functions/functions.php:3259 functions/functions.php:3262
-#: functions/functions.php:3334
+#: functions/functions.php:3357 functions/functions.php:3360
+#: functions/functions.php:3432
 msgid "The free memory now is"
 msgstr "Het vrije geheugen is nu"
 
 #: functions/__functions.php:3055 functions/__functions.php:3093
 #: functions/__functions.php:3125 functions/_functions.php:3082
 #: functions/_functions.php:3120 functions/_functions.php:3152
-#: functions/functions.php:3272 functions/functions.php:3310
-#: functions/functions.php:3342
+#: functions/functions.php:3370 functions/functions.php:3408
+#: functions/functions.php:3440
 msgid "For more details, visit our site"
 msgstr "Voor meer informatie, bezoek onze site"
 
 #: functions/__functions.php:3058 functions/__functions.php:3096
 #: functions/__functions.php:3128 functions/_functions.php:3085
 #: functions/_functions.php:3123 functions/_functions.php:3155
-#: functions/functions.php:3275 functions/functions.php:3313
-#: functions/functions.php:3345
+#: functions/functions.php:3373 functions/functions.php:3411
+#: functions/functions.php:3443
 msgid "WP MEMORY (Free WordPress Plugin to Fix Low Memory Limit)"
 msgstr ""
 "WP MEMORY (Gratis WordPress-plug-in om een laag geheugenlimiet te verhelpen)"
 
 #: functions/__functions.php:3066 functions/_functions.php:3093
-#: functions/functions.php:3283
+#: functions/functions.php:3381
 msgid "Unable to get ini_get('memory_limit')"
 msgstr "Kan ini_get('memory_limit') niet ophalen"
 
 #: functions/__functions.php:3071 functions/_functions.php:3098
-#: functions/functions.php:3288
+#: functions/functions.php:3386
 msgid "Unable to get memory_get_usage() "
 msgstr "Kan memory_get_usage() niet ophalen"
 
 #: functions/__functions.php:3075 functions/_functions.php:3102
-#: functions/functions.php:3292
+#: functions/functions.php:3390
 msgid "Memory Usage is not Numeric (3)"
 msgstr "Geheugengebruik is niet numeriek (3)"
 
 #: functions/__functions.php:3079 functions/_functions.php:3106
-#: functions/functions.php:3296
+#: functions/functions.php:3394
 msgid "Memory Usage < than 1'"
 msgstr "Geheugengebruik < dan 1'"
 
 #: functions/__functions.php:3084 functions/_functions.php:3111
-#: functions/functions.php:3301
-#, fuzzy
+#: functions/functions.php:3399
 #| msgid "Possible error: On file wp-config.php memory symbol should be M."
 msgid ""
-"Possible error: On file wp-config.php memory symbol should be M or MB or G or "
-"GB."
+"Possible error: On file wp-config.php memory symbol should be M or MB or G "
+"or GB."
 msgstr ""
-"Mogelijke fout: In het bestand wp-config.php zou het geheugensymbool M moeten "
-"zijn."
+"Mogelijke fout: In het bestand wp-config.php moet het geheugensymbool M of "
+"MB of G of GB zijn."
 
 #: functions/__functions.php:3089 functions/_functions.php:3116
-#: functions/functions.php:3306
+#: functions/functions.php:3404
 msgid "For example,  define(\"WP_MEMORY_LIMIT\", \"256M\"); "
 msgstr "Bijvoorbeeld define(\"WP_MEMORY_LIMIT\", \"256M\");"
 
 #: functions/__functions.php:3103 functions/_functions.php:3130
-#: functions/functions.php:3320
+#: functions/functions.php:3418
 msgid "Memory Limit out of range. (6)"
 msgstr "Geheugenlimiet buiten bereik. (6)"
 
 #: functions/__functions.php:3115 functions/_functions.php:3142
-#: functions/functions.php:3332
+#: functions/functions.php:3430
 msgid "No Memory Problems found."
 msgstr "Er zijn geen geheugenproblemen gevonden."
 
 #: functions/__functions.php:3137 functions/_functions.php:3164
-#: functions/functions.php:3354
+#: functions/functions.php:3452
 msgid "Step 2 - Check for Javascript Errors"
 msgstr "Stap 2 - Controleer op Javascript-fouten"
 
 #: functions/__functions.php:3141 functions/_functions.php:3168
-#: functions/functions.php:3358
+#: functions/functions.php:3456
 msgid "Javascript is NOT working in your site and/or with your browser!"
 msgstr "Javascript werkt NIET op uw site en/of met uw browser!"
 
 #: functions/__functions.php:3148 functions/_functions.php:3175
-#: functions/functions.php:3365
+#: functions/functions.php:3463
 msgid "Step 3 - Check for Hosting Resources"
 msgstr "Stap 3 - Controleer op hostingbronnen"
 
 #: functions/__functions.php:3151 functions/_functions.php:3178
-#: functions/functions.php:3368
+#: functions/functions.php:3466
 msgid "Maybe Your server is not Linux"
 msgstr "Misschien is uw server geen Linux"
 
 #: functions/__functions.php:3153 functions/__functions.php:3167
 #: functions/_functions.php:3180 functions/_functions.php:3194
-#: functions/functions.php:3370 functions/functions.php:3385
+#: functions/functions.php:3468 functions/functions.php:3483
 msgid "and this plugin requires Linux."
 msgstr "en deze plugin vereist Linux."
 
 #: functions/__functions.php:3156 functions/_functions.php:3183
-#: functions/functions.php:3373
+#: functions/functions.php:3471
 msgid "Your Hosting Company dont have the constant: PHP_OS_FAMILY defined."
 msgstr "Uw hostingbedrijf heeft de constante: PHP_OS_FAMILY niet gedefinieerd."
 
 #: functions/__functions.php:3165 functions/_functions.php:3192
-#: functions/functions.php:3383
+#: functions/functions.php:3481
 msgid "Your server is not Linux"
 msgstr "Je server is geen Linux"
 
 #: functions/__functions.php:3169 functions/_functions.php:3196
-#: functions/functions.php:3387
+#: functions/functions.php:3485
 msgid "Your server is:"
 msgstr "Uw server is:"
 
@@ -1347,422 +1347,440 @@ msgstr "Uw server is:"
 #: functions/__functions.php:3297 functions/_functions.php:3206
 #: functions/_functions.php:3223 functions/_functions.php:3242
 #: functions/_functions.php:3303 functions/_functions.php:3324
-#: functions/functions.php:3398 functions/functions.php:3414
-#: functions/functions.php:3432 functions/functions.php:3490
-#: functions/functions.php:3510
+#: functions/functions.php:3496 functions/functions.php:3512
+#: functions/functions.php:3530 functions/functions.php:3588
+#: functions/functions.php:3608
 msgid "Plugin requirement:"
 msgstr "Pluginvereisten:"
 
 #: functions/__functions.php:3182 functions/_functions.php:3209
-#: functions/functions.php:3401
+#: functions/functions.php:3499
 msgid ""
 "Open_basedir restriction in effect. Talk with your hosting and request to "
 "disable it."
 msgstr ""
-"Open_basedir-beperking van kracht. Neem contact op met uw hosting en vraag om "
-"deze uit te schakelen."
+"Open_basedir-beperking van kracht. Neem contact op met uw hosting en vraag "
+"om deze uit te schakelen."
 
 #: functions/__functions.php:3199 functions/_functions.php:3226
-#: functions/functions.php:3417
+#: functions/functions.php:3515
 msgid ""
-"PHP function sys_getloadavg not enabled. Talk with your hosting and request to "
-"enable it."
+"PHP function sys_getloadavg not enabled. Talk with your hosting and request "
+"to enable it."
 msgstr ""
-"PHP-functie sys_getloadavg niet ingeschakeld. Neem contact op met uw hosting en "
-"vraag om deze in te schakelen."
+"PHP-functie sys_getloadavg niet ingeschakeld. Neem contact op met uw hosting "
+"en vraag om deze in te schakelen."
 
 #: functions/__functions.php:3218 functions/_functions.php:3245
-#: functions/functions.php:3435
+#: functions/functions.php:3533
 msgid ""
-"/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable it."
+"/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
+"it."
 msgstr ""
-"/proc/cpuinfo is niet leesbaar. Neem contact op met uw hosting en vraag om het "
-"in te schakelen."
+"/proc/cpuinfo is niet leesbaar. Neem contact op met uw hosting en vraag om "
+"het in te schakelen."
 
 #: functions/__functions.php:3233 functions/_functions.php:3260
-#: functions/functions.php:3449
+#: functions/functions.php:3547
 msgid ""
 "Request to your Hosting enable the PHP functions disk_free_space() and "
 "disk_total_space()"
 msgstr ""
-"Vraag aan uw hosting om de PHP-functies disk_free_space() en disk_total_space() "
-"in te schakelen"
+"Vraag aan uw hosting om de PHP-functies disk_free_space() en "
+"disk_total_space() in te schakelen"
 
 #: functions/__functions.php:3257 functions/_functions.php:3284
-#: functions/functions.php:3472
+#: functions/functions.php:3570
 msgid ""
 "Request to your Hosting to enable the PHP function shell_exec() because is "
 "returning NULL."
 msgstr ""
-"Vraag uw hostingprovider om de PHP-functie shell_exec() in te schakelen, omdat "
-"deze NULL retourneert."
+"Vraag uw hostingprovider om de PHP-functie shell_exec() in te schakelen, "
+"omdat deze NULL retourneert."
 
 #: functions/__functions.php:3280 functions/_functions.php:3307
-#: functions/functions.php:3494
+#: functions/functions.php:3592
 msgid ""
 "/proc/stat doesn't readable. Talk with your hosting and request to enable it."
 msgstr ""
-"/proc/stat is niet leesbaar. Neem contact op met uw hosting en vraag om het in "
-"te schakelen."
+"/proc/stat is niet leesbaar. Neem contact op met uw hosting en vraag om het "
+"in te schakelen."
 
 #: functions/__functions.php:3300 functions/_functions.php:3327
-#: functions/functions.php:3513
+#: functions/functions.php:3611
 msgid ""
-"/etc/os-release doesn't readable. Talk with your hosting and request to enable "
-"it."
+"/etc/os-release doesn't readable. Talk with your hosting and request to "
+"enable it."
 msgstr ""
 "/etc/os-release is niet leesbaar. Neem contact op met uw hosting en vraag om "
 "het in te schakelen."
 
 #: functions/__functions.php:3316 functions/_functions.php:3343
-#: functions/functions.php:3528
+#: functions/functions.php:3626
 msgid "PHP Version 7.0 or bigger is required. My version:"
 msgstr "PHP-versie 7.0 of hoger is vereist. Mijn versie:"
 
 #: functions/__functions.php:3337 functions/_functions.php:3364
-#: functions/functions.php:3549
+#: functions/functions.php:3647
 msgid "Your hosting is blocking the PHP function sys_getloadavg()."
 msgstr "Uw hosting blokkeert de PHP-functie sys_getloadavg()."
 
 #: functions/__functions.php:3348 functions/_functions.php:3375
-#: functions/functions.php:3560
+#: functions/functions.php:3658
 msgid ""
-"if you can see warnings or empty fields on your dashboard, means your hosting "
-"company is blocking some php functions."
+"if you can see warnings or empty fields on your dashboard, means your "
+"hosting company is blocking some php functions."
 msgstr ""
-"Als u waarschuwingen of lege velden op uw dashboard ziet, betekent dit dat uw "
-"hostingbedrijf bepaalde PHP-functies blokkeert."
+"Als u waarschuwingen of lege velden op uw dashboard ziet, betekent dit dat "
+"uw hostingbedrijf bepaalde PHP-functies blokkeert."
 
 #: functions/__functions.php:3355 functions/_functions.php:3382
-#: functions/functions.php:3567
+#: functions/functions.php:3665
 msgid "Looks like our plugin can works fine with your server configuration."
 msgstr "Het lijkt erop dat onze plugin prima werkt met uw serverconfiguratie."
 
 #: functions/__functions.php:3363 functions/_functions.php:3390
-#: functions/functions.php:3575
-msgid "If we are wrong, please, contact our support at: https://wptoolsplugin.com"
+#: functions/functions.php:3673
+msgid ""
+"If we are wrong, please, contact our support at: https://wptoolsplugin.com"
 msgstr ""
-"Als we het mis hebben, neem dan contact op met onze ondersteuning via: https://"
-"wptoolsplugin.com"
+"Als we het mis hebben, neem dan contact op met onze ondersteuning via: "
+"https://wptoolsplugin.com"
 
 #: functions/__functions.php:3529 functions/_functions.php:3556
-#: functions/functions.php:3737
+#: functions/functions.php:3835
 msgid ""
-"The `.maintenance` file in WordPress signals maintenance mode during updates, "
-"displaying a message to visitors. Created in the root directory, it is "
-"automatically removed after updates are completed."
+"The `.maintenance` file in WordPress signals maintenance mode during "
+"updates, displaying a message to visitors. Created in the root directory, it "
+"is automatically removed after updates are completed."
 msgstr ""
-"Het `.maintenance`-bestand in WordPress signaleert de onderhoudsmodus tijdens "
-"updates en toont een bericht aan bezoekers. Het is gemaakt in de root-directory "
-"en wordt automatisch verwijderd nadat de updates zijn voltooid."
+"Het `.maintenance`-bestand in WordPress signaleert de onderhoudsmodus "
+"tijdens updates en toont een bericht aan bezoekers. Het is gemaakt in de "
+"root-directory en wordt automatisch verwijderd nadat de updates zijn "
+"voltooid."
 
 #: functions/__functions.php:3531 functions/_functions.php:3558
-#: functions/functions.php:3739
+#: functions/functions.php:3837
 msgid ""
-"Manual removal may be necessary if the file persists, causing the site to stay "
-"in maintenance mode."
+"Manual removal may be necessary if the file persists, causing the site to "
+"stay in maintenance mode."
 msgstr ""
-"Handmatig verwijderen kan nodig zijn als het bestand blijft bestaan en de site "
-"in de onderhoudsmodus blijft staan."
+"Handmatig verwijderen kan nodig zijn als het bestand blijft bestaan en de "
+"site in de onderhoudsmodus blijft staan."
 
 #: functions/__functions.php:3535 functions/_functions.php:3562
-#: functions/functions.php:3743
+#: functions/functions.php:3841
 msgid "Learn more about..."
 msgstr "Meer informatie..."
 
 #: functions/__functions.php:3542 functions/__functions.php:3568
 #: functions/_functions.php:3569 functions/_functions.php:3595
-#: functions/functions.php:3750 functions/functions.php:3777
+#: functions/functions.php:3848 functions/functions.php:3875
 msgid "The .maintenance file does not exist."
 msgstr "Het .maintenance-bestand bestaat niet."
 
 #: functions/__functions.php:3559 functions/_functions.php:3586
-#: functions/functions.php:3768
+#: functions/functions.php:3866
 msgid "The .maintenance file has been successfully deleted."
 msgstr "Het .maintenance-bestand is succesvol verwijderd."
 
 #: functions/__functions.php:3562 functions/_functions.php:3589
-#: functions/functions.php:3771
+#: functions/functions.php:3869
 msgid "'Unable to delete the .maintenance file."
 msgstr "'Kan het bestand .maintenance niet verwijderen."
 
 #: functions/__functions.php:3563 functions/_functions.php:3590
-#: functions/functions.php:3772
+#: functions/functions.php:3870
 msgid "'Permission issue or file in use."
 msgstr "'Machtigingsprobleem of bestand in gebruik."
 
 #: functions/__functions.php:3581 functions/_functions.php:3608
-#: functions/functions.php:3790
+#: functions/functions.php:3888
 msgid "Error: Invalid nonce."
 msgstr "Fout: Ongeldige nonce."
 
 #: functions/__functions.php:3617 functions/_functions.php:3644
-#: functions/functions.php:3825
+#: functions/functions.php:3923
 msgid "Robots TXT"
 msgstr "Robots-TXT"
 
 #: functions/__functions.php:3625 functions/_functions.php:3652
-#: functions/functions.php:3833
+#: functions/functions.php:3931
 msgid "File Path"
 msgstr "Bestandspad"
 
 #: functions/__functions.php:3638 functions/_functions.php:3665
-#: functions/functions.php:3846
+#: functions/functions.php:3944
 msgid "Cannot create BKP file"
 msgstr "Kan BKP-bestand niet aanmaken"
 
 #: functions/__functions.php:3644 functions/_functions.php:3671
-#: functions/functions.php:3852
+#: functions/functions.php:3950
 msgid "Cannot write to BKP file"
 msgstr "Kan niet naar BKP-bestand schrijven"
 
 #: functions/__functions.php:3650 functions/_functions.php:3677
-#: functions/functions.php:3858
+#: functions/functions.php:3956
 msgid "Cannot open file to save"
 msgstr "Kan bestand niet openen om op te slaan"
 
 #: functions/__functions.php:3656 functions/_functions.php:3683
-#: functions/functions.php:3864
+#: functions/functions.php:3962
 msgid "Cannot write to file"
 msgstr "Kan niet naar bestand schrijven"
 
 #: functions/__functions.php:3663 functions/_functions.php:3690
-#: functions/functions.php:3871
+#: functions/functions.php:3969
 msgid "Success, file robots.txt updated!"
 msgstr "Succes, robots.txt-bestand bijgewerkt!"
 
 #: functions/__functions.php:3665 functions/_functions.php:3692
-#: functions/functions.php:3873
+#: functions/functions.php:3971
 msgid "Backup file created:"
 msgstr "Back-upbestand gemaakt:"
 
 #: functions/__functions.php:3670 functions/_functions.php:3697
-#: functions/functions.php:3878
+#: functions/functions.php:3976
 msgid "If you save again, will overwrite the backup."
 msgstr "Als u opnieuw opslaat, wordt de back-up overschreven."
 
 #: functions/__functions.php:3677 functions/_functions.php:3704
-#: functions/functions.php:3885
+#: functions/functions.php:3983
 msgid "Fail to Get Post Content!"
 msgstr "Berichtinhoud ophalen mislukt!"
 
 #: functions/__functions.php:3683 functions/_functions.php:3710
-#: functions/functions.php:3891
+#: functions/functions.php:3989
 msgid "File not found."
 msgstr "Bestand niet gevonden."
 
 #: functions/__functions.php:3686 functions/__functions.php:3718
 #: functions/_functions.php:3713 functions/_functions.php:3745
-#: functions/functions.php:3894 functions/functions.php:3926
+#: functions/functions.php:3992 functions/functions.php:4024
 msgid "To create, fill out the form below and click SAVE"
 msgstr "Om te creëren, vul het onderstaande formulier in en klik op OPSLAAN"
 
 #: functions/__functions.php:3707 functions/_functions.php:3734
-#: functions/functions.php:3915
-msgid "File not writable. Check file permissions and user own. Unable to edit it."
+#: functions/functions.php:4013
+msgid ""
+"File not writable. Check file permissions and user own. Unable to edit it."
 msgstr ""
 "Bestand niet beschrijfbaar. Controleer bestandsrechten en eigen rechten van "
 "gebruiker. Kan het niet bewerken."
 
 #: functions/__functions.php:3715 functions/_functions.php:3742
-#: functions/functions.php:3923
+#: functions/functions.php:4021
 msgid "Empty file robots.txt!"
 msgstr "Leeg het robots.txt-bestand!"
 
 #: functions/__functions.php:3722 functions/_functions.php:3749
-#: functions/functions.php:3930
+#: functions/functions.php:4028
 msgid "Edit the file and click SAVE"
 msgstr "Bewerk het bestand en klik op OPSLAAN"
 
 #: functions/__functions.php:3737 functions/_functions.php:3764
-#: functions/functions.php:3945
+#: functions/functions.php:4043
 msgid ""
-"Suggestion: Before to click SAVE, copy the content to your clipboard. Just in "
-"case to fail to save."
+"Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
+"in case to fail to save."
 msgstr ""
-"Suggestie: Kopieer de inhoud naar uw klembord voordat u op OPSLAAN klikt. Voor "
-"het geval dat het opslaan mislukt."
+"Suggestie: Kopieer de inhoud naar uw klembord voordat u op OPSLAAN klikt. "
+"Voor het geval dat het opslaan mislukt."
 
 #: functions/__functions.php:3749 functions/_functions.php:3776
-#: functions/functions.php:3957
+#: functions/functions.php:4055
 msgid "(Save Option Button available in Premium Version)"
 msgstr "(Opslagoptieknop beschikbaar in Premium-versie)"
 
 #: functions/__functions.php:3779 functions/_functions.php:3806
-#: functions/functions.php:3987
+#: functions/functions.php:4085
 msgid "PHP Information"
 msgstr "PHP-informatie"
 
 #: functions/__functions.php:3787 functions/_functions.php:3814
-#: functions/functions.php:3995
+#: functions/functions.php:4093
 msgid "Current Modified Value"
 msgstr "Huidige gewijzigde waarde"
 
 #: functions/__functions.php:3795 functions/_functions.php:3822
-#: functions/functions.php:4003
+#: functions/functions.php:4101
 msgid "Server Timezone"
 msgstr "Servertijdzone"
 
 #: functions/__functions.php:3814 functions/_functions.php:3841
-#: functions/functions.php:4022
+#: functions/functions.php:4120
 msgid "Server Time"
 msgstr "Servertijd"
 
 #: functions/__functions.php:3820 functions/_functions.php:3847
-#: functions/functions.php:4028
+#: functions/functions.php:4126
 msgid "PHP Max Memory Limit"
 msgstr "PHP Max geheugenlimiet"
 
 #: functions/__functions.php:3829 functions/_functions.php:3856
-#: functions/functions.php:4037
+#: functions/functions.php:4135
 msgid "PHP Max Execution Time"
 msgstr "Maximale uitvoeringstijd PHP"
 
 #: functions/__functions.php:3832 functions/__functions.php:3836
 #: functions/_functions.php:3859 functions/_functions.php:3863
-#: functions/functions.php:4040 functions/functions.php:4044
+#: functions/functions.php:4138 functions/functions.php:4142
 msgid "sec"
 msgstr "sec"
 
 #: functions/__functions.php:3840 functions/_functions.php:3867
-#: functions/functions.php:4048
+#: functions/functions.php:4146
 msgid "PHP Max Upload Size"
 msgstr "Maximale uploadgrootte PHP"
 
 #: functions/__functions.php:3847 functions/_functions.php:3874
-#: functions/functions.php:4055
+#: functions/functions.php:4153
 msgid "PHP Max Post Size"
 msgstr "PHP Maximale berichtgrootte"
 
 #: functions/__functions.php:3851 functions/_functions.php:3878
-#: functions/functions.php:4059
+#: functions/functions.php:4157
 msgid "PHP Max Input Vars"
 msgstr "PHP Maximale invoervariabelen"
 
 #: functions/__functions.php:3859 functions/_functions.php:3886
-#: functions/functions.php:4067
+#: functions/functions.php:4165
 msgid "Check how to do it at our blog."
 msgstr "Kijk op onze blog hoe je dat doet."
 
 #: functions/__functions.php:3866 functions/_functions.php:3893
-#: functions/functions.php:4074
+#: functions/functions.php:4172
 msgid "Disabled Functions"
 msgstr "Uitgeschakelde functies"
 
 #: functions/__functions.php:3872 functions/_functions.php:3899
-#: functions/functions.php:4080
+#: functions/functions.php:4178
 msgid "Nothing"
 msgstr "Niets"
 
 #: functions/__functions.php:3881 functions/_functions.php:3908
-#: functions/functions.php:4089
+#: functions/functions.php:4187
 msgid "Extensions Loaded"
 msgstr "Extensies geladen"
 
 #: functions/__functions.php:3896 functions/_functions.php:3923
-#: functions/functions.php:4104
+#: functions/functions.php:4202
 msgid "Complete Information"
 msgstr "Volledige informatie"
 
 #: functions/__functions.php:3964 functions/_functions.php:3991
-#: functions/functions.php:4169
+#: functions/functions.php:4267
 msgid "WP Memory Test"
 msgstr "WP Geheugentest"
 
 #: functions/__functions.php:4009 functions/_functions.php:4036
-#: functions/functions.php:4214
+#: functions/functions.php:4312
 msgid "Visit the"
 msgstr "Bezoek de"
 
 #: functions/__functions.php:4013 functions/_functions.php:4040
-#: functions/functions.php:4218
+#: functions/functions.php:4316
 msgid "Site Health screen"
 msgstr "Site Gezondheidsscherm"
 
 #: functions/__functions.php:4015 functions/_functions.php:4042
-#: functions/functions.php:4220
+#: functions/functions.php:4318
 msgid "to perform checks now."
 msgstr "om nu controles uit te voeren."
 
 #: functions/__functions.php:4020 functions/_functions.php:4047
-#: functions/functions.php:4225
+#: functions/functions.php:4323
 msgid "Great job! Your site currently passes all site health"
 msgstr "Goed gedaan! Uw site voldoet momenteel aan alle site health-tests."
 
 #: functions/__functions.php:4026 functions/_functions.php:4053
-#: functions/functions.php:4231
+#: functions/functions.php:4329
 msgid "checks"
 msgstr "controles"
 
 #: functions/__functions.php:4031 functions/_functions.php:4058
-#: functions/functions.php:4236
+#: functions/functions.php:4334
 msgid "Your site has"
 msgstr "Uw site heeft"
 
 #: functions/__functions.php:4035 functions/_functions.php:4062
-#: functions/functions.php:4240
+#: functions/functions.php:4338
 msgid "a critical issue"
 msgstr "een kritisch probleem"
 
 #: functions/__functions.php:4038 functions/__functions.php:4051
 #: functions/_functions.php:4065 functions/_functions.php:4078
-#: functions/functions.php:4243 functions/functions.php:4256
+#: functions/functions.php:4341 functions/functions.php:4354
 msgid "that should be addressed as soon as possible."
 msgstr "dat moet zo snel mogelijk worden aangepakt."
 
 #: functions/__functions.php:4044 functions/_functions.php:4071
-#: functions/functions.php:4249
+#: functions/functions.php:4347
 msgid "Your site has a"
 msgstr "Uw site heeft een"
 
 #: functions/__functions.php:4048 functions/_functions.php:4075
-#: functions/functions.php:4253
+#: functions/functions.php:4351
 msgid "critical issues"
 msgstr "kritieke kwesties"
 
 #: functions/__functions.php:4056 functions/__functions.php:4065
 #: functions/_functions.php:4083 functions/_functions.php:4092
-#: functions/functions.php:4261 functions/functions.php:4270
+#: functions/functions.php:4359 functions/functions.php:4368
 msgid "Looking good, but"
 msgstr "Ziet er goed uit, maar"
 
 #: functions/__functions.php:4060 functions/_functions.php:4087
-#: functions/functions.php:4265
+#: functions/functions.php:4363
 msgid "one thing"
 msgstr "één ding"
 
 #: functions/__functions.php:4062 functions/__functions.php:4071
 #: functions/_functions.php:4089 functions/_functions.php:4098
-#: functions/functions.php:4267 functions/functions.php:4276
+#: functions/functions.php:4365 functions/functions.php:4374
 msgid "can be improved."
 msgstr "kan verbeterd worden."
 
 #: functions/__functions.php:4069 functions/_functions.php:4096
-#: functions/functions.php:4274
+#: functions/functions.php:4372
 msgid "some things"
 msgstr "sommige dingen"
 
 #: functions/__functions.php:4098 functions/_functions.php:4125
-#: functions/functions.php:4303
+#: functions/functions.php:4401
 msgid "Memory Issue"
 msgstr "Geheugenprobleem"
 
 #: functions/__functions.php:4161 functions/_functions.php:4186
-#: functions/functions.php:4366
+#: functions/functions.php:4464
 msgid "Errors have been detected on this site. "
 msgstr "Er zijn fouten op deze site ontdekt. "
 
 #: functions/__functions.php:4165 functions/__functions.php:4196
 #: functions/_functions.php:4190 functions/_functions.php:4221
-#: functions/functions.php:4370 functions/functions.php:4401
+#: functions/functions.php:4468 functions/functions.php:4499
 #: functions/functions_cron_manager.php:58
 msgid "Learn more"
 msgstr "Meer informatie"
 
 #: functions/__functions.php:4187 functions/_functions.php:4212
-#: functions/functions.php:4392
+#: functions/functions.php:4490
 msgid "Memory issues have been detected on this site. "
 msgstr "Er zijn geheugenproblemen gedetecteerd op deze site."
+
+#: functions/functions.php:1608
+msgid "Artificial Intelligence Support Chat for Issues and Solutions"
+msgstr ""
+"Ondersteuningschat voor kunstmatige intelligentie voor problemen en "
+"oplossingen"
+
+#: functions/functions.php:1617
+msgid "Enter your message..."
+msgstr "Voer uw bericht in..."
+
+#: functions/functions.php:1618
+msgid "Send"
+msgstr "Versturen"
 
 #: functions/functions_cron_manager.php:35
 msgid "Cron Jobs"
@@ -1794,8 +1812,8 @@ msgstr ""
 
 #: functions/functions_cron_manager.php:55
 msgid ""
-"This is often caused by plugins that don't clean up their cron events when you "
-"deactivate them."
+"This is often caused by plugins that don't clean up their cron events when "
+"you deactivate them."
 msgstr ""
 "Dit wordt vaak veroorzaakt doordat plugins hun cron-gebeurtenissen niet "
 "opruimen wanneer u ze deactiveert."
@@ -1825,8 +1843,8 @@ msgid ""
 "Option to delete all Transients or expired Transients available in Premium "
 "Version."
 msgstr ""
-"Optie om alle Transients of verlopen Transients te verwijderen is beschikbaar "
-"in de Premium-versie."
+"Optie om alle Transients of verlopen Transients te verwijderen is "
+"beschikbaar in de Premium-versie."
 
 #: functions/functions_transiente_manager.php:44
 msgid "Delete All Transients"
@@ -1867,44 +1885,43 @@ msgid "Expired"
 msgstr "Verlopen"
 
 #: guide/guide.php:9
-#, fuzzy
 #| msgid ""
 #| "This plugin has currently more than 44 tools to help you to manage your "
-#| "WordPress site, included the dashboard with CPU/Disk/Memory usage charts and "
-#| "more info."
+#| "WordPress site, included the dashboard with CPU/Disk/Memory usage charts "
+#| "and more info."
 msgid ""
 "This plugin has currently more than 48 tools to help you to manage your "
 "WordPress site, included the dashboard with CPU/Disk/Memory usage charts and "
 "more info."
 msgstr ""
-"Deze plugin bevat momenteel meer dan 44 hulpmiddelen waarmee u uw WordPress-"
-"site kunt beheren, waaronder een dashboard met grafieken over CPU-/schijf-/"
+"Deze plugin bevat momenteel meer dan 48 tools waarmee u uw WordPress-site "
+"kunt beheren, inclusief het dashboard met grafieken over CPU-/schijf-/"
 "geheugengebruik en meer informatie."
 
 #: guide/guide.php:12
 msgid ""
-"Show the PHP errors, limited to 200 last errors (to avoid freeze your browser). "
-"Just click Show PHP Erros voice at the menu"
+"Show the PHP errors, limited to 200 last errors (to avoid freeze your "
+"browser). Just click Show PHP Erros voice at the menu"
 msgstr ""
-"Toon de PHP-fouten, beperkt tot de laatste 200 fouten (om te voorkomen dat uw "
-"browser vastloopt). Klik gewoon op Toon PHP-fouten stem in het menu"
+"Toon de PHP-fouten, beperkt tot de laatste 200 fouten (om te voorkomen dat "
+"uw browser vastloopt). Klik gewoon op Toon PHP-fouten stem in het menu"
 
 #: guide/guide.php:14
 msgid ""
 "Increase the memory limit, time limit and max upload file size limit without "
 "editing any WordPress or PHP files. Just Click General Settings Tab"
 msgstr ""
-"Verhoog de geheugenlimiet, tijdslimiet en maximale uploadbestandsgroottelimiet "
-"zonder WordPress- of PHP-bestanden te bewerken. Klik gewoon op het tabblad "
-"Algemene instellingen"
+"Verhoog de geheugenlimiet, tijdslimiet en maximale "
+"uploadbestandsgroottelimiet zonder WordPress- of PHP-bestanden te bewerken. "
+"Klik gewoon op het tabblad Algemene instellingen"
 
 #: guide/guide.php:16
 msgid ""
 "Show the PHPINFO (PHP info) with a lot of info about your PHP server "
 "configuration, also server IP."
 msgstr ""
-"Toon de PHPINFO (PHP-info) met veel informatie over de configuratie van uw PHP-"
-"server, inclusief het IP-adres van de server."
+"Toon de PHPINFO (PHP-info) met veel informatie over de configuratie van uw "
+"PHP-server, inclusief het IP-adres van de server."
 
 #: guide/guide.php:18
 msgid ""
@@ -1923,28 +1940,30 @@ msgstr ""
 
 #: guide/guide.php:22 settings/options/plugin_options_tabbed.php:209
 msgid ""
-"Disables the default notification email sent by a site after an automatic core, "
-"theme or plugin update."
+"Disables the default notification email sent by a site after an automatic "
+"core, theme or plugin update."
 msgstr ""
-"Schakelt de standaardmeldingsmail uit die door een site wordt verzonden na een "
-"automatische kern-, thema- of plug-inupdate."
+"Schakelt de standaardmeldingsmail uit die door een site wordt verzonden na "
+"een automatische kern-, thema- of plug-inupdate."
 
 #: guide/guide.php:24
 msgid "Add Google Analytics GA Tracking ID (Univeral Analytics) on footer."
 msgstr ""
-"Voeg Google Analytics GA Tracking ID (Univeral Analytics) toe aan de voettekst."
+"Voeg Google Analytics GA Tracking ID (Univeral Analytics) toe aan de "
+"voettekst."
 
 #: guide/guide.php:26
 msgid ""
-"Add Google Search Central (formerly Google Webmasters) HTML TAG and Bing Meta "
-"Name"
+"Add Google Search Central (formerly Google Webmasters) HTML TAG and Bing "
+"Meta Name"
 msgstr ""
-"Voeg Google Search Central (voorheen Google Webmasters) HTML TAG en Bing Meta "
-"Name toe"
+"Voeg Google Search Central (voorheen Google Webmasters) HTML TAG en Bing "
+"Meta Name toe"
 
 #: guide/guide.php:28 settings/options/plugin_options_tabbed.php:251
 msgid "Alert on Top Admin Bar if WordPress Debug is active."
-msgstr "Waarschuwing in de bovenste beheerdersbalk als WordPress Debug actief is."
+msgstr ""
+"Waarschuwing in de bovenste beheerdersbalk als WordPress Debug actief is."
 
 #: guide/guide.php:30 settings/options/plugin_options_tabbed.php:260
 msgid "Hide Admin Bar from non Administrators."
@@ -1957,7 +1976,8 @@ msgstr "Deactiveer Lazy Load-functionaliteit (toegevoegd in WP-versie 5.5)"
 #: guide/guide.php:34
 msgid "Deactivate Emojis functionality (support for emoji's in older browsers)"
 msgstr ""
-"Deactiveer Emoji-functionaliteit (ondersteuning voor emoji's in oudere browsers)"
+"Deactiveer Emoji-functionaliteit (ondersteuning voor emoji's in oudere "
+"browsers)"
 
 #: guide/guide.php:36
 msgid "Page Load Info: Number of SQL queries per page and page load time."
@@ -1970,8 +1990,8 @@ msgid ""
 "Record and send emails notifications when PHP notices, warnings and errors "
 "happens."
 msgstr ""
-"Registreer en verstuur e-mailmeldingen wanneer PHP meldingen, waarschuwingen en "
-"fouten opmerkt."
+"Registreer en verstuur e-mailmeldingen wanneer PHP meldingen, waarschuwingen "
+"en fouten opmerkt."
 
 #: guide/guide.php:40
 msgid "Show and edit rebots.txt."
@@ -1987,8 +2007,8 @@ msgid ""
 "Bypass WordPress debug (if WP_DEBUG = false) and show errors and warnings on "
 "screen. (Don't use in production!)"
 msgstr ""
-"Omzeil WordPress debug (als WP_DEBUG = false) en toon fouten en waarschuwingen "
-"op het scherm. (Niet gebruiken in productie!)"
+"Omzeil WordPress debug (als WP_DEBUG = false) en toon fouten en "
+"waarschuwingen op het scherm. (Niet gebruiken in productie!)"
 
 #: guide/guide.php:46
 msgid "Show Cron Jobs table."
@@ -2004,8 +2024,8 @@ msgstr "Toon bestand wp-config.php"
 
 #: guide/guide.php:54
 msgid ""
-"Restores the previous (\"classic\") widgets settings screens and disables the "
-"block editor from managing widgets."
+"Restores the previous (\"classic\") widgets settings screens and disables "
+"the block editor from managing widgets."
 msgstr ""
 "Herstelt de vorige (\"klassieke\") widgetinstellingenschermen en schakelt de "
 "blokeditor uit voor het beheren van widgets."
@@ -2015,8 +2035,8 @@ msgid ""
 "Disable the WP Admin Bar / Toolbar on the frontend of sites. (it does not "
 "affect the dashboard)"
 msgstr ""
-"Schakel de WP Admin Bar / Toolbar uit op de frontend van sites. (Dit heeft geen "
-"invloed op het dashboard)"
+"Schakel de WP Admin Bar / Toolbar uit op de frontend van sites. (Dit heeft "
+"geen invloed op het dashboard)"
 
 #: guide/guide.php:58
 msgid "Button to Show Errors on Admin Bar (Also Javascript errors!)"
@@ -2037,8 +2057,8 @@ msgstr "Verwijder de bestanden readme.html en license.txt in de hoofdmap."
 #: guide/guide.php:66
 msgid "Show disk size, disk used, disk free and Top Bigger Folders."
 msgstr ""
-"Toon schijfgrootte, gebruikte schijfruimte, vrije schijfruimte en de grootste "
-"mappen."
+"Toon schijfgrootte, gebruikte schijfruimte, vrije schijfruimte en de "
+"grootste mappen."
 
 #: guide/guide.php:68
 msgid "Remove WP icon from admin toolbar (top left)."
@@ -2057,8 +2077,8 @@ msgid ""
 "Show the mySQL  (database info) with a lot of info about your mySQL server "
 "configuration."
 msgstr ""
-"Toon de mySQL (database-info) met veel informatie over de configuratie van uw "
-"mySQL-server."
+"Toon de mySQL (database-info) met veel informatie over de configuratie van "
+"uw mySQL-server."
 
 #: guide/guide.php:76
 msgid "Disable javascript console logs for non administrators."
@@ -2074,8 +2094,8 @@ msgstr "Transients weergeven en verwijderen."
 
 #: guide/guide.php:82
 msgid ""
-"Enables the WordPress database tools to optimize and repair InnoDB and MyISAM "
-"database tables."
+"Enables the WordPress database tools to optimize and repair InnoDB and "
+"MyISAM database tables."
 msgstr ""
 "Hiermee kunnen de WordPress-databasetools InnoDB- en MyISAM-databasetabellen "
 "optimaliseren en repareren."
@@ -2113,10 +2133,9 @@ msgid "Show Database charset (character_set_system)."
 msgstr "Toon database-tekenset (character_set_system)."
 
 #: guide/guide.php:103
-#, fuzzy
 #| msgid "Show and edit rebots.txt."
 msgid "Show Robots.txt."
-msgstr "Toon en bewerk rebots.txt."
+msgstr "Robots.txt weergeven."
 
 #: guide/guide.php:105
 msgid "Erase file .maintenance."
@@ -2125,8 +2144,8 @@ msgstr "Wis bestand .maintenance."
 #: guide/guide.php:107
 msgid "Fix Incompatible Archive issue when installing plugins from zip files."
 msgstr ""
-"Los het probleem met het incompatibele archief op bij het installeren van plug-"
-"ins vanuit zip-bestanden."
+"Los het probleem met het incompatibele archief op bij het installeren van "
+"plug-ins vanuit zip-bestanden."
 
 #: guide/guide.php:109
 msgid "Improve Dashboard Performance and Clean up WordPress admin dashboard."
@@ -2150,17 +2169,64 @@ msgstr "Bezoek onze site voor meer informatie."
 msgid "That is all. Enjoy."
 msgstr "Dat is alles. Geniet ervan."
 
+#: includes/chat/class_bill_chat.php:42
+msgid "Chat messages reset successfully."
+msgstr "Chatberichten succesvol gereset."
+
+#: includes/chat/class_bill_chat.php:43
+msgid "Error resetting chat messages."
+msgstr "Fout bij het opnieuw instellen van chatberichten."
+
+#: includes/chat/class_bill_chat.php:44
+msgid "Invalid message received:"
+msgstr "Ongeldig bericht ontvangen:"
+
+#: includes/chat/class_bill_chat.php:45
+msgid "Invalid response format:"
+msgstr "Ongeldige antwoordopmaak:"
+
+#: includes/chat/class_bill_chat.php:46
+msgid "Error processing server response:"
+msgstr "Fout bij het verwerken van serverrespons:"
+
+#: includes/chat/class_bill_chat.php:47
+msgid "Response is not valid JSON."
+msgstr "Het antwoord is geen geldige JSON."
+
+#: includes/chat/class_bill_chat.php:48
+msgid "AJAX request failed:"
+msgstr "AJAX-verzoek mislukt:"
+
+#: includes/chat/class_bill_chat.php:49
+msgid "Error sending the message. Please try again later."
+msgstr "Fout bij het verzenden van het bericht. Probeer het later opnieuw."
+
+#: includes/chat/class_bill_chat.php:50
+msgid "Please enter a message!"
+msgstr "Voer een bericht in!"
+
+#: includes/chat/class_bill_chat.php:210
+msgid ""
+"Error contacting the Artificial Intelligence (API). Please try again later."
+msgstr ""
+"Fout bij het contacteren van de Artificial Intelligence (API). Probeer het "
+"later opnieuw."
+
+#: includes/chat/class_bill_chat.php:229
+msgid "Error to get response from AI source!"
+msgstr "Fout bij het ontvangen van antwoord van AI-bron!"
+
 #: includes/feedback-last/feedback-last.php:246
 msgid "We're sorry to hear that you're leaving."
 msgstr "We vinden het jammer dat je weggaat."
 
 #: includes/feedback-last/feedback-last.php:252
 msgid ""
-"Thank you for using our products. Before you deactivate, we'd like to offer a "
-"few options to improve your experience:"
+"Thank you for using our products. Before you deactivate, we'd like to offer "
+"a few options to improve your experience:"
 msgstr ""
-"Bedankt voor het gebruiken van onze producten. Voordat u ze deactiveert, willen "
-"we u graag een paar opties aanbieden om uw ervaring te verbeteren:"
+"Bedankt voor het gebruiken van onze producten. Voordat u ze deactiveert, "
+"willen we u graag een paar opties aanbieden om uw ervaring te verbeteren:"
 
 #: includes/feedback-last/feedback-last.php:255
 msgid "Explore more plugins - Discover our other free plugins and themes."
@@ -2173,7 +2239,8 @@ msgstr "Ondersteuning - Hulp nodig? Bezoek onze ondersteuningspagina."
 #: includes/feedback-last/feedback-last.php:259
 msgid "Cancel deactivation - Changed your mind? Keep using this plugin."
 msgstr ""
-"Deactivering annuleren - Van gedachten veranderd? Blijf deze plugin gebruiken."
+"Deactivering annuleren - Van gedachten veranderd? Blijf deze plugin "
+"gebruiken."
 
 #: includes/feedback-last/feedback-last.php:261
 msgid "Deactivate - Proceed with deactivation."
@@ -2181,8 +2248,8 @@ msgstr "Deactiveren - Ga verder met deactiveren."
 
 #: includes/feedback-last/feedback-last.php:264
 msgid ""
-"Trusted by over 50,000 users, our 20+ free plugins and 6 themes can supercharge "
-"your site's security, functionality, and backups."
+"Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
+"supercharge your site's security, functionality, and backups."
 msgstr ""
 "Onze 20+ gratis plug-ins en 6 thema's worden vertrouwd door meer dan 50.000 "
 "gebruikers en kunnen de beveiliging, functionaliteit en back-ups van uw site "
@@ -2222,9 +2289,9 @@ msgid ""
 "your site due to insufficient resources. Promptly address this issue before "
 "continuing."
 msgstr ""
-"Uw WordPress-geheugenlimiet is te laag, wat kan leiden tot kritieke problemen "
-"op uw site vanwege onvoldoende bronnen. Los dit probleem onmiddellijk op "
-"voordat u verdergaat."
+"Uw WordPress-geheugenlimiet is te laag, wat kan leiden tot kritieke "
+"problemen op uw site vanwege onvoldoende bronnen. Los dit probleem "
+"onmiddellijk op voordat u verdergaat."
 
 #: includes/feedback/activated-manager.php:217
 msgid "CONTINUE"
@@ -2255,11 +2322,11 @@ msgstr "en Instellingen, Probleemoplossingspagina en Ondersteuningspagina."
 
 #: includes/help/help.php:52
 msgid ""
-"Here are the link to our free blog with a lot of tips and tricks and about how "
-"to use this tool."
+"Here are the link to our free blog with a lot of tips and tricks and about "
+"how to use this tool."
 msgstr ""
-"Hier is de link naar onze gratis blog met veel tips en trucs en informatie over "
-"het gebruik van deze tool."
+"Hier is de link naar onze gratis blog met veel tips en trucs en informatie "
+"over het gebruik van deze tool."
 
 #: includes/help/help.php:57 includes/help/help.php:79
 msgid "Overview"
@@ -2270,16 +2337,16 @@ msgid ""
 "In the SETTINGS screen you will find many tabs, with useful information as "
 "StartUP Guide."
 msgstr ""
-"In het scherm INSTELLINGEN vindt u veel tabbladen met nuttige informatie, zoals "
-"de Opstartgids."
+"In het scherm INSTELLINGEN vindt u veel tabbladen met nuttige informatie, "
+"zoals de Opstartgids."
 
 #: includes/help/help.php:69
 msgid ""
 "You will find also fields and controls to configurate the plugin. Take some "
 "time to open each tab and mark that you want."
 msgstr ""
-"U vindt ook velden en bedieningselementen om de plugin te configureren. Neem de "
-"tijd om elk tabblad te openen en markeer wat u wilt."
+"U vindt ook velden en bedieningselementen om de plugin te configureren. Neem "
+"de tijd om elk tabblad te openen en markeer wat u wilt."
 
 #: includes/help/help.php:73
 msgid ""
@@ -2315,21 +2382,22 @@ msgstr "Opstartgids"
 
 #: settings/options/plugin_options_tabbed.php:26
 msgid ""
-"You can increase the memory limit, time limit and max upload filesize without "
-"editing any PHP or WordPress files. If your PHP init define a bigger amount, "
-"our plugin doesn't reduce it. Choose Select to don't change it."
+"You can increase the memory limit, time limit and max upload filesize "
+"without editing any PHP or WordPress files. If your PHP init define a bigger "
+"amount, our plugin doesn't reduce it. Choose Select to don't change it."
 msgstr ""
 "U kunt de geheugenlimiet, tijdslimiet en maximale uploadbestandsgrootte "
 "verhogen zonder PHP- of WordPress-bestanden te bewerken. Als uw PHP-"
-"initialisatie een grotere hoeveelheid definieert, vermindert onze plugin deze "
-"niet. Kies Selecteren om deze niet te wijzigen."
+"initialisatie een grotere hoeveelheid definieert, vermindert onze plugin "
+"deze niet. Kies Selecteren om deze niet te wijzigen."
 
 #: settings/options/plugin_options_tabbed.php:28
 msgid "Then click SAVE CHANGES."
 msgstr "Klik vervolgens op WIJZIGINGEN OPSLAAN."
 
 #: settings/options/plugin_options_tabbed.php:32
-#: settings/options/plugin_options_tabbed.php:412 settings/page-builders.php:317
+#: settings/options/plugin_options_tabbed.php:412
+#: settings/page-builders.php:317
 msgid "General Settings"
 msgstr "Algemene instellingen"
 
@@ -2433,7 +2501,8 @@ msgstr "1GB"
 
 #: settings/options/plugin_options_tabbed.php:175
 msgid "Disable WordPress Native Sitemap Automatic Creation."
-msgstr "Schakel het automatisch aanmaken van een native sitemap in WordPress uit."
+msgstr ""
+"Schakel het automatisch aanmaken van een native sitemap in WordPress uit."
 
 #: settings/options/plugin_options_tabbed.php:177
 msgid "Yes, disable all"
@@ -2531,7 +2600,8 @@ msgid "Deactivate Lazy Load functionality (added in WP version 5.5)."
 msgstr "Deactiveer de Lazy Load-functionaliteit (toegevoegd in WP-versie 5.5)."
 
 #: settings/options/plugin_options_tabbed.php:278
-msgid "Deactivate Emojis functionality (support for emoji's in older browsers)?"
+msgid ""
+"Deactivate Emojis functionality (support for emoji's in older browsers)?"
 msgstr ""
 "Emoji-functionaliteit deactiveren (ondersteuning voor emoji's in oudere "
 "browsers)?"
@@ -2561,16 +2631,18 @@ msgid ""
 "Disables the Admin Bar from the frontend only? (it does not affect the "
 "dashboard)"
 msgstr ""
-"Schakelt de beheerdersbalk alleen uit vanaf de frontend? (heeft geen invloed op "
-"het dashboard)"
+"Schakelt de beheerdersbalk alleen uit vanaf de frontend? (heeft geen invloed "
+"op het dashboard)"
 
 #: settings/options/plugin_options_tabbed.php:314
 msgid "Restores the previous (\"classic\") WordPress widgets settings screens?"
-msgstr "Herstelt de vorige (\"klassieke\") WordPress-widgetinstellingenschermen?"
+msgstr ""
+"Herstelt de vorige (\"klassieke\") WordPress-widgetinstellingenschermen?"
 
 #: settings/options/plugin_options_tabbed.php:323
 msgid "Show Errors Button (also Javascript errors) on Admin Toolbar?"
-msgstr "Knop Fouten weergeven (ook Javascript-fouten) op de beheerderswerkbalk?"
+msgstr ""
+"Knop Fouten weergeven (ook Javascript-fouten) op de beheerderswerkbalk?"
 
 #: settings/options/plugin_options_tabbed.php:332
 msgid "Replace WordPress logo at login form. Just paste a URL of the new logo."
@@ -2604,27 +2676,28 @@ msgstr "Schakel pingbacks naar uw eigen site uit (zelf-pingback)."
 
 #: settings/options/plugin_options_tabbed.php:389
 msgid ""
-"Resolve 'Incompatible Archive' issue when installing plugins from zip files by "
-"using PclZip instead of ZipArchive. Consider using this option only for new "
-"plugin installations."
+"Resolve 'Incompatible Archive' issue when installing plugins from zip files "
+"by using PclZip instead of ZipArchive. Consider using this option only for "
+"new plugin installations."
 msgstr ""
-"Los het probleem 'Incompatible Archive' op bij het installeren van plugins van "
-"zip-bestanden met behulp van PclZip in plaats van ZipArchive. Overweeg deze "
-"optie alleen te gebruiken voor nieuwe plugin-installaties."
+"Los het probleem 'Incompatible Archive' op bij het installeren van plugins "
+"van zip-bestanden met behulp van PclZip in plaats van ZipArchive. Overweeg "
+"deze optie alleen te gebruiken voor nieuwe plugin-installaties."
 
 #: settings/options/plugin_options_tabbed.php:402
 msgid ""
-"Improve Dashboard Performance by prevent WordPress from fetching news and Clean "
-"up WordPress admin dashboard."
+"Improve Dashboard Performance by prevent WordPress from fetching news and "
+"Clean up WordPress admin dashboard."
 msgstr ""
-"Verbeter de prestaties van het dashboard door te voorkomen dat WordPress nieuws "
-"ophaalt en door het WordPress-beheerdersdashboard op te schonen."
+"Verbeter de prestaties van het dashboard door te voorkomen dat WordPress "
+"nieuws ophaalt en door het WordPress-beheerdersdashboard op te schonen."
 
 #: settings/options/plugin_options_tabbed.php:427
-msgid "Show Server Load Average (CPU Usage) for the last minute at top admin bar."
+msgid ""
+"Show Server Load Average (CPU Usage) for the last minute at top admin bar."
 msgstr ""
-"Geef het gemiddelde servergebruik (CPU-gebruik) van de laatste minuut weer in "
-"de bovenste beheerbalk."
+"Geef het gemiddelde servergebruik (CPU-gebruik) van de laatste minuut weer "
+"in de bovenste beheerbalk."
 
 #: settings/options/plugin_options_tabbed.php:429
 #: settings/options/plugin_options_tabbed.php:447
@@ -2640,15 +2713,16 @@ msgid ""
 "If you can see always 0 (zero) or wait is because we are unable to get this "
 "info from your server. Server requirements:"
 msgstr ""
-"Als u altijd 0 (nul) ziet of wacht, komt dat omdat we deze informatie niet van "
-"uw server kunnen krijgen. Serververeisten:"
+"Als u altijd 0 (nul) ziet of wacht, komt dat omdat we deze informatie niet "
+"van uw server kunnen krijgen. Serververeisten:"
 
 #: settings/options/plugin_options_tabbed.php:435
 msgid ""
-"shell_exec enabled on your PHP (ask for your hosting to enable it if necessary."
+"shell_exec enabled on your PHP (ask for your hosting to enable it if "
+"necessary."
 msgstr ""
-"shell_exec ingeschakeld op uw PHP (vraag uw hostingprovider om dit indien nodig "
-"in te schakelen)."
+"shell_exec ingeschakeld op uw PHP (vraag uw hostingprovider om dit indien "
+"nodig in te schakelen)."
 
 #: settings/options/plugin_options_tabbed.php:437
 msgid "Server Files Readable: /proc/cpuinfo and /proc/stat."
@@ -2663,7 +2737,8 @@ msgid "Higher numbers represent a problem or an overloaded machine."
 msgstr "Hogere getallen duiden op een probleem of een overbelaste machine."
 
 #: settings/options/plugin_options_tabbed.php:444
-#: settings/options/plugin_options_tabbed.php:547 settings/page-builders.php:318
+#: settings/options/plugin_options_tabbed.php:547
+#: settings/page-builders.php:318
 msgid "Processor Load"
 msgstr "Processorbelasting"
 
@@ -2673,8 +2748,8 @@ msgstr "Schijfgebruik weergeven."
 
 #: settings/options/plugin_options_tabbed.php:449
 msgid ""
-"We use the PHP function disk_total_space(). Talk with your hosting if doesn't "
-"work."
+"We use the PHP function disk_total_space(). Talk with your hosting if "
+"doesn't work."
 msgstr ""
 "We gebruiken de PHP-functie disk_total_space(). Neem contact op met uw "
 "hostingprovider als het niet werkt."
@@ -2693,8 +2768,8 @@ msgstr "Schijfvrij: "
 
 #: settings/options/plugin_options_tabbed.php:472
 msgid ""
-"We need to use the PHP functions disk_total_space() and disk_free_space(). Talk "
-"with your hosting to enable them."
+"We need to use the PHP functions disk_total_space() and disk_free_space(). "
+"Talk with your hosting to enable them."
 msgstr ""
 "We moeten de PHP-functies disk_total_space() en disk_free_space() gebruiken. "
 "Neem contact op met uw hostingprovider om deze in te schakelen."
@@ -2726,7 +2801,8 @@ msgstr "Schijfgebruik"
 #: settings/options/plugin_options_tabbed.php:541
 msgid "Enable to show Server Percentage Load at Top Admin Bar?"
 msgstr ""
-"Kan ik het percentage serverbelasting weergeven in de bovenste beheerdersbalk?"
+"Kan ik het percentage serverbelasting weergeven in de bovenste "
+"beheerdersbalk?"
 
 #: settings/options/plugin_options_tabbed.php:543
 #: settings/options/plugin_options_tabbed.php:640
@@ -2764,8 +2840,8 @@ msgstr "U kunt onze gratis plug-in gebruiken"
 
 #: settings/options/plugin_options_tabbed.php:583
 msgid ""
-"to receive tips about how enhance your website's memory performance and address "
-"any issues that may arise."
+"to receive tips about how enhance your website's memory performance and "
+"address any issues that may arise."
 msgstr ""
 "om tips te ontvangen over hoe u de geheugenprestaties van uw website kunt "
 "verbeteren en eventuele problemen kunt oplossen."
@@ -2784,7 +2860,8 @@ msgstr "Uw server-IP-adres:"
 
 #: settings/options/plugin_options_tabbed.php:619
 msgid "WordPress will send email only when PHP fatal errors happens."
-msgstr "WordPress verstuurt alleen e-mails wanneer er fatale PHP-fouten optreden."
+msgstr ""
+"WordPress verstuurt alleen e-mails wanneer er fatale PHP-fouten optreden."
 
 #: settings/options/plugin_options_tabbed.php:621
 msgid ""
@@ -2799,17 +2876,19 @@ msgid ""
 "For the weekly email, the default setting is \"Yes.\" Choose \"No\" if you "
 "prefer not to receive it."
 msgstr ""
-"Voor de wekelijkse e-mail is de standaardinstelling 'Ja'. Kies 'Nee' als u deze "
-"e-mail niet wilt ontvangen."
+"Voor de wekelijkse e-mail is de standaardinstelling 'Ja'. Kies 'Nee' als u "
+"deze e-mail niet wilt ontvangen."
 
 #: settings/options/plugin_options_tabbed.php:625
-msgid "Left Blank to use your default Wordpress email.Then, click save changes."
+msgid ""
+"Left Blank to use your default Wordpress email.Then, click save changes."
 msgstr ""
 "Laat dit veld leeg om uw standaard Wordpress-e-mailadres te gebruiken. Klik "
 "vervolgens op Wijzigingen opslaan."
 
 #: settings/options/plugin_options_tabbed.php:628
-#: settings/options/plugin_options_tabbed.php:664 settings/page-builders.php:319
+#: settings/options/plugin_options_tabbed.php:664
+#: settings/page-builders.php:319
 msgid "Notifications"
 msgstr "Meldingen"
 
@@ -2826,16 +2905,17 @@ msgid ""
 "Receive a weekly email notification providing a summary of the number of "
 "notices, warnings, or errors that occurred?"
 msgstr ""
-"Wilt u een wekelijkse e-mailmelding ontvangen met een overzicht van het aantal "
-"meldingen, waarschuwingen of fouten dat is opgetreden?"
+"Wilt u een wekelijkse e-mailmelding ontvangen met een overzicht van het "
+"aantal meldingen, waarschuwingen of fouten dat is opgetreden?"
 
 #: settings/options/plugin_options_tabbed.php:656
 msgid ""
-"Receive a weekly email with a summary of my website's page load times?  (Alert "
-"only if average exceeds 3 seconds.)"
+"Receive a weekly email with a summary of my website's page load times?  "
+"(Alert only if average exceeds 3 seconds.)"
 msgstr ""
-"Ontvang ik een wekelijkse e-mail met een overzicht van de laadtijden van mijn "
-"website? (Alleen een waarschuwing als het gemiddelde hoger is dan 3 seconden.)"
+"Ontvang ik een wekelijkse e-mail met een overzicht van de laadtijden van "
+"mijn website? (Alleen een waarschuwing als het gemiddelde hoger is dan 3 "
+"seconden.)"
 
 #: settings/options/plugin_options_tabbed.php:678
 msgid "More Useful Tools"
@@ -2858,8 +2938,8 @@ msgid ""
 "Paste below the Item Purchase Code received by email from us when you bought "
 "the premium version."
 msgstr ""
-"Plak hieronder de aankoopcode voor het artikel die u per e-mail van ons heeft "
-"ontvangen toen u de premiumversie kocht."
+"Plak hieronder de aankoopcode voor het artikel die u per e-mail van ons "
+"heeft ontvangen toen u de premiumversie kocht."
 
 #: settings/options/plugin_options_tabbed.php:705
 msgid "After that, click SAVE CHANGES Button."
@@ -2872,3 +2952,67 @@ msgstr "Premiumversie geactiveerd!"
 #: settings/options/plugin_options_tabbed.php:724
 msgid "Purchase Code:"
 msgstr "Aankoopcode:"
+
+#: wptools.php:1960 wptools.php:1961
+msgid "MU Plugins"
+msgstr "MU-plug-ins"
+
+#: wptools.php:1974
+msgid "Loaded MU Plugins"
+msgstr "Geladen MU-plug-ins"
+
+#: wptools.php:1977
+msgid ""
+"MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
+"They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be "
+"activated or deactivated through the admin panel. The premium version of our "
+"plugin WP Tools allows you to activate and deactivate them."
+msgstr ""
+"MU-plugins (Must-Use Plugins) zijn plugins die automatisch worden geladen. "
+"Ze worden opgeslagen in een specifieke map (`wp-content/mu-plugins`) en "
+"kunnen niet worden geactiveerd of gedeactiveerd via het admin-paneel. De "
+"premiumversie van onze plugin WP Tools stelt u in staat om ze te activeren "
+"en deactiveren."
+
+#: wptools.php:1999
+msgid "Author:"
+msgstr "Auteur:"
+
+#: wptools.php:2004
+#| msgid "Support Site"
+msgid "Author Site"
+msgstr "Auteur Site"
+
+#: wptools.php:2009
+#| msgid "PHP Version"
+msgid "Version:"
+msgstr "Versie:"
+
+#: wptools.php:2013
+#| msgid "Table Name"
+msgid "File Name:"
+msgstr "Bestandsnaam:"
+
+#: wptools.php:2017
+#| msgid "File Path"
+msgid "File Path:"
+msgstr "Bestandspad:"
+
+#: wptools.php:2023
+msgid "Last Modified:"
+msgstr "Laatst gewijzigd:"
+
+#: wptools.php:2025
+#| msgid "Site Name unavailable"
+msgid "Modification date not available."
+msgstr "Wijzigingsdatum niet beschikbaar."
+
+#: wptools.php:2036
+#| msgid "Just Deactivate"
+msgid "Status: Activated"
+msgstr "Status: Geactiveerd"
+
+#: wptools.php:2044
+#| msgid "Just Deactivate"
+msgid "Status: Deactivated"
+msgstr "Status: Gedeactiveerd"

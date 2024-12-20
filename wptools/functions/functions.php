@@ -1598,6 +1598,39 @@ function wptools_options()
         //end 2023
 
         echo "</center>";
+
+
+
+        ?>
+    <!-- chat -->
+    <div id="chat-box">
+        <div id="chat-header">
+            <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools");?></h2>
+        </div>
+        <div id="gif-container">
+            <div class="spinner999"></div>
+        </div> <!-- Onde o efeito será exibido -->
+        <div id="chat-messages"></div>
+        <div id="error-message" style="display:none;"></div> <!-- Mensagem de erro -->
+    
+        <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
+        <button type="submit"><?php echo esc_attr__('Send', 'wptools'); ?></button>
+    
+        </form>
+    </div>
+
+<?php
+
+//
+//
+//
+//
+//
+
+
+
+
         echo "<h4>";
         echo esc_attr__(
             "For bigger files, download and open them in your local computer.",
@@ -1617,6 +1650,8 @@ function wptools_options()
     echo "<br />";
 
     echo "</h4>";
+
+
 
     //var_export($wptools_folders);
 

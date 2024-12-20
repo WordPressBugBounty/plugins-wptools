@@ -3,7 +3,7 @@ Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.7
-Stable tag: 4.73
+Stable tag: 4.75
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -332,7 +332,12 @@ These are the terms of use for <a href="https://siterightaway.net/terms-of-use-o
 
 To learn more details about the wptools plugin, visit the <a href="https://wptoolsplugin.com/">plugin site</a>.
 
+== External service ==
+When using our chat, only some information about issues, such as your language and data from the Diagnose tab, may be sent to our server. We do not share, publish, or disclose any information with third parties.
 
+== External service (1) ==
+The Stop Bad Bots plugin will retrieve tips and news from our site BillMinozzi.com. This information will be displayed in the plugin dashboard, in the right-hand column under the title "Tips and News." No data is sent to our server. Learn about the terms of use for our plugins and themes at this link:
+https://siterightaway.net/terms-of-use-of-our-plugins-and-themes/
 
 === changelog ===
 This file contains changelog entries.

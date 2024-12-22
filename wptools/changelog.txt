@@ -1,6 +1,7 @@
 === WP TOOLS ===
 
 This file contains changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
+4.77  2024-12-22 - Added chat with IA on deactivation to help
 4.76  2024-12-21 - Fixed warning about textdomain
 4.74/75  2024-12-20 - Added chat with IA
 4.72/73  2024-11-19 - One more tool: show MU Plugins

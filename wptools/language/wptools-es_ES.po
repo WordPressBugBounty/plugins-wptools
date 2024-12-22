@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 13:58+0000\n"
-"PO-Revision-Date: 2024-12-20 14:07+0000\n"
+"POT-Creation-Date: 2024-12-22 10:02+0000\n"
+"PO-Revision-Date: 2024-12-22 10:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -18,7 +18,7 @@ msgstr ""
 "esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: _wptools.php:169 wptools.php:171
+#: _wptools.php:169 wptools.php:173
 msgid ""
 "Unable to remove file read.me and/or license.txt. Talk with your hosting "
 "company."
@@ -26,89 +26,89 @@ msgstr ""
 "No se puede eliminar el archivo read.me y/o license.txt. Hable con su "
 "empresa de alojamiento."
 
-#: _wptools.php:292 _wptools.php:342 wptools.php:296 wptools.php:346
+#: _wptools.php:292 _wptools.php:342 wptools.php:298 wptools.php:348
 msgid "Site Errors"
 msgstr "Errores del sitio"
 
-#: _wptools.php:843 wptools.php:859
+#: _wptools.php:843 wptools.php:860
 msgid "Page Load Info: "
 msgstr "Información sobre la carga de la página: "
 
-#: _wptools.php:845 wptools.php:861
+#: _wptools.php:845 wptools.php:862
 msgid "queries and loaded in"
 msgstr "consultas y cargado en"
 
-#: _wptools.php:847 wptools.php:863
+#: _wptools.php:847 wptools.php:864
 msgid "seconds"
 msgstr "segundos"
 
 #: _wptools.php:872 _wptools.php:875 _wptools.php:1480 _wptools.php:1483
-#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:889
-#: wptools.php:892 wptools.php:1541 wptools.php:1544 wptools.php:1547
-#: wptools.php:1660 wptools.php:1663
+#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:890
+#: wptools.php:893 wptools.php:1542 wptools.php:1545 wptools.php:1548
+#: wptools.php:1661 wptools.php:1664
 msgid "Site Name unavailable"
 msgstr "Nombre del sitio no disponible"
 
-#: _wptools.php:882 wptools.php:899
+#: _wptools.php:882 wptools.php:900
 msgid "Notification about errors and warnings at: "
 msgstr "Notificación sobre errores y advertencias en: "
 
-#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:900
-#: wptools.php:1559 wptools.php:1679
+#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:901
+#: wptools.php:1560 wptools.php:1680
 msgid "This email was sent from your website"
 msgstr "Este correo electrónico fue enviado desde su sitio web"
 
-#: _wptools.php:884 _wptools.php:1617 wptools.php:901 wptools.php:1680
+#: _wptools.php:884 _wptools.php:1617 wptools.php:902 wptools.php:1681
 msgid "by the wpTools plugin."
 msgstr "por el plugin wpTools."
 
-#: _wptools.php:885 wptools.php:902
+#: _wptools.php:885 wptools.php:903
 msgid "Date"
 msgstr "Fecha"
 
-#: _wptools.php:886 wptools.php:903
+#: _wptools.php:886 wptools.php:904
 msgid "Errors and Warnings:"
 msgstr "Errores y advertencias:"
 
-#: _wptools.php:892 wptools.php:909
+#: _wptools.php:892 wptools.php:910
 msgid "You can stop emails at the Notifications Tab."
 msgstr "Puede detener los correos electrónicos en la pestaña Notificaciones."
 
-#: _wptools.php:893 _wptools.php:1504 wptools.php:910 wptools.php:1565
+#: _wptools.php:893 _wptools.php:1504 wptools.php:911 wptools.php:1566
 msgid "Dashboard => WP tools=> Settings"
 msgstr "Panel de control => WP Tools => Configuración"
 
-#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1120
+#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1121
 msgid "Dashboard"
 msgstr "Escritorio"
 
-#: _wptools.php:1346 wptools.php:1406
+#: _wptools.php:1346 wptools.php:1407
 msgid "WP Tools found errors on your site"
 msgstr "WP Tools encontró errores en su sitio"
 
-#: _wptools.php:1349 wptools.php:1409
+#: _wptools.php:1349 wptools.php:1410
 msgid "Critical"
 msgstr "Urgente"
 
-#: _wptools.php:1354 wptools.php:1414
+#: _wptools.php:1354 wptools.php:1415
 msgid "Code and hosting errors can destroy your site and the user experience."
 msgstr ""
 "Los errores de código y de alojamiento pueden destruir su sitio y la "
 "experiencia del usuario."
 
-#: _wptools.php:1361 wptools.php:1421
+#: _wptools.php:1361 wptools.php:1422
 msgid "Visit the WP Tools show errors page"
 msgstr "Visita la página de errores de WP Tools"
 
-#: _wptools.php:1495 wptools.php:1556
+#: _wptools.php:1495 wptools.php:1557
 msgid "Hello"
 msgstr "Hola"
 
-#: _wptools.php:1497 wptools.php:1558
+#: _wptools.php:1497 wptools.php:1559
 msgid "Weekly summary of issues on the site: "
 msgstr "Resumen semanal de ediciones del sitio: "
 
-#: _wptools.php:1499 wptools.php:1560
+#: _wptools.php:1499 wptools.php:1561
 msgid ""
 "This is a weekly summary of errors, warnings, or notices that occurred on "
 "your site assisted by the wpTools plugin."
@@ -116,34 +116,33 @@ msgstr ""
 "Este es un resumen semanal de errores, advertencias o avisos que ocurrieron "
 "en su sitio con la ayuda del complemento wpTools."
 
-#: _wptools.php:1500 wptools.php:1561
+#: _wptools.php:1500 wptools.php:1562
 msgid "Total number of issues"
 msgstr "Número total de problemas"
 
-#: _wptools.php:1501 _wptools.php:1614 wptools.php:1562 wptools.php:1677
+#: _wptools.php:1501 _wptools.php:1614 wptools.php:1563 wptools.php:1678
 msgid "Please visit your site for more details:"
 msgstr "Visite nuestro sitio web para obtener más detalles:"
 
-#: _wptools.php:1502 _wptools.php:1615 wptools.php:1563 wptools.php:1678
+#: _wptools.php:1502 _wptools.php:1615 wptools.php:1564 wptools.php:1679
 msgid "Dashboard => wpTools => Dashboard"
 msgstr "Panel de control => WP Tools => Configuración"
 
-#: _wptools.php:1503 _wptools.php:1620 wptools.php:1564 wptools.php:1683
+#: _wptools.php:1503 _wptools.php:1620 wptools.php:1565 wptools.php:1684
 msgid "You can stop weekly emails at the Notifications Tab:"
 msgstr ""
 "Puede detener los correos electrónicos semanales en la pestaña "
 "Notificaciones:"
 
-#: _wptools.php:1609 wptools.php:1672
+#: _wptools.php:1609 wptools.php:1673
 msgid "Weekly summary of Page Load on the site: "
 msgstr "Resumen semanal de ediciones del sitio:"
 
-#: _wptools.php:1610 includes/feedback-last/feedback-last.php:248
-#: wptools.php:1673
+#: _wptools.php:1610 wptools.php:1674
 msgid "Hello,"
 msgstr "Hola,"
 
-#: _wptools.php:1611 wptools.php:1674
+#: _wptools.php:1611 wptools.php:1675
 msgid ""
 "This is a weekly summary of Page Load seconds that occurred on your site "
 "assisted by the wpTools plugin:"
@@ -151,11 +150,11 @@ msgstr ""
 "Este es un resumen semanal de los segundos de carga de página que se "
 "produjeron en su sitiocon la ayuda del complemento wpTools:"
 
-#: _wptools.php:1612 wptools.php:1675
+#: _wptools.php:1612 wptools.php:1676
 msgid "Weekly Page Load Time:"
 msgstr "Tiempo de carga de página semanal:"
 
-#: _wptools.php:1613 wptools.php:1676
+#: _wptools.php:1613 wptools.php:1677
 msgid ""
 "Google recommends that the page loading time be less than 3 seconds. A "
 "faster-loading website is more likely to rank higher, potentially attracting "
@@ -165,11 +164,11 @@ msgstr ""
 "segundos. Es más probable que un sitio web que se carga más rápido tenga una "
 "clasificación más alta, lo que podría atraer a más visitantes."
 
-#: _wptools.php:1618 wptools.php:1681
+#: _wptools.php:1618 wptools.php:1682
 msgid "Date:"
 msgstr "Fecha:"
 
-#: _wptools.php:1621 wptools.php:1684
+#: _wptools.php:1621 wptools.php:1685
 msgid "Dashboard => WP tools => Settings"
 msgstr "Panel de control => WP Tools => Configuración"
 
@@ -427,7 +426,6 @@ msgstr ""
 "mientras trabajamos en ello. No dudes en volver a consultar más tarde."
 
 #: dashboard/mybanners.php:20
-#| msgid "Premium Features"
 msgid "Get More Features"
 msgstr "Obtenga más funciones"
 
@@ -440,16 +438,10 @@ msgid "Enhance Your Site"
 msgstr "Mejore su sitio"
 
 #: dashboard/mybanners.php:41
-#| msgid ""
-#| "Lifetime license with premium enhancements: One-time payment of just "
-#| "$17.99!"
 msgid "Lifetime license: One-time payment of just $17.99!"
 msgstr "Licencia de por vida: ¡Pago único de solo $17,99!"
 
 #: dashboard/mybanners.php:45
-#| msgid ""
-#| "Many extra features are not included in the free version. For example, "
-#| "fixing damaged tables, etc."
 msgid "features are not included in the free version:"
 msgstr "Las características no están incluidas en la versión gratuita:"
 
@@ -465,12 +457,10 @@ msgstr ""
 "límite máximo de tamaño de archivo de carga"
 
 #: dashboard/mybanners.php:52
-#| msgid "Delete All Cron Jobs Without Actions"
 msgid "- Delete cron jobs without actions"
 msgstr "- Eliminar trabajos cron sin acciones"
 
 #: dashboard/mybanners.php:54
-#| msgid "Delete All Transients"
 msgid "- Delete expired or all transients"
 msgstr "- Eliminar los caducados o todos los transitorios"
 
@@ -483,12 +473,10 @@ msgid "- Display all files with wrong permissions"
 msgstr " - Mostrar todos los archivos con permisos incorrectos"
 
 #: dashboard/mybanners.php:60
-#| msgid "Edit robots txt"
 msgid "- Edit and save robots.txt"
 msgstr "- Editar y guardar robots.txt"
 
 #: dashboard/mybanners.php:62
-#| msgid "Learn more."
 msgid "- and more..."
 msgstr "- y más..."
 
@@ -498,7 +486,7 @@ msgstr "Soporte Premium dedicado"
 
 #: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
-#: wptools.php:1981
+#: wptools.php:1982
 msgid "Learn More"
 msgstr "Aprende más"
 
@@ -1782,15 +1770,15 @@ msgstr "Saber más"
 msgid "Memory issues have been detected on this site. "
 msgstr "Se han detectado problemas de memoria en este sitio."
 
-#: functions/functions.php:1608
+#: functions/functions.php:1608 includes/feedback-last/feedback-last.php:259
 msgid "Artificial Intelligence Support Chat for Issues and Solutions"
 msgstr "Chat de soporte de inteligencia artificial para problemas y soluciones"
 
-#: functions/functions.php:1617
+#: functions/functions.php:1617 includes/feedback-last/feedback-last.php:269
 msgid "Enter your message..."
 msgstr "Ingrese su mensaje..."
 
-#: functions/functions.php:1618
+#: functions/functions.php:1618 includes/feedback-last/feedback-last.php:270
 msgid "Send"
 msgstr "Enviar"
 
@@ -2189,110 +2177,78 @@ msgstr "Visite nuestro sitio web para obtener más detalles."
 msgid "That is all. Enjoy."
 msgstr "Eso es todo. Que lo disfrutes."
 
-#: includes/chat/class_bill_chat.php:42
+#: includes/chat/class_bill_chat.php:43
 msgid "Chat messages reset successfully."
 msgstr "Los mensajes de chat se restablecieron correctamente."
 
-#: includes/chat/class_bill_chat.php:43
+#: includes/chat/class_bill_chat.php:44
 msgid "Error resetting chat messages."
 msgstr "Error al restablecer los mensajes de chat."
 
-#: includes/chat/class_bill_chat.php:44
+#: includes/chat/class_bill_chat.php:45
 msgid "Invalid message received:"
 msgstr "Mensaje no válido recibido:"
 
-#: includes/chat/class_bill_chat.php:45
+#: includes/chat/class_bill_chat.php:46
 msgid "Invalid response format:"
 msgstr "Formato de respuesta no válido:"
 
-#: includes/chat/class_bill_chat.php:46
+#: includes/chat/class_bill_chat.php:47
 msgid "Error processing server response:"
 msgstr "Error al procesar la respuesta del servidor:"
 
-#: includes/chat/class_bill_chat.php:47
+#: includes/chat/class_bill_chat.php:48
 msgid "Response is not valid JSON."
 msgstr "La respuesta no es JSON válido."
 
-#: includes/chat/class_bill_chat.php:48
+#: includes/chat/class_bill_chat.php:49
 msgid "AJAX request failed:"
 msgstr "La solicitud AJAX falló:"
 
-#: includes/chat/class_bill_chat.php:49
+#: includes/chat/class_bill_chat.php:50
 msgid "Error sending the message. Please try again later."
 msgstr "Error al enviar el mensaje. Inténtalo de nuevo más tarde."
 
-#: includes/chat/class_bill_chat.php:50
+#: includes/chat/class_bill_chat.php:51
 msgid "Please enter a message!"
 msgstr "¡Por favor ingrese un mensaje!"
 
-#: includes/chat/class_bill_chat.php:210
+#: includes/chat/class_bill_chat.php:212
 msgid ""
 "Error contacting the Artificial Intelligence (API). Please try again later."
 msgstr ""
 "Error al contactar con la Inteligencia Artificial (API). Inténtalo de nuevo "
 "más tarde."
 
-#: includes/chat/class_bill_chat.php:229
+#: includes/chat/class_bill_chat.php:242
 msgid "Error to get response from AI source!"
 msgstr "¡Error al obtener respuesta de la fuente de IA!"
 
-#: includes/feedback-last/feedback-last.php:246
-msgid "We're sorry to hear that you're leaving."
-msgstr "Lamentamos saber que te vas."
+#: includes/feedback-last/feedback-last.php:250
+msgid "What can we do to resolve the problem you're facing?"
+msgstr "¿Qué podemos hacer para resolver el problema que estás enfrentando?"
 
-#: includes/feedback-last/feedback-last.php:252
+#: includes/feedback-last/feedback-last.php:254
 msgid ""
-"Thank you for using our products. Before you deactivate, we'd like to offer "
-"a few options to improve your experience:"
+"Depending on your response, we can help keep the plugin running smoothly for "
+"you immediately!"
 msgstr ""
-"Gracias por utilizar nuestros productos. Antes de desactivarlos, nos "
-"gustaría ofrecerlealgunas opciones para mejorar su experiencia:"
+"¡Dependiendo de tu respuesta, podemos ayudarte a mantener el plugin "
+"funcionando sin problemas para ti inmediatamente!"
 
-#: includes/feedback-last/feedback-last.php:255
-msgid "Explore more plugins - Discover our other free plugins and themes."
-msgstr ""
-"Explorar más complementos: descubra nuestros otros complementos y temas "
-"gratuitos."
-
-#: includes/feedback-last/feedback-last.php:257
-msgid "Support - Need help? Visit our support page."
-msgstr "Soporte - ¿Necesita ayuda? Visite nuestra página de soporte."
-
-#: includes/feedback-last/feedback-last.php:259
-msgid "Cancel deactivation - Changed your mind? Keep using this plugin."
-msgstr ""
-"Cancelar desactivación: ¿Cambió de opinión? Siga usando este complemento."
-
-#: includes/feedback-last/feedback-last.php:261
-msgid "Deactivate - Proceed with deactivation."
-msgstr "Desactivar - Proceder con la desactivación."
-
-#: includes/feedback-last/feedback-last.php:264
-msgid ""
-"Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
-"supercharge your site's security, functionality, and backups."
-msgstr ""
-"Más de 50 000 usuarios confían en nuestros más de 20 complementos gratuitos "
-"y 6 temas que pueden potenciar la seguridad, la funcionalidad y las copias "
-"de seguridad de su sitio."
-
-#: includes/feedback-last/feedback-last.php:266
-msgid "Best regards!"
-msgstr "¡Atentamente!"
-
-#: includes/feedback-last/feedback-last.php:275
+#: includes/feedback-last/feedback-last.php:277
 msgid "Discover New FREE Plugins"
 msgstr "Descubra nuevos complementos GRATUITOS"
 
-#: includes/feedback-last/feedback-last.php:278
+#: includes/feedback-last/feedback-last.php:280
 msgid "Support Page"
 msgstr "Página de Soporte"
 
-#: includes/feedback-last/feedback-last.php:281
+#: includes/feedback-last/feedback-last.php:283
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: includes/feedback-last/feedback-last.php:284
+#: includes/feedback-last/feedback-last.php:286
 msgid "Just Deactivate"
 msgstr "Solo desactivar"
 
@@ -2985,15 +2941,15 @@ msgstr "¡Versión Premium activada!"
 msgid "Purchase Code:"
 msgstr "Código de Compra:"
 
-#: wptools.php:1960 wptools.php:1961
+#: wptools.php:1961 wptools.php:1962
 msgid "MU Plugins"
 msgstr "Complementos MU"
 
-#: wptools.php:1974
+#: wptools.php:1975
 msgid "Loaded MU Plugins"
 msgstr "Complementos MU cargados"
 
-#: wptools.php:1977
+#: wptools.php:1978
 msgid ""
 "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
 "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be "
@@ -3006,45 +2962,74 @@ msgstr ""
 "administración. La versión premium de nuestro complemento WP Tools te "
 "permite activarlos y desactivarlos."
 
-#: wptools.php:1999
+#: wptools.php:2000
 msgid "Author:"
 msgstr "Autor:"
 
-#: wptools.php:2004
-#| msgid "Support Site"
+#: wptools.php:2005
 msgid "Author Site"
 msgstr "Sitio del autor"
 
-#: wptools.php:2009
-#| msgid "PHP Version"
+#: wptools.php:2010
 msgid "Version:"
 msgstr "Versión:"
 
-#: wptools.php:2013
-#| msgid "Table Name"
+#: wptools.php:2014
 msgid "File Name:"
 msgstr "Nombre del archivo:"
 
-#: wptools.php:2017
-#| msgid "File Path"
+#: wptools.php:2018
 msgid "File Path:"
 msgstr "Ruta del archivo:"
 
-#: wptools.php:2023
+#: wptools.php:2024
 msgid "Last Modified:"
 msgstr "Última modificación:"
 
-#: wptools.php:2025
-#| msgid "Site Name unavailable"
+#: wptools.php:2026
 msgid "Modification date not available."
 msgstr "Fecha de modificación no disponible."
 
-#: wptools.php:2036
-#| msgid "Just Deactivate"
+#: wptools.php:2037
 msgid "Status: Activated"
 msgstr "Estado: Activado"
 
-#: wptools.php:2044
-#| msgid "Just Deactivate"
+#: wptools.php:2045
 msgid "Status: Deactivated"
 msgstr "Estado: Desactivado"
+
+#~ msgid "We're sorry to hear that you're leaving."
+#~ msgstr "Lamentamos saber que te vas."
+
+#~ msgid ""
+#~ "Thank you for using our products. Before you deactivate, we'd like to "
+#~ "offer a few options to improve your experience:"
+#~ msgstr ""
+#~ "Gracias por utilizar nuestros productos. Antes de desactivarlos, nos "
+#~ "gustaría ofrecerlealgunas opciones para mejorar su experiencia:"
+
+#~ msgid "Explore more plugins - Discover our other free plugins and themes."
+#~ msgstr ""
+#~ "Explorar más complementos: descubra nuestros otros complementos y temas "
+#~ "gratuitos."
+
+#~ msgid "Support - Need help? Visit our support page."
+#~ msgstr "Soporte - ¿Necesita ayuda? Visite nuestra página de soporte."
+
+#~ msgid "Cancel deactivation - Changed your mind? Keep using this plugin."
+#~ msgstr ""
+#~ "Cancelar desactivación: ¿Cambió de opinión? Siga usando este complemento."
+
+#~ msgid "Deactivate - Proceed with deactivation."
+#~ msgstr "Desactivar - Proceder con la desactivación."
+
+#~ msgid ""
+#~ "Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
+#~ "supercharge your site's security, functionality, and backups."
+#~ msgstr ""
+#~ "Más de 50 000 usuarios confían en nuestros más de 20 complementos "
+#~ "gratuitos y 6 temas que pueden potenciar la seguridad, la funcionalidad y "
+#~ "las copias de seguridad de su sitio."
+
+#~ msgid "Best regards!"
+#~ msgstr "¡Atentamente!"

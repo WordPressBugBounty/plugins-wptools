@@ -1440,195 +1440,312 @@ function wptools_options_check_table()
             "For more info about your database, look the page SHOW PHP INFO.",
             "wptools"
         ); ?>
-    <?php
-}
-function wptools_php_max_input_vars()
-{
-    if (ini_get("max_input_vars")) {
-        $php_max__input_vars = ini_get("max_input_vars");
-    } else {
-        $php_max__input_vars = esc_attr__("N/A", "wptools");
+        <?php
     }
-    return $php_max__input_vars;
-}
-function wptools_php_max_upload_size()
-{
-    if (ini_get("upload_max_filesize")) {
-        $php_max_upload_size = ini_get("upload_max_filesize");
-        //$php_max_upload_size = $php_max_upload_size);
-    } else {
-        $php_max_upload_size = esc_attr__("N/A", "wptools");
-    }
-    return $php_max_upload_size;
-}
-function wptools_php_max_post_size()
-{
-    if (ini_get("post_max_size")) {
-        $php_max_post_size = ini_get("post_max_size");
-        //$php_max_post_size = wptools_format_filesize($php_max_post_size);
-    } else {
-        $php_max_post_size = esc_attr__("N/A", "wptools");
-    }
-    return $php_max_post_size;
-}
-function wptools_php_max_execution_time()
-{
-    if (ini_get("max_execution_time")) {
-        $max_execute = ini_get("max_execution_time");
-    } else {
-        $max_execute = esc_attr__("N/A", "wptools");
-    }
-    return $max_execute;
-}
-function wptools_check_limit()
-{
-    if (!ini_get("memory_limit")) {
-        return esc_attr__("N/A", "wptools");
-    }
-    $memory_limit = ini_get("memory_limit");
-    if (preg_match('/^(\d+)(.)$/', $memory_limit, $matches)) {
-        if ($matches[2] == "G") {
-            $memory_limit = $matches[1] . " " . "GB"; // nnnG -> nnn GB
-        } elseif ($matches[2] == "M") {
-            $memory_limit = $matches[1] . " " . "MB"; // nnnM -> nnn MB
-        } elseif ($matches[2] == "K") {
-            $memory_limit = $matches[1] . " " . "KB"; // nnnK -> nnn KB
-        } elseif ($matches[2] == "T") {
-            $memory_limit = $matches[1] . " " . "TB"; // nnnT -> nnn TB
-        } elseif ($matches[2] == "P") {
-            $memory_limit = $matches[1] . " " . "PB"; // nnnP -> nnn PB
+    function wptools_php_max_input_vars()
+    {
+        if (ini_get("max_input_vars")) {
+            $php_max__input_vars = ini_get("max_input_vars");
+        } else {
+            $php_max__input_vars = esc_attr__("N/A", "wptools");
         }
+        return $php_max__input_vars;
     }
-    return $memory_limit;
-}
-function wptools_options()
-{
-    if (isset($_GET["page"])) {
-        $page = sanitize_text_field($_GET["page"]);
-        if ($page != "wptools_options21") {
-            return;
+    function wptools_php_max_upload_size()
+    {
+        if (ini_get("upload_max_filesize")) {
+            $php_max_upload_size = ini_get("upload_max_filesize");
+            //$php_max_upload_size = $php_max_upload_size);
+        } else {
+            $php_max_upload_size = esc_attr__("N/A", "wptools");
         }
+        return $php_max_upload_size;
     }
-    $wptools_count = 0;
-    define("WPTOOLSPLUGINPATH", plugin_dir_path(__FILE__));
-    $wptools_themePath = get_theme_root();
-    $error_log_path = trim(ini_get("error_log"));
-    if (
-        !is_null($error_log_path) and
-        $error_log_path != trim(ABSPATH . "error_log")
-    ) {
-        $wptools_folders = [
-            $error_log_path,
-            ABSPATH . "error_log",
-            ABSPATH . "php_errorlog",
-            WPTOOLSPLUGINPATH . "/error_log",
-            WPTOOLSPLUGINPATH . "/php_errorlog",
-            $wptools_themePath . "/error_log",
-            $wptools_themePath . "/php_errorlog",
-        ];
-    } else {
-        $wptools_folders = [
-            ABSPATH . "error_log",
-            ABSPATH . "php_errorlog",
-            WPTOOLSPLUGINPATH . "/error_log",
-            WPTOOLSPLUGINPATH . "/php_errorlog",
-            $wptools_themePath . "/error_log",
-            $wptools_themePath . "/php_errorlog",
-        ];
-    }
-    $wptools_admin_path = str_replace(
-        get_bloginfo("url") . "/",
-        ABSPATH,
-        get_admin_url()
-    );
-    array_push($wptools_folders, $wptools_admin_path . "/error_log");
-    array_push($wptools_folders, $wptools_admin_path . "/php_errorlog");
-    $wptools_plugins = array_slice(scandir(WPTOOLSPLUGINPATH), 2);
-    foreach ($wptools_plugins as $wptools_plugin) {
-        if (is_dir(WPTOOLSPLUGINPATH . "/" . $wptools_plugin)) {
-            array_push(
-                $wptools_folders,
-                WPTOOLSPLUGINPATH . "/" . $wptools_plugin . "/error_log"
-            );
-            array_push(
-                $wptools_folders,
-                WPTOOLSPLUGINPATH . "/" . $wptools_plugin . "/php_errorlog"
-            );
+    function wptools_php_max_post_size()
+    {
+        if (ini_get("post_max_size")) {
+            $php_max_post_size = ini_get("post_max_size");
+            //$php_max_post_size = wptools_format_filesize($php_max_post_size);
+        } else {
+            $php_max_post_size = esc_attr__("N/A", "wptools");
         }
+        return $php_max_post_size;
     }
-    $wptools_themes = array_slice(scandir($wptools_themePath), 2);
-    foreach ($wptools_themes as $wptools_theme) {
-        if (is_dir($wptools_themePath . "/" . $wptools_theme)) {
-            array_push(
-                $wptools_folders,
-                $wptools_themePath . "/" . $wptools_theme . "/error_log"
-            );
-            array_push(
-                $wptools_folders,
-                $wptools_themePath . "/" . $wptools_theme . "/php_errorlog"
-            );
+    function wptools_php_max_execution_time()
+    {
+        if (ini_get("max_execution_time")) {
+            $max_execute = ini_get("max_execution_time");
+        } else {
+            $max_execute = esc_attr__("N/A", "wptools");
         }
+        return $max_execute;
     }
-    // echo WPTOOLSURL.'images/logo.png';
-    echo "<br />";
-    echo '<img src="' . esc_url(WPTOOLSURL) . 'images/logo.png" alt="logo">';
-    echo "<h1>" . esc_attr__("Errors", "wptools") . "</h1>";
-    echo "<center>";
-
-
-    if (wptools_errors_today(2, 'javascript') or wptools_errors_today(2)) {
-
-        echo "<h2>";
-        echo esc_attr__(
-            "Your site has errors. Here are the last lines of the error log files.",
-            "wptools"
+    function wptools_check_limit()
+    {
+        if (!ini_get("memory_limit")) {
+            return esc_attr__("N/A", "wptools");
+        }
+        $memory_limit = ini_get("memory_limit");
+        if (preg_match('/^(\d+)(.)$/', $memory_limit, $matches)) {
+            if ($matches[2] == "G") {
+                $memory_limit = $matches[1] . " " . "GB"; // nnnG -> nnn GB
+            } elseif ($matches[2] == "M") {
+                $memory_limit = $matches[1] . " " . "MB"; // nnnM -> nnn MB
+            } elseif ($matches[2] == "K") {
+                $memory_limit = $matches[1] . " " . "KB"; // nnnK -> nnn KB
+            } elseif ($matches[2] == "T") {
+                $memory_limit = $matches[1] . " " . "TB"; // nnnT -> nnn TB
+            } elseif ($matches[2] == "P") {
+                $memory_limit = $matches[1] . " " . "PB"; // nnnP -> nnn PB
+            }
+        }
+        return $memory_limit;
+    }
+    function wptools_options()
+    {
+        if (isset($_GET["page"])) {
+            $page = sanitize_text_field($_GET["page"]);
+            if ($page != "wptools_options21") {
+                return;
+            }
+        }
+        $wptools_count = 0;
+        define("WPTOOLSPLUGINPATH", plugin_dir_path(__FILE__));
+        $wptools_themePath = get_theme_root();
+        $error_log_path = trim(ini_get("error_log"));
+        if (
+            !is_null($error_log_path) and
+            $error_log_path != trim(ABSPATH . "error_log")
+        ) {
+            $wptools_folders = [
+                $error_log_path,
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPLUGINPATH . "/error_log",
+                WPTOOLSPLUGINPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
+        } else {
+            $wptools_folders = [
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPLUGINPATH . "/error_log",
+                WPTOOLSPLUGINPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
+        }
+        $wptools_admin_path = str_replace(
+            get_bloginfo("url") . "/",
+            ABSPATH,
+            get_admin_url()
         );
-        echo "</h2>";
+        array_push($wptools_folders, $wptools_admin_path . "/error_log");
+        array_push($wptools_folders, $wptools_admin_path . "/php_errorlog");
+        $wptools_plugins = array_slice(scandir(WPTOOLSPLUGINPATH), 2);
+        foreach ($wptools_plugins as $wptools_plugin) {
+            if (is_dir(WPTOOLSPLUGINPATH . "/" . $wptools_plugin)) {
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPLUGINPATH . "/" . $wptools_plugin . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPLUGINPATH . "/" . $wptools_plugin . "/php_errorlog"
+                );
+            }
+        }
+        $wptools_themes = array_slice(scandir($wptools_themePath), 2);
+        foreach ($wptools_themes as $wptools_theme) {
+            if (is_dir($wptools_themePath . "/" . $wptools_theme)) {
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/php_errorlog"
+                );
+            }
+        }
+        // echo WPTOOLSURL.'images/logo.png';
+        echo "<br />";
+        echo '<img src="' . esc_url(WPTOOLSURL) . 'images/logo.png" alt="logo">';
+        echo "<h1>" . esc_attr__("Errors", "wptools") . "</h1>";
+        echo "<center>";
+
+
+        if (wptools_errors_today(2, 'javascript') or wptools_errors_today(2)) {
+
+            echo "<h2>";
+            echo esc_attr__(
+                "Your site has errors. Here are the last lines of the error log files.",
+                "wptools"
+            );
+            echo "</h2>";
 
 
 
 
-        echo '<h3 style="color: red;">';
-        echo esc_attr__(
-            "Our plugin can't function as intended. Errors, including JavaScript errors, may lead to visual problems or disrupt functionality, from minor glitches to critical site failures. Promptly address these issues before continuing because these problems will persist even if you deactivate our plugin.Notice that the PHP error system does not capture JavaScript errors. Only our plugin captures them.",
-            "wptools"
-        );
-        echo "</h3>";
+            echo '<h3 style="color: red;">';
+            echo esc_attr__(
+                "Our plugin can't function as intended. Errors, including JavaScript errors, may lead to visual problems or disrupt functionality, from minor glitches to critical site failures. Promptly address these issues before continuing because these problems will persist even if you deactivate our plugin.Notice that the PHP error system does not capture JavaScript errors. Only our plugin captures them.",
+                "wptools"
+            );
+            echo "</h3>";
 
-        //end 2023
+            //end 2023
 
-        echo "</center>";
+            echo "</center>";
 
 
 
         ?>
-    <!-- chat -->
-    <div id="chat-box">
-        <div id="chat-header">
-            <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools");?></h2>
-        </div>
-        <div id="gif-container">
-            <div class="spinner999"></div>
-        </div> <!-- Onde o efeito será exibido -->
-        <div id="chat-messages"></div>
-        <div id="error-message" style="display:none;"></div> <!-- Mensagem de erro -->
-    
-        <form id="chat-form">
-        <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
-        <button type="submit"><?php echo esc_attr__('Send', 'wptools'); ?></button>
-    
-        </form>
-    </div>
+            <!-- chat -->
+            <div id="chat-box">
+                <div id="chat-header">
+                    <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools"); ?></h2>
+                </div>
+                <div id="gif-container">
+                    <div class="spinner999"></div>
+                </div> <!-- Onde o efeito será exibido -->
+                <div id="chat-messages"></div>
+                <div id="error-message" style="display:none;"></div> <!-- Mensagem de erro -->
 
-<?php
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
+                    <button type="submit"><?php echo esc_attr__('Send', 'wptools'); ?></button>
 
-//
-//
-//
-//
-//
+                </form>
+            </div>
+
+        <?php
 
 
+
+
+
+
+            /* --------------------- PAGE LOAD -----------------------------*/
+
+            function wptools_check_page_load()
+            {
+                global $wpdb;
+                $table_name = $wpdb->prefix . 'wptools_page_load_times';
+
+
+
+                $query = "SELECT DATE(timestamp) AS date, AVG(load_time) AS average_load_time
+          FROM $table_name
+          WHERE timestamp >= CURDATE() - INTERVAL 6 DAY
+            AND NOT page_url LIKE 'wp-admin'
+          GROUP BY DATE(timestamp)
+          ORDER BY date";
+
+
+
+
+                $results9 = $wpdb->get_results($query, ARRAY_A);
+
+                if ($results9) {
+                    $total = count($results9);
+                    if ($total < 1) {
+                        $wptools_empty = true;
+                        return false;
+                    }
+                } else {
+                    $wptools_empty = true;
+                    return false;
+                }
+
+
+                //echo var_export($results9);
+
+                // Calcula a média
+                $total = 0;
+                $count = 0;
+
+                foreach ($results9 as $entry) {
+                    $total += (float)$entry['average_load_time'];
+                    $count++;
+                }
+
+                $average = $total / $count;
+                $roundedAverage = round($average); // Arredonda para o número mais próximo
+                return $roundedAverage;
+            }
+
+
+
+
+
+
+
+
+            $average  = wptools_check_page_load();
+
+            //$average = 9;
+
+            echo '<br>';
+            /*
+            Excelente: Menos de 2 segundos
+            Bom: Entre 2 e 3 segundos
+            Regular: Entre 3 e 5 segundos
+            Pobre: Entre 5 e 8 segundos
+            Muito pobre: Mais de 8 segundos
+            */
+
+
+
+
+            if ($average > 5) {
+
+                echo '<hr><h2>';
+
+                if ($average <= 8) {
+                    $message = esc_attr__("The page load time is poor.", "wptools");
+                } else {
+                    $message = esc_attr__("The page load time is very poor!", "wptools");
+                }
+                if ($average > 5) {
+                    echo $message;
+                    echo '</h2>';
+                    echo esc_attr__("The Load average of yours front pages is: ", "wptools");
+                    echo esc_attr($average);
+                    echo '<br>';
+                    echo  esc_attr__("Loading time can significantly impact your SEO.", "wptools");
+                    echo '<br>';
+                    echo esc_attr__("Many users will abandon the site before it fully loads.", "wptools");
+                    echo '<br>';
+                    echo esc_attr__("Search engines prioritize faster-loading pages, as they improve user experience and reduce bounce rates.", "wptools");
+                }
+
+                echo '<br>';
+                echo '<a href="https://wptoolsplugin.com/page-load-times-and-their-negative-impact-on-seo/" >';
+                echo esc_attr__("Learn more about Page Load Times and their negative impact on SEO", "wptools") . "...";
+                echo "</a>";
+
+
+                echo '<hr>';
+                echo '<br>';
+            }
+
+
+
+            /* --------------------- End PAGE LOAD -----------------------------*/
+        } // end page load
+
+
+
+
+
+        echo "<h2>";
+        echo esc_attr__(
+            "Errors and Site Health.",
+            "wptools"
+        );
+        echo "</h2>";
 
 
         echo "<h4>";
@@ -1638,120 +1755,126 @@ function wptools_options()
         );
 
         echo "<br />";
-    }
 
 
 
-    echo '<a href="https://wptoolsplugin.com/site-language-error-can-crash-your-site/" >';
-    echo esc_attr(__("Learn more about errors and warnings...", "wptools")) .
-        ".";
-    echo "</a>";
+        echo '<a href="https://wptoolsplugin.com/site-language-error-can-crash-your-site/" >';
+        echo esc_attr(__("Learn more about errors and warnings...", "wptools")) .
+            ".";
+        echo "</a>";
 
-    echo "<br />";
+        echo "<br />";
 
-    echo "</h4>";
+        echo "</h4>";
 
 
 
-    //var_export($wptools_folders);
 
-    foreach ($wptools_folders as $wptools_folder) {
-        foreach (glob($wptools_folder) as $wptools_filename) {
-            if (strpos($wptools_filename, "backup") != true) {
-                echo "<hr>";
-                echo "<strong>";
-                echo esc_attr(wptools_sizeFilter(filesize($wptools_filename)));
-                echo " - ";
-                echo esc_attr($wptools_filename);
-                echo "</strong>";
-                $wptools_count++;
 
-                $marray = wptools_read_file($wptools_filename, 3000);
 
-                // die(var_export($marray));
 
-                if (gettype($marray) != "array" or count($marray) < 1) {
-                    continue;
-                }
 
-                //die(var_export($marray[0]));
 
-                $total = count($marray);
 
-                // die(var_export($total));
+        //var_export($wptools_folders);
 
-                if (count($marray) > 0) {
-                    echo '<textarea style="width:99%;" id="anti_hacker" rows="12">';
+        foreach ($wptools_folders as $wptools_folder) {
+            foreach (glob($wptools_folder) as $wptools_filename) {
+                if (strpos($wptools_filename, "backup") != true) {
+                    echo "<hr>";
+                    echo "<strong>";
+                    echo esc_attr(wptools_sizeFilter(filesize($wptools_filename)));
+                    echo " - ";
+                    echo esc_attr($wptools_filename);
+                    echo "</strong>";
+                    $wptools_count++;
 
-                    if ($total > 1000) {
-                        $total = 1000;
+                    $marray = wptools_read_file($wptools_filename, 3000);
+
+                    // die(var_export($marray));
+
+                    if (gettype($marray) != "array" or count($marray) < 1) {
+                        continue;
                     }
 
-                    for ($i = 0; $i < $total; $i++) {
+                    //die(var_export($marray[0]));
 
-                        // 2024
-                        if (strpos(trim($marray[$i]), "[") !== 0) {
-                            //  continue; // Skip lines without correct date format
+                    $total = count($marray);
+
+                    // die(var_export($total));
+
+                    if (count($marray) > 0) {
+                        echo '<textarea style="width:99%;" id="anti_hacker" rows="12">';
+
+                        if ($total > 1000) {
+                            $total = 1000;
                         }
 
-                        $logs = [];
+                        for ($i = 0; $i < $total; $i++) {
 
-                        $line = trim($marray[$i]);
-                        if (empty($line)) {
-                            continue;
-                        }
-
-                        //  stack trace
-                        //[30-Sep-2023 11:28:52 UTC] PHP Stack trace:
-                        $pattern = "/PHP Stack trace:/";
-                        if (preg_match($pattern, $line, $matches)) {
-                            continue;
-                        }
-                        $pattern =
-                            "/\d{4}-\w{3}-\d{4} \d{2}:\d{2}:\d{2} UTC\] PHP \d+\./";
-                        if (preg_match($pattern, $line, $matches)) {
-                            continue;
-                        }
-                        //  end stack trace
-
-                        // Javascript ?
-                        if (strpos($line, "Javascript") !== false) {
-                            $is_javascript = true;
-                        } else {
-                            $is_javascript = false;
-                        }
-
-                        if ($is_javascript) {
-                            $matches = [];
-
-                            // die($line);
-
-                            $apattern = [];
-                            $apattern[] =
-                                "/(Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+).*?Column: (\d+).*?Error object: ({.*?})/";
-
-                            //$apattern[] =
-                            //    "/(Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+)/";
-
-
-                            $apattern[] =
-                                "/(SyntaxError|Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+)/";
-
-                            // Google Maps !
-                            //$apattern[] = "/Script error(?:\. - URL: (https?:\/\/\S+))?/i";
-
-                            $pattern = $apattern[0];
-
-                            for ($j = 0; $j < count($apattern); $j++) {
-                                if (
-                                    preg_match($apattern[$j], $line, $matches)
-                                ) {
-                                    $pattern = $apattern[$j];
-                                    break;
-                                }
+                            // 2024
+                            if (strpos(trim($marray[$i]), "[") !== 0) {
+                                //  continue; // Skip lines without correct date format
                             }
 
-                            /*
+                            $logs = [];
+
+                            $line = trim($marray[$i]);
+                            if (empty($line)) {
+                                continue;
+                            }
+
+                            //  stack trace
+                            //[30-Sep-2023 11:28:52 UTC] PHP Stack trace:
+                            $pattern = "/PHP Stack trace:/";
+                            if (preg_match($pattern, $line, $matches)) {
+                                continue;
+                            }
+                            $pattern =
+                                "/\d{4}-\w{3}-\d{4} \d{2}:\d{2}:\d{2} UTC\] PHP \d+\./";
+                            if (preg_match($pattern, $line, $matches)) {
+                                continue;
+                            }
+                            //  end stack trace
+
+                            // Javascript ?
+                            if (strpos($line, "Javascript") !== false) {
+                                $is_javascript = true;
+                            } else {
+                                $is_javascript = false;
+                            }
+
+                            if ($is_javascript) {
+                                $matches = [];
+
+                                // die($line);
+
+                                $apattern = [];
+                                $apattern[] =
+                                    "/(Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+).*?Column: (\d+).*?Error object: ({.*?})/";
+
+                                //$apattern[] =
+                                //    "/(Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+)/";
+
+
+                                $apattern[] =
+                                    "/(SyntaxError|Error|Syntax|Type|TypeError|Reference|ReferenceError|Range|Eval|URI|Error .*?): (.*?) - URL: (https?:\/\/\S+).*?Line: (\d+)/";
+
+                                // Google Maps !
+                                //$apattern[] = "/Script error(?:\. - URL: (https?:\/\/\S+))?/i";
+
+                                $pattern = $apattern[0];
+
+                                for ($j = 0; $j < count($apattern); $j++) {
+                                    if (
+                                        preg_match($apattern[$j], $line, $matches)
+                                    ) {
+                                        $pattern = $apattern[$j];
+                                        break;
+                                    }
+                                }
+
+                                /*
                                 //$pattern = "/Line: (\d+)/";
                                  preg_match($pattern, $line, $matches);
                                 print_r($matches);
@@ -1759,204 +1882,204 @@ function wptools_options()
                                 die($line);
                                 */
 
-                            if (preg_match($pattern, $line, $matches)) {
-                                $matches[1] = str_replace(
-                                    "Javascript ",
-                                    "",
-                                    $matches[1]
-                                );
-
-                                //  debug2(substr($line, 1, 22));
-                                $filteredDate = strstr(substr($line, 1, 26), ']', true);
-                                // debug2($filteredDate);
-
-
-                                if (count($matches) == 2) {
-                                    $log_entry = [
-                                        "Date" => $filteredDate,
-                                        "Message Type" => "Script error",
-                                        "Problem Description" => "N/A",
-                                        "Script URL" => $matches[1],
-                                        "Line" => "N/A",
-                                    ];
-                                } else {
-                                    $log_entry = [
-                                        "Date" => $filteredDate,
-                                        "Message Type" => $matches[1],
-                                        "Problem Description" => $matches[2],
-                                        "Script URL" => $matches[3],
-                                        "Line" => $matches[4],
-                                    ];
-                                }
-
-
-
-
-                                $script_path = $matches[3];
-                                $script_info = pathinfo($script_path);
-
-
-                                // Dividir o nome do script com base em ":"
-                                $parts = explode(":", $script_info["basename"]);
-
-                                // O nome do script agora está na primeira parte
-                                $scriptName = $parts[0];
-
-                                $log_entry["Script Name"] = $scriptName; // Get the script name
-
-                                $log_entry["Script Location"] =
-                                    $script_info["dirname"]; // Get the script location
-
-                                if ($log_entry["Script Location"] == 'http:' or $log_entry["Script Location"] == 'https:')
-                                    $log_entry["Script Location"] = $matches[3];
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                if (
-                                    strpos(
-                                        $log_entry["Script URL"],
-                                        "/wp-content/plugins/"
-                                    ) !== false
-                                ) {
-                                    // O erro ocorreu em um plugin
-                                    $parts = explode(
-                                        "/wp-content/plugins/",
-                                        $log_entry["Script URL"]
+                                if (preg_match($pattern, $line, $matches)) {
+                                    $matches[1] = str_replace(
+                                        "Javascript ",
+                                        "",
+                                        $matches[1]
                                     );
-                                    if (count($parts) > 1) {
-                                        $plugin_parts = explode("/", $parts[1]);
-                                        $log_entry["File Type"] = "Plugin";
-                                        $log_entry["Plugin Name"] =
-                                            $plugin_parts[0];
-                                        //   $log_entry["Script Location"] =
-                                        //      "/wp-content/plugins/" .
-                                        //       $plugin_parts[0];
+
+                                    //  debug2(substr($line, 1, 22));
+                                    $filteredDate = strstr(substr($line, 1, 26), ']', true);
+                                    // debug2($filteredDate);
+
+
+                                    if (count($matches) == 2) {
+                                        $log_entry = [
+                                            "Date" => $filteredDate,
+                                            "Message Type" => "Script error",
+                                            "Problem Description" => "N/A",
+                                            "Script URL" => $matches[1],
+                                            "Line" => "N/A",
+                                        ];
+                                    } else {
+                                        $log_entry = [
+                                            "Date" => $filteredDate,
+                                            "Message Type" => $matches[1],
+                                            "Problem Description" => $matches[2],
+                                            "Script URL" => $matches[3],
+                                            "Line" => $matches[4],
+                                        ];
                                     }
-                                } elseif (
-                                    strpos(
-                                        $log_entry["Script URL"],
-                                        "/wp-content/themes/"
-                                    ) !== false
-                                ) {
-                                    // O erro ocorreu em um tema
-                                    $parts = explode(
-                                        "/wp-content/themes/",
-                                        $log_entry["Script URL"]
+
+
+
+
+                                    $script_path = $matches[3];
+                                    $script_info = pathinfo($script_path);
+
+
+                                    // Dividir o nome do script com base em ":"
+                                    $parts = explode(":", $script_info["basename"]);
+
+                                    // O nome do script agora está na primeira parte
+                                    $scriptName = $parts[0];
+
+                                    $log_entry["Script Name"] = $scriptName; // Get the script name
+
+                                    $log_entry["Script Location"] =
+                                        $script_info["dirname"]; // Get the script location
+
+                                    if ($log_entry["Script Location"] == 'http:' or $log_entry["Script Location"] == 'https:')
+                                        $log_entry["Script Location"] = $matches[3];
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    if (
+                                        strpos(
+                                            $log_entry["Script URL"],
+                                            "/wp-content/plugins/"
+                                        ) !== false
+                                    ) {
+                                        // O erro ocorreu em um plugin
+                                        $parts = explode(
+                                            "/wp-content/plugins/",
+                                            $log_entry["Script URL"]
+                                        );
+                                        if (count($parts) > 1) {
+                                            $plugin_parts = explode("/", $parts[1]);
+                                            $log_entry["File Type"] = "Plugin";
+                                            $log_entry["Plugin Name"] =
+                                                $plugin_parts[0];
+                                            //   $log_entry["Script Location"] =
+                                            //      "/wp-content/plugins/" .
+                                            //       $plugin_parts[0];
+                                        }
+                                    } elseif (
+                                        strpos(
+                                            $log_entry["Script URL"],
+                                            "/wp-content/themes/"
+                                        ) !== false
+                                    ) {
+                                        // O erro ocorreu em um tema
+                                        $parts = explode(
+                                            "/wp-content/themes/",
+                                            $log_entry["Script URL"]
+                                        );
+                                        if (count($parts) > 1) {
+                                            $theme_parts = explode("/", $parts[1]);
+                                            $log_entry["File Type"] = "Theme";
+                                            $log_entry["Theme Name"] =
+                                                $theme_parts[0];
+                                            // $log_entry["Script Location"] =
+                                            //     "/wp-content/themes/" .
+                                            //     $theme_parts[0];
+                                        }
+                                    } else {
+                                        // Caso não seja um tema nem um plugin, pode ser necessário ajustar o comportamento aqui.
+                                        //$log_entry["Script Location"] = $matches[1];
+                                    }
+
+                                    // Extrair o nome do script do URL
+                                    $script_name = basename(
+                                        parse_url(
+                                            $log_entry["Script URL"],
+                                            PHP_URL_PATH
+                                        )
                                     );
-                                    if (count($parts) > 1) {
-                                        $theme_parts = explode("/", $parts[1]);
-                                        $log_entry["File Type"] = "Theme";
-                                        $log_entry["Theme Name"] =
-                                            $theme_parts[0];
-                                        // $log_entry["Script Location"] =
-                                        //     "/wp-content/themes/" .
-                                        //     $theme_parts[0];
+                                    $log_entry["Script Name"] = $script_name;
+
+                                    //echo $line."\n";
+
+                                    // Exemplo de saída:
+                                    if (isset($log_entry["Date"])) {
+                                        // echo "DATE: {$log_entry["Date"]}\n";
+                                        echo "DATE: " . esc_attr($log_entry["Date"]) . "\n";
                                     }
+                                    if (isset($log_entry["Message Type"])) {
+                                        // echo "MESSAGE TYPE: (Javascript) {$log_entry["Message Type"]}\n";
+                                        echo "MESSAGE TYPE: (Javascript) " . esc_html($log_entry["Message Type"]) . "\n";
+                                    }
+                                    if (isset($log_entry["Problem Description"])) {
+                                        // echo "PROBLEM DESCRIPTION: {$log_entry["Problem Description"]}\n";
+                                        echo "PROBLEM DESCRIPTION: " . esc_html($log_entry["Problem Description"]) . "\n";
+                                    }
+
+                                    if (isset($log_entry["Script Name"])) {
+                                        // echo "SCRIPT NAME: {$log_entry["Script Name"]}\n";
+                                        echo "SCRIPT NAME: " . esc_attr($log_entry["Script Name"]) . "\n";
+                                    }
+                                    if (isset($log_entry["Line"])) {
+                                        //echo "LINE: {$log_entry["Line"]}\n";
+                                        echo "LINE: " . absint($log_entry["Line"]) . "\n";
+                                    }
+                                    if (isset($log_entry["Column"])) {
+                                        //	echo "COLUMN: {$log_entry['Column']}\n";
+                                    }
+                                    if (isset($log_entry["Error Object"])) {
+                                        //	echo "ERROR OBJECT: {$log_entry['Error Object']}\n";
+                                    }
+                                    if (isset($log_entry["Script Location"])) {
+                                        // echo "SCRIPT LOCATION: {$log_entry["Script Location"]}\n";
+                                        echo "SCRIPT LOCATION: " . esc_html($log_entry["Script Location"]) . "\n";
+                                    }
+                                    if (isset($log_entry["Plugin Name"])) {
+                                        // echo "PLUGIN NAME: {$log_entry["Plugin Name"]}\n";
+                                        echo "PLUGIN NAME: " . esc_attr($log_entry["Plugin Name"]) . "\n";
+                                    }
+                                    if (isset($log_entry["Theme Name"])) {
+                                        // echo "THEME NAME: {$log_entry["Theme Name"]}\n";
+                                        echo "THEME NAME: " . esc_attr($log_entry["Theme Name"]) . "\n";
+                                    }
+
+                                    echo "------------------------\n";
+                                    continue;
                                 } else {
-                                    // Caso não seja um tema nem um plugin, pode ser necessário ajustar o comportamento aqui.
-                                    //$log_entry["Script Location"] = $matches[1];
+                                    // echo "-----------x-------------\n";
+                                    // echo $line;
+                                    echo esc_html($line);
+                                    echo "\n-----------x------------\n";
                                 }
-
-                                // Extrair o nome do script do URL
-                                $script_name = basename(
-                                    parse_url(
-                                        $log_entry["Script URL"],
-                                        PHP_URL_PATH
-                                    )
-                                );
-                                $log_entry["Script Name"] = $script_name;
-
-                                //echo $line."\n";
-
-                                // Exemplo de saída:
-                                if (isset($log_entry["Date"])) {
-                                    // echo "DATE: {$log_entry["Date"]}\n";
-                                    echo "DATE: " . esc_attr($log_entry["Date"]) . "\n";
-                                }
-                                if (isset($log_entry["Message Type"])) {
-                                    // echo "MESSAGE TYPE: (Javascript) {$log_entry["Message Type"]}\n";
-                                    echo "MESSAGE TYPE: (Javascript) " . esc_html($log_entry["Message Type"]) . "\n";
-                                }
-                                if (isset($log_entry["Problem Description"])) {
-                                    // echo "PROBLEM DESCRIPTION: {$log_entry["Problem Description"]}\n";
-                                    echo "PROBLEM DESCRIPTION: " . esc_html($log_entry["Problem Description"]) . "\n";
-                                }
-
-                                if (isset($log_entry["Script Name"])) {
-                                    // echo "SCRIPT NAME: {$log_entry["Script Name"]}\n";
-                                    echo "SCRIPT NAME: " . esc_attr($log_entry["Script Name"]) . "\n";
-                                }
-                                if (isset($log_entry["Line"])) {
-                                    //echo "LINE: {$log_entry["Line"]}\n";
-                                    echo "LINE: " . absint($log_entry["Line"]) . "\n";
-                                }
-                                if (isset($log_entry["Column"])) {
-                                    //	echo "COLUMN: {$log_entry['Column']}\n";
-                                }
-                                if (isset($log_entry["Error Object"])) {
-                                    //	echo "ERROR OBJECT: {$log_entry['Error Object']}\n";
-                                }
-                                if (isset($log_entry["Script Location"])) {
-                                    // echo "SCRIPT LOCATION: {$log_entry["Script Location"]}\n";
-                                    echo "SCRIPT LOCATION: " . esc_html($log_entry["Script Location"]) . "\n";
-                                }
-                                if (isset($log_entry["Plugin Name"])) {
-                                    // echo "PLUGIN NAME: {$log_entry["Plugin Name"]}\n";
-                                    echo "PLUGIN NAME: " . esc_attr($log_entry["Plugin Name"]) . "\n";
-                                }
-                                if (isset($log_entry["Theme Name"])) {
-                                    // echo "THEME NAME: {$log_entry["Theme Name"]}\n";
-                                    echo "THEME NAME: " . esc_attr($log_entry["Theme Name"]) . "\n";
-                                }
-
-                                echo "------------------------\n";
                                 continue;
+                                // END JAVASCRIPT
                             } else {
-                                // echo "-----------x-------------\n";
-                                // echo $line;
-                                echo esc_html($line);
-                                echo "\n-----------x------------\n";
-                            }
-                            continue;
-                            // END JAVASCRIPT
-                        } else {
-                            /* ----- PHP // */
+                                /* ----- PHP // */
 
 
-                            // continue;
+                                // continue;
 
 
-                            $apattern = [];
-                            $apattern[] =
-                                "/^\[.*\] PHP (Warning|Error|Notice|Fatal error|Parse error): (.*) in \/([^ ]+) on line (\d+)/";
-                            $apattern[] =
-                                "/^\[.*\] PHP (Warning|Error|Notice|Fatal error|Parse error): (.*) in \/([^ ]+):(\d+)$/";
+                                $apattern = [];
+                                $apattern[] =
+                                    "/^\[.*\] PHP (Warning|Error|Notice|Fatal error|Parse error): (.*) in \/([^ ]+) on line (\d+)/";
+                                $apattern[] =
+                                    "/^\[.*\] PHP (Warning|Error|Notice|Fatal error|Parse error): (.*) in \/([^ ]+):(\d+)$/";
 
-                            $pattern = $apattern[0];
+                                $pattern = $apattern[0];
 
-                            for ($j = 0; $j < count($apattern); $j++) {
-                                if (
-                                    preg_match($apattern[$j], $line, $matches)
-                                ) {
-                                    $pattern = $apattern[$j];
-                                    break;
+                                for ($j = 0; $j < count($apattern); $j++) {
+                                    if (
+                                        preg_match($apattern[$j], $line, $matches)
+                                    ) {
+                                        $pattern = $apattern[$j];
+                                        break;
+                                    }
                                 }
-                            }
 
-                            if (preg_match($pattern, $line, $matches)) {
-                                //die(var_export($matches));
+                                if (preg_match($pattern, $line, $matches)) {
+                                    //die(var_export($matches));
 
-                                /*              
+                                    /*              
                                     0 => '[29-Sep-2023 11:44:22 UTC] PHP Parse error:  syntax error, unexpected \'preg_match\' (T_STRING) in /home/realesta/public_html/wp-content/plugins/wptools/functions/functions.php on line 2066',
                                     1 => 'Parse error',
                                     2 => ' syntax error, unexpected \'preg_match\' (T_STRING)',
@@ -1967,174 +2090,174 @@ function wptools_options()
 
 
 
-                                $filteredDate = strstr(substr($line, 1, 26), ']', true);
+                                    $filteredDate = strstr(substr($line, 1, 26), ']', true);
 
-                                $log_entry = [
-                                    "Date" => $filteredDate,
-                                    "News Type" => $matches[1],
-                                    "Problem Description" => wptools_strip_strong(
-                                        $matches[2]
-                                    ),
-                                ];
-
-
-
-                                $script_path = $matches[3];
-                                $script_info = pathinfo($script_path);
-
-                                // Dividir o nome do script com base em ":"
-                                $parts = explode(":", $script_info["basename"]);
-
-                                // O nome do script agora está na primeira parte
-                                $scriptName = $parts[0];
-
-                                $log_entry["Script Name"] = $scriptName; // Get the script name
-
-                                $log_entry["Script Location"] =
-                                    $script_info["dirname"]; // Get the script location
-
-                                $log_entry["Line"] = $matches[4];
+                                    $log_entry = [
+                                        "Date" => $filteredDate,
+                                        "News Type" => $matches[1],
+                                        "Problem Description" => wptools_strip_strong(
+                                            $matches[2]
+                                        ),
+                                    ];
 
 
 
-                                // Check if the "Script Location" contains "/plugins/" or "/themes/"
-                                if (
-                                    strpos(
-                                        $log_entry["Script Location"],
-                                        "/plugins/"
-                                    ) !== false
-                                ) {
-                                    // Extract the plugin name
-                                    $parts = explode(
-                                        "/plugins/",
-                                        $log_entry["Script Location"]
-                                    );
-                                    if (count($parts) > 1) {
-                                        $plugin_parts = explode("/", $parts[1]);
-                                        $log_entry["File Type"] = "Plugin";
-                                        $log_entry["Plugin Name"] =
-                                            $plugin_parts[0];
+                                    $script_path = $matches[3];
+                                    $script_info = pathinfo($script_path);
+
+                                    // Dividir o nome do script com base em ":"
+                                    $parts = explode(":", $script_info["basename"]);
+
+                                    // O nome do script agora está na primeira parte
+                                    $scriptName = $parts[0];
+
+                                    $log_entry["Script Name"] = $scriptName; // Get the script name
+
+                                    $log_entry["Script Location"] =
+                                        $script_info["dirname"]; // Get the script location
+
+                                    $log_entry["Line"] = $matches[4];
+
+
+
+                                    // Check if the "Script Location" contains "/plugins/" or "/themes/"
+                                    if (
+                                        strpos(
+                                            $log_entry["Script Location"],
+                                            "/plugins/"
+                                        ) !== false
+                                    ) {
+                                        // Extract the plugin name
+                                        $parts = explode(
+                                            "/plugins/",
+                                            $log_entry["Script Location"]
+                                        );
+                                        if (count($parts) > 1) {
+                                            $plugin_parts = explode("/", $parts[1]);
+                                            $log_entry["File Type"] = "Plugin";
+                                            $log_entry["Plugin Name"] =
+                                                $plugin_parts[0];
+                                        }
+                                    } elseif (
+                                        strpos(
+                                            $log_entry["Script Location"],
+                                            "/themes/"
+                                        ) !== false
+                                    ) {
+                                        // Extract the theme name
+                                        $parts = explode(
+                                            "/themes/",
+                                            $log_entry["Script Location"]
+                                        );
+                                        if (count($parts) > 1) {
+                                            $theme_parts = explode("/", $parts[1]);
+                                            $log_entry["File Type"] = "Theme";
+                                            $log_entry["Theme Name"] =
+                                                $theme_parts[0];
+                                        }
                                     }
-                                } elseif (
-                                    strpos(
-                                        $log_entry["Script Location"],
-                                        "/themes/"
-                                    ) !== false
-                                ) {
-                                    // Extract the theme name
-                                    $parts = explode(
-                                        "/themes/",
-                                        $log_entry["Script Location"]
-                                    );
-                                    if (count($parts) > 1) {
-                                        $theme_parts = explode("/", $parts[1]);
-                                        $log_entry["File Type"] = "Theme";
-                                        $log_entry["Theme Name"] =
-                                            $theme_parts[0];
+                                } else {
+                                    // stack trace...
+                                    $pattern = "/\[.*?\] PHP\s+\d+\.\s+(.*)/";
+                                    preg_match($pattern, $line, $matches);
+
+                                    if (!preg_match($pattern, $line)) {
+                                        echo "-----------y-------------\n";
+                                        echo esc_html($line);
+                                        echo "\n-----------y------------\n";
                                     }
+                                    continue;
                                 }
-                            } else {
-                                // stack trace...
-                                $pattern = "/\[.*?\] PHP\s+\d+\.\s+(.*)/";
-                                preg_match($pattern, $line, $matches);
 
-                                if (!preg_match($pattern, $line)) {
-                                    echo "-----------y-------------\n";
-                                    echo esc_html($line);
-                                    echo "\n-----------y------------\n";
+                                //$in_error_block = false; // End the error block
+                                $logs[] = $log_entry; // Add this log entry to the array of logs
+
+                                foreach ($logs as $log) {
+                                    if (isset($log["Date"])) {
+                                        echo "DATE: {$log["Date"]}\n";
+                                    }
+                                    if (isset($log["News Type"])) {
+                                        echo "MESSAGE TYPE: {$log["News Type"]}\n";
+                                    }
+                                    if (isset($log["Problem Description"])) {
+                                        echo "PROBLEM DESCRIPTION: {$log["Problem Description"]}\n";
+                                    }
+
+                                    // Check if the 'Script Name' key exists before printing
+                                    if (
+                                        isset($log["Script Name"]) and
+                                        !empty(trim($log["Script Name"]))
+                                    ) {
+                                        //echo "SCRIPT NAME: {$log["Script Name"]}\n";
+                                        echo "SCRIPT LOCATION: " . esc_html($log["Script Name"]) . "\n";
+                                    }
+
+                                    // Check if the 'Line' key exists before printing
+                                    if (isset($log["Line"])) {
+                                        //echo "LINE: {$log["Line"]}\n";
+                                        echo "SCRIPT LOCATION: " . esc_html($log["Line"]) . "\n";
+                                    }
+
+                                    // Check if the 'Script Location' key exists before printing
+                                    if (isset($log["Script Location"])) {
+                                        //echo "SCRIPT LOCATION: {$log["Script Location"]}\n";
+                                        echo "SCRIPT LOCATION: " . esc_html($log["Script Location"]) . "\n";
+                                    }
+
+                                    // Check if the 'File Type' key exists before printing
+                                    if (isset($log["File Type"])) {
+                                        // echo "FILE TYPE: {$log['File Type']}\n";
+                                    }
+
+                                    // Check if the 'Plugin Name' key exists before printing
+                                    if (
+                                        isset($log["Plugin Name"]) and
+                                        !empty(trim($log["Plugin Name"]))
+                                    ) {
+                                        // echo "PLUGIN NAME: {$log["Plugin Name"]}\n";
+                                        echo "PLUGIN NAME: " . sanitize_text_field($log["Plugin Name"]) . "\n";
+                                    }
+
+                                    // Check if the 'Theme Name' key exists before printing
+                                    if (isset($log["Theme Name"])) {
+                                        echo "THEME NAME: " . sanitize_text_field($log["Theme Name"]) . "\n";
+                                    }
+
+                                    echo "------------------------\n";
                                 }
-                                continue;
                             }
+                            // end if PHP ...
+                        } // end for...
 
-                            //$in_error_block = false; // End the error block
-                            $logs[] = $log_entry; // Add this log entry to the array of logs
-
-                            foreach ($logs as $log) {
-                                if (isset($log["Date"])) {
-                                    echo "DATE: {$log["Date"]}\n";
-                                }
-                                if (isset($log["News Type"])) {
-                                    echo "MESSAGE TYPE: {$log["News Type"]}\n";
-                                }
-                                if (isset($log["Problem Description"])) {
-                                    echo "PROBLEM DESCRIPTION: {$log["Problem Description"]}\n";
-                                }
-
-                                // Check if the 'Script Name' key exists before printing
-                                if (
-                                    isset($log["Script Name"]) and
-                                    !empty(trim($log["Script Name"]))
-                                ) {
-                                    //echo "SCRIPT NAME: {$log["Script Name"]}\n";
-                                    echo "SCRIPT LOCATION: " . esc_html($log["Script Name"]) . "\n";
-                                }
-
-                                // Check if the 'Line' key exists before printing
-                                if (isset($log["Line"])) {
-                                    //echo "LINE: {$log["Line"]}\n";
-                                    echo "SCRIPT LOCATION: " . esc_html($log["Line"]) . "\n";
-                                }
-
-                                // Check if the 'Script Location' key exists before printing
-                                if (isset($log["Script Location"])) {
-                                    //echo "SCRIPT LOCATION: {$log["Script Location"]}\n";
-                                    echo "SCRIPT LOCATION: " . esc_html($log["Script Location"]) . "\n";
-                                }
-
-                                // Check if the 'File Type' key exists before printing
-                                if (isset($log["File Type"])) {
-                                    // echo "FILE TYPE: {$log['File Type']}\n";
-                                }
-
-                                // Check if the 'Plugin Name' key exists before printing
-                                if (
-                                    isset($log["Plugin Name"]) and
-                                    !empty(trim($log["Plugin Name"]))
-                                ) {
-                                    // echo "PLUGIN NAME: {$log["Plugin Name"]}\n";
-                                    echo "PLUGIN NAME: " . sanitize_text_field($log["Plugin Name"]) . "\n";
-                                }
-
-                                // Check if the 'Theme Name' key exists before printing
-                                if (isset($log["Theme Name"])) {
-                                    echo "THEME NAME: " . sanitize_text_field($log["Theme Name"]) . "\n";
-                                }
-
-                                echo "------------------------\n";
-                            }
-                        }
-                        // end if PHP ...
-                    } // end for...
-
-                    echo "</textarea>";
+                        echo "</textarea>";
+                    }
+                    echo "<br />";
                 }
-                echo "<br />";
             }
         }
+        echo "<p>" .
+            esc_attr(__("Log Files found", "wptools")) .
+            ": " .
+            esc_attr($wptools_count) .
+            "</p>";
     }
-    echo "<p>" .
-        esc_attr(__("Log Files found", "wptools")) .
-        ": " .
-        esc_attr($wptools_count) .
-        "</p>";
-}
 
-function wptools_strip_strong($htmlString)
-{
-    // return $htmlString;
-    // Use preg_replace para remover as tags <strong>
-    $textWithoutStrongTags = preg_replace(
-        "/<strong>(.*?)<\/strong>/i",
-        '$1',
-        $htmlString
-    );
+    function wptools_strip_strong($htmlString)
+    {
+        // return $htmlString;
+        // Use preg_replace para remover as tags <strong>
+        $textWithoutStrongTags = preg_replace(
+            "/<strong>(.*?)<\/strong>/i",
+            '$1',
+            $htmlString
+        );
 
-    return $textWithoutStrongTags;
-}
+        return $textWithoutStrongTags;
+    }
 
-// Bill202309
+    // Bill202309
 
-/*
+    /*
 function wptools_read_file_old($file, $lines)
 {
     // Precisa o so uma linha?
@@ -2200,7 +2323,7 @@ function wptools_read_file_old($file, $lines)
 }
 */
 
-/*
+    /*
 $line = fgets($handle);
 if ($line === false) {
     break; // Não há mais linhas para ler
@@ -2219,381 +2342,381 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
 
 
 
-function wptools_read_file_2023($file, $lines)
-{
-    $handle = fopen($file, "r");
-    if (!$handle) {
-        return "";
-    }
-
-    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
-    $text = [];
-    $currentChunk = '';
-    $linecounter = 0;
-
-    // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle);
-    $pos = $filesize - $bufferSize;
-
-    while ($pos >= 0 && $linecounter < $lines) {
-        // Se pos é menor que zero, ajusta para 0
-        if ($pos < 0) {
-            $pos = 0;
+    function wptools_read_file_2023($file, $lines)
+    {
+        $handle = fopen($file, "r");
+        if (!$handle) {
+            return "";
         }
 
-        // Mover o ponteiro para a posição
-        fseek($handle, $pos);
+        $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
+        $text = [];
+        $currentChunk = '';
+        $linecounter = 0;
 
-        // Ler o bloco
-        $chunk = fread($handle, $bufferSize);
-        $currentChunk = $chunk . $currentChunk;
+        // Move para o final do arquivo e começa a leitura para trás
+        fseek($handle, 0, SEEK_END);
+        $filesize = ftell($handle);
+        $pos = $filesize - $bufferSize;
 
-        // Dividir o bloco em linhas
-        $linesInChunk = explode("\n", $currentChunk);
-
-        // O primeiro elemento pode ser uma linha parcial (incompleta)
-        $currentChunk = array_shift($linesInChunk);
-
-        // Adiciona as linhas ao texto
-        foreach (array_reverse($linesInChunk) as $line) {
-            $text[] = $line;
-            $linecounter++;
-            if ($linecounter >= $lines) {
-                break 2; // Sai dos dois loops
+        while ($pos >= 0 && $linecounter < $lines) {
+            // Se pos é menor que zero, ajusta para 0
+            if ($pos < 0) {
+                $pos = 0;
             }
-        }
 
-        // Move a posição para o próximo bloco
-        $pos -= $bufferSize;
-    }
+            // Mover o ponteiro para a posição
+            fseek($handle, $pos);
 
-    // Adiciona a última linha parcial (se houver)
-    if (!empty($currentChunk)) {
-        $text[] = $currentChunk;
-    }
+            // Ler o bloco
+            $chunk = fread($handle, $bufferSize);
+            $currentChunk = $chunk . $currentChunk;
 
-    fclose($handle);
+            // Dividir o bloco em linhas
+            $linesInChunk = explode("\n", $currentChunk);
 
-    // Reverte o array para retornar as linhas na ordem correta
-    // return array_reverse($text);
-    return $text;
-}
+            // O primeiro elemento pode ser uma linha parcial (incompleta)
+            $currentChunk = array_shift($linesInChunk);
 
-function wptools_read_file_bad($file, $lines)
-{
-
-    $handle = fopen($file, "r");
-    if (!$handle) {
-        return "";
-    }
-
-    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
-    $text = [];
-    $currentChunk = '';
-    $linecounter = 0;
-
-    // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle);
-    $pos = $filesize - $bufferSize;
-
-    while ($pos >= 0 && $linecounter < $lines) {
-        // Se pos é menor que zero, ajusta para 0
-        if ($pos < 0) {
-            $pos = 0;
-        }
-
-        // Mover o ponteiro para a posição
-        fseek($handle, $pos);
-
-        // Ler o bloco
-        $chunk = fread($handle, $bufferSize);
-        $currentChunk = $chunk . $currentChunk;
-
-        // Dividir o bloco em linhas
-        $linesInChunk = explode("\n", $currentChunk);
-
-        // O primeiro elemento pode ser uma linha parcial (incompleta)
-        $currentChunk = array_shift($linesInChunk);
-
-        // Adiciona as linhas ao texto, ignorando stack traces e termos como "thrown"
-        foreach (array_reverse($linesInChunk) as $line) {
-            // Verifica se a linha contém stack trace ou palavras como "thrown"
-            if (!preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $line)) {
+            // Adiciona as linhas ao texto
+            foreach (array_reverse($linesInChunk) as $line) {
                 $text[] = $line;
                 $linecounter++;
+                if ($linecounter >= $lines) {
+                    break 2; // Sai dos dois loops
+                }
             }
 
-            if ($linecounter >= $lines) {
-                break 2; // Sai dos dois loops
-            }
+            // Move a posição para o próximo bloco
+            $pos -= $bufferSize;
         }
 
-        // Move a posição para o próximo bloco
-        $pos -= $bufferSize;
-    }
-
-    // Adiciona a última linha parcial (se houver), se não for um stack trace ou termo ignorado
-    if (!empty($currentChunk) && !preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $currentChunk)) {
-        $text[] = $currentChunk;
-    }
-
-    fclose($handle);
-
-    // Reverte o array para retornar as linhas na ordem correta
-    return $text;
-}
-
-
-function wptools_read_file($file, $lines)
-{
-    $handle = fopen($file, "r");
-
-    if (!$handle) {
-        return "";
-    }
-
-    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
-    $text = [];
-    $currentChunk = '';
-    $linecounter = 0;
-
-    // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle); // Tamanho do arquivo
-
-    // Ajustar bufferSize para o tamanho do arquivo se for menor que 8KB
-    if ($filesize < $bufferSize) {
-        $bufferSize = $filesize;
-    }
-
-    $pos = $filesize - $bufferSize;
-
-    while ($pos >= 0 && $linecounter < $lines) {
-        if ($pos < 0) {
-            $pos = 0;
+        // Adiciona a última linha parcial (se houver)
+        if (!empty($currentChunk)) {
+            $text[] = $currentChunk;
         }
 
-        fseek($handle, $pos);
+        fclose($handle);
 
-        $chunk = fread($handle, $bufferSize);
-        $currentChunk = $chunk . $currentChunk;
-
-        $linesInChunk = explode("\n", $currentChunk);
-        $currentChunk = array_shift($linesInChunk);
-
-        foreach (array_reverse($linesInChunk) as $line) {
-            $text[] = $line;
-            $linecounter++;
-            if ($linecounter >= $lines) {
-                break 2;
-            }
-        }
-
-        $pos -= $bufferSize;
+        // Reverte o array para retornar as linhas na ordem correta
+        // return array_reverse($text);
+        return $text;
     }
 
-    if (!empty($currentChunk)) {
-        $text[] = $currentChunk;
-    }
+    function wptools_read_file_bad($file, $lines)
+    {
 
-    fclose($handle);
-
-    return $text;
-}
-
-
-
-function wptools_read_file99999($file, $lines)
-{
-    try {
         $handle = fopen($file, "r");
-    } catch (Exception $e) {
-        return "";
-    }
-    if (!$handle) {
-        return "";
+        if (!$handle) {
+            return "";
+        }
+
+        $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
+        $text = [];
+        $currentChunk = '';
+        $linecounter = 0;
+
+        // Move para o final do arquivo e começa a leitura para trás
+        fseek($handle, 0, SEEK_END);
+        $filesize = ftell($handle);
+        $pos = $filesize - $bufferSize;
+
+        while ($pos >= 0 && $linecounter < $lines) {
+            // Se pos é menor que zero, ajusta para 0
+            if ($pos < 0) {
+                $pos = 0;
+            }
+
+            // Mover o ponteiro para a posição
+            fseek($handle, $pos);
+
+            // Ler o bloco
+            $chunk = fread($handle, $bufferSize);
+            $currentChunk = $chunk . $currentChunk;
+
+            // Dividir o bloco em linhas
+            $linesInChunk = explode("\n", $currentChunk);
+
+            // O primeiro elemento pode ser uma linha parcial (incompleta)
+            $currentChunk = array_shift($linesInChunk);
+
+            // Adiciona as linhas ao texto, ignorando stack traces e termos como "thrown"
+            foreach (array_reverse($linesInChunk) as $line) {
+                // Verifica se a linha contém stack trace ou palavras como "thrown"
+                if (!preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $line)) {
+                    $text[] = $line;
+                    $linecounter++;
+                }
+
+                if ($linecounter >= $lines) {
+                    break 2; // Sai dos dois loops
+                }
+            }
+
+            // Move a posição para o próximo bloco
+            $pos -= $bufferSize;
+        }
+
+        // Adiciona a última linha parcial (se houver), se não for um stack trace ou termo ignorado
+        if (!empty($currentChunk) && !preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $currentChunk)) {
+            $text[] = $currentChunk;
+        }
+
+        fclose($handle);
+
+        // Reverte o array para retornar as linhas na ordem correta
+        return $text;
     }
 
-    $linecounter = $lines;
-    $pos = -2;
-    $beginning = false;
-    $text = [];
 
-    while ($linecounter > 0) {
-        $t = " ";
-        while ($t != "\n") {
-            if (fseek($handle, $pos, SEEK_END) == -1) {
-                $beginning = true;
+    function wptools_read_file($file, $lines)
+    {
+        $handle = fopen($file, "r");
+
+        if (!$handle) {
+            return "";
+        }
+
+        $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
+        $text = [];
+        $currentChunk = '';
+        $linecounter = 0;
+
+        // Move para o final do arquivo e começa a leitura para trás
+        fseek($handle, 0, SEEK_END);
+        $filesize = ftell($handle); // Tamanho do arquivo
+
+        // Ajustar bufferSize para o tamanho do arquivo se for menor que 8KB
+        if ($filesize < $bufferSize) {
+            $bufferSize = $filesize;
+        }
+
+        $pos = $filesize - $bufferSize;
+
+        while ($pos >= 0 && $linecounter < $lines) {
+            if ($pos < 0) {
+                $pos = 0;
+            }
+
+            fseek($handle, $pos);
+
+            $chunk = fread($handle, $bufferSize);
+            $currentChunk = $chunk . $currentChunk;
+
+            $linesInChunk = explode("\n", $currentChunk);
+            $currentChunk = array_shift($linesInChunk);
+
+            foreach (array_reverse($linesInChunk) as $line) {
+                $text[] = $line;
+                $linecounter++;
+                if ($linecounter >= $lines) {
+                    break 2;
+                }
+            }
+
+            $pos -= $bufferSize;
+        }
+
+        if (!empty($currentChunk)) {
+            $text[] = $currentChunk;
+        }
+
+        fclose($handle);
+
+        return $text;
+    }
+
+
+
+    function wptools_read_file99999($file, $lines)
+    {
+        try {
+            $handle = fopen($file, "r");
+        } catch (Exception $e) {
+            return "";
+        }
+        if (!$handle) {
+            return "";
+        }
+
+        $linecounter = $lines;
+        $pos = -2;
+        $beginning = false;
+        $text = [];
+
+        while ($linecounter > 0) {
+            $t = " ";
+            while ($t != "\n") {
+                if (fseek($handle, $pos, SEEK_END) == -1) {
+                    $beginning = true;
+                    break;
+                }
+                $t = fgetc($handle);
+                $pos--;
+            }
+
+            $linecounter--;
+
+            if ($beginning) {
+                rewind($handle);
+            }
+
+            $line = fgets($handle);
+            if ($line === false) {
                 break;
             }
-            $t = fgetc($handle);
-            $pos--;
+
+            $text[] = $line;
+
+            if ($beginning) {
+                break;
+            }
         }
 
-        $linecounter--;
-
-        if ($beginning) {
-            rewind($handle);
-        }
-
-        $line = fgets($handle);
-        if ($line === false) {
-            break;
-        }
-
-        $text[] = $line;
-
-        if ($beginning) {
-            break;
-        }
+        fclose($handle);
+        return array_reverse($text);
     }
 
-    fclose($handle);
-    return array_reverse($text);
-}
 
 
-
-function wptools_sizeFilter($bytes)
-{
-    $label = ["Bytes", "KB", "MB", "GB", "TB", "PB"];
-    for (
-        $i = 0;
-        $bytes >= 1024 && $i < count($label) - 1;
-        $bytes /= 1024, $i++
-    );
-    return round($bytes, 2) . " " . $label[$i];
-}
-function wptools_set_limit($limit = null)
-{
-    $old = wptools_get_limit();
-    $limit = (int) $limit;
-    @ini_set("memory_limit", $limit . "M");
-    $new = wptools_get_limit();
-    if (!$new || ($new == $old and $limit != old)) {
-        return false;
-    }
-    return true;
-}
-//
-function wptools_current_upload_max_filesize()
-{
-    $upload_limit = (int) ini_get("upload_max_filesize");
-    return $upload_limit * (1024 * 1024);
-}
-function wptools_set_upload_max_filesize()
-{
-    $upload_limit = (int) get_option("wptools_max_filesize", "0");
-    $upload_limit = $upload_limit * (1024 * 1024);
-    return $upload_limit;
-}
-///
-function wptools_current_time_limit()
-{
-    $time_limit = (int) ini_get("max_execution_time");
-    return $time_limit;
-}
-function wptools_set_time_limit($time_limit)
-{
-    $old_time_limit = wptools_current_time_limit();
-    @ini_set("max_execution_time", $time_limit);
-    $new_time_limit = wptools_current_time_limit();
-    if (
-        !$new_time_limit ||
-        ($new_time_limit == $old_time_limit and $time_limit != $old_time_limit)
-    ) {
-        return false;
-    }
-    return true;
-}
-function wptools_get_limit()
-{
-    $limit = (int) ini_get("memory_limit");
-    return $limit ? $limit : null;
-}
-function wptools_memory_test()
-{
-    global $wptools_memory,
-        $wptools_usage_content,
-        $wptools_label,
-        $wptools_status,
-        $wptools_description,
-        $wptools_actions;
-
-    if (!isset($wptools_memory["color"])) {
-        $wptools_memory["color"] = "font-weight:normal;";
-    }
-
-    $result = [
-        "badge" => [
-            "label" => $wptools_label,
-            "color" => $wptools_memory["color"],
-        ],
-        "test" => "wptools_test",
-        // status: Section the result should be displayed in. Possible values are good, recommended, or critical.
-        "status" => $wptools_status,
-        "label" => esc_attr__("Memory Usage", "wptools"),
-        "description" => $wptools_description . "  " . $wptools_usage_content,
-        "actions" => $wptools_actions,
-    ];
-    return $result;
-}
-function wptools_options_wp_config()
-{
-    wptools_show_logo();
-    echo "<h1>" . esc_attr(__("wp-config.php", "wptools")) . "</h1>";
-    echo '<a href="https://wptoolsplugin.com/what-is-the-file-wp-config/" >';
-    echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
-    echo "</a>";
-    echo "<br>";
-    echo "<br>";
-    $file = esc_url(ABSPATH) . "wp-config.php";
-    echo esc_attr_e("File path:", "wptools") . esc_attr($file);
-    echo "<br>";
-    $txt = "";
-    if (!file_exists($file)) {
-        echo esc_attr_e(
-            "File wp-config.php not found. Ask to your hosting company if is hidden.",
-            "wptools"
+    function wptools_sizeFilter($bytes)
+    {
+        $label = ["Bytes", "KB", "MB", "GB", "TB", "PB"];
+        for (
+            $i = 0;
+            $bytes >= 1024 && $i < count($label) - 1;
+            $bytes /= 1024, $i++
         );
+        return round($bytes, 2) . " " . $label[$i];
+    }
+    function wptools_set_limit($limit = null)
+    {
+        $old = wptools_get_limit();
+        $limit = (int) $limit;
+        @ini_set("memory_limit", $limit . "M");
+        $new = wptools_get_limit();
+        if (!$new || ($new == $old and $limit != old)) {
+            return false;
+        }
+        return true;
+    }
+    //
+    function wptools_current_upload_max_filesize()
+    {
+        $upload_limit = (int) ini_get("upload_max_filesize");
+        return $upload_limit * (1024 * 1024);
+    }
+    function wptools_set_upload_max_filesize()
+    {
+        $upload_limit = (int) get_option("wptools_max_filesize", "0");
+        $upload_limit = $upload_limit * (1024 * 1024);
+        return $upload_limit;
+    }
+    ///
+    function wptools_current_time_limit()
+    {
+        $time_limit = (int) ini_get("max_execution_time");
+        return $time_limit;
+    }
+    function wptools_set_time_limit($time_limit)
+    {
+        $old_time_limit = wptools_current_time_limit();
+        @ini_set("max_execution_time", $time_limit);
+        $new_time_limit = wptools_current_time_limit();
+        if (
+            !$new_time_limit ||
+            ($new_time_limit == $old_time_limit and $time_limit != $old_time_limit)
+        ) {
+            return false;
+        }
+        return true;
+    }
+    function wptools_get_limit()
+    {
+        $limit = (int) ini_get("memory_limit");
+        return $limit ? $limit : null;
+    }
+    function wptools_memory_test()
+    {
+        global $wptools_memory,
+            $wptools_usage_content,
+            $wptools_label,
+            $wptools_status,
+            $wptools_description,
+            $wptools_actions;
+
+        if (!isset($wptools_memory["color"])) {
+            $wptools_memory["color"] = "font-weight:normal;";
+        }
+
+        $result = [
+            "badge" => [
+                "label" => $wptools_label,
+                "color" => $wptools_memory["color"],
+            ],
+            "test" => "wptools_test",
+            // status: Section the result should be displayed in. Possible values are good, recommended, or critical.
+            "status" => $wptools_status,
+            "label" => esc_attr__("Memory Usage", "wptools"),
+            "description" => $wptools_description . "  " . $wptools_usage_content,
+            "actions" => $wptools_actions,
+        ];
+        return $result;
+    }
+    function wptools_options_wp_config()
+    {
+        wptools_show_logo();
+        echo "<h1>" . esc_attr(__("wp-config.php", "wptools")) . "</h1>";
+        echo '<a href="https://wptoolsplugin.com/what-is-the-file-wp-config/" >';
+        echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
+        echo "</a>";
         echo "<br>";
-    } else {
-        $txt = trim(file_get_contents($file, true));
-        if (empty($txt)) {
+        echo "<br>";
+        $file = esc_url(ABSPATH) . "wp-config.php";
+        echo esc_attr_e("File path:", "wptools") . esc_attr($file);
+        echo "<br>";
+        $txt = "";
+        if (!file_exists($file)) {
             echo esc_attr_e(
-                "Unable to read the file wp-config.php! Ask to your hosting company.",
+                "File wp-config.php not found. Ask to your hosting company if is hidden.",
                 "wptools"
             );
             echo "<br>";
+        } else {
+            $txt = trim(file_get_contents($file, true));
+            if (empty($txt)) {
+                echo esc_attr_e(
+                    "Unable to read the file wp-config.php! Ask to your hosting company.",
+                    "wptools"
+                );
+                echo "<br>";
+            }
         }
-    }
-    echo "<form>";
-    ?>
+        echo "<form>";
+        ?>
         <textarea rows="16" cols="70"><?php echo esc_html($txt); ?></textarea>
         <br>
         <br>
     <?php echo "</form>";
-}
-function wptools_show_logo()
-{
-    echo '<div id="wptools_logo" style="margin-top:10px;">';
-    // echo '<br>';
-    echo '<img src="';
-    echo esc_url(WPTOOLSIMAGES) . "/logo.png";
-    echo '">';
-    echo "<br>";
-    echo "</div>";
-}
-function wptools_options_cookies()
-{
-    wptools_show_logo();
-    echo "<h1>" . esc_attr(__("Show Cookies", "wptools")) . "</h1>";
-    echo '<a href="https://wptoolsplugin.com/what-are-cookies/" >';
-    echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
-    echo "</a>";
-    echo "<br>";
+    }
+    function wptools_show_logo()
+    {
+        echo '<div id="wptools_logo" style="margin-top:10px;">';
+        // echo '<br>';
+        echo '<img src="';
+        echo esc_url(WPTOOLSIMAGES) . "/logo.png";
+        echo '">';
+        echo "<br>";
+        echo "</div>";
+    }
+    function wptools_options_cookies()
+    {
+        wptools_show_logo();
+        echo "<h1>" . esc_attr(__("Show Cookies", "wptools")) . "</h1>";
+        echo '<a href="https://wptoolsplugin.com/what-are-cookies/" >';
+        echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
+        echo "</a>";
+        echo "<br>";
     ?>
         <br>
         <table class="wptools_admin_table" align="center">
@@ -2611,42 +2734,42 @@ function wptools_options_cookies()
 
         </table>
     <?php
-}
-function wptools_options_permissions2()
-{
-    wptools_show_logo();
-    echo "<h1>" .
-        esc_attr(__("Permission Scheme for WordPress", "wptools")) .
-        "</h1>";
-    echo esc_attr(__("Typically", "wptools"));
-    echo ":";
-    echo "<br>";
-    echo esc_attr(__("Files", "wptools"));
-    echo ": 644";
-    echo "<br>";
-    echo esc_attr(__("Folders", "wptools"));
-    echo ": 755";
-    echo "<br>";
-    echo esc_attr(__("File wp-config.php: 660", "wptools"));
-    echo "<br>";
-    echo "<br>";
-    // echo ABSPATH.'wp-config.php';
-    if (file_exists(ABSPATH . "wp-config.php")) {
-        echo esc_attr_e("wp-config.php currently permissions:", "wptools") .
-            esc_attr(decoct(fileperms(ABSPATH . "wp-config.php") & 0777));
     }
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo '<a href="https://wptoolsplugin.com/wordpress-file-permissions/" >';
-    echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
-    echo "</a>";
-    echo "<br>";
-    $files = wptools_fetch_files(ABSPATH);
-    if ($files === false) {
-        echo "<h3>" . esc_attr(__("Unable to read files", "wptools")) . "</h3>";
-        return;
-    }
+    function wptools_options_permissions2()
+    {
+        wptools_show_logo();
+        echo "<h1>" .
+            esc_attr(__("Permission Scheme for WordPress", "wptools")) .
+            "</h1>";
+        echo esc_attr(__("Typically", "wptools"));
+        echo ":";
+        echo "<br>";
+        echo esc_attr(__("Files", "wptools"));
+        echo ": 644";
+        echo "<br>";
+        echo esc_attr(__("Folders", "wptools"));
+        echo ": 755";
+        echo "<br>";
+        echo esc_attr(__("File wp-config.php: 660", "wptools"));
+        echo "<br>";
+        echo "<br>";
+        // echo ABSPATH.'wp-config.php';
+        if (file_exists(ABSPATH . "wp-config.php")) {
+            echo esc_attr_e("wp-config.php currently permissions:", "wptools") .
+                esc_attr(decoct(fileperms(ABSPATH . "wp-config.php") & 0777));
+        }
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo '<a href="https://wptoolsplugin.com/wordpress-file-permissions/" >';
+        echo esc_attr(__("Visit plugin's site for detais", "wptools")) . ".";
+        echo "</a>";
+        echo "<br>";
+        $files = wptools_fetch_files(ABSPATH);
+        if ($files === false) {
+            echo "<h3>" . esc_attr(__("Unable to read files", "wptools")) . "</h3>";
+            return;
+        }
     ?>
         <table class="wptools_admin_table" align="center">
             <thead>

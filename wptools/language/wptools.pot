@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-22 10:01+0000\n"
+"POT-Creation-Date: 2024-12-23 09:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -202,7 +202,7 @@ msgstr ""
 
 #: dashboard/dashboard.php:136 dashboard/dashboard.php:169
 #: functions/__functions.php:2222 functions/_functions.php:2193
-#: functions/functions.php:2537 settings/options/plugin_options_tabbed.php:594
+#: functions/functions.php:2660 settings/options/plugin_options_tabbed.php:594
 msgid "Memory Usage"
 msgstr ""
 
@@ -260,7 +260,7 @@ msgid "OS type & version"
 msgstr ""
 
 #: dashboard/dashboard.php:311 functions/__functions.php:3791
-#: functions/_functions.php:3818 functions/functions.php:4097
+#: functions/_functions.php:3818 functions/functions.php:4220
 msgid "PHP Version"
 msgstr ""
 
@@ -368,7 +368,7 @@ msgid "Troubleshooting Page"
 msgstr ""
 
 #: dashboard/dashboard_container.php:18 functions/__functions.php:2995
-#: functions/_functions.php:3022 functions/functions.php:3310
+#: functions/_functions.php:3022 functions/functions.php:3433
 msgid "Server Check & Requirements"
 msgstr ""
 
@@ -553,7 +553,7 @@ msgstr ""
 
 #: functions/__functions.php:150 functions/__functions.php:2277
 #: functions/_functions.php:139 functions/_functions.php:2248
-#: functions/functions.php:150 functions/functions.php:2592 guide/guide.php:52
+#: functions/functions.php:150 functions/functions.php:2715 guide/guide.php:52
 msgid "Show Cookies"
 msgstr ""
 
@@ -598,9 +598,9 @@ msgstr ""
 #: functions/_functions.php:356 functions/_functions.php:2204
 #: functions/_functions.php:2250 functions/_functions.php:2298
 #: functions/_functions.php:2748 functions/_functions.php:3646
-#: functions/functions.php:423 functions/functions.php:2548
-#: functions/functions.php:2594 functions/functions.php:2642
-#: functions/functions.php:3092 functions/functions.php:3925
+#: functions/functions.php:423 functions/functions.php:2671
+#: functions/functions.php:2717 functions/functions.php:2765
+#: functions/functions.php:3215 functions/functions.php:4048
 msgid "Visit plugin's site for detais"
 msgstr ""
 
@@ -666,7 +666,7 @@ msgstr ""
 
 #: functions/__functions.php:694 functions/__functions.php:3782
 #: functions/_functions.php:675 functions/_functions.php:3809
-#: functions/functions.php:747 functions/functions.php:4088
+#: functions/functions.php:747 functions/functions.php:4211
 msgid "Basic Information"
 msgstr ""
 
@@ -687,7 +687,7 @@ msgstr ""
 #: functions/_functions.php:2258 functions/_functions.php:3813
 #: functions/functions.php:752 functions/functions.php:758
 #: functions/functions.php:863 functions/functions.php:869
-#: functions/functions.php:2602 functions/functions.php:4092
+#: functions/functions.php:2725 functions/functions.php:4215
 msgid "Value"
 msgstr ""
 
@@ -941,44 +941,44 @@ msgid ""
 msgstr ""
 
 #: functions/__functions.php:1552 functions/_functions.php:1533
-#: functions/functions.php:1636
+#: functions/functions.php:1753
 msgid "For bigger files, download and open them in your local computer."
 msgstr ""
 
 #: functions/__functions.php:1559 functions/_functions.php:1540
-#: functions/functions.php:1646
+#: functions/functions.php:1762
 msgid "Learn more about errors and warnings..."
 msgstr ""
 
 #: functions/__functions.php:2038 functions/_functions.php:2009
-#: functions/functions.php:2116
+#: functions/functions.php:2239
 msgid "Log Files found"
 msgstr ""
 
 #: functions/__functions.php:2231 functions/_functions.php:2202
-#: functions/functions.php:2546
+#: functions/functions.php:2669
 msgid "wp-config.php"
 msgstr ""
 
 #: functions/__functions.php:2238 functions/__functions.php:2782
 #: functions/_functions.php:2209 functions/_functions.php:2753
-#: functions/functions.php:2553 functions/functions.php:3097
+#: functions/functions.php:2676 functions/functions.php:3220
 msgid "File path:"
 msgstr ""
 
 #: functions/__functions.php:2243 functions/_functions.php:2214
-#: functions/functions.php:2558
+#: functions/functions.php:2681
 msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
 msgstr ""
 
 #: functions/__functions.php:2251 functions/_functions.php:2222
-#: functions/functions.php:2566
+#: functions/functions.php:2689
 msgid "Unable to read the file wp-config.php! Ask to your hosting company."
 msgstr ""
 
 #: functions/__functions.php:2286 functions/__functions.php:3785
 #: functions/_functions.php:2257 functions/_functions.php:3812
-#: functions/functions.php:2601 functions/functions.php:4091
+#: functions/functions.php:2724 functions/functions.php:4214
 #: functions/functions_transiente_manager.php:159
 msgid "Name"
 msgstr ""
@@ -986,280 +986,280 @@ msgstr ""
 #: functions/__functions.php:2304 functions/__functions.php:2421
 #: functions/__functions.php:2583 functions/_functions.php:2275
 #: functions/_functions.php:2392 functions/_functions.php:2554
-#: functions/functions.php:2619 functions/functions.php:2736
-#: functions/functions.php:2898
+#: functions/functions.php:2742 functions/functions.php:2859
+#: functions/functions.php:3021
 msgid "Permission Scheme for WordPress"
 msgstr ""
 
 #: functions/__functions.php:2306 functions/__functions.php:2423
 #: functions/__functions.php:2585 functions/_functions.php:2277
 #: functions/_functions.php:2394 functions/_functions.php:2556
-#: functions/functions.php:2621 functions/functions.php:2738
-#: functions/functions.php:2900
+#: functions/functions.php:2744 functions/functions.php:2861
+#: functions/functions.php:3023
 msgid "Typically"
 msgstr ""
 
 #: functions/__functions.php:2309 functions/__functions.php:2425
 #: functions/__functions.php:2586 functions/_functions.php:2280
 #: functions/_functions.php:2396 functions/_functions.php:2557
-#: functions/functions.php:2624 functions/functions.php:2740
-#: functions/functions.php:2901
+#: functions/functions.php:2747 functions/functions.php:2863
+#: functions/functions.php:3024
 msgid "Files"
 msgstr ""
 
 #: functions/__functions.php:2312 functions/__functions.php:2427
 #: functions/__functions.php:2587 functions/_functions.php:2283
 #: functions/_functions.php:2398 functions/_functions.php:2558
-#: functions/functions.php:2627 functions/functions.php:2742
-#: functions/functions.php:2902
+#: functions/functions.php:2750 functions/functions.php:2865
+#: functions/functions.php:3025
 msgid "Folders"
 msgstr ""
 
 #: functions/__functions.php:2315 functions/__functions.php:2429
 #: functions/__functions.php:2588 functions/_functions.php:2286
 #: functions/_functions.php:2400 functions/_functions.php:2559
-#: functions/functions.php:2630 functions/functions.php:2744
-#: functions/functions.php:2903
+#: functions/functions.php:2753 functions/functions.php:2867
+#: functions/functions.php:3026
 msgid "File wp-config.php: 660"
 msgstr ""
 
 #: functions/__functions.php:2320 functions/_functions.php:2291
-#: functions/functions.php:2635
+#: functions/functions.php:2758
 msgid "wp-config.php currently permissions:"
 msgstr ""
 
 #: functions/__functions.php:2332 functions/__functions.php:2443
 #: functions/__functions.php:2602 functions/_functions.php:2303
 #: functions/_functions.php:2414 functions/_functions.php:2573
-#: functions/functions.php:2647 functions/functions.php:2758
-#: functions/functions.php:2917
+#: functions/functions.php:2770 functions/functions.php:2881
+#: functions/functions.php:3040
 msgid "Unable to read files"
 msgstr ""
 
 #: functions/__functions.php:2338 functions/__functions.php:2460
 #: functions/__functions.php:2619 functions/_functions.php:2309
 #: functions/_functions.php:2431 functions/_functions.php:2590
-#: functions/functions.php:2653 functions/functions.php:2775
-#: functions/functions.php:2934
+#: functions/functions.php:2776 functions/functions.php:2898
+#: functions/functions.php:3057
 msgid "Permissions"
 msgstr ""
 
 #: functions/__functions.php:2339 functions/__functions.php:2461
 #: functions/__functions.php:2620 functions/_functions.php:2310
 #: functions/_functions.php:2432 functions/_functions.php:2591
-#: functions/functions.php:2654 functions/functions.php:2776
-#: functions/functions.php:2935
+#: functions/functions.php:2777 functions/functions.php:2899
+#: functions/functions.php:3058
 msgid "Files / Folders"
 msgstr ""
 
 #: functions/__functions.php:2394 functions/_functions.php:2365
-#: functions/functions.php:2709
+#: functions/functions.php:2832
 msgid "Files with wrong permissions. This plugin will show max 50."
 msgstr ""
 
 #: functions/__functions.php:2398 functions/__functions.php:2510
 #: functions/__functions.php:2728 functions/_functions.php:2369
 #: functions/_functions.php:2481 functions/_functions.php:2699
-#: functions/functions.php:2713 functions/functions.php:2825
-#: functions/functions.php:3043
+#: functions/functions.php:2836 functions/functions.php:2948
+#: functions/functions.php:3166
 msgid "No files found with wrong permissions."
 msgstr ""
 
 #: functions/__functions.php:2407 functions/_functions.php:2378
-#: functions/functions.php:2722
+#: functions/functions.php:2845
 msgid "Folders with wrong permissions. This plugin will show max 50."
 msgstr ""
 
 #: functions/__functions.php:2412 functions/__functions.php:2523
 #: functions/__functions.php:2739 functions/_functions.php:2383
 #: functions/_functions.php:2494 functions/_functions.php:2710
-#: functions/functions.php:2727 functions/functions.php:2838
-#: functions/functions.php:3054
+#: functions/functions.php:2850 functions/functions.php:2961
+#: functions/functions.php:3177
 msgid "No folders found with wrong permissions."
 msgstr ""
 
 #: functions/__functions.php:2432 functions/__functions.php:2591
 #: functions/_functions.php:2403 functions/_functions.php:2562
-#: functions/functions.php:2747 functions/functions.php:2906
+#: functions/functions.php:2870 functions/functions.php:3029
 msgid "wp-config.php current permissions:"
 msgstr ""
 
 #: functions/__functions.php:2438 functions/__functions.php:2597
 #: functions/_functions.php:2409 functions/_functions.php:2568
-#: functions/functions.php:2753 functions/functions.php:2912
+#: functions/functions.php:2876 functions/functions.php:3035
 msgid "Visit plugin's site for details"
 msgstr ""
 
 #: functions/__functions.php:2506 functions/__functions.php:2726
 #: functions/_functions.php:2477 functions/_functions.php:2697
-#: functions/functions.php:2821 functions/functions.php:3041
+#: functions/functions.php:2944 functions/functions.php:3164
 msgid "Files with wrong permissions."
 msgstr ""
 
 #: functions/__functions.php:2508 functions/__functions.php:2520
 #: functions/_functions.php:2479 functions/_functions.php:2491
-#: functions/functions.php:2823 functions/functions.php:2835
+#: functions/functions.php:2946 functions/functions.php:2958
 msgid "This plugin will show max 50."
 msgstr ""
 
 #: functions/__functions.php:2518 functions/__functions.php:2736
 #: functions/_functions.php:2489 functions/_functions.php:2707
-#: functions/functions.php:2833 functions/functions.php:3051
+#: functions/functions.php:2956 functions/functions.php:3174
 msgid "Folders with wrong permissions."
 msgstr ""
 
 #: functions/__functions.php:2669 functions/_functions.php:2640
-#: functions/functions.php:2984
+#: functions/functions.php:3107
 msgid "Free version limited to a maximum of 50 files."
 msgstr ""
 
 #: functions/__functions.php:2775 functions/_functions.php:2746
-#: functions/functions.php:3090
+#: functions/functions.php:3213
 msgid ".htaccess"
 msgstr ""
 
 #: functions/__functions.php:2786 functions/_functions.php:2757
-#: functions/functions.php:3101
+#: functions/functions.php:3224
 msgid "File .htaccess not found."
 msgstr ""
 
 #: functions/__functions.php:2791 functions/_functions.php:2762
-#: functions/functions.php:3106
+#: functions/functions.php:3229
 msgid "Empty file .htaccess!"
 msgstr ""
 
 #: functions/__functions.php:3005 functions/_functions.php:3032
-#: functions/functions.php:3320
+#: functions/functions.php:3443
 msgid "Step 1 - Check Memory"
 msgstr ""
 
 #: functions/__functions.php:3014 functions/__functions.php:3108
 #: functions/_functions.php:3041 functions/_functions.php:3135
-#: functions/functions.php:3329 functions/functions.php:3423
+#: functions/functions.php:3452 functions/functions.php:3546
 msgid "General Failure (7) to get memory information."
 msgstr ""
 
 #: functions/__functions.php:3025 functions/_functions.php:3052
-#: functions/functions.php:3340
+#: functions/functions.php:3463
 msgid ""
 "Your site free memory is too low and can happens memory fault error, also "
 "without install our plugin."
 msgstr ""
 
 #: functions/__functions.php:3029 functions/_functions.php:3056
-#: functions/functions.php:3344
+#: functions/functions.php:3467
 msgid "The WordPress Memory Limit is"
 msgstr ""
 
 #: functions/__functions.php:3032 functions/_functions.php:3059
-#: functions/functions.php:3347
+#: functions/functions.php:3470
 msgid "The WordPress Memory Usage is"
 msgstr ""
 
 #: functions/__functions.php:3042 functions/__functions.php:3045
 #: functions/__functions.php:3117 functions/_functions.php:3069
 #: functions/_functions.php:3072 functions/_functions.php:3144
-#: functions/functions.php:3357 functions/functions.php:3360
-#: functions/functions.php:3432
+#: functions/functions.php:3480 functions/functions.php:3483
+#: functions/functions.php:3555
 msgid "The free memory now is"
 msgstr ""
 
 #: functions/__functions.php:3055 functions/__functions.php:3093
 #: functions/__functions.php:3125 functions/_functions.php:3082
 #: functions/_functions.php:3120 functions/_functions.php:3152
-#: functions/functions.php:3370 functions/functions.php:3408
-#: functions/functions.php:3440
+#: functions/functions.php:3493 functions/functions.php:3531
+#: functions/functions.php:3563
 msgid "For more details, visit our site"
 msgstr ""
 
 #: functions/__functions.php:3058 functions/__functions.php:3096
 #: functions/__functions.php:3128 functions/_functions.php:3085
 #: functions/_functions.php:3123 functions/_functions.php:3155
-#: functions/functions.php:3373 functions/functions.php:3411
-#: functions/functions.php:3443
+#: functions/functions.php:3496 functions/functions.php:3534
+#: functions/functions.php:3566
 msgid "WP MEMORY (Free WordPress Plugin to Fix Low Memory Limit)"
 msgstr ""
 
 #: functions/__functions.php:3066 functions/_functions.php:3093
-#: functions/functions.php:3381
+#: functions/functions.php:3504
 msgid "Unable to get ini_get('memory_limit')"
 msgstr ""
 
 #: functions/__functions.php:3071 functions/_functions.php:3098
-#: functions/functions.php:3386
+#: functions/functions.php:3509
 msgid "Unable to get memory_get_usage() "
 msgstr ""
 
 #: functions/__functions.php:3075 functions/_functions.php:3102
-#: functions/functions.php:3390
+#: functions/functions.php:3513
 msgid "Memory Usage is not Numeric (3)"
 msgstr ""
 
 #: functions/__functions.php:3079 functions/_functions.php:3106
-#: functions/functions.php:3394
+#: functions/functions.php:3517
 msgid "Memory Usage < than 1'"
 msgstr ""
 
 #: functions/__functions.php:3084 functions/_functions.php:3111
-#: functions/functions.php:3399
+#: functions/functions.php:3522
 msgid ""
 "Possible error: On file wp-config.php memory symbol should be M or MB or G "
 "or GB."
 msgstr ""
 
 #: functions/__functions.php:3089 functions/_functions.php:3116
-#: functions/functions.php:3404
+#: functions/functions.php:3527
 msgid "For example,  define(\"WP_MEMORY_LIMIT\", \"256M\"); "
 msgstr ""
 
 #: functions/__functions.php:3103 functions/_functions.php:3130
-#: functions/functions.php:3418
+#: functions/functions.php:3541
 msgid "Memory Limit out of range. (6)"
 msgstr ""
 
 #: functions/__functions.php:3115 functions/_functions.php:3142
-#: functions/functions.php:3430
+#: functions/functions.php:3553
 msgid "No Memory Problems found."
 msgstr ""
 
 #: functions/__functions.php:3137 functions/_functions.php:3164
-#: functions/functions.php:3452
+#: functions/functions.php:3575
 msgid "Step 2 - Check for Javascript Errors"
 msgstr ""
 
 #: functions/__functions.php:3141 functions/_functions.php:3168
-#: functions/functions.php:3456
+#: functions/functions.php:3579
 msgid "Javascript is NOT working in your site and/or with your browser!"
 msgstr ""
 
 #: functions/__functions.php:3148 functions/_functions.php:3175
-#: functions/functions.php:3463
+#: functions/functions.php:3586
 msgid "Step 3 - Check for Hosting Resources"
 msgstr ""
 
 #: functions/__functions.php:3151 functions/_functions.php:3178
-#: functions/functions.php:3466
+#: functions/functions.php:3589
 msgid "Maybe Your server is not Linux"
 msgstr ""
 
 #: functions/__functions.php:3153 functions/__functions.php:3167
 #: functions/_functions.php:3180 functions/_functions.php:3194
-#: functions/functions.php:3468 functions/functions.php:3483
+#: functions/functions.php:3591 functions/functions.php:3606
 msgid "and this plugin requires Linux."
 msgstr ""
 
 #: functions/__functions.php:3156 functions/_functions.php:3183
-#: functions/functions.php:3471
+#: functions/functions.php:3594
 msgid "Your Hosting Company dont have the constant: PHP_OS_FAMILY defined."
 msgstr ""
 
 #: functions/__functions.php:3165 functions/_functions.php:3192
-#: functions/functions.php:3481
+#: functions/functions.php:3604
 msgid "Your server is not Linux"
 msgstr ""
 
 #: functions/__functions.php:3169 functions/_functions.php:3196
-#: functions/functions.php:3485
+#: functions/functions.php:3608
 msgid "Your server is:"
 msgstr ""
 
@@ -1268,90 +1268,90 @@ msgstr ""
 #: functions/__functions.php:3297 functions/_functions.php:3206
 #: functions/_functions.php:3223 functions/_functions.php:3242
 #: functions/_functions.php:3303 functions/_functions.php:3324
-#: functions/functions.php:3496 functions/functions.php:3512
-#: functions/functions.php:3530 functions/functions.php:3588
-#: functions/functions.php:3608
+#: functions/functions.php:3619 functions/functions.php:3635
+#: functions/functions.php:3653 functions/functions.php:3711
+#: functions/functions.php:3731
 msgid "Plugin requirement:"
 msgstr ""
 
 #: functions/__functions.php:3182 functions/_functions.php:3209
-#: functions/functions.php:3499
+#: functions/functions.php:3622
 msgid ""
 "Open_basedir restriction in effect. Talk with your hosting and request to "
 "disable it."
 msgstr ""
 
 #: functions/__functions.php:3199 functions/_functions.php:3226
-#: functions/functions.php:3515
+#: functions/functions.php:3638
 msgid ""
 "PHP function sys_getloadavg not enabled. Talk with your hosting and request "
 "to enable it."
 msgstr ""
 
 #: functions/__functions.php:3218 functions/_functions.php:3245
-#: functions/functions.php:3533
+#: functions/functions.php:3656
 msgid ""
 "/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
 "it."
 msgstr ""
 
 #: functions/__functions.php:3233 functions/_functions.php:3260
-#: functions/functions.php:3547
+#: functions/functions.php:3670
 msgid ""
 "Request to your Hosting enable the PHP functions disk_free_space() and "
 "disk_total_space()"
 msgstr ""
 
 #: functions/__functions.php:3257 functions/_functions.php:3284
-#: functions/functions.php:3570
+#: functions/functions.php:3693
 msgid ""
 "Request to your Hosting to enable the PHP function shell_exec() because is "
 "returning NULL."
 msgstr ""
 
 #: functions/__functions.php:3280 functions/_functions.php:3307
-#: functions/functions.php:3592
+#: functions/functions.php:3715
 msgid ""
 "/proc/stat doesn't readable. Talk with your hosting and request to enable it."
 msgstr ""
 
 #: functions/__functions.php:3300 functions/_functions.php:3327
-#: functions/functions.php:3611
+#: functions/functions.php:3734
 msgid ""
 "/etc/os-release doesn't readable. Talk with your hosting and request to "
 "enable it."
 msgstr ""
 
 #: functions/__functions.php:3316 functions/_functions.php:3343
-#: functions/functions.php:3626
+#: functions/functions.php:3749
 msgid "PHP Version 7.0 or bigger is required. My version:"
 msgstr ""
 
 #: functions/__functions.php:3337 functions/_functions.php:3364
-#: functions/functions.php:3647
+#: functions/functions.php:3770
 msgid "Your hosting is blocking the PHP function sys_getloadavg()."
 msgstr ""
 
 #: functions/__functions.php:3348 functions/_functions.php:3375
-#: functions/functions.php:3658
+#: functions/functions.php:3781
 msgid ""
 "if you can see warnings or empty fields on your dashboard, means your "
 "hosting company is blocking some php functions."
 msgstr ""
 
 #: functions/__functions.php:3355 functions/_functions.php:3382
-#: functions/functions.php:3665
+#: functions/functions.php:3788
 msgid "Looks like our plugin can works fine with your server configuration."
 msgstr ""
 
 #: functions/__functions.php:3363 functions/_functions.php:3390
-#: functions/functions.php:3673
+#: functions/functions.php:3796
 msgid ""
 "If we are wrong, please, contact our support at: https://wptoolsplugin.com"
 msgstr ""
 
 #: functions/__functions.php:3529 functions/_functions.php:3556
-#: functions/functions.php:3835
+#: functions/functions.php:3958
 msgid ""
 "The `.maintenance` file in WordPress signals maintenance mode during "
 "updates, displaying a message to visitors. Created in the root directory, it "
@@ -1359,305 +1359,305 @@ msgid ""
 msgstr ""
 
 #: functions/__functions.php:3531 functions/_functions.php:3558
-#: functions/functions.php:3837
+#: functions/functions.php:3960
 msgid ""
 "Manual removal may be necessary if the file persists, causing the site to "
 "stay in maintenance mode."
 msgstr ""
 
 #: functions/__functions.php:3535 functions/_functions.php:3562
-#: functions/functions.php:3841
+#: functions/functions.php:3964
 msgid "Learn more about..."
 msgstr ""
 
 #: functions/__functions.php:3542 functions/__functions.php:3568
 #: functions/_functions.php:3569 functions/_functions.php:3595
-#: functions/functions.php:3848 functions/functions.php:3875
+#: functions/functions.php:3971 functions/functions.php:3998
 msgid "The .maintenance file does not exist."
 msgstr ""
 
 #: functions/__functions.php:3559 functions/_functions.php:3586
-#: functions/functions.php:3866
+#: functions/functions.php:3989
 msgid "The .maintenance file has been successfully deleted."
 msgstr ""
 
 #: functions/__functions.php:3562 functions/_functions.php:3589
-#: functions/functions.php:3869
+#: functions/functions.php:3992
 msgid "'Unable to delete the .maintenance file."
 msgstr ""
 
 #: functions/__functions.php:3563 functions/_functions.php:3590
-#: functions/functions.php:3870
+#: functions/functions.php:3993
 msgid "'Permission issue or file in use."
 msgstr ""
 
 #: functions/__functions.php:3581 functions/_functions.php:3608
-#: functions/functions.php:3888
+#: functions/functions.php:4011
 msgid "Error: Invalid nonce."
 msgstr ""
 
 #: functions/__functions.php:3617 functions/_functions.php:3644
-#: functions/functions.php:3923
+#: functions/functions.php:4046
 msgid "Robots TXT"
 msgstr ""
 
 #: functions/__functions.php:3625 functions/_functions.php:3652
-#: functions/functions.php:3931
+#: functions/functions.php:4054
 msgid "File Path"
 msgstr ""
 
 #: functions/__functions.php:3638 functions/_functions.php:3665
-#: functions/functions.php:3944
+#: functions/functions.php:4067
 msgid "Cannot create BKP file"
 msgstr ""
 
 #: functions/__functions.php:3644 functions/_functions.php:3671
-#: functions/functions.php:3950
+#: functions/functions.php:4073
 msgid "Cannot write to BKP file"
 msgstr ""
 
 #: functions/__functions.php:3650 functions/_functions.php:3677
-#: functions/functions.php:3956
+#: functions/functions.php:4079
 msgid "Cannot open file to save"
 msgstr ""
 
 #: functions/__functions.php:3656 functions/_functions.php:3683
-#: functions/functions.php:3962
+#: functions/functions.php:4085
 msgid "Cannot write to file"
 msgstr ""
 
 #: functions/__functions.php:3663 functions/_functions.php:3690
-#: functions/functions.php:3969
+#: functions/functions.php:4092
 msgid "Success, file robots.txt updated!"
 msgstr ""
 
 #: functions/__functions.php:3665 functions/_functions.php:3692
-#: functions/functions.php:3971
+#: functions/functions.php:4094
 msgid "Backup file created:"
 msgstr ""
 
 #: functions/__functions.php:3670 functions/_functions.php:3697
-#: functions/functions.php:3976
+#: functions/functions.php:4099
 msgid "If you save again, will overwrite the backup."
 msgstr ""
 
 #: functions/__functions.php:3677 functions/_functions.php:3704
-#: functions/functions.php:3983
+#: functions/functions.php:4106
 msgid "Fail to Get Post Content!"
 msgstr ""
 
 #: functions/__functions.php:3683 functions/_functions.php:3710
-#: functions/functions.php:3989
+#: functions/functions.php:4112
 msgid "File not found."
 msgstr ""
 
 #: functions/__functions.php:3686 functions/__functions.php:3718
 #: functions/_functions.php:3713 functions/_functions.php:3745
-#: functions/functions.php:3992 functions/functions.php:4024
+#: functions/functions.php:4115 functions/functions.php:4147
 msgid "To create, fill out the form below and click SAVE"
 msgstr ""
 
 #: functions/__functions.php:3707 functions/_functions.php:3734
-#: functions/functions.php:4013
+#: functions/functions.php:4136
 msgid ""
 "File not writable. Check file permissions and user own. Unable to edit it."
 msgstr ""
 
 #: functions/__functions.php:3715 functions/_functions.php:3742
-#: functions/functions.php:4021
+#: functions/functions.php:4144
 msgid "Empty file robots.txt!"
 msgstr ""
 
 #: functions/__functions.php:3722 functions/_functions.php:3749
-#: functions/functions.php:4028
+#: functions/functions.php:4151
 msgid "Edit the file and click SAVE"
 msgstr ""
 
 #: functions/__functions.php:3737 functions/_functions.php:3764
-#: functions/functions.php:4043
+#: functions/functions.php:4166
 msgid ""
 "Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
 "in case to fail to save."
 msgstr ""
 
 #: functions/__functions.php:3749 functions/_functions.php:3776
-#: functions/functions.php:4055
+#: functions/functions.php:4178
 msgid "(Save Option Button available in Premium Version)"
 msgstr ""
 
 #: functions/__functions.php:3779 functions/_functions.php:3806
-#: functions/functions.php:4085
+#: functions/functions.php:4208
 msgid "PHP Information"
 msgstr ""
 
 #: functions/__functions.php:3787 functions/_functions.php:3814
-#: functions/functions.php:4093
+#: functions/functions.php:4216
 msgid "Current Modified Value"
 msgstr ""
 
 #: functions/__functions.php:3795 functions/_functions.php:3822
-#: functions/functions.php:4101
+#: functions/functions.php:4224
 msgid "Server Timezone"
 msgstr ""
 
 #: functions/__functions.php:3814 functions/_functions.php:3841
-#: functions/functions.php:4120
+#: functions/functions.php:4243
 msgid "Server Time"
 msgstr ""
 
 #: functions/__functions.php:3820 functions/_functions.php:3847
-#: functions/functions.php:4126
+#: functions/functions.php:4249
 msgid "PHP Max Memory Limit"
 msgstr ""
 
 #: functions/__functions.php:3829 functions/_functions.php:3856
-#: functions/functions.php:4135
+#: functions/functions.php:4258
 msgid "PHP Max Execution Time"
 msgstr ""
 
 #: functions/__functions.php:3832 functions/__functions.php:3836
 #: functions/_functions.php:3859 functions/_functions.php:3863
-#: functions/functions.php:4138 functions/functions.php:4142
+#: functions/functions.php:4261 functions/functions.php:4265
 msgid "sec"
 msgstr ""
 
 #: functions/__functions.php:3840 functions/_functions.php:3867
-#: functions/functions.php:4146
+#: functions/functions.php:4269
 msgid "PHP Max Upload Size"
 msgstr ""
 
 #: functions/__functions.php:3847 functions/_functions.php:3874
-#: functions/functions.php:4153
+#: functions/functions.php:4276
 msgid "PHP Max Post Size"
 msgstr ""
 
 #: functions/__functions.php:3851 functions/_functions.php:3878
-#: functions/functions.php:4157
+#: functions/functions.php:4280
 msgid "PHP Max Input Vars"
 msgstr ""
 
 #: functions/__functions.php:3859 functions/_functions.php:3886
-#: functions/functions.php:4165
+#: functions/functions.php:4288
 msgid "Check how to do it at our blog."
 msgstr ""
 
 #: functions/__functions.php:3866 functions/_functions.php:3893
-#: functions/functions.php:4172
+#: functions/functions.php:4295
 msgid "Disabled Functions"
 msgstr ""
 
 #: functions/__functions.php:3872 functions/_functions.php:3899
-#: functions/functions.php:4178
+#: functions/functions.php:4301
 msgid "Nothing"
 msgstr ""
 
 #: functions/__functions.php:3881 functions/_functions.php:3908
-#: functions/functions.php:4187
+#: functions/functions.php:4310
 msgid "Extensions Loaded"
 msgstr ""
 
 #: functions/__functions.php:3896 functions/_functions.php:3923
-#: functions/functions.php:4202
+#: functions/functions.php:4325
 msgid "Complete Information"
 msgstr ""
 
 #: functions/__functions.php:3964 functions/_functions.php:3991
-#: functions/functions.php:4267
+#: functions/functions.php:4390
 msgid "WP Memory Test"
 msgstr ""
 
 #: functions/__functions.php:4009 functions/_functions.php:4036
-#: functions/functions.php:4312
+#: functions/functions.php:4435
 msgid "Visit the"
 msgstr ""
 
 #: functions/__functions.php:4013 functions/_functions.php:4040
-#: functions/functions.php:4316
+#: functions/functions.php:4439
 msgid "Site Health screen"
 msgstr ""
 
 #: functions/__functions.php:4015 functions/_functions.php:4042
-#: functions/functions.php:4318
+#: functions/functions.php:4441
 msgid "to perform checks now."
 msgstr ""
 
 #: functions/__functions.php:4020 functions/_functions.php:4047
-#: functions/functions.php:4323
+#: functions/functions.php:4446
 msgid "Great job! Your site currently passes all site health"
 msgstr ""
 
 #: functions/__functions.php:4026 functions/_functions.php:4053
-#: functions/functions.php:4329
+#: functions/functions.php:4452
 msgid "checks"
 msgstr ""
 
 #: functions/__functions.php:4031 functions/_functions.php:4058
-#: functions/functions.php:4334
+#: functions/functions.php:4457
 msgid "Your site has"
 msgstr ""
 
 #: functions/__functions.php:4035 functions/_functions.php:4062
-#: functions/functions.php:4338
+#: functions/functions.php:4461
 msgid "a critical issue"
 msgstr ""
 
 #: functions/__functions.php:4038 functions/__functions.php:4051
 #: functions/_functions.php:4065 functions/_functions.php:4078
-#: functions/functions.php:4341 functions/functions.php:4354
+#: functions/functions.php:4464 functions/functions.php:4477
 msgid "that should be addressed as soon as possible."
 msgstr ""
 
 #: functions/__functions.php:4044 functions/_functions.php:4071
-#: functions/functions.php:4347
+#: functions/functions.php:4470
 msgid "Your site has a"
 msgstr ""
 
 #: functions/__functions.php:4048 functions/_functions.php:4075
-#: functions/functions.php:4351
+#: functions/functions.php:4474
 msgid "critical issues"
 msgstr ""
 
 #: functions/__functions.php:4056 functions/__functions.php:4065
 #: functions/_functions.php:4083 functions/_functions.php:4092
-#: functions/functions.php:4359 functions/functions.php:4368
+#: functions/functions.php:4482 functions/functions.php:4491
 msgid "Looking good, but"
 msgstr ""
 
 #: functions/__functions.php:4060 functions/_functions.php:4087
-#: functions/functions.php:4363
+#: functions/functions.php:4486
 msgid "one thing"
 msgstr ""
 
 #: functions/__functions.php:4062 functions/__functions.php:4071
 #: functions/_functions.php:4089 functions/_functions.php:4098
-#: functions/functions.php:4365 functions/functions.php:4374
+#: functions/functions.php:4488 functions/functions.php:4497
 msgid "can be improved."
 msgstr ""
 
 #: functions/__functions.php:4069 functions/_functions.php:4096
-#: functions/functions.php:4372
+#: functions/functions.php:4495
 msgid "some things"
 msgstr ""
 
 #: functions/__functions.php:4098 functions/_functions.php:4125
-#: functions/functions.php:4401
+#: functions/functions.php:4524
 msgid "Memory Issue"
 msgstr ""
 
 #: functions/__functions.php:4161 functions/_functions.php:4186
-#: functions/functions.php:4464
+#: functions/functions.php:4587
 msgid "Errors have been detected on this site. "
 msgstr ""
 
 #: functions/__functions.php:4165 functions/__functions.php:4196
 #: functions/_functions.php:4190 functions/_functions.php:4221
-#: functions/functions.php:4468 functions/functions.php:4499
+#: functions/functions.php:4591 functions/functions.php:4622
 #: functions/functions_cron_manager.php:58
 msgid "Learn more"
 msgstr ""
 
 #: functions/__functions.php:4187 functions/_functions.php:4212
-#: functions/functions.php:4490
+#: functions/functions.php:4613
 msgid "Memory issues have been detected on this site. "
 msgstr ""
 
@@ -1671,6 +1671,40 @@ msgstr ""
 
 #: functions/functions.php:1618 includes/feedback-last/feedback-last.php:270
 msgid "Send"
+msgstr ""
+
+#: functions/functions.php:1707
+msgid "The page load time is poor."
+msgstr ""
+
+#: functions/functions.php:1709
+msgid "The page load time is very poor!"
+msgstr ""
+
+#: functions/functions.php:1714
+msgid "The Load average of yours front pages is: "
+msgstr ""
+
+#: functions/functions.php:1717
+msgid "Loading time can significantly impact your SEO."
+msgstr ""
+
+#: functions/functions.php:1719
+msgid "Many users will abandon the site before it fully loads."
+msgstr ""
+
+#: functions/functions.php:1721
+msgid ""
+"Search engines prioritize faster-loading pages, as they improve user "
+"experience and reduce bounce rates."
+msgstr ""
+
+#: functions/functions.php:1726
+msgid "Learn more about Page Load Times and their negative impact on SEO"
+msgstr ""
+
+#: functions/functions.php:1745
+msgid "Errors and Site Health."
 msgstr ""
 
 #: functions/functions_cron_manager.php:35

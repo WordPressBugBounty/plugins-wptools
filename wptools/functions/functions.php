@@ -1701,7 +1701,8 @@ function wptools_options_check_table()
 
             if ($average > 5) {
 
-                echo '<hr><h2>';
+                echo '<hr>';
+                echo '<h2 style="color: red;">';
 
                 if ($average <= 8) {
                     $message = esc_attr__("The page load time is poor.", "wptools");
@@ -1737,10 +1738,16 @@ function wptools_options_check_table()
         } // end page load
 
 
+        //
+        //
+        //
+        //
+        //
+        //
 
 
 
-        echo "<h2>";
+        echo '<h2 style="color: red;">';
         echo esc_attr__(
             "Errors and Site Health.",
             "wptools"

@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     4.78
+Version:     4.80
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -36,12 +36,26 @@ define('WPTOOLSVERSION', $wptools_plugin_version);
 define('WPTOOLSHOMEURL', admin_url());
 define('WPTOOLSPATH', plugin_dir_path(__file__));
 define('WPTOOLSURL', plugin_dir_url(__file__));
+
+
+define('load', plugin_dir_url(__file__));
 define('WPTOOLSIMAGES', plugin_dir_url(__file__) . 'images');
 define('WPTOOLSADMURL', admin_url());
 
-if (is_admin())
-    add_action('init', 'wptools_localization_init');
-	//add_action('plugins_loaded', 'wptools_localization_init');
+
+// page=settings-wptools
+if (is_admin()) {
+	// add_action('init', 'wptools_localization_init');
+	// add_action('plugins_loaded', 'wptools_localization_init');
+
+	//if (isset($_GET['page']) && $_GET['page'] === 'settings-wptools') {
+	// Ação a ser executada apenas na página específica
+	//	add_action('plugins_loaded', 'wptools_localization_init');
+	//} else {
+	add_action('init', 'wptools_localization_init');
+	//}
+}
+
 
 $wptools_request_url = trim(sanitize_text_field($_SERVER['REQUEST_URI']));
 $wptools_bypass_wpdebug =  trim(sanitize_text_field(get_option('wptools_bypass_wpdebug', 'no')));
@@ -51,6 +65,8 @@ if ($wptools_bypass_wpdebug == 'yes' and WP_DEBUG == false) {
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
 }
+
+
 $wptools_radio_server_load =  trim(sanitize_text_field(get_option('wptools_radio_server_load', 'yes')));
 $wptools_radio_server_load = strtolower($wptools_radio_server_load);
 $wptools_disable_lazy =  trim(sanitize_text_field(get_option('wptools_disable_lazy', 'yes')));
@@ -249,14 +265,60 @@ if ($wptools_max_filesize > 0) {
 	}
 }
 /////////////////////////////////////////
+
+
+
+
+function wptools_localization_init()
+{
+	$path = WPTOOLSPATH . 'language/';
+	$locale = apply_filters('plugin_locale', determine_locale(), 'wptools');
+
+	// Full path of the specific translation file (e.g., es_AR.mo)
+	$specific_translation_path = $path . "wptools-$locale.mo";
+	$specific_translation_loaded = false;
+
+	// Check if the specific translation file exists and try to load it
+	if (file_exists($specific_translation_path)) {
+		$specific_translation_loaded = load_textdomain('wptools', $specific_translation_path);
+	}
+
+	// List of languages that should have a fallback to a specific locale
+	$fallback_locales = [
+		'de' => 'de_DE',  // German
+		'fr' => 'fr_FR',  // French
+		'it' => 'it_IT',  // Italian
+		'es' => 'es_ES',  // Spanish
+		'pt' => 'pt_BR',  // Portuguese (fallback to Brazil)
+		'nl' => 'nl_NL'   // Dutch (fallback to Netherlands)
+	];
+
+	// If the specific translation was not loaded, try to fallback to the generic version
+	if (!$specific_translation_loaded) {
+		$language = explode('_', $locale)[0];  // Get only the language code, ignoring the country (e.g., es from es_AR)
+
+		if (array_key_exists($language, $fallback_locales)) {
+			// Full path of the generic fallback translation file (e.g., es_ES.mo)
+			$fallback_translation_path = $path . "wptools-{$fallback_locales[$language]}.mo";
+
+			// Check if the fallback generic file exists and try to load it
+			if (file_exists($fallback_translation_path)) {
+				load_textdomain('wptools', $fallback_translation_path);
+			}
+		}
+	}
+
+	// Load the plugin
+	load_plugin_textdomain('wptools', false, plugin_basename(WPTOOLSPATH) . '/language/');
+}
+
+
 if (is_admin()) {
 	require_once(WPTOOLSPATH . 'includes/help/help.php');
-	add_action('setup_theme', 'wptools_load_settings');
-	function wptools_load_settings()
-	{
-		require_once(WPTOOLSPATH . "settings/load-plugin.php");
-		require_once(WPTOOLSPATH . "settings/options/plugin_options_tabbed.php");
-	}
+
+
+
+
 	$plugin = plugin_basename(__FILE__);
 	function wptools_add_action_links($links)
 	{
@@ -616,7 +678,7 @@ if (is_admin()) {
 		else
 			$page = '';
 		if (($page == 'wptools_options31' or $page == 'wp-tools')  and $wptools_tab == 'dashboard') {
-			wp_enqueue_script('wptools-smoothiejs', WPTOOLSURL . 'js/smoothie.min.js', array('jquery'), WPTOOLSVERSION, true);
+			wp_enqueue_script('wptools-smoothiejs', load . 'js/smoothie.min.js', array('jquery'), WPTOOLSVERSION, true);
 			wp_enqueue_script('jquery');
 			wp_enqueue_script('wptah-flot', WPTOOLSURL .
 				'js/jquery.flot.min.js', array('jquery'));
@@ -1324,6 +1386,7 @@ function wptools_localization_init()
 }
 */
 
+/*
 function wptools_localization_init()
 {
 	$path = WPTOOLSPATH . 'language/';
@@ -1366,6 +1429,7 @@ function wptools_localization_init()
 	// Load the plugin
 	load_plugin_textdomain('wptools', false, plugin_basename(WPTOOLSPATH) . '/language/');
 }
+	*/
 
 
 
@@ -2099,5 +2163,17 @@ function activate_mu_plugin()
 			wp_redirect(admin_url('admin.php?page=mu-plugins&status=activated'));
 			exit;
 		}
+	}
+}
+
+//add_action('setup_theme', 'wptools_load_settings', 120);
+// add_action('admin_menu', 'wptools_load_settings', 120);
+
+add_action('init', 'wptools_load_settings');
+function wptools_load_settings()
+{
+	if (is_admin() and current_user_can("manage_options")) {
+		require_once(WPTOOLSPATH . "settings/load-plugin.php");
+		require_once(WPTOOLSPATH . "settings/options/plugin_options_tabbed.php");
 	}
 }

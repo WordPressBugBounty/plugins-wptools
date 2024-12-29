@@ -1599,10 +1599,17 @@ function wptools_options_check_table()
 
             echo "</center>";
 
+  
 
+    // <!-- chat -->
 
         ?>
-            <!-- chat -->
+
+
+
+
+
+
             <div id="chat-box">
                 <div id="chat-header">
                     <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools"); ?></h2>
@@ -1612,13 +1619,27 @@ function wptools_options_check_table()
                 </div> <!-- Onde o efeito será exibido -->
                 <div id="chat-messages"></div>
                 <div id="error-message" style="display:none;"></div> <!-- Mensagem de erro -->
-
                 <form id="chat-form">
-                    <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
-                    <button type="submit"><?php echo esc_attr__('Send', 'wptools'); ?></button>
-
+                    <div id="input-group">
+                        <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
+                        <button type="submit"><?php echo esc_attr__('Send', 'wptools'); ?></button>
+                    </div>
+                    <div id="action-instruction" style="text-align: center; margin-top: 10px;">
+                        <span><?php echo esc_attr__("Enter a message and click 'Send', or just click 'Auto Checkup' to analyze the site's error log.", 'wptools'); ?></span>
+                    </div>
+                    <div class="auto-checkup-container" style="text-align: center; margin-top: 10px;">
+                        <button type="button" id="auto-checkup">
+                            <img src="<?php echo plugin_dir_url(__FILE__) . 'robot2.png'; ?>" alt="" width="35" height="30">
+                            <?php echo esc_attr__('Auto Checkup', 'wptools'); ?>
+                        </button>
+                    </div>
                 </form>
-            </div>
+            </div> <!-- end chat --   ->
+
+
+
+
+
 
         <?php
 

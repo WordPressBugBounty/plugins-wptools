@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author William Sergio Minossi
  */
@@ -27,13 +28,26 @@ $query = "SELECT DATE(timestamp) AS date, AVG(load_time) AS average_load_time
 
 */
 
+// Verificar ou criar tabela
+if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+    $charset_collate = $wpdb->get_charset_collate();
+    $sql = "CREATE TABLE $table_name (
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                page_url VARCHAR(255) NOT NULL,
+                load_time FLOAT NOT NULL,
+                timestamp DATETIME NOT NULL
+            ) $charset_collate;";
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
 $query = "SELECT DATE(timestamp) AS date, AVG(load_time) AS average_load_time
           FROM $table_name
           WHERE timestamp >= CURDATE() - INTERVAL 6 DAY
             AND NOT page_url LIKE 'wp-admin'
           GROUP BY DATE(timestamp)
           ORDER BY date";
-          
+
 
 
 
@@ -41,11 +55,10 @@ $results9 = $wpdb->get_results($query, ARRAY_A);
 
 if ($results9) {
     $total = count($results9);
-    if($total < 1 ) {
-      $wptools_empty = true;
-      return;
+    if ($total < 1) {
+        $wptools_empty = true;
+        return;
     }
-
 } else {
     $wptools_empty = true;
     return;
@@ -64,7 +77,7 @@ for ($i = $d; $i > 0; $i--) {
     $array7ld[$x] = date("Y-m-d", $tm); // Adjust the format to match the database
     $search_value = trim($array7ld[$x]);
     $array7ld[$x] = date("Y-m-d", $tm);
-    
+
     // Use 'date' instead of 'error_day' for comparison
     $mykey = array_search($array7ld[$x], array_column($results8, 'date'));
 

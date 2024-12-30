@@ -1599,9 +1599,9 @@ function wptools_options_check_table()
 
             echo "</center>";
 
-  
 
-    // <!-- chat -->
+
+            // <!-- chat -->
 
         ?>
 
@@ -1634,7 +1634,7 @@ function wptools_options_check_table()
                         </button>
                     </div>
                 </form>
-            </div> <!-- end chat --   ->
+            </div> 
 
 
 
@@ -1642,7 +1642,19 @@ function wptools_options_check_table()
 
 
         <?php
-
+        // end chat
+        //
+        //
+        //
+        //
+        //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1654,6 +1666,23 @@ function wptools_options_check_table()
             {
                 global $wpdb;
                 $table_name = $wpdb->prefix . 'wptools_page_load_times';
+
+                // Verificar ou criar tabela
+                if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+                    $charset_collate = $wpdb->get_charset_collate();
+                    $sql = "CREATE TABLE $table_name (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    page_url VARCHAR(255) NOT NULL,
+                    load_time FLOAT NOT NULL,
+                    timestamp DATETIME NOT NULL
+                ) $charset_collate;";
+                    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+                    dbDelta($sql);
+                }
+
+
+
+
 
 
 
@@ -4408,8 +4437,8 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
             <!--
             window.location = "<?php echo esc_url($urlgopro); ?>";
             -->
-        </script>
-    <?php
+            </script>
+        <?php
     }
 
     function wptools_error_test($tests)
@@ -4658,4 +4687,4 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
             }
         }
     }
-    ?>
+        ?>

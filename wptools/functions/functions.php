@@ -1588,12 +1588,12 @@ function wptools_options_check_table()
 
 
 
-            echo '<h3 style="color: red;">';
+            echo '<p style="margin-right: 30px !important; color: red; border: 1px solid black; background: white; padding: 5px;">';
             echo esc_attr__(
-                "Our plugin can't function as intended. Errors, including JavaScript errors, may lead to visual problems or disrupt functionality, from minor glitches to critical site failures. Promptly address these issues before continuing because these problems will persist even if you deactivate our plugin.Notice that the PHP error system does not capture JavaScript errors. Only our plugin captures them.",
+                "Our plugin can't function as intended. Errors, including JavaScript errors, may lead to visual problems or disrupt functionality, from minor glitches to critical site failures. Promptly address these issues before continuing because these problems will persist even if you deactivate our plugin.Notice that the PHP error system and also WordPress does not capture JavaScript errors. Only our plugin captures them.",
                 "wptools"
             );
-            echo "</h3>";
+            echo "</p>";
 
             //end 2023
 
@@ -1835,14 +1835,70 @@ function wptools_options_check_table()
 
         //var_export($wptools_folders);
 
+
+        function wptools_getFileSizeInBytes($wptools_filename)
+        {
+            if (!file_exists($wptools_filename) || !is_readable($wptools_filename)) {
+                // return "File not readable.";
+                return esc_attr__("File not readable.", 'wptools');
+            }
+            $fileSizeBytes = filesize($wptools_filename);
+            if ($fileSizeBytes === false) {
+                //return "Size not determined.";
+                return esc_attr__("Size not determined.", 'wptools');
+            }
+            return $fileSizeBytes;
+        }
+        /**
+         * Converte um tamanho em bytes para um formato legível.
+         *
+         * @param int $sizeBytes Tamanho em bytes.
+         * @return string O tamanho em formato legível.
+         */
+        function wptools_convertToHumanReadableSize($sizeBytes)
+        {
+            if (!is_int($sizeBytes) || $sizeBytes < 0) {
+                // Retorna uma mensagem de erro se o tamanho for inválido
+                return esc_attr__("Invalid size.", 'wptools');
+            }
+            $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+            $unitIndex = 0;
+            while ($sizeBytes >= 1024 && $unitIndex < count($units) - 1) {
+                $sizeBytes /= 1024;
+                $unitIndex++;
+            }
+            // Retorna o valor com a unidade
+            return sprintf("%.2f %s", $sizeBytes, $units[$unitIndex]);
+        }
+
+
+
         foreach ($wptools_folders as $wptools_folder) {
             foreach (glob($wptools_folder) as $wptools_filename) {
                 if (strpos($wptools_filename, "backup") != true) {
                     echo "<hr>";
                     echo "<strong>";
-                    echo esc_attr(wptools_sizeFilter(filesize($wptools_filename)));
-                    echo " - ";
+
+
+                    //echo esc_attr(wptools_sizeFilter(filesize($wptools_filename)));
+                   // echo " - ";
+
+
                     echo esc_attr($wptools_filename);
+
+
+                    echo "<br />";
+                    echo esc_attr__("File Size: ", 'wptools');
+                    $fileSizeBytes = wptools_getFileSizeInBytes($wptools_filename);
+                    if (is_int($fileSizeBytes)) {
+                        echo esc_attr(wptools_convertToHumanReadableSize($fileSizeBytes));
+                    } else {
+                        echo esc_attr($fileSizeBytes); // Exibe a mensagem de erro
+                    }
+
+
+
+
                     echo "</strong>";
                     $wptools_count++;
 
@@ -3304,6 +3360,51 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
         $bill_themePath = get_theme_root();
 
 
+        if(!function_exists('wptools_parseDate')){
+            function wptools_parseDate($dateString, $locale)
+            {
+                // Mapeamento de formatos de data por idioma
+                $dateFormatsByLanguage = [
+                    'pt' => 'd/m/Y', // 31/12/2024 (Português)
+                    'en' => 'm/d/Y', // 12/31/2024 (Inglês)
+                    'fr' => 'd/m/Y', // 31/12/2024 (Francês)
+                    'de' => 'd.m.Y', // 31.12.2024 (Alemão)
+                    'es' => 'd/m/Y', // 31/12/2024 (Espanhol)
+                    'nl' => 'd-m-Y', // 31-12-2024 (Holandês)
+                ];
+                // Extrai o código de idioma do locale (ex: 'pt_BR' -> 'pt')
+                $language = substr($locale, 0, 2);
+                // Obtém o formato de data correspondente ao idioma
+                $format = $dateFormatsByLanguage[$language] ?? 'Y-m-d'; // Fallback para um formato padrão
+                // Tenta criar o DateTime com o formato correspondente
+                $date = \DateTime::createFromFormat($format, $dateString);
+                if ($date !== false) {
+                    return $date;
+                }
+                // Se o formato específico do idioma falhar, tenta detectar o formato automaticamente
+                $possibleFormats = [
+                    'd/m/Y', // 31/12/2024
+                    'm/d/Y', // 12/31/2024
+                    'Y-m-d', // 2024-12-31
+                    'd-M-Y', // 31-Dec-2024
+                    'd F Y', // 31 December 2024
+                    'd.m.Y', // 31.12.2024 (Alemão)
+                    'd-m-Y', // 31-12-2024 (Holandês)
+                ];
+                foreach ($possibleFormats as $format) {
+                    $date = \DateTime::createFromFormat($format, $dateString);
+                    if ($date !== false) {
+                        return $date;
+                    }
+                }
+                // Se nenhum formato funcionar, lança uma exceção
+                // throw new \Exception("Falha ao parsear a data: " . $dateString);
+                return false;
+            }
+        }
+
+
+
 
 
         $error_log_path = trim(ini_get("error_log"));
@@ -3344,131 +3445,95 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
         }
 
 
+
+
+
+
+
+
+        // Data limite para comparação
+        //$dateThreshold = new DateTime('now');
+        $dateThreshold = new \DateTime('now');
+        // $dateThreshold->modify('-3 days');
+        $dateThreshold->modify("-{$num_days} days");
+        // $dateThreshold->modify("-$num_days days");
+        // Regex para identificar diferentes formatos de data
+        $datePatterns = [
+            '/\d{2}-[a-zA-ZÀ-ÿ]{3}-\d{4}/',  // DD-Mon-YYYY (ex: 31-Dec-2024)
+            '/\d{2}\s+[a-zA-ZÀ-ÿ]+\s+\d{4}/', // DD Month YYYY (ex: 31 December 2024)
+            '/\d{4}-\d{2}-\d{2}/',           // YYYY-MM-DD (ex: 2024-12-31)
+            '/\d{2}\/\d{2}\/\d{4}/',         // DD/MM/YYYY (ex: 31/12/2024)
+            '/\d{2}-\d{2}-\d{4}/',           // DD-MM-YYYY (ex: 31-12-2024)
+            '/\d{2}\.\d{2}\.\d{4}/',         // DD.MM.YYYY (ex: 31.12.2024)
+            '/\d{4}\/\d{2}\/\d{2}/',         // YYYY/MM/DD (ex: 2024/12/31)
+        ];
+
+        // Obtém o locale do WordPress
+        $locale = get_locale(); // Exemplo: 'pt_BR', 'en_US', etc.
+        $language = substr($locale, 0, 2); // Extrai o código de idioma (ex: 'pt', 'en')
+        // Itera sobre as pastas de faturas
         foreach ($wptools_folders as $wptools_folder) {
-
-
-            if (!empty($wptools_folder) && file_exists($wptools_folder)) {
-
+            if (!empty($wptools_folder) && file_exists($wptools_folder) && filesize($wptools_folder) > 0) {
                 $wptools_count++;
+                //
+                //
+                //
+                //
+                //
+
                 $marray = wptools_read_file($wptools_folder, 20);
-
                 if (is_array($marray) && !empty($marray)) {
-                    // Iterar sobre as linhas do log
                     foreach ($marray as $line) {
-
-
-                        // javascript...
+                        if (empty($line)) {
+                            continue;
+                        }
                         if ($filter !== null && stripos($line, $filter) === false) {
                             continue;
                         }
-
-                        /*
-                    $date_formats = [
-                    'Y-m-d',
-                    'Y/m/d',
-                    'Y-d-m',
-                    'Y/d/m',
-                    'd-M-Y',
-                    'd/M/Y',
-                    'M d Y',
-                    'd/m/Y',  // Formato para '16/06/2024'
-                    'd-m-Y',  // Formato para '16-06-2024'
-                    'd-M-Y',  // Formato para '16-Jun-2024
-                     ];
-
-
-                    $first_space_pos = strpos($line, ' ');
-                    $date_string = substr($line, 0, $first_space_pos);
-                    $date_string = preg_replace('/[^0-9\/\-\s:]/', '', $date_string); // Remove todos os caracteres, exceto números, barras, hífens, espaços e dois pontos
-                    //$date_string = preg_replace('/[^0-9\/\-]/', '', $date_string);
-
-
-
-                    $valid_date = false;
-                    foreach ($date_formats as $format) {
-                        $date = DateTime::createFromFormat($format, $date_string);
-
-                        if ($date !== false && $date->format($format) === $date_string) {
-                            $valid_date = true;
-                         
-
-                            break;
-                        }
-                    }
-
-                    
-
-                    // die(var_export($valid_date));
-*/
-
-
-
-                        $date_formats = [
-                            'Y-m-d',
-                            'Y/m/d',
-                            'Y-d-m',
-                            'Y/d/m',
-                            'd-M-Y',
-                            'd/M/Y',
-                            'M d Y',
-                            'd/m/Y',  // Formato para '16/06/2024'
-                            'd-m-Y',  // Formato para '16-06-2024'
-                        ];
-
-                        //$line = "DATE: 16-Jun-2024 11:29:33 UTC";
-                        //$first_space_pos = strpos($line, '16-Jun-2024');
-
-
-
-                        // $line = "[17-Jun-2024 08:12:21 UTC] PHP ...";
-
-                        //$line = "[17-Jun-2024 08:12:21 UTC] PHP ...";
-
-                        // Verifica se a string começa com um colchete '['
-                        if (substr($line, 0, 1) === '[') {
-                            // Encontra o índice do primeiro colchete '[' e do primeiro espaço depois do colchete
-                            $start_pos = strpos($line, '[');
-                        } else {
-                            // Define $start_pos como 0 se não começar com colchete '['
-                            $start_pos = 0;
-                        }
-
-                        $end_pos = strpos($line, ' ', $start_pos);
-
-                        if ($start_pos !== false && $end_pos !== false) {
-                            $date_string = substr($line, $start_pos + 1, $end_pos - $start_pos - 1);
-                        }
-
-                        if (!isset($date_string)) {
+                        if (substr($line, 0, 1) !== '[') {
                             continue;
                         }
-
-                        //$date_string = preg_replace('/[^0-9a-zA-Z\s\/\-]/', '', $date_string);
-                        $date_string = preg_replace('/[^0-9a-zA-Z\/\-\s]/', '', $date_string);
-
-                        $valid_date = false;
-                        foreach ($date_formats as $format) {
-                            $date = DateTime::createFromFormat($format, $date_string);
-
-                            if ($date !== false && $date->format($format) === $date_string) {
-                                $valid_date = true;
-                                break;
+                        // Verifica se a linha corresponde a algum padrão de data
+                        foreach ($datePatterns as $pattern) {
+                            if (preg_match($pattern, $line, $matches)) {
+                                try {
+                                    // Usa a função wptools_parseDate para interpretar a data
+                                    $date = wptools_parseDate($matches[0], $locale);
+                                    if (!$date)
+                                        return false;
+                                    // Verifica se a data é anterior ao limite
+                                    // debug2($date);
+                                    if ($date < $dateThreshold) {
+                                        // debug2('Antiga');
+                                        // debug2("Data antiga encontrada: " . $date->format('Y-m-d'));
+                                    } else {
+                                        // debug2('Data Nova encontrada');
+                                        return true;
+                                    }
+                                } catch (Exception $e) {
+                                    // Ignorar linhas com datas inválidas
+                                    // debug2("Erro ao processar a data: " . $e->getMessage());
+                                    continue;
+                                }
+                            } else {
+                                // debug2('nao bateu');
                             }
                         }
-
-                        if (!$valid_date) {
-                            continue;
-                        }
-
-                        $log_date = $date->getTimestamp();
-                        $days_diff = floor((time() - $log_date) / (60 * 60 * 24));
-                        if ($days_diff <= $num_days) {
-                            return true; // Se encontrar uma correspondência, retorna true
-                        }
+                        return false;
                     }
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
         return false;
     }
 

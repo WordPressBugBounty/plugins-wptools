@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     4.84
+Version:     4.85
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -206,6 +206,7 @@ function wptools_general_admin_notice($msg)
 }
 
 require_once(WPTOOLSPATH . "functions/functions.php");
+require_once(WPTOOLSPATH . "functions/function_sysinfo.php");
 
 
 if (!function_exists('ini_set')) {

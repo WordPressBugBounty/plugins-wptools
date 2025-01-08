@@ -4469,6 +4469,7 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
         $matches[2],
         "\n</div>\n";
     }
+    /*
     function wptools_OSName()
     {
         try {
@@ -4495,6 +4496,7 @@ if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !==
             return false;
         }
     }
+        */
     function wptools_gopro_callback9()
     {
         $urlgopro = "https://wptoolsplugin.com/premium/"; ?>

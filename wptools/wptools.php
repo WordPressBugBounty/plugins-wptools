@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     4.88
+Version:     5.00
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -41,6 +41,23 @@ define('WPTOOLSURL', plugin_dir_url(__file__));
 define('load', plugin_dir_url(__file__));
 define('WPTOOLSIMAGES', plugin_dir_url(__file__) . 'images');
 define('WPTOOLSADMURL', admin_url());
+
+$wptools_is_admin = wptools_check_wordpress_logged_in_cookie();
+
+function wptools_check_wordpress_logged_in_cookie()
+{
+	// Percorre todos os cookies definidos
+	foreach ($_COOKIE as $key => $value) {
+		// Verifica se algum cookie começa com 'wordpress_logged_in_'
+		if (strpos($key, 'wordpress_logged_in_') === 0) {
+			// Cookie encontrado
+			return true;
+		}
+	}
+	// Cookie não encontrado
+	return false;
+}
+
 
 
 // page=settings-wptools
@@ -331,12 +348,16 @@ if (is_admin()) {
 }
 
 add_action('wp_head', 'wptools_ajaxurl');
+
+
 function wptools_ajaxurl()
 {
 	echo '<script type="text/javascript">
 	   var ajaxurl = "' . admin_url('admin-ajax.php') . '";
 	 </script>';
 }
+
+
 
 if (is_admin()) {
 	/*
@@ -728,6 +749,22 @@ if (is_admin()) {
 			'wptools-scripts-js',
 			plugin_dir_url(__FILE__) . 'js/wptools_scripts.js'
 		);
+
+
+		// >>>>>>>>>>>>>
+		wp_enqueue_style('datatables-css', 'https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css');
+		wp_enqueue_script('datatables-js', 'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', ['jquery'], null, true);
+		//wp_enqueue_script('custom-plugin-js', plugins_url('/custom-plugin.js', __FILE__), ['datatables-js'], null, true);
+
+
+		wp_enqueue_script(
+			'wptools-datatables-js',
+			plugin_dir_url(__FILE__) . 'assets/js/error_log_table.js'
+		);
+
+
+		wp_enqueue_style('wpt-error-log-table-css', WPTOOLSURL .
+			'css/error_log_table.css');
 	}
 	add_action('admin_enqueue_scripts', 'wptools_add_admstylesheet', 1000);
 	if ($wptools_radio_server_load == 'yes')

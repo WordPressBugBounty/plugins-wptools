@@ -1,12 +1,8 @@
 jQuery(document).ready(function ($) {
-    // Cria o botão de configurações
-    // Localiza o último aviso ou notificação do WordPress
-    // Localiza o último aviso ou notificação do WordPress
     const $lastNotice = $('.notice').last();
-    // Cria o botão com estilos personalizados
     const $settingsButton = $('<button>', {
         id: 'wptools-settings-button',
-        text: 'Setup',
+        text: wptoolsTranslations.setupButton, // Texto traduzido
         css: {
             padding: '8px 12px',
             backgroundColor: '#0073aa',
@@ -14,25 +10,20 @@ jQuery(document).ready(function ($) {
             border: 'none',
             borderRadius: '4px',
             cursor: 'pointer',
-            marginTop: '35px', // Espaço acima do botão
-            marginRight: '35px', // Espaço à direita, para afastar da borda
-            position: 'absolute', // Garante controle total sobre o posicionamento
-            right: '0', // Alinha à direita
-            zIndex: 1000, // Garante que o botão fique acima de outros elementos
+            marginTop: '35px',
+            marginRight: '35px',
+            position: 'absolute',
+            right: '0',
+            zIndex: 1000,
         },
     });
-    // Insere o botão após a última notificação
     if ($lastNotice.length) {
-        // Insere o botão e ajusta a posição com relação ao contêiner do aviso
         $lastNotice.after($settingsButton);
-        // $('#wpbody-content').prepend($settingsButton.css({ position: 'absolute' }));
-        console.log('Botão inserido após a última notificação.');
+        // console.log('Botão inserido após a última notificação.');
     } else {
-        // Se nenhuma notificação for encontrada, insere o botão no contêiner principal
         $('#wpbody-content').prepend($settingsButton.css({ position: 'absolute' }));
-        console.log('Botão inserido no início do conteúdo como fallback.');
+        // console.log('Botão inserido no início do conteúdo como fallback.');
     }
-    // Cria o painel lateral
     const $settingsPanel = $('<div>', {
         id: 'settings-panel',
         css: {
@@ -50,10 +41,9 @@ jQuery(document).ready(function ($) {
             zIndex: 1001,
         },
     }).appendTo('body');
-    // Adiciona o botão de fechar fora do fluxo de re-renderização
     const $closeButton = $('<button>', {
         id: 'close-button',
-        text: 'Close',
+        text: wptoolsTranslations.closeButton, // Texto traduzido
         css: {
             position: 'absolute',
             top: '50px',
@@ -66,14 +56,11 @@ jQuery(document).ready(function ($) {
             cursor: 'pointer',
         },
     }).appendTo($settingsPanel);
-    // Evento de clique no botão de fechar (usando event delegation)
     $settingsPanel.on('click', '#close-button', function () {
         $settingsPanel.css('right', '-320px');
         isPanelOpen = false;
     });
-    // Variável para controle do estado do painel
     let isPanelOpen = false;
-    // Evento de clique no botão de configurações
     $settingsButton.on('click', function () {
         if (isPanelOpen) {
             $settingsPanel.css('right', '-320px');
@@ -84,42 +71,40 @@ jQuery(document).ready(function ($) {
         isPanelOpen = !isPanelOpen;
     });
     function wptools_loadLogs() {
-        $settingsPanel.html('<p>Loading...</p>'); // Clear content and show loading state
-        $settingsPanel.append($closeButton); // Add the close button to the panel
+        $settingsPanel.html('<p>' + wptoolsTranslations.loadingMessage + '</p>'); // Texto traduzido
+        $settingsPanel.append($closeButton);
         $.ajax({
             url: ajaxurl,
             type: 'POST',
             data: {
                 action: 'wptools_find_logs',
-                // nonce: wptools_ajax.nonce,
+                _ajax_nonce: wptoolsTranslations.nonce, // Nonce adicionado aqui
             },
             success: function (response) {
                 if (response.success) {
                     wptools_displayLogs(response.data, response.data.selected_log);
                 } else {
-                    $settingsPanel.html('<p>Erro ao carregar os logs.</p>').append($closeButton);
+                    $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs + '</p>').append($closeButton); // Texto traduzido
                 }
             },
             error: function () {
-                $settingsPanel.html('<p>Erro ao carregar os logs (2).</p>').append($closeButton);
+                $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs2 + '</p>').append($closeButton); // Texto traduzido
             },
         });
     }
     function wptools_displayLogs(logs, selectedLog) {
         if (logs.data.length === 0) {
-            //  $settingsPanel.html('<p>No log files found.</p>').append($closeButton);
-            $settingsPanel.html('<p><strong>No log files found. The log files should exist. Please contact your hosting provider.</strong></p>')
-                .find('p') // Seleciona o elemento <p>
+            $settingsPanel.html('<p><strong>' + wptoolsTranslations.noLogsFound + '</strong></p>')
+                .find('p')
                 .css({
-                    'margin-right': '70px',  // Aplica a margem à direita
-                    'margin-top': '30px'     // Aplica a margem superior de 30px
+                    'margin-right': '70px',
+                    'margin-top': '30px'
                 })
-                .end() // Retorna ao painel
+                .end()
                 .append($closeButton);
             return;
         }
         const $list = $('<form>');
-        // Adicionar uma linha para depurar o valor atual da opção
         logs.data.forEach(function (log) {
             const $label = $('<label>', { css: { display: 'block', marginBottom: '10px' } });
             const $radio = $('<input>', {
@@ -127,17 +112,15 @@ jQuery(document).ready(function ($) {
                 name: 'logfile',
                 value: log.path,
             });
-            // Marca o botão de rádio como selecionado se corresponder a `selectedLog`
             if (log.path === selectedLog) {
                 $radio.prop('checked', true);
             }
-            // Adiciona o nome, tamanho e caminho do log ao label
             $label.append($radio).append(` ${log.name} (${log.size}) - ${log.path}`);
             $list.append($label);
         });
         const $viewButton = $('<button>', {
-            id: 'wptools_setup_ajax', // Adiciona o ID ao botão
-            text: 'Save',
+            id: 'wptools_setup_ajax',
+            text: wptoolsTranslations.saveButton, // Texto traduzido
             css: {
                 marginTop: '20px',
                 padding: '8px 12px',
@@ -148,55 +131,50 @@ jQuery(document).ready(function ($) {
                 cursor: 'pointer',
             },
         }).on('click', function (e) {
-            e.preventDefault(); // Impede o comportamento padrão do botão
+            e.preventDefault();
             const $button = $('#wptools_setup_ajax');
-            // Desabilita o botão
             $button.attr('disabled', true);
             $button.css({
-                backgroundColor: '#d3d3d3', // Cor de fundo mais clara quando desabilitado
-                cursor: 'not-allowed',      // Muda o cursor para indicar desabilitado
+                backgroundColor: '#d3d3d3',
+                cursor: 'not-allowed',
             });
-            // Captura o valor do botão de rádio selecionado no momento do clique
             const selectedLog = $('input[name="logfile"]:checked').val();
             if (selectedLog) {
-                console.log('Log selecionado:', selectedLog); // Use console.log para depuração
-                // Enviar uma requisição AJAX para a função PHP
+                // console.log('Log selecionado:', selectedLog);
                 $.ajax({
-                    url: ajaxurl, // URL do admin-ajax.php (fornecida pelo WordPress)
+                    url: ajaxurl,
                     type: 'POST',
                     data: {
-                        action: 'wptools_save_log_option', // Nome da ação que será chamada no PHP
-                        log_file: selectedLog, // Passa o log selecionado como parâmetro
+                        action: 'wptools_save_log_option',
+                        log_file: selectedLog,
+                        _ajax_nonce: wptoolsTranslations.nonce, // Nonce adicionado aqui
                     },
                     success: function (response) {
                         if (response.success) {
-                            // Exibe os dados retornados no console
-                            console.log('Resposta do servidor:', response.data);
-                            // Aqui você pode atualizar a interface do usuário com os dados recebidos
-                            //alert('Log carregado com sucesso! (22)');
+                            // console.log('Resposta do servidor:', response.data);
+                            alert(wptoolsTranslations.logSavedSuccess); // Texto traduzido
                             if (typeof table !== 'undefined' && table) {
-                                table.ajax.reload(null, false); // false para manter a paginação atual
-                                console.log('Tabela recarregada com sucesso.');
+                                table.ajax.reload(null, false);
+                                // console.log('Tabela recarregada com sucesso.');
                             } else {
-                                console.error('Tabela não inicializada.');
+                                // console.error('Tabela não inicializada.');
                             }
-                            // Recarrega a página imediatamente
                             location.reload();
                         } else {
-                            console.error('Erro na resposta:', response.data);
-                            alert('Erro ao carregar o log.');
+                            // console.error('Erro na resposta:', response.data);
+                            alert(wptoolsTranslations.logSaveError); // Texto traduzido
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
-                        console.error('Erro na requisição AJAX:', textStatus, errorThrown);
-                        alert('Erro na requisição AJAX. Verifique o console para mais detalhes.');
+                        // console.error('Erro na requisição AJAX:', textStatus, errorThrown);
+                        alert(wptoolsTranslations.ajaxError); // Texto traduzido
                     }
                 });
             } else {
-                alert('Por favor, selecione um arquivo de log.');
+                alert(wptoolsTranslations.selectLogAlert); // Texto traduzido
             }
         });
-        $settingsPanel.html('<h3>Log Files, choose one.</h3>')
+        $settingsPanel.html('<h3>' + wptoolsTranslations.logFilesHeader + '</h3>') // Texto traduzido
             .append($list)
             .append($viewButton)
             .append($closeButton);

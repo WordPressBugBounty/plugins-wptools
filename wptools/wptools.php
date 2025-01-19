@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.00
+Version:     5.02
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -751,16 +751,125 @@ if (is_admin()) {
 		);
 
 
-		// >>>>>>>>>>>>>
+
 		wp_enqueue_style('datatables-css', 'https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css');
-		wp_enqueue_script('datatables-js', 'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', ['jquery'], null, true);
+		//	wp_enqueue_script('datatables-js', 'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', ['jquery'], null, true);
+
+
 		//wp_enqueue_script('custom-plugin-js', plugins_url('/custom-plugin.js', __FILE__), ['datatables-js'], null, true);
+
+		/*
+		// Carrega o CSS do DataTables
+		wp_enqueue_style(
+			'datatables-css',
+			plugin_dir_url(__FILE__) . 'css/jquery.dataTables.min.css'
+		);
+*/
+
+
+
+
+		// Carrega o JS do DataTables
+		wp_enqueue_script(
+			'datatables-js',
+			plugin_dir_url(__FILE__) . 'assets/js/jquery.dataTables.min.js',
+			['jquery'], // Dependência do jQuery
+			null, // Versão (null para não adicionar versão ao URL)
+			true // Carregar no footer
+		);
+
+
 
 
 		wp_enqueue_script(
 			'wptools-datatables-js',
 			plugin_dir_url(__FILE__) . 'assets/js/error_log_table.js'
 		);
+
+
+
+		wp_localize_script('wptools-datatables-js', 'myplugin_ajax', [
+			'ajax_url' => admin_url('admin-ajax.php'),
+			'nonce' => wp_create_nonce('wptools_myplugin_nonce'),
+		]);
+
+		/*
+		$translations = [
+			'wptools_loading' => __('Loading...', 'textdomain'),
+			'wptools_no_data' => __('No data available', 'textdomain'),
+			'wptools_message' => __('Message', 'textdomain'),
+			'wptools_file' => __('File', 'textdomain'),
+			'wptools_line' => __('Line', 'textdomain'),
+			'wptools_error_type' => __('Error Type', 'textdomain'),
+			'wptools_error_details' => __('Error Details', 'textdomain'),
+			'wptools_php_errors' => [
+				'parse' => __('Critical syntax error in the code that prevents the script from running.', 'textdomain'),
+				'fatal' => __('Critical error that stops the script from running.', 'textdomain'),
+				'warning' => __('Non-critical issue that doesn’t stop execution but may lead to problems.', 'textdomain'),
+				'notice' => __('Minor issue, such as using an undefined variable.', 'textdomain'),
+				'deprecated' => __('Use of outdated features that may be removed in future versions.', 'textdomain'),
+				'core' => __('Internal PHP error, often related to the engine.', 'textdomain'),
+				'compile' => __('Error during script compilation.', 'textdomain'),
+				'user' => __('Custom error/warning/notification triggered by the developer.', 'textdomain'),
+				'javascript' => __('Issues impacting functionality and user experience.', 'textdomain')
+			],
+			'wptools_type' => __('Type', 'textdomain'),
+			'wptools_file_details' => __('File Details', 'textdomain'),
+			'wptools_file_path' => __('File Path', 'textdomain'),
+			'wptools_error' => __('Error', 'textdomain'),
+			'wptools_view_details' => __('View Details', 'textdomain'),
+			'wptools_reset_tabs' => __('Reset Tabs', 'textdomain')
+		];
+		*/
+
+		//	wp_localize_script('wptools-datatables-js', 'wptools_translations', $translations);
+		//	}
+
+
+
+		//wp_enqueue_script('meu-script', 'caminho/para/meu-script.js', array('jquery'), null, true);
+
+		wp_localize_script('wptools-datatables-js', 'wptools_vars', array(
+			'invalid_error_string' => __('Invalid error string.', 'wptools'),
+			'url_error' => __('Error creating URL object or accessing pathname:', 'wptools'),
+			'incomplete_data' => __('Incomplete data.', 'wptools'),
+			'empty_table' => __('No data available in table.', 'wptools'),
+			'table_not_available' => __('The DataTable instance is not available.', 'wptools'),
+			'all' => __('All', 'wptools'),
+			'date' => __('Date', 'wptools'),
+			'type' => __('Type', 'wptools'),
+			'message' => __('Message', 'wptools'),
+			'path' => __('Path', 'wptools'),
+			'script' => __('Script', 'wptools'),
+			'line' => __('Line', 'wptools'),
+			'plugin' => __('Plugin', 'wptools'),
+			'note' => __('Note', 'wptools'),
+			'plugin_note' => __('Contact the plugin developer with these details and request support. However, be advised that often the cause may be external to the plugin, such as insufficient server memory (or insufficient WordPress Memory Limit), conflicts with other plugins (or theme), lack of disk space, server overload due to hacker and bot spiders among other factors.', 'wptools'),
+			'theme' => __('Theme', 'wptools'),
+			'details' => __('Details', 'wptools'),
+			'learn_more' => __('To learn more:', 'wptools'),
+			'click_here' => __('Click here', 'wptools'),
+			'analyze_functionality' => __('Analyze functionality will be implemented here.', 'wptools'),
+			'parse_error' => __('Critical Syntax error in the code that stops script execution.', 'wptools'),
+			'fatal_error' => __('Critical error that stops script execution.', 'wptools'),
+			'warning_error' => __('Non-critical issue that doesn\'t stop execution but may eventually lead to problems.', 'wptools'),
+			'notice_error' => __('Minor issue, like using an undefined variable.', 'wptools'),
+			'deprecated_error' => __('Use of outdated features that may be removed in future versions.', 'wptools'),
+			'core_error' => __('Internal PHP error, often related to the engine.', 'wptools'),
+			'compile_error' => __('Error during script compilation.', 'wptools'),
+			'user_error' => __('Custom error/warning/notice triggered by the developer.', 'wptools'),
+			'javascript_error' => __('Issues that impact functionality and user experience.', 'wptools'),
+			'unknown_error_type' => __('Unknown error type', 'wptools'),
+		));
+
+
+
+
+
+
+
+
+
 
 
 		wp_enqueue_style('wpt-error-log-table-css', WPTOOLSURL .

@@ -19,8 +19,62 @@ function wptools_myplugin_enqueue_scripts($hook)
         //    'assets/js/error_log_settings.js');
         wp_localize_script('myplugin-settings-script', 'myplugin_ajax', [
             'ajax_url' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('myplugin_nonce'),
+            'nonce' => wp_create_nonce('wptools_myplugin_nonce'),
         ]);
+
+
+
+        // Define as mensagens traduzíveis
+        /*
+        $translations = [
+            'setupButton' => __('Setup', 'textdomain'),
+            'closeButton' => __('Close', 'textdomain'),
+            'loadingMessage' => __('Loading...', 'textdomain'),
+            'errorLoadingLogs' => __('Error loading logs.', 'textdomain'),
+            'errorLoadingLogs2' => __('Error loading logs (2).', 'textdomain'),
+            'noLogsFound' => __('No log files found. The log files should exist. Please contact your hosting provider.', 'textdomain'),
+            'logFilesHeader' => __('Log Files, choose one.', 'textdomain'),
+            'saveButton' => __('Save', 'textdomain'),
+            'selectLogAlert' => __('Please select a log file.', 'textdomain'),
+            'logSavedSuccess' => __('Log successfully loaded.', 'textdomain'),
+            'logSaveError' => __('Error loading the log.', 'textdomain'),
+            'ajaxError' => __('AJAX request error. Check the console for more details.', 'textdomain'),
+        ];
+        */
+
+
+        //wp_enqueue_script('meu-script', 'caminho/para/meu-script.js', array('jquery'), null, true);
+
+
+
+
+
+
+        // Gera o nonce
+        $wptools_nonce = wp_create_nonce('wptools_ajax_nonce');
+
+        // Passa o nonce e outras traduções para o JavaScript
+        wp_localize_script('myplugin-settings-script', 'wptoolsTranslations', array(
+            'setupButton' => __('Setup', 'wptools'),
+            'closeButton' => __('Close', 'wptools'),
+            'loadingMessage' => __('Loading logs...', 'wptools'),
+            'errorLoadingLogs' => __('Error loading logs.', 'wptools'),
+            'errorLoadingLogs2' => __('An error occurred while loading logs.', 'wptools'),
+            'noLogsFound' => __('No logs found.', 'wptools'),
+            'saveButton' => __('Save', 'wptools'),
+            'logSavedSuccess' => __('Log saved successfully!', 'wptools'),
+            'logSaveError' => __('Error saving log.', 'wptools'),
+            'ajaxError' => __('AJAX error. Please try again.', 'wptools'),
+            'selectLogAlert' => __('Please select a log file.', 'wptools'),
+            'logFilesHeader' => __('Log Files', 'wptools'),
+            'nonce' => $wptools_nonce, // Nonce passado para o JavaScript
+        ));
+
+
+
+
+        // Passa as mensagens para o script
+        //  wp_localize_script('myplugin-settings-script', 'wptoolsTranslations', $translations);
     } else {
         //debug4("nao entrou");
     }
@@ -30,6 +84,18 @@ add_action('admin_enqueue_scripts', 'wptools_myplugin_enqueue_scripts');
 add_action('wp_ajax_wptools_find_logs', 'wptools_find_logs');
 function wptools_find_logs()
 {
+
+
+    if (!isset($_POST['_ajax_nonce']) || !wp_verify_nonce($_POST['_ajax_nonce'], 'wptools_ajax_nonce')) {
+        wp_send_json_error('Nonce inválido');
+    }
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error('Você não tem permissão para executar esta ação.');
+    }
+
+
+
     // Array que será preenchida com os logs encontrados
     $logs = [];
     // Função para adicionar um arquivo de log à array $logs
@@ -126,6 +192,18 @@ function wptools_find_logs()
 }
 function wptools_save_log_option()
 {
+
+    // Verifica o nonce
+    if (!isset($_POST['_ajax_nonce']) || !wp_verify_nonce($_POST['_ajax_nonce'], 'wptools_ajax_nonce')) {
+        wp_send_json_error('Nonce inválido');
+    }
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error('Você não tem permissão para executar esta ação.');
+    }
+
+
+
     // Get the selected log file path from the AJAX request
     if (isset($_POST['log_file'])) {
         $log_file = sanitize_text_field($_POST['log_file']); // Sanitize the log file path

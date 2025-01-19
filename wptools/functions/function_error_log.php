@@ -4,8 +4,9 @@ if (!defined("ABSPATH")) {
 }
 // register_tick_function('meu_tick_function');
 // declare(ticks=1);
+wptools_show_logo();
 ?>
-<h1 style="color: gray; text-align: center;">Error Log Table</h1>
+<h1 style="color: gray; text-align: center;"><?php esc_attr_e("Error Log Table", 'wptools'); ?></h1>
 <div id="error-log-wrapper">
     <!-- Indicador de carregamento -->
     <div id="wptools-loadingIndicator">
@@ -15,7 +16,7 @@ if (!defined("ABSPATH")) {
     </div>
     <!-- Filtro por tipo -->
     <div class="filter-options">
-        <label for="type-filter">Filter by Type:</label>
+        <label for="type-filter"><?php esc_attr_e("Filter by Type", 'wptools'); ?>:</label>
         <select id="type-filter">
             <option value="all">All</option>
         </select>
@@ -24,10 +25,10 @@ if (!defined("ABSPATH")) {
     <table id="wptools-error-log-table" class="display">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Type</th>
-                <th>Description</th>
-                <th>Action</th>
+                <th><?php esc_attr_e("Date", 'wptools'); ?></th>
+                <th><?php esc_attr_e("Type", 'wptools'); ?></th>
+                <th><?php esc_attr_e("Description", 'wptools'); ?></th>
+                <th><?php esc_attr_e("Action", 'wptools'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -285,7 +286,7 @@ function wptools_get_error_log_data()
         //echo "Linha sem a data: $lineWithoutDate\n";
         /* ---------- data  -------------------------- */
         if ($filteredDate and wptools_has_two_digit_day($filteredDate)) {
-            //debug4($filteredDate);
+            //// debug4($filteredDate);
             $line = str_replace("$filteredDate ", '', $line);
             //  $line = str_replace("$filteredDate ", '', $line ?? '');
         } else
@@ -322,7 +323,7 @@ function wptools_get_error_log_data()
                     break;
                     // continue;
                 }
-                //  debug4();
+                //  // debug4();
                 $log_entry = [
                     "Date" => $filteredDate,
                     "Type" => $type,
@@ -354,11 +355,11 @@ function wptools_get_error_log_data()
             $output .= "<td>{$type}</td>\n";
             //$description = htmlentities($description, ENT_QUOTES, 'UTF-8');
             $output .= "<td>{$description}</td>\n";
-            $output .= "<td><button class='view-details'>View</button></td>\n";
+            $output .= "<td><button class='view-details'>" . esc_attr__('View', 'wptools') . "</button></td>\n";
             $output .= "</tr>\n";
         } else {
-            debug4($line);
-            debug4($line_orig);
+            // debug4($line);
+            // debug4($line_orig);
             // debug3("Nenhuma correspondência para a linha: {$line}");
             $output .= "<tr>\n";
             $output .= "<td>N/A</td>\n";

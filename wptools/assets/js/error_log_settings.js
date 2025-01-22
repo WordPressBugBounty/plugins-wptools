@@ -1,4 +1,7 @@
 jQuery(document).ready(function ($) {
+
+    console.warn("Carregou js setup");
+
     const $lastNotice = $('.notice').last();
     const $settingsButton = $('<button>', {
         id: 'wptools-settings-button',
@@ -82,7 +85,17 @@ jQuery(document).ready(function ($) {
             },
             success: function (response) {
                 if (response.success) {
-                    wptools_displayLogs(response.data, response.data.selected_log);
+                    // wptools_displayLogs(response.data, response.data.selected_log);
+
+                    if (response.data.data.length === 0) {
+                        // Exibe uma mensagem de erro (usando tradução, se disponível)
+                        $settingsPanel.html('<p>' + wptoolsTranslations.noLogsFound + '</p>').append($closeButton);
+                    } else {
+                        // Se houver logs, exibe-os
+                        wptools_displayLogs(response.data, response.data.selected_log);
+                    }
+
+
                 } else {
                     $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs + '</p>').append($closeButton); // Texto traduzido
                 }

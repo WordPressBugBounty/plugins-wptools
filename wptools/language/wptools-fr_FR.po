@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-19 10:57+0000\n"
-"PO-Revision-Date: 2025-01-19 11:02+0000\n"
+"POT-Creation-Date: 2025-01-22 14:16+0000\n"
+"PO-Revision-Date: 2025-01-22 14:29+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: _wptools.php:169 wptools.php:206
+#: _wptools.php:169 wptools.php:169
 msgid ""
 "Unable to remove file read.me and/or license.txt. Talk with your hosting "
 "company."
@@ -26,90 +26,90 @@ msgstr ""
 "Impossible de supprimer le fichier read.me et/ou license.txt. Contactez "
 "votre hébergeur."
 
-#: _wptools.php:292 _wptools.php:342 wptools.php:382 wptools.php:432
+#: _wptools.php:292 _wptools.php:342 wptools.php:292
 msgid "Site Errors"
 msgstr "Erreurs du site"
 
-#: _wptools.php:843 wptools.php:1069
+#: _wptools.php:843 wptools.php:700
 msgid "Page Load Info: "
 msgstr "Informations sur le chargement de la page: "
 
-#: _wptools.php:845 wptools.php:1071
+#: _wptools.php:845 wptools.php:702
 msgid "queries and loaded in"
 msgstr "requêtes et chargées dans"
 
-#: _wptools.php:847 wptools.php:1073
+#: _wptools.php:847 wptools.php:704
 msgid "seconds"
 msgstr "secondes"
 
 #: _wptools.php:872 _wptools.php:875 _wptools.php:1480 _wptools.php:1483
-#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:1099
-#: wptools.php:1102 wptools.php:1753 wptools.php:1756 wptools.php:1759
-#: wptools.php:1872 wptools.php:1875
+#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600
 msgid "Site Name unavailable"
 msgstr "Nom du site indisponible"
 
-#: _wptools.php:882 wptools.php:1109
+#: _wptools.php:882 wptools.php:758
 msgid "Notification about errors and warnings at: "
 msgstr "Notification d'erreurs et d'avertissements à :"
 
-#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:1110
-#: wptools.php:1771 wptools.php:1891
+#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:728
+#: wptools.php:1285 wptools.php:1439
 msgid "This email was sent from your website"
 msgstr "Cet e-mail a été envoyé depuis votre site Web"
 
-#: _wptools.php:884 _wptools.php:1617 wptools.php:1111 wptools.php:1892
+#: _wptools.php:884 _wptools.php:1617 wptools.php:730 wptools.php:1287
+#: wptools.php:1441
 msgid "by the wpTools plugin."
 msgstr "par le plugin wpTools."
 
-#: _wptools.php:885 functions/function_error_log.php:28 wptools.php:839
-#: wptools.php:1112
+#: _wptools.php:885 functions/function_error_log.php:28 wptools.php:732
+#: wptools.php:1289 wptools.php:1443 wptools.php:1569
 msgid "Date"
 msgstr "Date"
 
-#: _wptools.php:886 wptools.php:1113
+#: _wptools.php:886
 msgid "Errors and Warnings:"
 msgstr "Erreurs et avertissements :"
 
-#: _wptools.php:892 wptools.php:1119
+#: _wptools.php:892 wptools.php:738
 msgid "You can stop emails at the Notifications Tab."
 msgstr "Vous pouvez arrêter les e-mails dans l'onglet Notifications."
 
-#: _wptools.php:893 _wptools.php:1504 wptools.php:1120 wptools.php:1777
+#: _wptools.php:893 _wptools.php:1504 wptools.php:740 wptools.php:1297
+#: wptools.php:1451
 msgid "Dashboard => WP tools=> Settings"
 msgstr "Tableau de bord => Outils WP => Paramètres"
 
-#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1330
+#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:830
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: _wptools.php:1346 wptools.php:1618
+#: _wptools.php:1346 wptools.php:1116
 msgid "WP Tools found errors on your site"
 msgstr "WP Tools a trouvé des erreurs sur votre site"
 
-#: _wptools.php:1349 wptools.php:1621
+#: _wptools.php:1349 wptools.php:1119
 msgid "Critical"
 msgstr "Critique"
 
-#: _wptools.php:1354 wptools.php:1626
+#: _wptools.php:1354 wptools.php:1124
 msgid "Code and hosting errors can destroy your site and the user experience."
 msgstr ""
 "Les erreurs de code et d’hébergement peuvent détruire votre site et "
 "l’expérience utilisateur."
 
-#: _wptools.php:1361 wptools.php:1633
+#: _wptools.php:1361 wptools.php:1131
 msgid "Visit the WP Tools show errors page"
 msgstr "Visitez la page d'affichage des erreurs de WP Tools"
 
-#: _wptools.php:1495 wptools.php:1768
+#: _wptools.php:1495
 msgid "Hello"
 msgstr "Bonjour"
 
-#: _wptools.php:1497 wptools.php:1770
+#: _wptools.php:1497 wptools.php:1316
 msgid "Weekly summary of issues on the site: "
 msgstr "Résumé hebdomadaire des problèmes sur le site :"
 
-#: _wptools.php:1499 wptools.php:1772
+#: _wptools.php:1499
 msgid ""
 "This is a weekly summary of errors, warnings, or notices that occurred on "
 "your site assisted by the wpTools plugin."
@@ -117,32 +117,32 @@ msgstr ""
 "Il s'agit d'un résumé hebdomadaire des erreurs, avertissements ou avis "
 "survenus sur votre site, assisté par le plugin wpTools."
 
-#: _wptools.php:1500 wptools.php:1773
+#: _wptools.php:1500
 msgid "Total number of issues"
 msgstr "Nombre total de numéros"
 
-#: _wptools.php:1501 _wptools.php:1614 wptools.php:1774 wptools.php:1889
+#: _wptools.php:1501 _wptools.php:1614
 msgid "Please visit your site for more details:"
 msgstr "Veuillez visiter votre site pour plus de détails :"
 
-#: _wptools.php:1502 _wptools.php:1615 wptools.php:1775 wptools.php:1890
+#: _wptools.php:1502 _wptools.php:1615
 msgid "Dashboard => wpTools => Dashboard"
 msgstr "Tableau de bord => wpTools => Tableau de bord"
 
-#: _wptools.php:1503 _wptools.php:1620 wptools.php:1776 wptools.php:1895
+#: _wptools.php:1503 _wptools.php:1620 wptools.php:1295 wptools.php:1449
 msgid "You can stop weekly emails at the Notifications Tab:"
 msgstr ""
 "Vous pouvez arrêter les e-mails hebdomadaires dans l'onglet Notifications :"
 
-#: _wptools.php:1609 wptools.php:1884
+#: _wptools.php:1609 wptools.php:1459
 msgid "Weekly summary of Page Load on the site: "
 msgstr "Résumé hebdomadaire du chargement des pages sur le site :"
 
-#: _wptools.php:1610 wptools.php:1885
+#: _wptools.php:1610
 msgid "Hello,"
 msgstr "Bonjour,"
 
-#: _wptools.php:1611 wptools.php:1886
+#: _wptools.php:1611
 msgid ""
 "This is a weekly summary of Page Load seconds that occurred on your site "
 "assisted by the wpTools plugin:"
@@ -150,11 +150,11 @@ msgstr ""
 "Il s'agit d'un résumé hebdomadaire des secondes de chargement de page qui se "
 "sont produites sur votre site, assisté par le plugin wpTools :"
 
-#: _wptools.php:1612 wptools.php:1887
+#: _wptools.php:1612
 msgid "Weekly Page Load Time:"
 msgstr "Temps de chargement hebdomadaire de la page :"
 
-#: _wptools.php:1613 wptools.php:1888
+#: _wptools.php:1613
 msgid ""
 "Google recommends that the page loading time be less than 3 seconds. A "
 "faster-loading website is more likely to rank higher, potentially attracting "
@@ -164,11 +164,11 @@ msgstr ""
 "secondes. Un site Web qui se charge plus rapidement est plus susceptible "
 "d'être mieux classé, ce qui pourrait attirer davantage de visiteurs."
 
-#: _wptools.php:1618 wptools.php:1893
+#: _wptools.php:1618
 msgid "Date:"
 msgstr "Date:"
 
-#: _wptools.php:1621 wptools.php:1896
+#: _wptools.php:1621
 msgid "Dashboard => WP tools => Settings"
 msgstr "Tableau de bord => Outils WP => Paramètres"
 
@@ -506,7 +506,7 @@ msgstr "Assistance Premium dédiée"
 
 #: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
-#: wptools.php:2193
+#: wptools.php:1616
 msgid "Learn More"
 msgstr "En apprendre plus"
 
@@ -1937,7 +1937,7 @@ msgstr "Tableau du journal des erreurs"
 msgid "Filter by Type"
 msgstr "Filtrer par type"
 
-#: functions/function_error_log.php:29 wptools.php:840
+#: functions/function_error_log.php:29 wptools.php:1570
 msgid "Type"
 msgstr "Taper"
 
@@ -1957,7 +1957,7 @@ msgstr ""
 "Saisissez un message et cliquez sur « Envoyer », ou copiez et collez "
 "simplement le contenu de la colonne de description."
 
-#: functions/function_error_log.php:358
+#: functions/function_error_log.php:381
 msgid "View"
 msgstr "Voir"
 
@@ -2009,51 +2009,56 @@ msgstr "Horaire"
 msgid "Protected"
 msgstr "Protégé"
 
-#: functions/functions_error_log_page.php:58
+#: functions/functions_error_log_page.php:35
 msgid "Setup"
 msgstr "Installation"
 
-#: functions/functions_error_log_page.php:59
+#: functions/functions_error_log_page.php:36
 msgid "Close"
 msgstr "Fermer"
 
-#: functions/functions_error_log_page.php:60
+#: functions/functions_error_log_page.php:37
 msgid "Loading logs..."
 msgstr "Chargement des journaux..."
 
-#: functions/functions_error_log_page.php:61
+#: functions/functions_error_log_page.php:38
 msgid "Error loading logs."
 msgstr "Erreur lors du chargement des journaux."
 
-#: functions/functions_error_log_page.php:62
+#: functions/functions_error_log_page.php:39
 msgid "An error occurred while loading logs."
 msgstr "Une erreur s'est produite lors du chargement des journaux."
 
-#: functions/functions_error_log_page.php:63
-msgid "No logs found."
-msgstr "Aucun journal trouvé."
+#: functions/functions_error_log_page.php:40
+#: functions/functions_error_log_page.php:168
+msgid ""
+"No log files found, but there should be some. Please consult your hosting "
+"provider."
+msgstr ""
+"Aucun fichier journal n'a été trouvé, mais il devrait y en avoir. Veuillez "
+"consulter votre hébergeur."
 
-#: functions/functions_error_log_page.php:64
+#: functions/functions_error_log_page.php:41
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: functions/functions_error_log_page.php:65
+#: functions/functions_error_log_page.php:42
 msgid "Log saved successfully!"
 msgstr "Journal enregistré avec succès !"
 
-#: functions/functions_error_log_page.php:66
+#: functions/functions_error_log_page.php:43
 msgid "Error saving log."
 msgstr "Erreur lors de l'enregistrement du journal."
 
-#: functions/functions_error_log_page.php:67
+#: functions/functions_error_log_page.php:44
 msgid "AJAX error. Please try again."
 msgstr "Erreur AJAX. Veuillez réessayer."
 
-#: functions/functions_error_log_page.php:68
+#: functions/functions_error_log_page.php:45
 msgid "Please select a log file."
 msgstr "Veuillez sélectionner un fichier journal."
 
-#: functions/functions_error_log_page.php:69
+#: functions/functions_error_log_page.php:46
 msgid "Log Files"
 msgstr "Fichiers journaux"
 
@@ -2504,33 +2509,33 @@ msgstr ""
 msgid "CONTINUE"
 msgstr "CONTINUER"
 
-#: includes/help/help.php:38
+#: includes/help/help.php:46
 msgid ""
 "In the DASHBOARD screen you will find useful information about your server."
 msgstr ""
 "Dans l'écran TABLEAU DE BORD, vous trouverez des informations utiles sur "
 "votre serveur."
 
-#: includes/help/help.php:41
+#: includes/help/help.php:49
 msgid ""
 "Here are the link to the Dashboard Plugin Page with more useful information"
 msgstr ""
 "Voici le lien vers la page du plugin du tableau de bord avec des "
 "informations plus utiles"
 
-#: includes/help/help.php:45
+#: includes/help/help.php:53
 msgid "You will find also links to "
 msgstr "Vous trouverez également des liens vers"
 
-#: includes/help/help.php:47
+#: includes/help/help.php:55
 msgid "StartUp Guide"
 msgstr "Guide de démarrage"
 
-#: includes/help/help.php:48
+#: includes/help/help.php:56
 msgid "and Settings, Troubleshooting Guide Page and Support Page."
 msgstr "et Paramètres, page du guide de dépannage et page d'assistance."
 
-#: includes/help/help.php:52
+#: includes/help/help.php:60
 msgid ""
 "Here are the link to our free blog with a lot of tips and tricks and about "
 "how to use this tool."
@@ -2538,11 +2543,12 @@ msgstr ""
 "Voici le lien vers notre blog gratuit avec de nombreux trucs et astuces et "
 "sur la façon d'utiliser cet outil."
 
-#: includes/help/help.php:57 includes/help/help.php:79
+#: includes/help/help.php:65 includes/help/help.php:87
+#: includes/help/help.php:125
 msgid "Overview"
 msgstr "Aperçu"
 
-#: includes/help/help.php:66
+#: includes/help/help.php:74
 msgid ""
 "In the SETTINGS screen you will find many tabs, with useful information as "
 "StartUP Guide."
@@ -2550,7 +2556,7 @@ msgstr ""
 "Dans l'écran PARAMÈTRES, vous trouverez de nombreux onglets, avec des "
 "informations utiles comme le Guide de démarrage."
 
-#: includes/help/help.php:69
+#: includes/help/help.php:77
 msgid ""
 "You will find also fields and controls to configurate the plugin. Take some "
 "time to open each tab and mark that you want."
@@ -2559,20 +2565,82 @@ msgstr ""
 "plugin. Prenez le temps d'ouvrir chaque onglet et de marquer celui que vous "
 "souhaitez."
 
-#: includes/help/help.php:73
+#: includes/help/help.php:81 includes/help/help.php:117
 msgid ""
 "Here are the link to the Dashboard Plugin Page with more useful information."
 msgstr ""
 "Voici le lien vers la page du plugin du tableau de bord avec des "
 "informations plus utiles."
 
-#: includes/help/help.php:113
+#: includes/help/help.php:100
+msgid ""
+"This is a table with the history of errors logged on your site. You can sort "
+"the table by clicking on each header field. For example, date, type, and so "
+"on."
+msgstr ""
+"Il s'agit d'un tableau contenant l'historique des erreurs enregistrées sur "
+"votre site. Vous pouvez trier le tableau en cliquant sur chaque champ d'en-"
+"tête. Par exemple, date, type, etc."
+
+#: includes/help/help.php:101
+msgid ""
+"In the setup button, at the top right corner, you can choose which log file "
+"to display in the table, from the possible files our plugin has found."
+msgstr ""
+"Dans le bouton de configuration, dans le coin supérieur droit, vous pouvez "
+"choisir quel fichier journal afficher dans le tableau, parmi les fichiers "
+"possibles que notre plugin a trouvés."
+
+#: includes/help/help.php:102
+msgid ""
+"There should be at least one log file; otherwise, consult your hosting "
+"provider."
+msgstr ""
+"Il devrait y avoir au moins un fichier journal ; sinon, consultez votre "
+"hébergeur."
+
+#: includes/help/help.php:103
+msgid ""
+"Click the view button for more details and to better understand the issue "
+"and what is causing it. In the window that opens, click on AI Analysis to "
+"chat with the artificial intelligence and delve deeper, if necessary, to "
+"better understand the problem and possible solutions."
+msgstr ""
+"Cliquez sur le bouton Afficher pour plus de détails et pour mieux comprendre "
+"le problème et sa cause. Dans la fenêtre qui s'ouvre, cliquez sur Analyse IA "
+"pour discuter avec l'intelligence artificielle et approfondir, si "
+"nécessaire, pour mieux comprendre le problème et les solutions possibles."
+
+#: includes/help/help.php:104
+msgid ""
+"Once you are aware of the cause, we suggest contacting the developer of the "
+"plugin or theme and informing them, providing all the details. We do not "
+"recommend modifying plugins/themes or WordPress files, as your changes will "
+"be lost in their next update."
+msgstr ""
+"Une fois que vous avez identifié la cause du problème, nous vous suggérons "
+"de contacter le développeur du plugin ou du thème et de l'informer en lui "
+"fournissant tous les détails. Nous vous déconseillons de modifier les "
+"plugins/thèmes ou les fichiers WordPress, car vos modifications seront "
+"perdues lors de leur prochaine mise à jour."
+
+#: includes/help/help.php:106
+msgid ""
+"Visit our blog for more details on the subject: <a href=\"https://"
+"wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+msgstr ""
+"Visitez notre blog pour plus de détails sur le sujet : <a href=\"https://"
+"wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+
+#: includes/help/help.php:166
 msgid "Open WP Tools Plugin Here!"
 msgstr "Ouvrez le plugin WP Tools ici !"
 
-#: includes/help/help.php:114
-msgid "Just Click Over WP Tools."
-msgstr "Cliquez simplement sur WP Tools."
+#: includes/help/help.php:167
+msgid "Just Click Over WP Tools, then Go To Settings=>StartUp Guide."
+msgstr ""
+"Cliquez simplement sur WP Tools, puis accédez à Paramètres=>Guide de "
+"démarrage."
 
 #: includes/vendor/vendor.php:37
 msgid "Please, wait...  Dismissing..."
@@ -3138,7 +3206,7 @@ msgid "100 Folders in Premium Version"
 msgstr "100 dossiers en version Premium"
 
 #: settings/options/_plugin_options_tabbed.php:516
-#: settings/options/plugin_options_tabbed.php:524 wptools.php:842
+#: settings/options/plugin_options_tabbed.php:524 wptools.php:1572
 msgid "Path"
 msgstr "Chemin"
 
@@ -3342,52 +3410,56 @@ msgstr "Version Premium activée !"
 msgid "Purchase Code:"
 msgstr "Code d’achat :"
 
-#: wptools.php:833
+#: wptools.php:1494 wptools.php:1495
+msgid "MU Plugins"
+msgstr "Plugins MU"
+
+#: wptools.php:1563
 msgid "Invalid error string."
 msgstr "Chaîne d'erreur non valide."
 
-#: wptools.php:834
+#: wptools.php:1564
 msgid "Error creating URL object or accessing pathname:"
 msgstr ""
 "Erreur lors de la création de l'objet URL ou de l'accès au chemin d'accès :"
 
-#: wptools.php:835
+#: wptools.php:1565
 msgid "Incomplete data."
 msgstr "Données incomplètes."
 
-#: wptools.php:836
+#: wptools.php:1566
 msgid "No data available in table."
 msgstr "Aucune donnée disponible dans le tableau."
 
-#: wptools.php:837
+#: wptools.php:1567
 msgid "The DataTable instance is not available."
 msgstr "L'instance DataTable n'est pas disponible."
 
-#: wptools.php:838
+#: wptools.php:1568
 msgid "All"
 msgstr "Tous"
 
-#: wptools.php:841
+#: wptools.php:1571
 msgid "Message"
 msgstr "Message"
 
-#: wptools.php:843
+#: wptools.php:1573
 msgid "Script"
 msgstr "Scénario"
 
-#: wptools.php:844
+#: wptools.php:1574
 msgid "Line"
 msgstr "Doubler"
 
-#: wptools.php:845
+#: wptools.php:1575
 msgid "Plugin"
 msgstr "Plugin"
 
-#: wptools.php:846
+#: wptools.php:1576
 msgid "Note"
 msgstr "Note"
 
-#: wptools.php:847
+#: wptools.php:1577
 msgid ""
 "Contact the plugin developer with these details and request support. "
 "However, be advised that often the cause may be external to the plugin, such "
@@ -3402,36 +3474,36 @@ msgstr ""
 "d'espace disque, une surcharge du serveur due à des pirates informatiques et "
 "à des robots d'indexation, entre autres facteurs."
 
-#: wptools.php:848
+#: wptools.php:1578
 msgid "Theme"
 msgstr "Thème"
 
-#: wptools.php:849
+#: wptools.php:1579
 msgid "Details"
 msgstr "Détails"
 
-#: wptools.php:850
+#: wptools.php:1580
 msgid "To learn more:"
 msgstr "Pour en savoir plus :"
 
-#: wptools.php:851
+#: wptools.php:1581
 msgid "Click here"
 msgstr "Cliquez ici"
 
-#: wptools.php:852
+#: wptools.php:1582
 msgid "Analyze functionality will be implemented here."
 msgstr "La fonctionnalité d'analyse sera implémentée ici."
 
-#: wptools.php:853
+#: wptools.php:1583
 msgid "Critical Syntax error in the code that stops script execution."
 msgstr ""
 "Erreur de syntaxe critique dans le code qui arrête l'exécution du script."
 
-#: wptools.php:854
+#: wptools.php:1584
 msgid "Critical error that stops script execution."
 msgstr "Erreur critique qui arrête l'exécution du script."
 
-#: wptools.php:855
+#: wptools.php:1585
 msgid ""
 "Non-critical issue that doesn't stop execution but may eventually lead to "
 "problems."
@@ -3439,91 +3511,99 @@ msgstr ""
 "Problème non critique qui n'arrête pas l'exécution mais peut éventuellement "
 "entraîner des problèmes."
 
-#: wptools.php:856
+#: wptools.php:1586
 msgid "Minor issue, like using an undefined variable."
 msgstr "Problème mineur, comme l'utilisation d'une variable non définie."
 
-#: wptools.php:857
+#: wptools.php:1587
 msgid "Use of outdated features that may be removed in future versions."
 msgstr ""
 "Utilisation de fonctionnalités obsolètes qui pourraient être supprimées dans "
 "les versions futures."
 
-#: wptools.php:858
+#: wptools.php:1588
 msgid "Internal PHP error, often related to the engine."
 msgstr "Erreur PHP interne, souvent liée au moteur."
 
-#: wptools.php:859
+#: wptools.php:1589
 msgid "Error during script compilation."
 msgstr "Erreur lors de la compilation du script."
 
-#: wptools.php:860
+#: wptools.php:1590
 msgid "Custom error/warning/notice triggered by the developer."
 msgstr "Erreur/avertissement/avis personnalisé déclenché par le développeur."
 
-#: wptools.php:861
+#: wptools.php:1591
 msgid "Issues that impact functionality and user experience."
 msgstr ""
 "Problèmes qui ont un impact sur la fonctionnalité et l'expérience "
 "utilisateur."
 
-#: wptools.php:862
+#: wptools.php:1592
 msgid "Unknown error type"
 msgstr "Type d'erreur inconnu"
 
-#: wptools.php:2172 wptools.php:2173
-msgid "MU Plugins"
-msgstr "Plugins MU"
-
-#: wptools.php:2186
+#: wptools.php:1609
 msgid "Loaded MU Plugins"
 msgstr "Plugins MU chargés"
 
-#: wptools.php:2189
+#: wptools.php:1612
+#| msgid ""
+#| "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
+#| "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot "
+#| "be activated or deactivated through the admin panel. The premium version "
+#| "of our plugin WP Tools allows you to activate and deactivate them."
 msgid ""
 "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
 "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be "
-"activated or deactivated through the admin panel. The premium version of our "
-"plugin WP Tools allows you to activate and deactivate them."
+"activated or deactivated through the admin panel."
 msgstr ""
 "Les plugins MU (Must-Use Plugins) sont des plugins qui se chargent "
 "automatiquement. Ils sont stockés dans un dossier spécifique (`wp-content/mu-"
 "plugins`) et ne peuvent pas être activés ou désactivés via le panneau "
-"d'administration. La version premium de notre plugin WP Tools vous permet de "
-"les activer et de les désactiver."
+"d'administration."
 
-#: wptools.php:2211
+#: wptools.php:1634
 msgid "Author:"
 msgstr "Auteur:"
 
-#: wptools.php:2216
+#: wptools.php:1639
 msgid "Author Site"
 msgstr "Site d'aide"
 
-#: wptools.php:2221
+#: wptools.php:1644
 msgid "Version:"
 msgstr "Version:"
 
-#: wptools.php:2225
+#: wptools.php:1648
 msgid "File Name:"
 msgstr "Nom de fichier:"
 
-#: wptools.php:2229
+#: wptools.php:1652
 msgid "File Path:"
 msgstr "Chemin du fichier:"
 
-#: wptools.php:2235
+#: wptools.php:1658
 msgid "Last Modified:"
 msgstr "Dernière modification :"
 
-#: wptools.php:2237
+#: wptools.php:1660
 msgid "Modification date not available."
 msgstr "Date  indisponible/"
 
-#: wptools.php:2248
-msgid "Status: Activated"
-msgstr "Status: Active"
+#: wptools.php:1668
+msgid "Are you sure you want to deactivate this plugin?"
+msgstr "Etes-vous sûr de vouloir désactiver ce plugin ?"
 
-#: wptools.php:2256
-msgid "Status: Deactivated"
-msgstr "Status Désactive"
+#: wptools.php:1669
+#| msgid "Just Deactivate"
+msgid "Deactivate Plugin"
+msgstr "Désactiver le plugin"
+
+#: wptools.php:1676
+msgid "Are you sure you want to reactivate this plugin?"
+msgstr "Etes-vous sûr de vouloir réactiver ce plugin ?"
+
+#: wptools.php:1677
+msgid "Reactivate Plugin"
+msgstr "Réactiver le plugin"

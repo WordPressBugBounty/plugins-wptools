@@ -91,11 +91,34 @@ function wptools_get_error_log_data()
     $default =    $file_path = ABSPATH . 'error_log';
     $file_path = get_option('wptools_log_file_name_option', $default);
     $output = '';
+
+
+
+
     try {
         // Verifica se o arquivo existe
         if (!file_exists($file_path)) {
-            // throw new Exception("Error log file not found!!!");
-            return '<tr><td colspan="4">Error log file not found!</td></tr>';
+
+
+            $file_path_error_log = ABSPATH . 'error_log';
+            $file_path_debug_log = WP_CONTENT_DIR . 'debug.log';
+
+            // Verifica se algum dos arquivos existe
+            if (file_exists($file_path_error_log) || file_exists($file_path_debug_log)) {
+                // Se pelo menos um arquivo existir, deixa o fluxo seguir adiante
+                // Não retorna nada, apenas continua o processamento
+
+
+                if (file_exists($file_path_error_log)) {
+
+                    update_option('wptools_log_file_name_option', $file_path_error_log);
+                } else {
+                    update_option('wptools_log_file_name_option', $file_path_debug_log);
+                }
+            } else {
+                // Se nenhum dos arquivos existir, retorna a mensagem de erro
+                return '<tr><td colspan="4">' . esc_attr("Error log file not found! Click Setup Button at top right corner.", "wptools") . '</td></tr>';
+            }
         }
     } catch (Exception $e) {
         echo '<tr><td colspan="4">Error to open error log file.';

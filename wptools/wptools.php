@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.02
+Version:     5.03
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -764,7 +764,7 @@ if (is_admin()) {
 			'datatables-css',
 			plugin_dir_url(__FILE__) . 'css/jquery.dataTables.min.css'
 		);
-*/
+		*/
 
 
 
@@ -793,41 +793,6 @@ if (is_admin()) {
 			'nonce' => wp_create_nonce('wptools_myplugin_nonce'),
 		]);
 
-		/*
-		$translations = [
-			'wptools_loading' => __('Loading...', 'textdomain'),
-			'wptools_no_data' => __('No data available', 'textdomain'),
-			'wptools_message' => __('Message', 'textdomain'),
-			'wptools_file' => __('File', 'textdomain'),
-			'wptools_line' => __('Line', 'textdomain'),
-			'wptools_error_type' => __('Error Type', 'textdomain'),
-			'wptools_error_details' => __('Error Details', 'textdomain'),
-			'wptools_php_errors' => [
-				'parse' => __('Critical syntax error in the code that prevents the script from running.', 'textdomain'),
-				'fatal' => __('Critical error that stops the script from running.', 'textdomain'),
-				'warning' => __('Non-critical issue that doesn’t stop execution but may lead to problems.', 'textdomain'),
-				'notice' => __('Minor issue, such as using an undefined variable.', 'textdomain'),
-				'deprecated' => __('Use of outdated features that may be removed in future versions.', 'textdomain'),
-				'core' => __('Internal PHP error, often related to the engine.', 'textdomain'),
-				'compile' => __('Error during script compilation.', 'textdomain'),
-				'user' => __('Custom error/warning/notification triggered by the developer.', 'textdomain'),
-				'javascript' => __('Issues impacting functionality and user experience.', 'textdomain')
-			],
-			'wptools_type' => __('Type', 'textdomain'),
-			'wptools_file_details' => __('File Details', 'textdomain'),
-			'wptools_file_path' => __('File Path', 'textdomain'),
-			'wptools_error' => __('Error', 'textdomain'),
-			'wptools_view_details' => __('View Details', 'textdomain'),
-			'wptools_reset_tabs' => __('Reset Tabs', 'textdomain')
-		];
-		*/
-
-		//	wp_localize_script('wptools-datatables-js', 'wptools_translations', $translations);
-		//	}
-
-
-
-		//wp_enqueue_script('meu-script', 'caminho/para/meu-script.js', array('jquery'), null, true);
 
 		wp_localize_script('wptools-datatables-js', 'wptools_vars', array(
 			'invalid_error_string' => __('Invalid error string.', 'wptools'),

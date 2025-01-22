@@ -3,17 +3,6 @@ if (!defined("ABSPATH")) {
     exit();
 } // Exit if accessed directly
 
-$logErrors = ini_get('log_errors');
-$errorLog = ini_get('error_log');
-if ($logErrors) {
-    if (!$errorLog) {
-        ini_set('error_log', ABSPATH . 'error_log');
-    }
-} else {
-    ini_set('log_errors', 'On');
-}
-
-
 require_once WPTOOLSPATH . "functions/functions_transiente_manager.php";
 require_once WPTOOLSPATH . "functions/functions_cron_manager.php";
 if (!defined("WP_ALLOW_REPAIR")) {
@@ -79,15 +68,6 @@ function wptools_menu()
         "manage_options", // string $capability
         "wptools_options24", // menu slug
         "wptools_options_robots", // callable function
-        4 // position
-    );
-    add_submenu_page(
-        "wp-tools", // $parent_slug
-        "Erase .maintenance file", // string $page_title
-        esc_attr__("Erase .maintenance file", "wptools"), // string $menu_title
-        "manage_options", // string $capability
-        "wptools_options40", // menu slug
-        "wptools_options_maintenance", // callable function
         4 // position
     );
     add_submenu_page(
@@ -226,6 +206,7 @@ function wptools_menu()
 }
 /* =============================== */
 
+
 // 2024
 if ($wptools_improve_wp_dashboard_performance == "yes") {
     // Desativar o feed de notícias
@@ -346,22 +327,319 @@ function wptools_load_upsell()
     // var_dump(__LINE__);
 }
 
-//
-//
-
 function wptools_new_more_plugins()
 {
-    //$plugin_displayer_wptools = new class_billtools_show_plugins();
-    $plugin_displayer_wptools = new wptools_Bill_show_more_plugins();
-    // Call the show_plugins() function
-    $plugin_displayer_wptools->bill_show_plugins();
+    wptools_show_logo();
+    $plugins_to_install = [];
+    $plugins_to_install[0]["Name"] = "Anti Hacker Plugin";
+    $plugins_to_install[0]["Description"] =
+        "Firewall, Malware Scanner, Login Protect, block user enumeration and TOR, disable Json WordPress Rest API, xml-rpc (xmlrpc) & Pingback and more security tools...";
+    $plugins_to_install[0]["image"] =
+        "https://ps.w.org/antihacker/assets/icon-256x256.gif?rev=2524575";
+    $plugins_to_install[0]["slug"] = "antihacker";
+    $plugins_to_install[1]["Name"] = "Stop Bad Bots";
+    $plugins_to_install[1]["Description"] =
+        "Stop Bad Bots, Block SPAM bots, Crawlers and spiders also from botnets. Save bandwidth, avoid server overload and content steal (that ruins your SEO). Blocks also by IP and Referer.";
+    $plugins_to_install[1]["image"] =
+        "https://ps.w.org/stopbadbots/assets/icon-256x256.gif?rev=2524815";
+    $plugins_to_install[1]["slug"] = "stopbadbots";
+    $plugins_to_install[2]["Name"] = "WP Tools";
+    $plugins_to_install[2]["Description"] =
+        "More than 35 useful tools! It is a swiss army knife, to take your site to the next level. Also, show hidden errors, file permissions, site health alert, database check, server info and perform a server benchmark.";
+    $plugins_to_install[2]["image"] =
+        "https://ps.w.org/wptools/assets/icon-256x256.gif?rev=2526088";
+    $plugins_to_install[2]["slug"] = "wptools";
+    $plugins_to_install[3]["Name"] =
+        "reCAPTCHA For All and Cloudflare Turnstile";
+    $plugins_to_install[3]["Description"] = "Protect ALL Pages (or just some) of your site against bots (spam, hackers, fake users and other types of automated abuse)
+	with invisible reCaptcha V3 (Google) or Cloudflare turnstile. You can also block visitors from China.";
+    $plugins_to_install[3]["image"] =
+        "https://ps.w.org/recaptcha-for-all/assets/icon-256x256.gif?rev=2544899";
+    $plugins_to_install[3]["slug"] = "recaptcha-for-all";
+    $plugins_to_install[4]["Name"] = "WP Memory";
+    $plugins_to_install[4]["Description"] =
+        "Check High Memory Usage, Memory Limit, PHP Memory, show result in Site Health Page and fix WordPress and php low memory limit with 3 steps wizard.";
+    $plugins_to_install[4]["image"] =
+        "https://ps.w.org/wp-memory/assets/icon-256x256.gif?rev=2525936";
+    $plugins_to_install[4]["slug"] = "wp-memory";
+
+    /*
+	$plugins_to_install[5]["Name"] = "Truth Social";
+	$plugins_to_install[5]["Description"] = "Tools and feeds for Truth Social new social media platform and Twitter.";
+	$plugins_to_install[5]["image"] = "https://ps.w.org/toolstruthsocial/assets/icon-256x256.png?rev=2629666";
+	$plugins_to_install[5]["slug"] = "toolstruthsocial";
+	*/
+    $plugins_to_install[5]["Name"] = "Database Backup";
+    $plugins_to_install[5]["Description"] =
+        "Database Backup with just one click. Scheduling an automatic daily or weekly backup and choosing backup file retention time. This plugin prioritizes security, and backups are created with skip-extended-insert.";
+    $plugins_to_install[5]["image"] =
+        "https://ps.w.org/database-backup/assets/icon-256x256.gif?rev=2862571";
+    $plugins_to_install[5]["slug"] = "database-backup";
+
+    $plugins_to_install[6]["Name"] = "Database Restore Bigdump";
+    $plugins_to_install[6]["Description"] =
+        "Large and very large Database Restore with BigDump script. Just use your mouse.";
+    $plugins_to_install[6]["image"] =
+        "https://ps.w.org/bigdump-restore/assets/icon-256x256.gif?rev=2872393";
+    $plugins_to_install[6]["slug"] = "bigdump-restore";
+
+    $plugins_to_install[7]["Name"] = "Easy Update URLs";
+    $plugins_to_install[7]["Description"] =
+        "Fix your URLs at database after cloning or moving sites.";
+    $plugins_to_install[7]["image"] =
+        "https://ps.w.org/easy-update-urls/assets/icon-256x256.gif?rev=2866408";
+    $plugins_to_install[7]["slug"] = "easy-update-urls";
+
+    $plugins_to_install[8]["Name"] = "S3 Cloud Contabo";
+    $plugins_to_install[8]["Description"] =
+        "Connect you with your Contabo S3-compatible Object Storage.Transfer and manage your files in the cloud with a user-friendly interface.";
+    $plugins_to_install[8]["image"] =
+        "https://ps.w.org/s3cloud/assets/icon-256x256.gif?rev=2855916";
+    $plugins_to_install[8]["slug"] = "s3cloud";
+
+    $plugins_to_install[9]["Name"] = "Tools for S3 AWS Amazon";
+    $plugins_to_install[9]["Description"] =
+        "Connect you with your Amazon S3-compatible Object Storage. Transfer and manage your files in the cloud with a user-friendly interface.";
+    $plugins_to_install[9]["image"] =
+        "https://ps.w.org/toolsfors3/assets/icon-256x256.gif?rev=2862487";
+    $plugins_to_install[9]["slug"] = "toolsfors3";
+?>
+    <div style="padding-right:20px;">
+
+
+        <br>
+        <center>
+            <div id="bill-wrap-install-intro" class="bill-wrap-install-intro" style="">
+                <h2><?php echo esc_attr(
+                        "Useful FREE Plugins of the same author:",
+                        "wptools"
+                    ); ?></h2>
+                This comprehensive FREE suite of plugins, hosted and approved by WordPress, crafted by Bill Minozzi, will elevate your website to new heights. Enhance your website's security and speed, while gaining access to a plethora of tools that will save you time, prevent issues, and streamline website management.
+            </div>
+        </center>
+
+        <br>
+        <div id="bill-wrap-install" class="bill-wrap-install" style="display:none">
+            <h3><?php esc_attr_e("Please wait", "wptools"); ?></h3>
+            <big>
+                <h4>
+                    <?php esc_attr_e(
+                        "Installing plugin",
+                        "wptools"
+                    ); ?> <div id="billpluginslug">...</div>
+                </h4>
+            </big>
+            <img src="/wp-admin/images/wpspin_light-2x.gif" id="billimagewaitfbl" style="display:none;margin-left:0px;margin-top:0px;" />
+            <br />
+        </div>
+
+
+        <table style="margin-right:20px; border-spacing: 0 25px; " class="widefat" cellspacing="0" id="wptools-more-plugins-table">
+            <tbody class="wptools-more-plugins-body">
+                <?php
+                $counter = 0;
+                $total = count($plugins_to_install);
+                for ($i = 0; $i < $total; $i++) {
+                    if ($counter % 2 == 0) {
+                        echo '<tr style="background:#f6f6f1;">';
+                    }
+                    ++$counter;
+                    if ($counter % 2 == 1) {
+                        echo '<td style="max-width:140px; max-height:140px; padding-left: 40px;" >';
+                    } else {
+                        echo '<td style="max-width:140px; max-height:140px;" >';
+                    }
+                    echo '<img style="width:100px;" src="' .
+                        esc_url($plugins_to_install[$i]["image"]) .
+                        '">';
+                    echo "</td>";
+                    echo '<td style="width:40%;">';
+                    echo "<h3>" . esc_attr($plugins_to_install[$i]["Name"]) . "</h3>";
+                    echo esc_attr($plugins_to_install[$i]["Description"]);
+                    echo "<br>";
+                    echo "</td>";
+                    echo '<td style="max-width:140px; max-height:140px;" >';
+                    if (wptools_plugin_installed($plugins_to_install[$i]["slug"])) {
+                        echo '<a href="#" class="button activate-now">' .
+                            esc_attr__("Installed", "wptools") .
+                            "</a>";
+                    } else {
+                        echo '<a href="#" id="' .
+                            esc_attr($plugins_to_install[$i]["slug"]) .
+                            '"class="button button-primary wt-bill-install-now">' .
+                            esc_attr__("Install", "wptools") .
+                            "</a>";
+                    }
+                    echo "</td>";
+                    if ($counter % 2 == 1) {
+                        echo '<td style="width; 100px; border-left: 1px solid gray;">';
+                        echo "</td>";
+                    }
+                    if ($counter % 2 == 0) {
+                        echo "</tr>";
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
+
+        <!-- Bill-11 -->
+        <?php echo '<div id="wptools_nonce" style="display:none;" >' .
+            wp_create_nonce("wptools_install_plugin"); ?>
+
+
+
+    </div>
+
+
+    <center>
+        <a href="https://profiles.wordpress.org/sminozzi/#content-plugins" class="button button-primary">
+            <?php esc_attr_e("More Plugins", "wptools"); ?>
+        </a>
+    </center>
+
+
+<?php
 }
 
+if (!function_exists("wp_get_current_user")) {
+    require_once ABSPATH . "wp-includes/pluggable.php";
+}
+if (is_admin() or is_super_admin()) {
+    add_action("admin_enqueue_scripts", "wptools_load_upsell");
+    add_action("wp_ajax_wptools_install_plugin", "wptools_install_plugin");
+}
+function wptools_install_plugin()
+{
+    if (isset($_POST["slug"])) {
+        $slug = sanitize_text_field($_POST["slug"]);
+    } else {
+        echo "Fail error (-5)";
+        wp_die();
+    }
 
+    if (isset($_POST["nonce"])) {
+        $nonce = sanitize_text_field($_POST["nonce"]);
+        if (!wp_verify_nonce($nonce, "wptools_install_plugin")) {
+            die("Bad Nonce");
+        }
+    } else {
+        wp_die("nonce not set");
+    }
 
+    if (
+        $slug != "database-backup" &&
+        $slug != "bigdump-restore" &&
+        $slug != "easy-update-urls" &&
+        $slug != "s3cloud" &&
+        $slug != "toolsfors3" &&
+        $slug != "antihacker" &&
+        $slug != "toolstruthsocial" &&
+        $slug != "stopbadbots" &&
+        $slug != "wptools" &&
+        $slug != "recaptcha-for-all" &&
+        $slug != "wp-memory"
+    ) {
+        wp_die("wrong slug");
+    }
 
-//
-/*
+    $plugin["source"] = "repo"; // $_GET['plugin_source']; // Plugin source.
+    require_once ABSPATH . "wp-admin/includes/plugin-install.php"; // Need for plugins_api.
+    require_once ABSPATH . "wp-admin/includes/class-wp-upgrader.php"; // Need for upgrade classes.
+    // get plugin information
+    $api = plugins_api("plugin_information", [
+        "slug" => $slug,
+        "fields" => ["sections" => false],
+    ]);
+    if (is_wp_error($api)) {
+        echo "Fail error (-1)";
+        wp_die();
+        // proceed
+    } else {
+        // Set plugin source to WordPress API link if available.
+        if (isset($api->download_link)) {
+            $plugin["source"] = $api->download_link;
+            $source = $api->download_link;
+        } else {
+            echo "Fail error (-2)";
+            wp_die();
+        }
+        $nonce = "install-plugin_" . $api->slug;
+        /*
+        $type = 'web';
+        $url = $source;
+        $title = 'wptools';
+        */
+        $plugin = $slug;
+        // verbose...
+        //    $upgrader = new Plugin_Upgrader($skin = new Plugin_Installer_Skin(compact('type', 'title', 'url', 'nonce', 'plugin', 'api')));
+        class wptools_QuietSkin extends \WP_Upgrader_Skin
+        {
+            public function feedback($string, ...$args)
+            {
+                /* no output */
+            }
+            public function header()
+            {
+                /* no output */
+            }
+            public function footer()
+            {
+                /* no output */
+            }
+        }
+        $skin = new wptools_QuietSkin(["api" => $api]);
+        $upgrader = new Plugin_Upgrader($skin);
+        // var_dump($upgrader);
+        try {
+            $upgrader->install($source);
+            //	get all plugins
+            $all_plugins = get_plugins();
+            // scan existing plugins
+            foreach ($all_plugins as $key => $value) {
+                // get full path to plugin MAIN file
+                // folder and filename
+                $plugin_file = $key;
+                $slash_position = strpos($plugin_file, "/");
+                $folder = substr($plugin_file, 0, $slash_position);
+                // match FOLDER against SLUG
+                // if matched then ACTIVATE it
+                if ($slug == $folder) {
+                    // Activate
+                    $result = activate_plugin(
+                        ABSPATH . "wp-content/plugins/" . $plugin_file
+                    );
+                    if (is_wp_error($result)) {
+                        // Process Error
+                        echo "Fail error (-3)";
+                        wp_die();
+                    } else {
+                        //works
+                        $url = "https://billminozzi.com/httpapi/httpapi.php";
+                        $data = [
+                            "slug" => $slug,
+                            "status" => "18",
+                        ];
+                        $args = [
+                            "body" => $data,
+                        ];
+                        try {
+                            $response = wp_remote_post($url, $args);
+                        } catch (Exception $e) {
+                            //error_log('Erro '.$e->getMessage());
+                        }
+                    }
+                } // if matched
+            }
+        } catch (Exception $e) {
+            echo "Fail error (-4)";
+            wp_die();
+        }
+    } // activation
+    echo "OK";
+    wp_die();
+}
+
 function wptools_plugin_installed($slug)
 {
     $all_plugins = get_plugins();
@@ -376,7 +654,6 @@ function wptools_plugin_installed($slug)
     }
     return false;
 }
-*/
 
 function wptools_bill_go_pro_hide()
 {
@@ -430,12 +707,6 @@ function wptools_javacript()
     <?php
     $wptools_filename = ABSPATH . "error_log";
     $marray = wptools_read_file($wptools_filename, 3000);
-
-
-    // 2024
-    //$marray = array_reverse($marray);
-
-
 
     if (gettype($marray) != "array" or count($marray) < 1) {
         // if (count($marray) < 1) {
@@ -500,12 +771,10 @@ function wptools_javacript()
 
                 $message_type = str_replace("(Javascript) ", "", $matches[1]);
 
-                $filteredDate = strstr(substr($line, 1, 26), ']', true);
-
 
                 if (count($matches) == 2) {
                     $log_entry = [
-                        "Date" => $filteredDate,
+                        "Date" => substr($line, 1, 20),
                         "Message Type" => "Script error",
                         "Problem Description" => "N/A",
                         "Script URL" => $matches[1],
@@ -513,7 +782,7 @@ function wptools_javacript()
                     ];
                 } else {
                     $log_entry = [
-                        "Date" => $filteredDate,
+                        "Date" => substr($line, 1, 20),
                         "Message Type" => $message_type,
                         "Problem Description" => $matches[2],
                         "Script URL" => $matches[3],
@@ -573,61 +842,27 @@ function wptools_javacript()
                     }
                 }
 
-                /*
-                    // Extrair o nome do script do URL
-                    $script_name = basename(
-                        parse_url($log_entry["Script URL"], PHP_URL_PATH)
-                    );
-                    $log_entry["Script Name"] = $script_name;
-
-                    if (isset($log_entry["Date"])) {
-                        echo "DATE: {$log_entry["Date"]}\n";
-                    }
-                    if (isset($log_entry["Message Type"])) {
-                        echo "MESSAGE TYPE: {$log_entry["Message Type"]}\n";
-                    }
-                    if (isset($log_entry["Problem Description"])) {
-                        echo "PROBLEM DESCRIPTION: {$log_entry["Problem Description"]}\n";
-                    }
-
-                    if (isset($log_entry["Script Name"]) and !empty($log_entry["Script Name"]) ) {
-                        echo "SCRIPT NAME: {$log_entry["Script Name"]}\n";
-                    }
-                    if (isset($log_entry["Line"])) {
-                        echo "LINE: {$log_entry["Line"]}\n";
-                    }
-                    if (isset($log_entry["Column"])) {
-                        //	echo "COLUMN: {$log_entry['Column']}\n";
-                    }
-                    if (isset($log_entry["Error Object"])) {
-                        //	echo "ERROR OBJECT: {$log_entry['Error Object']}\n";
-                    }
-                    if (isset($log_entry["Script Location"])) {
-                        echo "SCRIPT LOCATION: {$log_entry["Script Location"]}\n";
-                    }
-                    if (isset($log_entry["Plugin Name"])) {
-                        echo "PLUGIN NAME: {$log_entry["Plugin Name"]}\n";
-                    }
-                    if (isset($log_entry["Theme Name"])) {
-                        echo "THEME NAME: {$log_entry["Theme Name"]}\n";
-                    }
-                    */
+                // Extrair o nome do script do URL
+                $script_name = basename(
+                    parse_url($log_entry["Script URL"], PHP_URL_PATH)
+                );
+                $log_entry["Script Name"] = $script_name;
 
                 if (isset($log_entry["Date"])) {
-                    echo "DATE: " . esc_html($log_entry["Date"]) . "\n";
+                    echo "DATE: {$log_entry["Date"]}\n";
                 }
                 if (isset($log_entry["Message Type"])) {
-                    echo "MESSAGE TYPE: " . esc_html($log_entry["Message Type"]) . "\n";
+                    echo "MESSAGE TYPE: {$log_entry["Message Type"]}\n";
                 }
                 if (isset($log_entry["Problem Description"])) {
-                    echo "PROBLEM DESCRIPTION: " . esc_html($log_entry["Problem Description"]) . "\n";
+                    echo "PROBLEM DESCRIPTION: {$log_entry["Problem Description"]}\n";
                 }
 
                 if (isset($log_entry["Script Name"]) and !empty($log_entry["Script Name"])) {
-                    echo "SCRIPT NAME: " . esc_html($log_entry["Script Name"]) . "\n";
+                    echo "SCRIPT NAME: {$log_entry["Script Name"]}\n";
                 }
                 if (isset($log_entry["Line"])) {
-                    echo "LINE: " . esc_html($log_entry["Line"]) . "\n";
+                    echo "LINE: {$log_entry["Line"]}\n";
                 }
                 if (isset($log_entry["Column"])) {
                     //	echo "COLUMN: {$log_entry['Column']}\n";
@@ -636,20 +871,20 @@ function wptools_javacript()
                     //	echo "ERROR OBJECT: {$log_entry['Error Object']}\n";
                 }
                 if (isset($log_entry["Script Location"])) {
-                    echo "SCRIPT LOCATION: " . esc_html($log_entry["Script Location"]) . "\n";
+                    echo "SCRIPT LOCATION: {$log_entry["Script Location"]}\n";
                 }
                 if (isset($log_entry["Plugin Name"])) {
-                    echo "PLUGIN NAME: " . esc_html($log_entry["Plugin Name"]) . "\n";
+                    echo "PLUGIN NAME: {$log_entry["Plugin Name"]}\n";
                 }
                 if (isset($log_entry["Theme Name"])) {
-                    echo "THEME NAME: " . esc_html($log_entry["Theme Name"]) . "\n";
+                    echo "THEME NAME: {$log_entry["Theme Name"]}\n";
                 }
 
                 echo "------------------------\n";
                 continue;
             } else {
                 // echo "-----------x-------------\n";
-                echo esc_html($line);
+                echo $line;
                 echo "\n-----------x------------\n";
             }
             continue;
@@ -661,7 +896,7 @@ function wptools_javacript()
     if ($wptoolsctd < 1) {
         echo "<h3>";
         echo esc_attr(
-            esc_attr__(
+            __(
                 "No Javascript errors found last 3000 entries of log_error file.",
                 "wptools"
             )
@@ -709,7 +944,7 @@ function wptools_sql_details()
     if ($wptools_show_dbtools) {
         echo "<br><big>";
         echo esc_html(
-            esc_attr__("Open WordPress Optimize and Repair Database Tools", "wptools")
+            __("Open WordPress Optimize and Repair Database Tools", "wptools")
         ) . "&nbsp;&raquo;&nbsp;";
         if (!empty($wptools_checkversion)) {
             //echo '</big>';
@@ -720,14 +955,14 @@ function wptools_sql_details()
                 "</a>";
             echo "<br>(";
             echo esc_html(
-                esc_attr__(
+                __(
                     "It is not necessary edit your wp-config.php file",
                     "wptools"
                 )
             );
         } else {
             echo esc_html(
-                esc_attr__("(Option available in Premium Version)", "wptools")
+                __("(Option available in Premium Version)", "wptools")
             );
         }
         echo ")<br></big>";
@@ -838,7 +1073,7 @@ function wptools_sql_details()
 
             <tr>
                 <td><?php echo esc_attr__("Maximum No. of Connections", "wptools"); ?></td>
-                <td><?php echo esc_attr(wptools_database_max_no_connection()); ?></td>
+                <td><?php echo esc_attr(database_max_no_connection()); ?></td>
             </tr>
             <tr>
                 <td><?php echo esc_attr__("Maximum Packet Size", "wptools"); ?></td>
@@ -886,7 +1121,7 @@ function wptools_sql_details()
                 echo "<tr><td>" .
                     esc_attr(__("Something went wrong!", "wptools")) .
                     "</td><td>" .
-                    esc_attr__("Something went wrong!", "wptools") .
+                    __("Something went wrong!", "wptools") .
                     "</td></tr>";
             } ?>
         </tbody>
@@ -904,7 +1139,7 @@ function wptools_database_software()
         $db_soft_array = explode(" ", trim($db_software_dump));
         $db_software = $db_soft_array[0];
     } else {
-        $db_software = esc_attr__("N/A", "wptools");
+        $db_software = __("N/A", "wptools");
     }
     return $db_software;
 }
@@ -915,11 +1150,11 @@ function wptools_database_version()
     if (preg_match("/\d+(?:\.\d+)+/", $db_version_dump, $matches)) {
         $db_version = $matches[0];
     } else {
-        $db_version = esc_attr__("N/A", "wptools");
+        $db_version = __("N/A", "wptools");
     }
     return $db_version;
 }
-function wptools_database_max_no_connection()
+function database_max_no_connection()
 {
     global $wpdb;
     $connection_max_query = $wpdb->get_row(
@@ -927,7 +1162,7 @@ function wptools_database_max_no_connection()
     );
     $db_max_connection = $connection_max_query->Value;
     if (empty($db_max_connection)) {
-        $db_max_connection = esc_attr__("N/A", "wptools");
+        $db_max_connection = __("N/A", "wptools");
     } else {
         $db_max_connection = number_format_i18n($db_max_connection, 0);
     }
@@ -941,7 +1176,7 @@ function wptools_database_max_packet_size()
     );
     $db_max_packet_size = $packet_max_query->Value;
     if (empty($db_max_packet_size)) {
-        $db_max_packet_size = esc_attr__("N/A", "wptools");
+        $db_max_packet_size = __("N/A", "wptools");
     } else {
         $db_max_packet_size = wptools_format_filesize($db_max_packet_size);
     }
@@ -956,7 +1191,7 @@ function wptools_database_disk_usage()
         $db_disk_usage += $tablestatus->Data_length;
     }
     if (empty($db_disk_usage)) {
-        $db_disk_usage = esc_attr__("N/A", "wptools");
+        $db_disk_usage = __("N/A", "wptools");
     } else {
         $db_disk_usage = wptools_format_filesize($db_disk_usage);
     }
@@ -971,7 +1206,7 @@ function wptools_index_disk_usage()
         $db_wptools_index_disk_usage += $tablestatus->Index_length;
     }
     if (empty($db_wptools_index_disk_usage)) {
-        $db_wptools_index_disk_usage = esc_attr__("N/A", "wptools");
+        $db_wptools_index_disk_usage = __("N/A", "wptools");
     } else {
         $db_wptools_index_disk_usage = wptools_format_filesize(
             $db_wptools_index_disk_usage
@@ -986,27 +1221,27 @@ function wptools_format_filesize($bytes)
         if ($bytes / pow(1024, 5) > 1) {
             return number_format_i18n($bytes / pow(1024, 5), 0) .
                 " " .
-                esc_attr__("PB", "wptools");
+                __("PB", "wptools");
         } elseif ($bytes / pow(1024, 4) > 1) {
             return number_format_i18n($bytes / pow(1024, 4), 0) .
                 " " .
-                esc_attr__("TB", "wptools");
+                __("TB", "wptools");
         } elseif ($bytes / pow(1024, 3) > 1) {
             return number_format_i18n($bytes / pow(1024, 3), 0) .
                 " " .
-                esc_attr__("GB", "wptools");
+                __("GB", "wptools");
         } elseif ($bytes / pow(1024, 2) > 1) {
             return number_format_i18n($bytes / pow(1024, 2), 0) .
                 " " .
-                esc_attr__("MB", "wptools");
+                __("MB", "wptools");
         } elseif ($bytes / 1024 > 1) {
             return number_format_i18n($bytes / 1024, 0) .
                 " " .
-                esc_attr__("KB", "wptools");
+                __("KB", "wptools");
         } elseif ($bytes >= 0) {
-            return number_format_i18n($bytes, 0) . " " . esc_attr__("bytes", "wptools");
+            return number_format_i18n($bytes, 0) . " " . __("bytes", "wptools");
         } else {
-            return esc_attr__("Unknown", "wptools");
+            return __("Unknown", "wptools");
         }
     } catch (exception $e) {
         return "0";
@@ -1017,23 +1252,23 @@ function wptools_format_filesize_kB($kiloBytes)
     if ($kiloBytes / pow(1024, 4) > 1) {
         return number_format_i18n($kiloBytes / pow(1024, 4), 0) .
             " " .
-            esc_attr__("PB", "wptools");
+            __("PB", "wptools");
     } elseif ($kiloBytes / pow(1024, 3) > 1) {
         return number_format_i18n($kiloBytes / pow(1024, 3), 0) .
             " " .
-            esc_attr__("TB", "wptools");
+            __("TB", "wptools");
     } elseif ($kiloBytes / pow(1024, 2) > 1) {
         return number_format_i18n($kiloBytes / pow(1024, 2), 0) .
             " " .
-            esc_attr__("GB", "wptools");
+            __("GB", "wptools");
     } elseif ($kiloBytes / 1024 > 1) {
         return number_format_i18n($kiloBytes / 1024, 0) .
             " " .
-            esc_attr__("MB", "wptools");
+            __("MB", "wptools");
     } elseif ($kiloBytes >= 0) {
         return number_format_i18n($kiloBytes / 1, 0) .
             " " .
-            esc_attr__("KB", "wptools");
+            __("KB", "wptools");
     } else {
         return esc_attr__("Unknown", "wptools");
     }
@@ -1056,67 +1291,27 @@ function wptools_check_memory()
     global $wptools_memory;
     $wptools_memory["color"] = "font-weight:normal;";
     try {
-
-
-        // $wptools_memory["limit"] = (int) ini_get("memory_limit");
-
-        if (!function_exists('ini_get')) {
-            $wptools_memory["msg_type"] = "notok";
-            return;
-        } else {
-            $wptools_memory["limit"] = (int) ini_get("memory_limit");
-        }
-
-
-        //$wptools_memory["usage"] = function_exists("memory_get_usage")
-        //    ? round(memory_get_usage() / 1024 / 1024, 0)
-        //: 0;
-
-        //if ($wptools_memory["usage"] == 0) {
-        //    $wptools_memory["msg_type"] = "notok";
-        //    return;
-        // }
-
-        if (!function_exists('memory_get_usage')) {
-            $wptools_memory["msg_type"] = "notok";
-            return;
-        } else {
-
-            // $bill_install_memory["usage"] = round(memory_get_usage() / 1024 / 1024, 0);
-            $wptools_memory["usage"] = (int) memory_get_usage();
-        }
-
-
+        $wptools_memory["limit"] = (int) ini_get("memory_limit");
+        $wptools_memory["usage"] = function_exists("memory_get_usage")
+            ? round(memory_get_usage() / 1024 / 1024, 0)
+            : 0;
         if ($wptools_memory["usage"] == 0) {
             $wptools_memory["msg_type"] = "notok";
             return;
-        } else {
-            $wptools_memory["usage"] = round($wptools_memory["usage"] / 1024 / 1024, 0);
         }
-
+        if (!defined("WP_MEMORY_LIMIT")) {
+            $wptools_memory["msg_type"] = "notok";
+            return;
+        }
+        $wptools_memory["wp_limit"] = trim(WP_MEMORY_LIMIT);
+        if ($wptools_memory["wp_limit"] > 9999999) {
+            $wptools_memory["wp_limit"] =
+                $wptools_memory["wp_limit"] / 1024 / 1024;
+        }
         if (!is_numeric($wptools_memory["usage"])) {
             $wptools_memory["msg_type"] = "notok";
             return;
         }
-
-
-
-
-
-        //if (!defined("WP_MEMORY_LIMIT")) {
-        //    $wptools_memory["msg_type"] = "notok";
-        //    return;
-        //}
-
-        if (!defined("WP_MEMORY_LIMIT")) {
-            $wptools_memory['wp_limit'] = 40;
-        } else {
-
-            $wptools_memory['wp_limit'] = (int) rtrim(WP_MEMORY_LIMIT, 'M');
-        }
-
-        // $wptools_memory["wp_limit"] = trim(WP_MEMORY_LIMIT);
-
         if (!is_numeric($wptools_memory["limit"])) {
             $wptools_memory["msg_type"] = "notok";
             return;
@@ -1130,14 +1325,9 @@ function wptools_check_memory()
             $wptools_memory["msg_type"] = "notok";
             return;
         }
-
-        /*
         $wplimit = $wptools_memory["wp_limit"];
-        // $wplimit = substr($wplimit, 0, strlen($wplimit) - 1);
+        $wplimit = substr($wplimit, 0, strlen($wplimit) - 1);
         $wptools_memory["wp_limit"] = $wplimit;
-        */
-
-
         $wptools_memory["percent"] =
             $wptools_memory["usage"] / $wptools_memory["wp_limit"];
         $wptools_memory["color"] = "font-weight:normal;";
@@ -1193,14 +1383,14 @@ function wptools_options_benchmark()
     echo "<h1>" . esc_attr(__("Server Benchmark", "wptools")) . "</h1>";
     echo '<div id="wptools_exchange" style="min-width:100%">';
     echo esc_attr(
-        esc_attr__(
+        __(
             "This plugin can benchmarks your server's performance through a variety of PHP and MySql tests.",
             "wptools"
         )
     );
     echo "<br>";
     echo esc_attr(
-        esc_attr__(
+        __(
             "The total time is in seconds. Lower time are better (faster).",
             "wptools"
         )
@@ -1230,7 +1420,7 @@ function wptools_options_benchmark()
             ); ?> <br>
         </label>
         <input type="submit" class="button-primary" value="<?php echo esc_attr(
-                                                                esc_attr__("Update", "wptools")
+                                                                __("Update", "wptools")
                                                             ); ?>" />
         <br>
         <br>
@@ -1447,7 +1637,7 @@ function wptools_php_max_input_vars()
     if (ini_get("max_input_vars")) {
         $php_max__input_vars = ini_get("max_input_vars");
     } else {
-        $php_max__input_vars = esc_attr__("N/A", "wptools");
+        $php_max__input_vars = __("N/A", "wptools");
     }
     return $php_max__input_vars;
 }
@@ -1509,7 +1699,6 @@ function wptools_options()
             return;
         }
     }
-
     require_once(WPTOOLSPATH . "functions/function_error_log.php");
 }
 
@@ -1534,92 +1723,7 @@ function wptools_strip_strong($htmlString)
 
 // Bill202309
 
-/*
-function wptools_read_file_old($file, $lines)
-{
-    // Precisa o so uma linha?
-    // remover stack trace ?
-
-    try {
-        $handle = fopen($file, "r");
-    } catch (Exception $e) {
-        return "";
-    }
-    if (!$handle) {
-        return "";
-    }
-
-    $linecounter = $lines;
-    $pos = -2;
-    $beginning = false;
-    $text = [];
-
-    while ($linecounter > 0) {
-        $t = " ";
-        // acha ultima quebra de linha indo para traz...
-        // partindo da ultima posicao menos 1.
-        while ($t != "\n") {
-            if (fseek($handle, $pos, SEEK_END) == -1) {
-                // chegou no inicio?
-                $beginning = true;
-                break;
-            }
-            $t = fgetc($handle);
-            $pos--;
-        }
-
-        $linecounter--;
-
-        // chegou no inicio?
-        if ($beginning) {
-            rewind($handle);
-        }
-
-        $line = fgets($handle);
-        if ($line === false) {
-            break; // Não há mais linhas para ler
-        }
-
-        $text[] = $line;
-
-        if ($beginning) {
-            break;
-        }
-    }
-
-    fclose($handle);
-
-    // Inverte o array para que as linhas sejam na ordem correta
-    // $text = array_reverse($text);
-
-    //die(var_export(count($text)));
-
-    return $text;
-
-    return implode("", $text);
-}
-*/
-
-/*
-$line = fgets($handle);
-if ($line === false) {
-    break; // Não há mais linhas para ler
-}
-
-// Verifica se a linha coincide com o formato desejado
-if (strpos($line, "] NOTICE [") !== false && strpos($line, "Notice on line") !== false) {
-    // Se a linha coincide, remove a quebra de linha
-    $nextLine = fgets($handle);
-    if ($nextLine !== false) {
-        // Junte as linhas
-        $line = rtrim($line) . " " . rtrim($nextLine);
-    }
-}
-*/
-
-
-
-function wptools_read_file_2023($file, $lines)
+function wptools_read_file($file, $lines)
 {
     $handle = fopen($file, "r");
     if (!$handle) {
@@ -1676,137 +1780,15 @@ function wptools_read_file_2023($file, $lines)
     fclose($handle);
 
     // Reverte o array para retornar as linhas na ordem correta
-    // return array_reverse($text);
-    return $text;
+    return array_reverse($text);
 }
 
-function wptools_read_file_bad($file, $lines)
-{
-
-    $handle = fopen($file, "r");
-    if (!$handle) {
-        return "";
-    }
-
-    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
-    $text = [];
-    $currentChunk = '';
-    $linecounter = 0;
-
-    // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle);
-    $pos = $filesize - $bufferSize;
-
-    while ($pos >= 0 && $linecounter < $lines) {
-        // Se pos é menor que zero, ajusta para 0
-        if ($pos < 0) {
-            $pos = 0;
-        }
-
-        // Mover o ponteiro para a posição
-        fseek($handle, $pos);
-
-        // Ler o bloco
-        $chunk = fread($handle, $bufferSize);
-        $currentChunk = $chunk . $currentChunk;
-
-        // Dividir o bloco em linhas
-        $linesInChunk = explode("\n", $currentChunk);
-
-        // O primeiro elemento pode ser uma linha parcial (incompleta)
-        $currentChunk = array_shift($linesInChunk);
-
-        // Adiciona as linhas ao texto, ignorando stack traces e termos como "thrown"
-        foreach (array_reverse($linesInChunk) as $line) {
-            // Verifica se a linha contém stack trace ou palavras como "thrown"
-            if (!preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $line)) {
-                $text[] = $line;
-                $linecounter++;
-            }
-
-            if ($linecounter >= $lines) {
-                break 2; // Sai dos dois loops
-            }
-        }
-
-        // Move a posição para o próximo bloco
-        $pos -= $bufferSize;
-    }
-
-    // Adiciona a última linha parcial (se houver), se não for um stack trace ou termo ignorado
-    if (!empty($currentChunk) && !preg_match('/^\s*at\s|#[0-9]+\s|Stack trace:|thrown/', $currentChunk)) {
-        $text[] = $currentChunk;
-    }
-
-    fclose($handle);
-
-    // Reverte o array para retornar as linhas na ordem correta
-    return $text;
-}
-
-
+/*
 function wptools_read_file($file, $lines)
 {
-    $handle = fopen($file, "r");
+    // Precisa o so uma linha?
+    // remover stack trace ?
 
-    if (!$handle) {
-        return "";
-    }
-
-    $bufferSize = 8192; // Tamanho do bloco de leitura (8KB)
-    $text = [];
-    $currentChunk = '';
-    $linecounter = 0;
-
-    // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle); // Tamanho do arquivo
-
-    // Ajustar bufferSize para o tamanho do arquivo se for menor que 8KB
-    if ($filesize < $bufferSize) {
-        $bufferSize = $filesize;
-    }
-
-    $pos = $filesize - $bufferSize;
-
-    while ($pos >= 0 && $linecounter < $lines) {
-        if ($pos < 0) {
-            $pos = 0;
-        }
-
-        fseek($handle, $pos);
-
-        $chunk = fread($handle, $bufferSize);
-        $currentChunk = $chunk . $currentChunk;
-
-        $linesInChunk = explode("\n", $currentChunk);
-        $currentChunk = array_shift($linesInChunk);
-
-        foreach (array_reverse($linesInChunk) as $line) {
-            $text[] = $line;
-            $linecounter++;
-            if ($linecounter >= $lines) {
-                break 2;
-            }
-        }
-
-        $pos -= $bufferSize;
-    }
-
-    if (!empty($currentChunk)) {
-        $text[] = $currentChunk;
-    }
-
-    fclose($handle);
-
-    return $text;
-}
-
-
-
-function wptools_read_file99999($file, $lines)
-{
     try {
         $handle = fopen($file, "r");
     } catch (Exception $e) {
@@ -1823,8 +1805,11 @@ function wptools_read_file99999($file, $lines)
 
     while ($linecounter > 0) {
         $t = " ";
+        // acha ultima quebra de linha indo para traz...
+        // partindo da ultima posicao menos 1.
         while ($t != "\n") {
             if (fseek($handle, $pos, SEEK_END) == -1) {
+                // chegou no inicio?
                 $beginning = true;
                 break;
             }
@@ -1834,15 +1819,15 @@ function wptools_read_file99999($file, $lines)
 
         $linecounter--;
 
+        // chegou no inicio?
         if ($beginning) {
             rewind($handle);
         }
 
         $line = fgets($handle);
         if ($line === false) {
-            break;
+            break; // Não há mais linhas para ler
         }
-
         $text[] = $line;
 
         if ($beginning) {
@@ -1851,10 +1836,17 @@ function wptools_read_file99999($file, $lines)
     }
 
     fclose($handle);
-    return array_reverse($text);
+
+    // Inverte o array para que as linhas sejam na ordem correta
+    // $text = array_reverse($text);
+
+    //die(var_export(count($text)));
+
+    return $text;
+
+    return implode("", $text);
 }
-
-
+*/
 
 function wptools_sizeFilter($bytes)
 {
@@ -2003,12 +1995,10 @@ function wptools_options_cookies()
             </thead>
             <?php foreach ($_COOKIE as $name => $value): ?>
                 <tr>
-                    <td><?php echo esc_attr($name); ?></td>
-                    <td><?php echo esc_attr($value); ?></td>
+                    <td><?php echo esc_html($name); ?></td>
+                    <td><?php echo esc_html($value); ?></td>
                 </tr>
             <?php endforeach; ?>
-
-
         </table>
     <?php
 }
@@ -2118,7 +2108,7 @@ function wptools_options_permissions2()
             echo esc_attr($ctdd) .
                 " " .
                 esc_attr(
-                    esc_attr__(
+                    __(
                         "Folders with wrong permissions. This plugin will show max 50.",
                         "wptools"
                     )
@@ -2235,7 +2225,7 @@ function wptools_options_permissions2()
                 esc_attr__("This plugin will show max 50.", "wptools");
         } else {
             echo esc_attr(
-                esc_attr__("No folders found with wrong permissions.", "wptools")
+                __("No folders found with wrong permissions.", "wptools")
             );
         }
 
@@ -2451,7 +2441,7 @@ function wptools_options_permissions2()
                 esc_attr__("Folders with wrong permissions.", "wptools");
         } else {
             echo esc_attr(
-                esc_attr__("No folders found with wrong permissions.", "wptools")
+                __("No folders found with wrong permissions.", "wptools")
             );
         }
 
@@ -2514,199 +2504,246 @@ function wptools_options_permissions2()
     <?php echo "</form>";
     }
 
-
-
-    function wptools_errors_today($num_days, $filter = null)
+    function wptools_errors_today($onlytoday)
     {
         $wptools_count = 0;
-        $wptools_folders = [];
 
-        $bill_themePath = get_theme_root();
-
-
-        if (!function_exists('wptools_parseDate')) {
-            function wptools_parseDate($dateString, $locale)
-            {
-                // Mapeamento de formatos de data por idioma
-                $dateFormatsByLanguage = [
-                    'pt' => 'd/m/Y', // 31/12/2024 (Português)
-                    'en' => 'm/d/Y', // 12/31/2024 (Inglês)
-                    'fr' => 'd/m/Y', // 31/12/2024 (Francês)
-                    'de' => 'd.m.Y', // 31.12.2024 (Alemão)
-                    'es' => 'd/m/Y', // 31/12/2024 (Espanhol)
-                    'nl' => 'd-m-Y', // 31-12-2024 (Holandês)
-                ];
-                // Extrai o código de idioma do locale (ex: 'pt_BR' -> 'pt')
-                $language = substr($locale, 0, 2);
-                // Obtém o formato de data correspondente ao idioma
-                $format = $dateFormatsByLanguage[$language] ?? 'Y-m-d'; // Fallback para um formato padrão
-                // Tenta criar o DateTime com o formato correspondente
-                $date = \DateTime::createFromFormat($format, $dateString);
-                if ($date !== false) {
-                    return $date;
-                }
-                // Se o formato específico do idioma falhar, tenta detectar o formato automaticamente
-                $possibleFormats = [
-                    'd/m/Y', // 31/12/2024
-                    'm/d/Y', // 12/31/2024
-                    'Y-m-d', // 2024-12-31
-                    'd-M-Y', // 31-Dec-2024
-                    'd F Y', // 31 December 2024
-                    'd.m.Y', // 31.12.2024 (Alemão)
-                    'd-m-Y', // 31-12-2024 (Holandês)
-                ];
-                foreach ($possibleFormats as $format) {
-                    $date = \DateTime::createFromFormat($format, $dateString);
-                    if ($date !== false) {
-                        return $date;
-                    }
-                }
-                // Se nenhum formato funcionar, lança uma exceção
-                // throw new \Exception("Falha ao parsear a data: " . $dateString);
-                return false;
-            }
-        }
-
-
-
-
-
+        //define('WPTOOLSPATH', plugin_dir_path(__file__));
+        //WPTOOLSPATH
+        $wptools_themePath = get_theme_root();
         $error_log_path = trim(ini_get("error_log"));
         if (
-            !is_null($error_log_path) and $error_log_path != trim(ABSPATH . "error_log")
+            !is_null($error_log_path) and
+            $error_log_path != trim(ABSPATH . "error_log")
         ) {
-            $wptools_folders[] = $error_log_path;
+            $wptools_folders = [
+                $error_log_path,
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPATH . "/error_log",
+                WPTOOLSPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
+        } else {
+            $wptools_folders = [
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPATH . "/error_log",
+                WPTOOLSPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
         }
-
-        $wptools_folders[] = ABSPATH . "error_log";
-        $wptools_folders[] = ABSPATH . "php_errorlog";
-        $wptools_folders[] = WPTOOLSPATH . "/error_log";
-        $wptools_folders[] = WPTOOLSPATH . "/php_errorlog";
-        $wptools_folders[] = get_theme_root() . "/error_log";
-        $wptools_folders[] = get_theme_root() . "/php_errorlog";
-        // Adicionar caminhos específicos de administração se existirem
         $wptools_admin_path = str_replace(
             get_bloginfo("url") . "/",
             ABSPATH,
             get_admin_url()
         );
-        $wptools_folders[] = $wptools_admin_path . "/error_log";
-        $wptools_folders[] = $wptools_admin_path . "/php_errorlog";
-        // Adicionar diretórios de plugins
+        array_push($wptools_folders, $wptools_admin_path . "/error_log");
+        array_push($wptools_folders, $wptools_admin_path . "/php_errorlog");
         $wptools_plugins = array_slice(scandir(WPTOOLSPATH), 2);
         foreach ($wptools_plugins as $wptools_plugin) {
             if (is_dir(WPTOOLSPATH . "/" . $wptools_plugin)) {
-                $wptools_folders[] = WPTOOLSPATH . "/" . $wptools_plugin . "/error_log";
-                $wptools_folders[] = WPTOOLSPATH . "/" . $wptools_plugin . "/php_errorlog";
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPATH . "/" . $wptools_plugin . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPATH . "/" . $wptools_plugin . "/php_errorlog"
+                );
             }
         }
-        $wptools_themes = array_slice(scandir(get_theme_root()), 2);
+        $wptools_themes = array_slice(scandir($wptools_themePath), 2);
         foreach ($wptools_themes as $wptools_theme) {
-            if (is_dir(get_theme_root() . "/" . $wptools_theme)) {
-                $wptools_folders[] = get_theme_root() . "/" . $wptools_theme . "/error_log";
-                $wptools_folders[] = get_theme_root() . "/" . $wptools_theme . "/php_errorlog";
+            if (is_dir($wptools_themePath . "/" . $wptools_theme)) {
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/php_errorlog"
+                );
             }
         }
 
-
-
-
-
-
-
-
-        // Data limite para comparação
-        //$dateThreshold = new DateTime('now');
-        $dateThreshold = new \DateTime('now');
-        // $dateThreshold->modify('-3 days');
-        $dateThreshold->modify("-{$num_days} days");
-        // $dateThreshold->modify("-$num_days days");
-        // Regex para identificar diferentes formatos de data
-        $datePatterns = [
-            '/\d{2}-[a-zA-ZÀ-ÿ]{3}-\d{4}/',  // DD-Mon-YYYY (ex: 31-Dec-2024)
-            '/\d{2}\s+[a-zA-ZÀ-ÿ]+\s+\d{4}/', // DD Month YYYY (ex: 31 December 2024)
-            '/\d{4}-\d{2}-\d{2}/',           // YYYY-MM-DD (ex: 2024-12-31)
-            '/\d{2}\/\d{2}\/\d{4}/',         // DD/MM/YYYY (ex: 31/12/2024)
-            '/\d{2}-\d{2}-\d{4}/',           // DD-MM-YYYY (ex: 31-12-2024)
-            '/\d{2}\.\d{2}\.\d{4}/',         // DD.MM.YYYY (ex: 31.12.2024)
-            '/\d{4}\/\d{2}\/\d{2}/',         // YYYY/MM/DD (ex: 2024/12/31)
-        ];
-
-        // Obtém o locale do WordPress
-        $locale = get_locale(); // Exemplo: 'pt_BR', 'en_US', etc.
-        $language = substr($locale, 0, 2); // Extrai o código de idioma (ex: 'pt', 'en')
-        // Itera sobre as pastas de faturas
         foreach ($wptools_folders as $wptools_folder) {
-            if (!empty($wptools_folder) && file_exists($wptools_folder) && filesize($wptools_folder) > 0) {
-                $wptools_count++;
-                //
-                //
-                //
-                //
-                //
+            //// if (gettype($wptools_folder) != 'array')
+            //	continue;
 
-                $marray = wptools_read_file($wptools_folder, 20);
-                if (is_array($marray) && !empty($marray)) {
-                    foreach ($marray as $line) {
-                        if (empty($line)) {
-                            continue;
-                        }
-                        if ($filter !== null && stripos($line, $filter) === false) {
-                            continue;
-                        }
-                        if (substr($line, 0, 1) !== '[') {
-                            continue;
-                        }
-                        // Verifica se a linha corresponde a algum padrão de data
-                        foreach ($datePatterns as $pattern) {
-                            if (preg_match($pattern, $line, $matches)) {
-                                try {
-                                    // Usa a função wptools_parseDate para interpretar a data
-                                    $date = wptools_parseDate($matches[0], $locale);
-                                    if (!$date)
-                                        return false;
-                                    // Verifica se a data é anterior ao limite
-                                    // debug2($date);
-                                    if ($date < $dateThreshold) {
-                                        // debug2('Antiga');
-                                        // debug2("Data antiga encontrada: " . $date->format('Y-m-d'));
-                                    } else {
-                                        // debug2('Data Nova encontrada');
-                                        return true;
-                                    }
-                                } catch (Exception $e) {
-                                    // Ignorar linhas com datas inválidas
-                                    // debug2("Erro ao processar a data: " . $e->getMessage());
-                                    continue;
-                                }
-                            } else {
-                                // debug2('nao bateu');
+            if (trim(empty($wptools_folder))) {
+                continue;
+            }
+
+            foreach (glob($wptools_folder) as $wptools_filename) {
+                if (strpos($wptools_filename, "backup") != true) {
+                    $wptools_count++;
+                    $marray = wptools_read_file($wptools_filename, 20);
+
+                    if (gettype($marray) != "array" or count($marray) < 1) {
+                        continue;
+                    }
+
+                    if (count($marray) > 0) {
+                        for ($i = 0; $i < count($marray); $i++) {
+                            // [05-Aug-2021 08:31:45 UTC]
+
+                            if (
+                                substr($marray[$i], 0, 1) != "[" or
+                                empty($marray[$i])
+                            ) {
+                                continue;
                             }
+                            $pos = strpos($marray[$i], " ");
+                            $string = trim(substr($marray[$i], 1, $pos));
+                            if (empty($string)) {
+                                continue;
+                            }
+                            // $data_array = explode('-',$string,);
+                            $last_date = strtotime($string);
+
+                            //
+                            //  die(var_dump($marray[$i]));
+                            // die(var_export(time() - $last_date < 60 * 60 * 24));
+
+                            //var_dump($last_date);
+
+                            //  if ($onlytoday == 2) {
+                            if (time() - $last_date < 60 * 60 * ($onlytoday * 24)) {
+                                //die(var_export(time() - $last_date < 60 * 60 * 24));
+                                return true;
+                            }
+                            // } else {
+                            // return true;
+                            // }
                         }
-                        return false;
                     }
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
         return false;
     }
 
+    function wptools_javascript_errors_today($onlytoday)
+    {
+        $wptools_count = 0;
 
+        //define('WPTOOLSPATH', plugin_dir_path(__file__));
+        //WPTOOLSPATH
+        $wptools_themePath = get_theme_root();
+        $error_log_path = trim(ini_get("error_log"));
+        if (
+            !is_null($error_log_path) and
+            $error_log_path != trim(ABSPATH . "error_log")
+        ) {
+            $wptools_folders = [
+                $error_log_path,
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPATH . "/error_log",
+                WPTOOLSPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
+        } else {
+            $wptools_folders = [
+                ABSPATH . "error_log",
+                ABSPATH . "php_errorlog",
+                WPTOOLSPATH . "/error_log",
+                WPTOOLSPATH . "/php_errorlog",
+                $wptools_themePath . "/error_log",
+                $wptools_themePath . "/php_errorlog",
+            ];
+        }
+        $wptools_admin_path = str_replace(
+            get_bloginfo("url") . "/",
+            ABSPATH,
+            get_admin_url()
+        );
+        array_push($wptools_folders, $wptools_admin_path . "/error_log");
+        array_push($wptools_folders, $wptools_admin_path . "/php_errorlog");
+        $wptools_plugins = array_slice(scandir(WPTOOLSPATH), 2);
+        foreach ($wptools_plugins as $wptools_plugin) {
+            if (is_dir(WPTOOLSPATH . "/" . $wptools_plugin)) {
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPATH . "/" . $wptools_plugin . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    WPTOOLSPATH . "/" . $wptools_plugin . "/php_errorlog"
+                );
+            }
+        }
+        $wptools_themes = array_slice(scandir($wptools_themePath), 2);
+        foreach ($wptools_themes as $wptools_theme) {
+            if (is_dir($wptools_themePath . "/" . $wptools_theme)) {
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/error_log"
+                );
+                array_push(
+                    $wptools_folders,
+                    $wptools_themePath . "/" . $wptools_theme . "/php_errorlog"
+                );
+            }
+        }
 
+        foreach ($wptools_folders as $wptools_folder) {
+            //// if (gettype($wptools_folder) != 'array')
+            //	continue;
 
+            if (trim(empty($wptools_folder))) {
+                continue;
+            }
 
+            foreach (glob($wptools_folder) as $wptools_filename) {
+                if (strpos($wptools_filename, "backup") != true) {
+                    $wptools_count++;
+                    $marray = wptools_read_file($wptools_filename, 20);
 
+                    if (gettype($marray) != "array" or count($marray) < 1) {
+                        continue;
+                    }
 
+                    if (count($marray) > 0) {
+                        for ($i = 0; $i < count($marray); $i++) {
+                            // [05-Aug-2021 08:31:45 UTC]
+
+                            //if (substr($marray[$i], 0, 1) != '[' or empty($marray[$i]))
+                            if (
+                                substr($marray[$i], 0, 1) != "[" ||
+                                stripos($marray[$i], "javascript") === false ||
+                                empty($marray[$i])
+                            ) {
+                                continue;
+                            }
+
+                            $pos = strpos($marray[$i], " ");
+                            $string = trim(substr($marray[$i], 1, $pos));
+                            if (empty($string)) {
+                                continue;
+                            }
+                            // $data_array = explode('-',$string,);
+                            $last_date = strtotime($string);
+                            // var_dump($last_date);
+
+                            //if ($onlytoday == 1) {
+                            if (time() - $last_date < 60 * 60 * ($onlytoday * 24)) {
+                                return true;
+                            }
+                            //} else {
+                            //    return true;
+                            //}
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     function bill_check_resources($par)
     {
@@ -2730,9 +2767,6 @@ function wptools_options_permissions2()
             echo "</h3>";
             $bill_found_error = false;
             $bill_found_error_hosting = false;
-
-            //echo var_export($bill_install_memory["msg_type"]);
-            //die();
 
             if (!is_array($bill_install_memory) or !isset($bill_install_memory)) {
                 esc_attr_e("General Failure (7) to get memory information.", "wptools");
@@ -2805,7 +2839,7 @@ function wptools_options_permissions2()
                     $bill_found_error = true;
                 } elseif ($bill_install_memory["msg_type"] == "notok(5)") {
                     esc_attr_e(
-                        "Possible error: On file wp-config.php memory symbol should be M or MB or G or GB.",
+                        "Possible error: On file wp-config.php memory symbol should be M.",
                         "wptools"
                     );
                     echo "<br>";
@@ -3125,70 +3159,29 @@ function wptools_options_permissions2()
 				notok(7) = General Failure
 				*/
         global $bill_install_memory;
-
         try {
-
-
-            if (!function_exists('ini_get')) {
-                $bill_install_memory["msg_type"] = "notok(1)";
-                return $bill_install_memory;
-            } else {
-                $bill_install_memory["limit"] = (int) ini_get("memory_limit");
-            }
-
+            $bill_install_memory["limit"] = (int) ini_get("memory_limit");
             if (!is_numeric($bill_install_memory["limit"])) {
                 $bill_install_memory["msg_type"] = "notok(1)";
-                return $bill_install_memory;
+                return;
             }
-
-            /*
-        $bill_install_memory["usage"] = function_exists("memory_get_usage")
-            ? round(memory_get_usage() / 1024 / 1024, 0)
-            : 0;
-        */
-
-            if (!function_exists('memory_get_usage')) {
-                $bill_install_memory["msg_type"] = "notok(2)";
-                return $bill_install_memory;
-            } else {
-
-                // $bill_install_memory["usage"] = round(memory_get_usage() / 1024 / 1024, 0);
-                $bill_install_memory["usage"] = (int) memory_get_usage();
-            }
-
-
-
-
-            //return $bill_install_memory;
-
-
+            $bill_install_memory["usage"] = function_exists("memory_get_usage")
+                ? round(memory_get_usage() / 1024 / 1024, 0)
+                : 0;
             if ($bill_install_memory["usage"] == 0) {
                 $bill_install_memory["msg_type"] = "notok(2)";
-                return $bill_install_memory;
-            } else {
-                $bill_install_memory["usage"] = round($bill_install_memory["usage"] / 1024 / 1024, 0);
+                return;
             }
-
             if (!is_numeric($bill_install_memory["usage"])) {
                 $bill_install_memory["msg_type"] = "notok(3)";
-                return $bill_install_memory;
+                return;
             }
-
-
             if (!defined("WP_MEMORY_LIMIT")) {
-                $bill_install_memory["wp_limit"] = 40;
-                define('WP_MEMORY_LIMIT', '40M');
+                $bill_install_memory["wp_limit"] = "40M";
+                // return;
             } else {
-                $wp_memory_limit = WP_MEMORY_LIMIT;
-                $wp_memory_limit = rtrim($wp_memory_limit, 'M');
-                $bill_install_memory["wp_limit"] = (int) $wp_memory_limit;
+                $bill_install_memory["wp_limit"] = trim(WP_MEMORY_LIMIT);
             }
-
-            if (!is_numeric($bill_install_memory["wp_limit"])) {
-                $bill_install_memory["msg_type"] = "notok(4)";
-                return $bill_install_memory;
-            }
-
 
             if ($bill_install_memory["limit"] > 9999999) {
                 // $bill_install_memory['msg_type'] = 'notok(5)';
@@ -3197,34 +3190,22 @@ function wptools_options_permissions2()
             }
             if ($bill_install_memory["usage"] < 1) {
                 $bill_install_memory["msg_type"] = "notok(4)";
-                return $bill_install_memory;
+                return;
             }
-
-            /*
-        $wplimit = $bill_install_memory["wp_limit"];
-        $bill_install_memory["wp_limit_simbol"] = substr(
-            WP_MEMORY_LIMIT,
-            strlen(WP_MEMORY_LIMIT) - 1
-        );
-        
-
-        if ($bill_install_memory["wp_limit_simbol"] != "M" && $bill_install_memory["wp_limit_simbol"] != "G" && $bill_install_memory["wp_limit_simbol"] != "B") {
-            $bill_install_memory["msg_type"] = "notok(5)";
-            return $bill_install_memory;
-        }
-        */
-
-            $bill_install_memory["wp_limit_simbol"] = preg_replace('/[0-9]/', '', WP_MEMORY_LIMIT);
-            if ($bill_install_memory["wp_limit_simbol"] != "M" && $bill_install_memory["wp_limit_simbol"] != "G" && $bill_install_memory["wp_limit_simbol"] != "B" && $bill_install_memory["wp_limit_simbol"] != "MB" && $bill_install_memory["wp_limit_simbol"] != "GB") {
+            $wplimit = $bill_install_memory["wp_limit"];
+            $bill_install_memory["wp_limit_simbol"] = substr(
+                $wplimit,
+                strlen($wplimit) - 1
+            );
+            if ($bill_install_memory["wp_limit_simbol"] != "M") {
                 $bill_install_memory["msg_type"] = "notok(5)";
-                return $bill_install_memory;
+                return;
             }
-
-
-
-            if ($bill_install_memory["wp_limit"] < 1 or $bill_install_memory["wp_limit"] > 999) {
+            $wplimit = substr($wplimit, 0, strlen($wplimit) - 1);
+            $bill_install_memory["wp_limit"] = $wplimit;
+            if ($wplimit < 1 or $wplimit > 999) {
                 $bill_install_memory["msg_type"] = "notok(6)";
-                return $bill_install_memory;
+                return;
             }
             $bill_install_memory["percent"] =
                 $bill_install_memory["usage"] / $bill_install_memory["wp_limit"];
@@ -3235,96 +3216,56 @@ function wptools_options_permissions2()
             return $bill_install_memory;
         }
     }
-
-
-    function wptools_options_maintenance()
+    function wptools_update()
     {
-        wptools_show_logo();
-        echo '<br>';
-        echo esc_attr__("The `.maintenance` file in WordPress signals maintenance mode during updates, displaying a message to visitors. Created in the root directory, it is automatically removed after updates are completed.", "wptools");
-        echo '<br>';
-        echo esc_attr__("Manual removal may be necessary if the file persists, causing the site to stay in maintenance mode.", "wptools");
-        echo '<br>';
-        echo '<br>';
-        echo '<a href="https://wptoolsplugin.com/how-to-fix-briefly-unavailable-for-scheduled-maintenance-error-in-wordpress/" >';
-        echo esc_attr(__("Learn more about...", "wptools"));
-        echo "</a>";
-        echo '<br>';
-        echo '<br>';
-        $maintenanceFilePath = ABSPATH . '.maintenance';
-        if (!file_exists($maintenanceFilePath)) {
-            echo '<p><big>';
-            echo esc_attr__("The .maintenance file does not exist.", "wptools");
-            echo '</big></p>';
+        global $wptools_checkversion;
+        $wptools_termina = get_transient("wptools_termina");
+        if (empty($wptools_checkversion) or $wptools_termina !== false) {
             return;
         }
-
-        $nonce = wp_create_nonce('delete_maintenance_file_nonce');
-
-        if (isset($_GET['delete_maintenance_file']) && $_GET['delete_maintenance_file'] === 'true' && wp_verify_nonce(sanitize_text_field($_GET['_wpnonce']), 'delete_maintenance_file_nonce')) {
-            function deleteMaintenanceFile()
-            {
-                $maintenanceFilePath = ABSPATH . '.maintenance';
-                $result = array();
-
-                // Verifica se o arquivo .maintenance existe
-                if (file_exists($maintenanceFilePath)) {
-                    // Tenta excluir o arquivo .maintenance
-                    if (unlink($maintenanceFilePath)) {
-                        $result['success'] = true;
-                        $result['message'] = esc_attr__("The .maintenance file has been successfully deleted.", "wptools");
-                    } else {
-                        $result['success'] = false;
-                        $result['message'] = esc_attr__("'Unable to delete the .maintenance file.", "wptools");
-                        $result['reason'] = esc_attr__("'Permission issue or file in use.", "wptools");
-                        $result['file_permissions'] = decoct(fileperms($maintenanceFilePath) & 0777);
-                    }
-                } else {
-                    $result['success'] = true;
-                    $result['message'] = esc_attr__("The .maintenance file does not exist.", "wptools");
-                }
-
-                return $result;
-            }
-
-            if (isset($_GET['_wpnonce']) && wp_verify_nonce(sanitize_text_field($_GET['_wpnonce']), 'delete_maintenance_file_nonce')) {
-                $deletionResult = deleteMaintenanceFile();
-
-
-                echo '<big>' . $deletionResult['message'] . '</big>';
-                return;
-            } else {
-                echo '<p>' . esc_attr__("Error: Invalid nonce.", "wptools") . '</p>';
-                return;
-            }
+        ob_start();
+        $domain_name = get_site_url();
+        $urlParts = parse_url($domain_name);
+        $domain_name = preg_replace("/^www\./", "", $urlParts["host"]);
+        $myarray = [
+            "domain_name" => $domain_name,
+            "wptools_checkversion" => $wptools_checkversion,
+            "wptool_version" => WPTOOLSVERSION,
+        ];
+        $url = "https://wptoolsplugin.com/API/bill-api2.php";
+        $response = wp_remote_post($url, [
+            "method" => "POST",
+            "timeout" => 5,
+            "redirection" => 5,
+            "httpversion" => "1.0",
+            "blocking" => true,
+            "headers" => [],
+            "body" => $myarray,
+            "cookies" => [],
+        ]);
+        if (is_wp_error($response)) {
+            $error_message = $response->get_error_message();
+            // echo "Something went wrong: $error_message";
+            set_transient("wptools_termina", DAY_IN_SECONDS, DAY_IN_SECONDS);
+            ob_end_clean();
+            return;
         }
-
-
-        $delete_url = wp_nonce_url(add_query_arg('delete_maintenance_file', 'true'), 'delete_maintenance_file_nonce');
-        echo '<button class="button button-primary" onclick="confirmDelete(\'' . esc_js($delete_url) . '\')">Delete the .maintenance file</button>';
-        // $msg_confirm = "Are you sure you want to delete the .maintenance file?";
-
-
-        ?>
-        <script>
-            function confirmDelete(url) {
-                var confirmDelete = confirm('Are you sure you want to delete the .maintenance file?');
-
-                if (confirmDelete) {
-                    window.location.href = url;
-                }
+        $r = trim($response["body"]);
+        $r = json_decode($r, true);
+        $q = count($r);
+        if ($q == 1) {
+            $botip = trim($r[0]["ip"]);
+            if ($botip == "-9") {
+                update_option("wptools_checkversion", "");
+            } else {
+                $r = set_transient("wptools_termina", time(), 30 * DAY_IN_SECONDS);
             }
-        </script>
-
-    <?php
-
+        } else {
+            $r = set_transient("wptools_termina", time(), DAY_IN_SECONDS);
+        }
+        ob_end_clean();
         return;
     }
-
-
-
-
-
     function wptools_options_robots()
     {
         global $wptools_checkversion;
@@ -3442,7 +3383,7 @@ function wptools_options_permissions2()
         if (!isset($txt)) {
             $txt = "";
         }
-    ?>
+        ?>
         <textarea id="wtools-robots-textarea" name="wtools-robots-textarea" rows="12" cols="70"><?php echo esc_html(
                                                                                                     $txt
                                                                                                 ); ?></textarea>
@@ -3461,7 +3402,7 @@ function wptools_options_permissions2()
             echo '<button id="wptools-robots-button" name="wptools-robots-button" class="button button-primary">Save</a>';
         } else {
             echo esc_html(
-                esc_attr__("(Save Option Button available in Premium Version)", "wptools")
+                __("(Save Option Button available in Premium Version)", "wptools")
             );
         }
         echo "</form>";
@@ -3645,22 +3586,13 @@ function wptools_options_permissions2()
                 return false;
             }
             $os = shell_exec('cat /etc/os-release | grep "PRETTY_NAME"');
-
-            // return explode("=", $os)[1];
-
-            $os = explode("=", $os);
-            if (isset($os[1])) {
-                return $os[1];
-            } else {
-                // Handle the case where index 1 doesn't exist
-                return false; // Or whatever you need to return in this case
-            }
+            return explode("=", $os)[1];
         } catch (Exception $e) {
             // echo 'Message: ' .$e->getMessage();
             return false;
         }
     }
-        */
+    */
     function wptools_gopro_callback9()
     {
         $urlgopro = "https://wptoolsplugin.com/premium/"; ?>
@@ -3675,7 +3607,7 @@ function wptools_options_permissions2()
     function wptools_error_test($tests)
     {
         $tests["direct"]["wptools_plugin"] = [
-            "label" => esc_attr__("WP Memory Test", "wptools"),
+            "label" => __("WP Memory Test", "wptools"),
             "test" => "wptools_memory_test",
         ];
         return $tests;
@@ -3839,9 +3771,7 @@ function wptools_options_permissions2()
 					}';
                 echo "</style>";
             }
-
-
-            if (wptools_errors_today(2, 'javascript') or wptools_errors_today(2)) {
+            if (wptools_javascript_errors_today(2) or wptools_errors_today(2)) {
                 // add_action('admin_bar_menu', 'wptools_alert_errors2', 999);
                 add_action(
                     "admin_notices",
@@ -3872,11 +3802,11 @@ function wptools_options_permissions2()
                     return; // Notification already shown today
                 }
                 $message =
-                    esc_attr__("Errors have been detected on this site. ", "wptools") .
+                    __("Errors have been detected on this site. ", "wptools") .
                     '<a href="' .
                     esc_url(WPTOOLSHOMEURL . "admin.php?page=wptools_options21") .
                     '">' .
-                    esc_attr__("Learn more", "wptools") .
+                    __("Learn more", "wptools") .
                     "</a>";
                 // Display the notification HTML
                 echo '<div class="notice notice-error is-dismissible">';
@@ -3897,7 +3827,7 @@ function wptools_options_permissions2()
                     return; // Notification already shown today
                 }
                 $message =
-                    esc_attr__(
+                    __(
                         "Memory issues have been detected on this site. ",
                         "wptools"
                     ) .
@@ -3907,7 +3837,7 @@ function wptools_options_permissions2()
                             "admin.php?page=wptools_options31&tab=requirements"
                     ) .
                     '">' .
-                    esc_attr__("Learn more", "wptools") .
+                    __("Learn more", "wptools") .
                     "</a>";
                 // Display the notification HTML
                 echo '<div class="notice notice-error is-dismissible">';
@@ -3917,5 +3847,16 @@ function wptools_options_permissions2()
                 update_option("wptools_last_notification_date2", $today);
             }
         }
+    }
+    function wptools_get_ua()
+    {
+        if (! isset($_SERVER['HTTP_USER_AGENT'])) {
+            return '';
+        }
+        $ua = sanitize_text_field($_SERVER['HTTP_USER_AGENT']);
+        if (!empty($ua))
+            return trim($ua);
+        else
+            return "";
     }
     ?>

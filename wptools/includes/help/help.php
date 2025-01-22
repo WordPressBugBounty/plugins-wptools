@@ -195,4 +195,25 @@ function wptools_admin_print_footer_scripts()
     </script>
 <?php
 }
+
+function wptools_adm_enqueue_scripts_pointer()
+{
+    global $bill_current_screen;
+    // wp_enqueue_style( 'wp-pointer' );
+    wp_enqueue_script('wp-pointer');
+    require_once ABSPATH . 'wp-admin/includes/screen.php';
+    $myscreen = get_current_screen();
+    $bill_current_screen = $myscreen->id;
+    $dismissed_string = get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true);
+    // $dismissed = explode(',', (string) get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true));
+    // if (in_array('plugins', $dismissed)) {  
+    if (!empty($dismissed_string)) {
+        $r = update_option('wptools_activated_pointer', '0');
+        if (!$r) {
+            add_option('wptools_activated_pointer', '0');
+        }
+        return;
+    }
+    add_action('admin_print_footer_scripts', 'wptools_admin_print_footer_scripts');
+}
 ?>

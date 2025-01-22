@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.04
+Version:     5.05
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -14,6 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 if (!defined('ABSPATH')) {
 	die('We\'re sorry, but you can not directly access this file.');
 }
+
 //
 // Debug
 //if (!ini_get('error_log') or empty(trim(ini_get('error_log'))));
@@ -1330,6 +1331,28 @@ add_filter('plugin_row_meta', 'wptools_plugin_row_meta', 10, 2);
 if (is_admin()) {
 
 	// Pointer... 
+
+
+	/*
+	//function wpmemory_adm_enqueue_scripts_pointer() {
+	function wptools_adm_enqueue_scripts_pointer() {
+
+        global $bill_current_screen;
+        // wp_enqueue_style( 'wp-pointer' );
+        wp_enqueue_script('wp-pointer');
+        require_once ABSPATH . 'wp-admin/includes/screen.php';
+        $myscreen = get_current_screen();
+        $bill_current_screen = $myscreen->id;
+        // Check if the pointer was displayed before
+        $dismissed = get_user_option('wptools_pointer_displayed', get_current_user_id());
+       // if (!$dismissed) {
+            add_action('admin_print_footer_scripts', 'wptools_admin_print_footer_scripts');
+            update_user_option(get_current_user_id(), 'wptools_pointer_displayed', true);
+       // }
+    }
+	*/
+
+
 	function wptools_load_pointer()
 	{
 		$pointers = get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true);
@@ -1342,6 +1365,10 @@ if (is_admin()) {
 	{
 		wp_enqueue_style('wpt-pointer', WPTOOLSURL . 'css/bill-wp-pointer.css');
 	}
+
+
+
+
 
 
 
@@ -1360,7 +1387,9 @@ if (is_admin()) {
 			// wait 30 sec...
 			if ($bill_intervalo > 10) {
 				//add_action( 'wp_enqueue_scripts', 'wptools_load_pointer_css' );
+
 				add_action('admin_enqueue_scripts', 'wptools_adm_enqueue_scripts_pointer');
+
 				wptools_load_pointer();
 				add_action('wp_loaded', 'wptools_load_pointer_css');
 

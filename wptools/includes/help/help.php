@@ -18,7 +18,6 @@ if (is_admin()) {
         $current_screen = get_current_screen();
         // var_dump($current_screen->id);
 
-        debug4($current_screen);
 
 
         if (trim($current_screen->id) === "wp-tools_page_wptools_options31") {

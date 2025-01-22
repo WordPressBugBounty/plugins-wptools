@@ -10,7 +10,7 @@ if (! defined('ABSPATH'))  exit;
 function wptools_sysinfo_get()
 {
     global $wpdb;
-    $wptools_userAgentOri = wptools_get_ua();
+    $wptools_userAgentOri = wptools_get_ua2();
 
     // Get theme info
     $theme_data   = wp_get_theme();
@@ -196,4 +196,15 @@ function wptools_get_host()
     }
     $host = 'DBH: ' . DB_HOST . ', SRV: ' . $server_name;
     return $host;
+}
+function wptools_get_ua2()
+{
+    if (! isset($_SERVER['HTTP_USER_AGENT'])) {
+        return '';
+    }
+    $ua = sanitize_text_field($_SERVER['HTTP_USER_AGENT']);
+    if (!empty($ua))
+        return trim($ua);
+    else
+        return "";
 }

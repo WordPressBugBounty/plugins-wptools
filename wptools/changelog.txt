@@ -1,7 +1,7 @@
 === WP TOOLS ===
 
 This file contains changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
-5.06  2025-02-04 - Improved javascript error catch.
+5.06/07  2025-02-04 - Improved javascript error catch.
 5.03/05  2025-01-22 - Improved errorslog table.
 5.00/02  2025-01-17/19 - installed advanced table to manage error log issues.
 4.87/88  2025-01-09 - Small Improvements.

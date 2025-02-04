@@ -63,7 +63,7 @@ if (file_exists($plugin_file_path)) {
     */
 
 
-debug4();
+// debug4();
 
 $plugin_name = 'bill-catch-errors.php';
 
@@ -73,7 +73,7 @@ $wp_mu_plugins = get_mu_plugins();
 // Check if the plugin exists in the list of mu-plugins
 
 if (isset($wp_mu_plugins[$plugin_name])) {
-    debug4();
+    //debug4();
 
     // Get the plugin's data
     $plugin_data = $wp_mu_plugins[$plugin_name];
@@ -88,7 +88,7 @@ if (isset($wp_mu_plugins[$plugin_name])) {
         return;
     }
 } else {
-    debug4();
+    //debug4();
 
     //debug4('The Bill Catch Errors plugin is not installed or loaded.');
     bill_install_mu_plugin();
@@ -97,7 +97,7 @@ if (isset($wp_mu_plugins[$plugin_name])) {
 
 function bill_install_mu_plugin()
 {
-    debug4();
+    //debug4();
 
     $plugin_file = 'bill-catch-errors.php';
     //'bill-catch-errors.php'; // Name of the plugin file to be copied
@@ -123,8 +123,8 @@ function bill_install_mu_plugin()
         $source = $wptools_mu_plugin_dir . '/' . $plugin_file;
         $destination = $mu_plugins_dir . '/' . $plugin_file;
 
-        debug4($source);
-        debug4($destination);
+        //debug4($source);
+        //debug4($destination);
 
         // Check if the plugin file exists in the source directory
         if (!file_exists($source)) {

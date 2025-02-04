@@ -147,6 +147,8 @@ function wptools_get_error_log_data()
         try {
             // Abre o arquivo com SplFileObject
             $fileObj = new SplFileObject($file_path, 'r');
+
+            /*
             // Lê as primeiras $numLines linhas
             $ctd = 0;
             while (!$fileObj->eof() && $ctd < $numLines) {
@@ -157,6 +159,29 @@ function wptools_get_error_log_data()
                 }
                 $fileObj->next(); // Avança o ponteiro para a próxima linha
             }
+            */
+
+              $fileObj->seek(PHP_INT_MAX); // Move para o final do arquivo
+              $totalLines = $fileObj->key(); // Obtém total de linhas
+  
+              // Calcula linha inicial
+              $startLine = max(0, $totalLines - $numLines);
+  
+              // Reinicia ponteiro para linha inicial
+              $fileObj->seek($startLine);
+  
+              // Limpa array de linhas
+              $lines = [];
+  
+              // Lê linhas até o final
+              while (!$fileObj->eof()) {
+                  $line = $fileObj->fgets();
+                  if ($line !== false) {
+                      $lines[] = rtrim($line);
+                  }
+              }
+
+              
         } catch (Exception $e) {
             // echo "Erro ao processar o arquivo: " . $e->getMessage();
             echo '<tr><td colspan="4">Error to process error log file.';

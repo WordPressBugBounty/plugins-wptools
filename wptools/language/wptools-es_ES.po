@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-22 14:16+0000\n"
-"PO-Revision-Date: 2025-01-22 14:29+0000\n"
+"POT-Creation-Date: 2025-02-04 08:53+0000\n"
+"PO-Revision-Date: 2025-02-04 09:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -12,13 +12,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
-"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Loco-Version: 2.7.1; wp-6.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
 "esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: _wptools.php:169 wptools.php:169
+#: _wptools.php:169 wptools.php:207
 msgid ""
 "Unable to remove file read.me and/or license.txt. Talk with your hosting "
 "company."
@@ -26,90 +26,90 @@ msgstr ""
 "No se puede eliminar el archivo read.me y/o license.txt. Hable con su "
 "empresa de alojamiento."
 
-#: _wptools.php:292 _wptools.php:342 wptools.php:292
+#: _wptools.php:292 _wptools.php:342 wptools.php:383 wptools.php:433
 msgid "Site Errors"
 msgstr "Errores del sitio"
 
-#: _wptools.php:843 wptools.php:700
+#: _wptools.php:843 wptools.php:1035
 msgid "Page Load Info: "
 msgstr "Información sobre la carga de la página: "
 
-#: _wptools.php:845 wptools.php:702
+#: _wptools.php:845 wptools.php:1037
 msgid "queries and loaded in"
 msgstr "consultas y cargado en"
 
-#: _wptools.php:847 wptools.php:704
+#: _wptools.php:847 wptools.php:1039
 msgid "seconds"
 msgstr "segundos"
 
 #: _wptools.php:872 _wptools.php:875 _wptools.php:1480 _wptools.php:1483
-#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600
+#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:1065
+#: wptools.php:1068 wptools.php:1747 wptools.php:1750 wptools.php:1753
+#: wptools.php:1866 wptools.php:1869
 msgid "Site Name unavailable"
 msgstr "Nombre del sitio no disponible"
 
-#: _wptools.php:882 wptools.php:758
+#: _wptools.php:882 wptools.php:1075
 msgid "Notification about errors and warnings at: "
 msgstr "Notificación sobre errores y advertencias en: "
 
-#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:728
-#: wptools.php:1285 wptools.php:1439
+#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:1076
+#: wptools.php:1765 wptools.php:1885
 msgid "This email was sent from your website"
 msgstr "Este correo electrónico fue enviado desde su sitio web"
 
-#: _wptools.php:884 _wptools.php:1617 wptools.php:730 wptools.php:1287
-#: wptools.php:1441
+#: _wptools.php:884 _wptools.php:1617 wptools.php:1077 wptools.php:1886
 msgid "by the wpTools plugin."
 msgstr "por el plugin wpTools."
 
-#: _wptools.php:885 functions/function_error_log.php:28 wptools.php:732
-#: wptools.php:1289 wptools.php:1443 wptools.php:1569
+#: _wptools.php:885 functions/function_error_log.php:28 wptools.php:805
+#: wptools.php:1078
 msgid "Date"
 msgstr "Fecha"
 
-#: _wptools.php:886
+#: _wptools.php:886 wptools.php:1079
 msgid "Errors and Warnings:"
 msgstr "Errores y advertencias:"
 
-#: _wptools.php:892 wptools.php:738
+#: _wptools.php:892 wptools.php:1085
 msgid "You can stop emails at the Notifications Tab."
 msgstr "Puede detener los correos electrónicos en la pestaña Notificaciones."
 
-#: _wptools.php:893 _wptools.php:1504 wptools.php:740 wptools.php:1297
-#: wptools.php:1451
+#: _wptools.php:893 _wptools.php:1504 wptools.php:1086 wptools.php:1771
 msgid "Dashboard => WP tools=> Settings"
 msgstr "Panel de control => WP Tools => Configuración"
 
-#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:830
+#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1296
 msgid "Dashboard"
 msgstr "Escritorio"
 
-#: _wptools.php:1346 wptools.php:1116
+#: _wptools.php:1346 wptools.php:1612
 msgid "WP Tools found errors on your site"
 msgstr "WP Tools encontró errores en su sitio"
 
-#: _wptools.php:1349 wptools.php:1119
+#: _wptools.php:1349 wptools.php:1615
 msgid "Critical"
 msgstr "Urgente"
 
-#: _wptools.php:1354 wptools.php:1124
+#: _wptools.php:1354 wptools.php:1620
 msgid "Code and hosting errors can destroy your site and the user experience."
 msgstr ""
 "Los errores de código y de alojamiento pueden destruir su sitio y la "
 "experiencia del usuario."
 
-#: _wptools.php:1361 wptools.php:1131
+#: _wptools.php:1361 wptools.php:1627
 msgid "Visit the WP Tools show errors page"
 msgstr "Visita la página de errores de WP Tools"
 
-#: _wptools.php:1495
+#: _wptools.php:1495 wptools.php:1762
 msgid "Hello"
 msgstr "Hola"
 
-#: _wptools.php:1497 wptools.php:1316
+#: _wptools.php:1497 wptools.php:1764
 msgid "Weekly summary of issues on the site: "
 msgstr "Resumen semanal de ediciones del sitio: "
 
-#: _wptools.php:1499
+#: _wptools.php:1499 wptools.php:1766
 msgid ""
 "This is a weekly summary of errors, warnings, or notices that occurred on "
 "your site assisted by the wpTools plugin."
@@ -117,33 +117,33 @@ msgstr ""
 "Este es un resumen semanal de errores, advertencias o avisos que ocurrieron "
 "en su sitio con la ayuda del complemento wpTools."
 
-#: _wptools.php:1500
+#: _wptools.php:1500 wptools.php:1767
 msgid "Total number of issues"
 msgstr "Número total de problemas"
 
-#: _wptools.php:1501 _wptools.php:1614
+#: _wptools.php:1501 _wptools.php:1614 wptools.php:1768 wptools.php:1883
 msgid "Please visit your site for more details:"
 msgstr "Visite nuestro sitio web para obtener más detalles:"
 
-#: _wptools.php:1502 _wptools.php:1615
+#: _wptools.php:1502 _wptools.php:1615 wptools.php:1769 wptools.php:1884
 msgid "Dashboard => wpTools => Dashboard"
 msgstr "Panel de control => WP Tools => Configuración"
 
-#: _wptools.php:1503 _wptools.php:1620 wptools.php:1295 wptools.php:1449
+#: _wptools.php:1503 _wptools.php:1620 wptools.php:1770 wptools.php:1889
 msgid "You can stop weekly emails at the Notifications Tab:"
 msgstr ""
 "Puede detener los correos electrónicos semanales en la pestaña "
 "Notificaciones:"
 
-#: _wptools.php:1609 wptools.php:1459
+#: _wptools.php:1609 wptools.php:1878
 msgid "Weekly summary of Page Load on the site: "
 msgstr "Resumen semanal de ediciones del sitio:"
 
-#: _wptools.php:1610
+#: _wptools.php:1610 wptools.php:1879
 msgid "Hello,"
 msgstr "Hola,"
 
-#: _wptools.php:1611
+#: _wptools.php:1611 wptools.php:1880
 msgid ""
 "This is a weekly summary of Page Load seconds that occurred on your site "
 "assisted by the wpTools plugin:"
@@ -151,11 +151,11 @@ msgstr ""
 "Este es un resumen semanal de los segundos de carga de página que se "
 "produjeron en su sitiocon la ayuda del complemento wpTools:"
 
-#: _wptools.php:1612
+#: _wptools.php:1612 wptools.php:1881
 msgid "Weekly Page Load Time:"
 msgstr "Tiempo de carga de página semanal:"
 
-#: _wptools.php:1613
+#: _wptools.php:1613 wptools.php:1882
 msgid ""
 "Google recommends that the page loading time be less than 3 seconds. A "
 "faster-loading website is more likely to rank higher, potentially attracting "
@@ -165,11 +165,11 @@ msgstr ""
 "segundos. Es más probable que un sitio web que se carga más rápido tenga una "
 "clasificación más alta, lo que podría atraer a más visitantes."
 
-#: _wptools.php:1618
+#: _wptools.php:1618 wptools.php:1887
 msgid "Date:"
 msgstr "Fecha:"
 
-#: _wptools.php:1621
+#: _wptools.php:1621 wptools.php:1890
 msgid "Dashboard => WP tools => Settings"
 msgstr "Panel de control => WP Tools => Configuración"
 
@@ -189,11 +189,8 @@ msgstr "celúla"
 msgid "WP Tools Server Performance"
 msgstr "Benchmark del servidor (rendimiento)"
 
-#: dashboard/dashboard.php:38 functions/__functions.php:159
-#: functions/__functions.php:1144 functions/_functions.php:148
-#: functions/_functions.php:1125 functions/f-new-unctions.php:159
-#: functions/f-new-unctions.php:1193 functions/functions.php:159
-#: functions/functions.php:1193
+#: dashboard/dashboard.php:38 functions/functions.php:139
+#: functions/functions.php:1383
 msgid "Server Benchmark"
 msgstr "Benchmark del Servidor "
 
@@ -230,9 +227,7 @@ msgid "WP Tools Dashboard"
 msgstr "Tablero de WPTools"
 
 #: dashboard/dashboard.php:136 dashboard/dashboard.php:169
-#: functions/__functions.php:2222 functions/_functions.php:2193
-#: functions/f-new-unctions.php:2724 functions/functions.php:1937
-#: settings/options/_plugin_options_tabbed.php:594
+#: functions/functions.php:1929 settings/options/_plugin_options_tabbed.php:594
 #: settings/options/plugin_options_tabbed.php:601
 msgid "Memory Usage"
 msgstr "Uso de memoria"
@@ -294,9 +289,7 @@ msgstr ""
 msgid "OS type & version"
 msgstr "Tipo y versión de SO"
 
-#: dashboard/dashboard.php:311 functions/__functions.php:3791
-#: functions/_functions.php:3818 functions/f-new-unctions.php:4320
-#: functions/functions.php:3506
+#: dashboard/dashboard.php:311 functions/functions.php:3447
 msgid "PHP Version"
 msgstr "Versión de PHP"
 
@@ -414,9 +407,7 @@ msgstr ""
 msgid "Troubleshooting Page"
 msgstr "Página de resolución de problemas"
 
-#: dashboard/dashboard_container.php:18 functions/__functions.php:2995
-#: functions/_functions.php:3022 functions/f-new-unctions.php:3533
-#: functions/functions.php:2719
+#: dashboard/dashboard_container.php:18 functions/functions.php:2756
 msgid "Server Check & Requirements"
 msgstr "Check y requisitos del servidor"
 
@@ -428,9 +419,8 @@ msgstr "Información de depuración"
 msgid "More Tools"
 msgstr "Más herramientas"
 
-#: dashboard/dashboard_container.php:23 functions/__functions.php:218
-#: functions/_functions.php:207 functions/f-new-unctions.php:218
-#: functions/functions.php:218 settings/options/_plugin_options_tabbed.php:715
+#: dashboard/dashboard_container.php:23 functions/functions.php:198
+#: settings/options/_plugin_options_tabbed.php:715
 #: settings/options/_plugin_options_tabbed.php:732
 #: settings/options/plugin_options_tabbed.php:719
 #: settings/options/plugin_options_tabbed.php:736
@@ -507,7 +497,7 @@ msgstr "Soporte Premium dedicado"
 
 #: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
 #: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
-#: wptools.php:1616
+#: wptools.php:2217
 msgid "Learn More"
 msgstr "Aprende más"
 
@@ -553,1363 +543,15 @@ msgstr "Tablero de WPTools:"
 msgid "Dashboard => WP Tools => Dashboard"
 msgstr "Panel de control => WP Tools => Configuración"
 
-#: dashboard/tools.php:15
+#: dashboard/tools.php:20
 msgid "If you need support, please, copy and paste the info below in our"
 msgstr ""
 "Si necesita ayuda, por favor, copie y pegue la siguiente información en "
 "nuestro"
 
-#: dashboard/tools.php:17
+#: dashboard/tools.php:22
 msgid "Support Site"
 msgstr "Sitio de soporte"
-
-#: functions/__functions.php:59 functions/_functions.php:48
-#: functions/f-new-unctions.php:59 functions/functions.php:59
-msgid "Settings"
-msgstr "Ajustes"
-
-#: functions/__functions.php:69 functions/_functions.php:58
-#: functions/f-new-unctions.php:69 functions/functions.php:69
-msgid "Check mySQL Tables"
-msgstr "Check las tablas de mySQL"
-
-#: functions/__functions.php:78 functions/_functions.php:67
-#: functions/f-new-unctions.php:78 functions/functions.php:78
-msgid "Edit robots txt"
-msgstr "Editar robots txt"
-
-#: functions/__functions.php:87 functions/_functions.php:76
-#: functions/f-new-unctions.php:87 functions/functions.php:87
-msgid "Erase .maintenance file"
-msgstr "Borrar archivo .maintenance"
-
-#: functions/__functions.php:96 functions/_functions.php:85
-#: functions/f-new-unctions.php:96 functions/functions.php:96
-msgid "Show Errors"
-msgstr "Mostrar errores "
-
-#: functions/__functions.php:105 functions/_functions.php:94
-#: functions/f-new-unctions.php:105 functions/functions.php:105
-msgid "Show PHP Info"
-msgstr "Mostrar información de PHP"
-
-#: functions/__functions.php:114 functions/_functions.php:103
-#: functions/f-new-unctions.php:114 functions/functions.php:114
-msgid "Show .htaccess"
-msgstr "Mostrar .htaccess"
-
-#: functions/__functions.php:123 functions/_functions.php:112
-#: functions/f-new-unctions.php:123 functions/functions.php:123
-msgid "Show wp-config.php"
-msgstr "Mostrar wp-config.php"
-
-#: functions/__functions.php:132 functions/_functions.php:121
-#: functions/f-new-unctions.php:132 functions/functions.php:132
-msgid "Show Cron Jobs"
-msgstr "Mostrar Cron Jobs"
-
-#: functions/__functions.php:141 functions/_functions.php:130
-#: functions/f-new-unctions.php:141 functions/functions.php:141
-msgid "Show File Permissions"
-msgstr "Mostrar los permisos de los archivos"
-
-#: functions/__functions.php:150 functions/__functions.php:2277
-#: functions/_functions.php:139 functions/_functions.php:2248
-#: functions/f-new-unctions.php:150 functions/f-new-unctions.php:2779
-#: functions/functions.php:150 functions/functions.php:1992 guide/guide.php:52
-msgid "Show Cookies"
-msgstr "Mostrar Cookies"
-
-#: functions/__functions.php:168 functions/_functions.php:157
-#: functions/f-new-unctions.php:168 functions/functions.php:168
-msgid "Database Detais"
-msgstr "Detalles de la base de datos"
-
-#: functions/__functions.php:177 functions/_functions.php:166
-#: functions/f-new-unctions.php:177 functions/functions.php:177
-#: functions/functions_transiente_manager.php:32
-msgid "Show Transients"
-msgstr "Mostrar transitorios"
-
-#: functions/__functions.php:186 functions/_functions.php:175
-#: functions/f-new-unctions.php:186 functions/functions.php:186
-msgid "Javascrip and jQuery"
-msgstr "Javascrip y jQuery"
-
-#: functions/__functions.php:196 functions/_functions.php:185
-#: functions/f-new-unctions.php:196 functions/functions.php:196
-msgid "More Tools Same Author"
-msgstr "Más herramientas del mismo autor"
-
-#: functions/__functions.php:206 functions/_functions.php:195
-#: functions/f-new-unctions.php:206 functions/functions.php:206
-msgid "More New Tools"
-msgstr "Más herramientas nuevas"
-
-#: functions/__functions.php:352 functions/_functions.php:335
-#: functions/f-new-unctions.php:402 functions/functions.php:402
-msgid "jQuery Version"
-msgstr "versión de jQuery"
-
-#: functions/__functions.php:358 functions/_functions.php:341
-#: functions/f-new-unctions.php:408 functions/functions.php:408
-msgid "jQuery Migrate Version"
-msgstr "versión de jQuery Migrate"
-
-#: functions/__functions.php:373 functions/__functions.php:2233
-#: functions/__functions.php:2279 functions/__functions.php:2327
-#: functions/__functions.php:2777 functions/__functions.php:3619
-#: functions/_functions.php:356 functions/_functions.php:2204
-#: functions/_functions.php:2250 functions/_functions.php:2298
-#: functions/_functions.php:2748 functions/_functions.php:3646
-#: functions/f-new-unctions.php:423 functions/f-new-unctions.php:2735
-#: functions/f-new-unctions.php:2781 functions/f-new-unctions.php:2829
-#: functions/f-new-unctions.php:3279 functions/f-new-unctions.php:4148
-#: functions/functions.php:423 functions/functions.php:1948
-#: functions/functions.php:1994 functions/functions.php:2042
-#: functions/functions.php:2492 functions/functions.php:3334
-msgid "Visit plugin's site for detais"
-msgstr "Visite el sitio del plugin para obtener más detalles"
-
-#: functions/__functions.php:377 functions/_functions.php:360
-#: functions/f-new-unctions.php:427 functions/functions.php:427
-msgid "Last Javascript Errors (max 200)"
-msgstr "Últimos errores de Javascript (máximo 200)"
-
-#: functions/__functions.php:388 functions/_functions.php:371
-#: functions/f-new-unctions.php:444 functions/functions.php:444
-msgid "No Javascript errors found last entries of log_error file."
-msgstr ""
-"No se han encontrado errores de Javascript en las últimas 3000 entradas del "
-"archivo log_error."
-
-#: functions/__functions.php:397 functions/_functions.php:380
-#: functions/f-new-unctions.php:453 functions/functions.php:453
-msgid "Learn more about site code errors..."
-msgstr "Más información sobre los errores del código del sitio..."
-
-#: functions/__functions.php:612 functions/_functions.php:593
-#: functions/f-new-unctions.php:665 functions/functions.php:665
-msgid "No Javascript errors found last 3000 entries of log_error file."
-msgstr ""
-"No se han encontrado errores de Javascript en las últimas 3000 entradas del "
-"archivo log_error."
-
-#: functions/__functions.php:643 functions/_functions.php:624
-#: functions/f-new-unctions.php:696 functions/functions.php:696
-msgid "WP_ALLOW_REPAIR is defined as false on your wp-config.php"
-msgstr "WP_ALLOW_REPAIR está definido como falso en su wp-config.php"
-
-#: functions/__functions.php:648 functions/_functions.php:629
-#: functions/f-new-unctions.php:701 functions/functions.php:701
-msgid "That can disable WordPress Database Optimize and Repair Tool."
-msgstr ""
-"Eso puede desactivar la herramienta de optimización y reparación de la base "
-"de datos de WordPress."
-
-#: functions/__functions.php:652 functions/_functions.php:633
-#: functions/f-new-unctions.php:705 functions/functions.php:705
-msgid "Change that to true."
-msgstr "Cámbialo a verdadero."
-
-#: functions/__functions.php:659 functions/_functions.php:640
-#: functions/f-new-unctions.php:712 functions/functions.php:712
-msgid "Open WordPress Optimize and Repair Database Tools"
-msgstr ""
-"Abrir las herramientas de optimización y reparación de bases de datos de "
-"WordPress"
-
-#: functions/__functions.php:666 functions/_functions.php:647
-#: functions/f-new-unctions.php:719 functions/functions.php:719
-msgid "Open"
-msgstr "Abierto"
-
-#: functions/__functions.php:671 functions/_functions.php:652
-#: functions/f-new-unctions.php:724 functions/functions.php:724
-msgid "It is not necessary edit your wp-config.php file"
-msgstr "No es necesario editar su archivo wp-config.php"
-
-#: functions/__functions.php:677 functions/_functions.php:658
-#: functions/f-new-unctions.php:730 functions/functions.php:730
-msgid "(Option available in Premium Version)"
-msgstr "(Opción disponible en la versión Premium)"
-
-#: functions/__functions.php:692 functions/_functions.php:673
-#: functions/f-new-unctions.php:745 functions/functions.php:745
-msgid "Database Information"
-msgstr "Información de la base de datos"
-
-#: functions/__functions.php:694 functions/__functions.php:3782
-#: functions/_functions.php:675 functions/_functions.php:3809
-#: functions/f-new-unctions.php:747 functions/f-new-unctions.php:4311
-#: functions/functions.php:747 functions/functions.php:3497
-msgid "Basic Information"
-msgstr "Información básica"
-
-#: functions/__functions.php:698 functions/__functions.php:704
-#: functions/__functions.php:809 functions/__functions.php:815
-#: functions/_functions.php:679 functions/_functions.php:685
-#: functions/_functions.php:790 functions/_functions.php:796
-#: functions/f-new-unctions.php:751 functions/f-new-unctions.php:757
-#: functions/f-new-unctions.php:862 functions/f-new-unctions.php:868
-#: functions/functions.php:751 functions/functions.php:757
-#: functions/functions.php:862 functions/functions.php:868
-msgid "Variable Name"
-msgstr "Nombre de la variable"
-
-#: functions/__functions.php:699 functions/__functions.php:705
-#: functions/__functions.php:810 functions/__functions.php:816
-#: functions/__functions.php:2287 functions/__functions.php:3786
-#: functions/_functions.php:680 functions/_functions.php:686
-#: functions/_functions.php:791 functions/_functions.php:797
-#: functions/_functions.php:2258 functions/_functions.php:3813
-#: functions/f-new-unctions.php:752 functions/f-new-unctions.php:758
-#: functions/f-new-unctions.php:863 functions/f-new-unctions.php:869
-#: functions/f-new-unctions.php:2789 functions/f-new-unctions.php:4315
-#: functions/functions.php:752 functions/functions.php:758
-#: functions/functions.php:863 functions/functions.php:869
-#: functions/functions.php:2002 functions/functions.php:3501
-msgid "Value"
-msgstr "Valor"
-
-#: functions/__functions.php:710 functions/_functions.php:691
-#: functions/f-new-unctions.php:763 functions/functions.php:763
-msgid "Database Software"
-msgstr "Software de base de datos"
-
-#: functions/__functions.php:714 functions/_functions.php:695
-#: functions/f-new-unctions.php:767 functions/functions.php:767
-msgid "Database Version"
-msgstr "Versión de base de datos"
-
-#: functions/__functions.php:718 functions/_functions.php:699
-#: functions/f-new-unctions.php:771 functions/functions.php:771
-msgid "MySQL Uptime"
-msgstr "Tiempo de actividad de MySQL"
-
-#: functions/__functions.php:728 functions/_functions.php:709
-#: functions/f-new-unctions.php:781 functions/functions.php:781
-msgid "Mysql Time"
-msgstr "Tiempo Mysql"
-
-#: functions/__functions.php:741 functions/_functions.php:722
-#: functions/f-new-unctions.php:794 functions/functions.php:794
-msgid "Database Name"
-msgstr "Nombre de Base de Datos"
-
-#: functions/__functions.php:749 functions/_functions.php:730
-#: functions/f-new-unctions.php:802 functions/functions.php:802
-msgid "Database User"
-msgstr "Usuario de Base de Datos"
-
-#: functions/__functions.php:757 functions/_functions.php:738
-#: functions/f-new-unctions.php:810 functions/functions.php:810
-msgid "Database Hosting"
-msgstr "Alojamiento de bases de datos"
-
-#: functions/__functions.php:765 functions/_functions.php:746
-#: functions/f-new-unctions.php:818 functions/functions.php:818
-msgid "Database Charset"
-msgstr "Conjunto de caracteres de la base de datos"
-
-#: functions/__functions.php:773 functions/_functions.php:754
-#: functions/f-new-unctions.php:826 functions/functions.php:826
-msgid "Table Prefix"
-msgstr "Prefijo de Tabla"
-
-#: functions/__functions.php:787 functions/_functions.php:768
-#: functions/f-new-unctions.php:840 functions/functions.php:840
-msgid "Maximum No. of Connections"
-msgstr "Número máximo de conexiones"
-
-#: functions/__functions.php:791 functions/_functions.php:772
-#: functions/f-new-unctions.php:844 functions/functions.php:844
-msgid "Maximum Packet Size"
-msgstr "Tamaño máximo de los paquetes"
-
-#: functions/__functions.php:795 functions/_functions.php:776
-#: functions/f-new-unctions.php:848 functions/functions.php:848
-msgid "Database Disk Usage"
-msgstr "Uso del disco de la base de datos"
-
-#: functions/__functions.php:799 functions/_functions.php:780
-#: functions/f-new-unctions.php:852 functions/functions.php:852
-msgid "Index Disk Usage"
-msgstr "Uso del disco "
-
-#: functions/__functions.php:805 functions/_functions.php:786
-#: functions/f-new-unctions.php:858 functions/functions.php:858
-msgid "Advanced Information"
-msgstr "Información avanzada"
-
-#: functions/__functions.php:834 functions/__functions.php:836
-#: functions/_functions.php:815 functions/_functions.php:817
-#: functions/f-new-unctions.php:887 functions/f-new-unctions.php:889
-#: functions/functions.php:887 functions/functions.php:889
-msgid "Something went wrong!"
-msgstr "¡Algo salió mal!"
-
-#: functions/__functions.php:854 functions/__functions.php:865
-#: functions/__functions.php:877 functions/__functions.php:891
-#: functions/__functions.php:906 functions/__functions.php:921
-#: functions/__functions.php:1401 functions/__functions.php:1411
-#: functions/__functions.php:1421 functions/__functions.php:1430
-#: functions/__functions.php:1437 functions/_functions.php:835
-#: functions/_functions.php:846 functions/_functions.php:858
-#: functions/_functions.php:872 functions/_functions.php:887
-#: functions/_functions.php:902 functions/_functions.php:1382
-#: functions/_functions.php:1392 functions/_functions.php:1402
-#: functions/_functions.php:1411 functions/_functions.php:1418
-#: functions/f-new-unctions.php:907 functions/f-new-unctions.php:918
-#: functions/f-new-unctions.php:930 functions/f-new-unctions.php:944
-#: functions/f-new-unctions.php:959 functions/f-new-unctions.php:974
-#: functions/f-new-unctions.php:1450 functions/f-new-unctions.php:1460
-#: functions/f-new-unctions.php:1470 functions/f-new-unctions.php:1479
-#: functions/f-new-unctions.php:1486 functions/functions.php:907
-#: functions/functions.php:918 functions/functions.php:930
-#: functions/functions.php:944 functions/functions.php:959
-#: functions/functions.php:974 functions/functions.php:1450
-#: functions/functions.php:1460 functions/functions.php:1470
-#: functions/functions.php:1479 functions/functions.php:1486
-msgid "N/A"
-msgstr "N/A"
-
-#: functions/__functions.php:936 functions/__functions.php:967
-#: functions/_functions.php:917 functions/_functions.php:948
-#: functions/f-new-unctions.php:989 functions/f-new-unctions.php:1020
-#: functions/functions.php:989 functions/functions.php:1020
-msgid "PB"
-msgstr "PB"
-
-#: functions/__functions.php:940 functions/__functions.php:971
-#: functions/_functions.php:921 functions/_functions.php:952
-#: functions/f-new-unctions.php:993 functions/f-new-unctions.php:1024
-#: functions/functions.php:993 functions/functions.php:1024
-msgid "TB"
-msgstr "TB"
-
-#: functions/__functions.php:944 functions/__functions.php:975
-#: functions/_functions.php:925 functions/_functions.php:956
-#: functions/f-new-unctions.php:997 functions/f-new-unctions.php:1028
-#: functions/functions.php:997 functions/functions.php:1028
-msgid "GB"
-msgstr "GB"
-
-#: functions/__functions.php:948 functions/__functions.php:979
-#: functions/_functions.php:929 functions/_functions.php:960
-#: functions/f-new-unctions.php:1001 functions/f-new-unctions.php:1032
-#: functions/functions.php:1001 functions/functions.php:1032
-msgid "MB"
-msgstr "MB"
-
-#: functions/__functions.php:952 functions/__functions.php:983
-#: functions/_functions.php:933 functions/_functions.php:964
-#: functions/f-new-unctions.php:1005 functions/f-new-unctions.php:1036
-#: functions/functions.php:1005 functions/functions.php:1036
-msgid "KB"
-msgstr "KB"
-
-#: functions/__functions.php:954 functions/_functions.php:935
-#: functions/f-new-unctions.php:1007 functions/functions.php:1007
-msgid "bytes"
-msgstr "bytes"
-
-#: functions/__functions.php:956 functions/__functions.php:985
-#: functions/_functions.php:937 functions/_functions.php:966
-#: functions/f-new-unctions.php:1009 functions/f-new-unctions.php:1038
-#: functions/functions.php:1009 functions/functions.php:1038
-msgid "Unknown"
-msgstr "Desconocido"
-
-#: functions/__functions.php:1148 functions/_functions.php:1129
-#: functions/f-new-unctions.php:1197 functions/functions.php:1197
-msgid ""
-"This plugin can benchmarks your server's performance through a variety of "
-"PHP and MySql tests."
-msgstr ""
-"Este plugin puede evaluar el rendimiento de su servidor a través de una "
-"variedad de pruebas de PHP y MySql."
-
-#: functions/__functions.php:1155 functions/_functions.php:1136
-#: functions/f-new-unctions.php:1204 functions/functions.php:1204
-msgid "The total time is in seconds. Lower time are better (faster)."
-msgstr ""
-"El tiempo total está en segundos. Los tiempos más bajos son mejores (más "
-"rápidos)."
-
-#: functions/__functions.php:1170 functions/_functions.php:1151
-#: functions/f-new-unctions.php:1219 functions/functions.php:1219
-msgid "Participate in Community Server Performance."
-msgstr "Participar en el rendimiento del servidor comunitario."
-
-#: functions/__functions.php:1175 functions/_functions.php:1156
-#: functions/f-new-unctions.php:1224 functions/functions.php:1224
-msgid ""
-"Enabling this feature causes your site to share only server performance data "
-"with WP Tools Plugin."
-msgstr ""
-"Activar esta función hace que su sitio comparta sólo los datos de "
-"rendimiento del servidor con el plugin WP Tools."
-
-#: functions/__functions.php:1179 functions/_functions.php:1160
-#: functions/f-new-unctions.php:1228 functions/functions.php:1228
-msgid ""
-"In return your WordPress site receives Updated Aggregated Industry Average "
-"Data."
-msgstr ""
-"A cambio, su sitio de WordPress recibe datos agregados actualizados del "
-"sector."
-
-#: functions/__functions.php:1184 functions/_functions.php:1165
-#: functions/f-new-unctions.php:1233 functions/functions.php:1233
-msgid "Update"
-msgstr "Actualizar"
-
-#: functions/__functions.php:1194 functions/_functions.php:1175
-#: functions/f-new-unctions.php:1243 functions/functions.php:1243
-msgid "Learn more."
-msgstr "Leer más."
-
-#: functions/__functions.php:1242 functions/_functions.php:1223
-#: functions/f-new-unctions.php:1291 functions/functions.php:1291
-msgid "Industry Average Data"
-msgstr "Datos medios del sector"
-
-#: functions/__functions.php:1328 functions/_functions.php:1309
-#: functions/f-new-unctions.php:1377 functions/functions.php:1377
-msgid "Tables Information"
-msgstr "Información sobre las tablas"
-
-#: functions/__functions.php:1334 functions/_functions.php:1315
-#: functions/f-new-unctions.php:1383 functions/functions.php:1383
-msgid "Open Database Page if you find errors on tables (status not ok)"
-msgstr ""
-"Abrir la página de la base de datos si encuentra errores en las tablas (el "
-"estado no es correcto)"
-
-#: functions/__functions.php:1341 functions/_functions.php:1322
-#: functions/f-new-unctions.php:1390 functions/functions.php:1390
-msgid "Dbase Page"
-msgstr "Página de Dbase"
-
-#: functions/__functions.php:1349 functions/_functions.php:1330
-#: functions/f-new-unctions.php:1398 functions/functions.php:1398
-msgid "Status"
-msgstr "Estado"
-
-#: functions/__functions.php:1352 functions/_functions.php:1333
-#: functions/f-new-unctions.php:1401 functions/functions.php:1401
-msgid "Table Name"
-msgstr "Nombre de Tabla"
-
-#: functions/__functions.php:1353 functions/_functions.php:1334
-#: functions/f-new-unctions.php:1402 functions/functions.php:1402
-msgid "Engine"
-msgstr "Motor"
-
-#: functions/__functions.php:1354 functions/_functions.php:1335
-#: functions/f-new-unctions.php:1403 functions/functions.php:1403
-msgid "Last Update"
-msgstr "Última Actualización"
-
-#: functions/__functions.php:1356 functions/_functions.php:1337
-#: functions/f-new-unctions.php:1405 functions/functions.php:1405
-msgid "Data Length (Aproximate)"
-msgstr "Longitud de los datos (aproximada)"
-
-#: functions/__functions.php:1391 functions/_functions.php:1372
-#: functions/f-new-unctions.php:1440 functions/functions.php:1440
-msgid "For more info about your database, look the page SHOW PHP INFO."
-msgstr ""
-"Para más información sobre su base de datos, mire la página SHOW PHP INFO."
-
-#: functions/__functions.php:1526 functions/_functions.php:1507
-#: functions/f-new-unctions.php:1575
-msgid "Errors"
-msgstr "Errores"
-
-#: functions/__functions.php:1531 functions/_functions.php:1512
-#: functions/f-new-unctions.php:1583
-msgid "Your site has errors. Here are the last lines of the error log files."
-msgstr ""
-"Su sitio tiene errores. Aquí están las últimas líneas de los archivos de "
-"registro de errores."
-
-#: functions/__functions.php:1542 functions/_functions.php:1523
-#: functions/f-new-unctions.php:1593
-msgid ""
-"Our plugin can't function as intended. Errors, including JavaScript errors, "
-"may lead to visual problems or disrupt functionality, from minor glitches to "
-"critical site failures. Promptly address these issues before continuing "
-"because these problems will persist even if you deactivate our plugin.Notice "
-"that the PHP error system does not capture JavaScript errors. Only our "
-"plugin captures them."
-msgstr ""
-"Nuestro complemento no puede funcionar según lo previsto. Los errores, "
-"incluidos los errores de JavaScript, pueden provocar problemas visuales o "
-"alterar la funcionalidad, desde fallas menores hasta fallas críticas del "
-"sitio. Aborde estos problemas de inmediato antes de continuar porque estos "
-"problemas persistirán incluso si desactiva nuestro complemento. Tenga en "
-"cuenta que el sistema de errores de PHP no captura los errores de "
-"JavaScript. Sólo nuestro complemento los captura."
-
-#: functions/__functions.php:1552 functions/_functions.php:1533
-#: functions/f-new-unctions.php:1810
-msgid "For bigger files, download and open them in your local computer."
-msgstr ""
-"Para los archivos más grandes, descárguelos y ábralos en su ordenador local."
-
-#: functions/__functions.php:1559 functions/_functions.php:1540
-#: functions/f-new-unctions.php:1819
-msgid "Learn more about errors and warnings..."
-msgstr "Más información sobre errores y avisos..."
-
-#: functions/__functions.php:2038 functions/_functions.php:2009
-#: functions/f-new-unctions.php:2296
-msgid "Log Files found"
-msgstr "Archivos de registro encontrados"
-
-#: functions/__functions.php:2231 functions/_functions.php:2202
-#: functions/f-new-unctions.php:2733 functions/functions.php:1946
-msgid "wp-config.php"
-msgstr "wp-config.php"
-
-#: functions/__functions.php:2238 functions/__functions.php:2782
-#: functions/_functions.php:2209 functions/_functions.php:2753
-#: functions/f-new-unctions.php:2740 functions/f-new-unctions.php:3284
-#: functions/functions.php:1953 functions/functions.php:2497
-msgid "File path:"
-msgstr "Ruta del archivo:"
-
-#: functions/__functions.php:2243 functions/_functions.php:2214
-#: functions/f-new-unctions.php:2745 functions/functions.php:1958
-msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
-msgstr ""
-"Archivo wp-config.php no encontrado. Pregunte a su empresa de alojamiento si "
-"está oculto."
-
-#: functions/__functions.php:2251 functions/_functions.php:2222
-#: functions/f-new-unctions.php:2753 functions/functions.php:1966
-msgid "Unable to read the file wp-config.php! Ask to your hosting company."
-msgstr ""
-"¡No se puede leer el archivo wp-config.php! Pregunte a su empresa de "
-"alojamiento."
-
-#: functions/__functions.php:2286 functions/__functions.php:3785
-#: functions/_functions.php:2257 functions/_functions.php:3812
-#: functions/f-new-unctions.php:2788 functions/f-new-unctions.php:4314
-#: functions/functions.php:2001 functions/functions.php:3500
-#: functions/functions_transiente_manager.php:159
-msgid "Name"
-msgstr "Nombre"
-
-#: functions/__functions.php:2304 functions/__functions.php:2421
-#: functions/__functions.php:2583 functions/_functions.php:2275
-#: functions/_functions.php:2392 functions/_functions.php:2554
-#: functions/f-new-unctions.php:2806 functions/f-new-unctions.php:2923
-#: functions/f-new-unctions.php:3085 functions/functions.php:2019
-#: functions/functions.php:2136 functions/functions.php:2298
-msgid "Permission Scheme for WordPress"
-msgstr "Esquema de permisos para WordPress"
-
-#: functions/__functions.php:2306 functions/__functions.php:2423
-#: functions/__functions.php:2585 functions/_functions.php:2277
-#: functions/_functions.php:2394 functions/_functions.php:2556
-#: functions/f-new-unctions.php:2808 functions/f-new-unctions.php:2925
-#: functions/f-new-unctions.php:3087 functions/functions.php:2021
-#: functions/functions.php:2138 functions/functions.php:2300
-msgid "Typically"
-msgstr "Normalmente"
-
-#: functions/__functions.php:2309 functions/__functions.php:2425
-#: functions/__functions.php:2586 functions/_functions.php:2280
-#: functions/_functions.php:2396 functions/_functions.php:2557
-#: functions/f-new-unctions.php:2811 functions/f-new-unctions.php:2927
-#: functions/f-new-unctions.php:3088 functions/functions.php:2024
-#: functions/functions.php:2140 functions/functions.php:2301
-msgid "Files"
-msgstr "Archivos"
-
-#: functions/__functions.php:2312 functions/__functions.php:2427
-#: functions/__functions.php:2587 functions/_functions.php:2283
-#: functions/_functions.php:2398 functions/_functions.php:2558
-#: functions/f-new-unctions.php:2814 functions/f-new-unctions.php:2929
-#: functions/f-new-unctions.php:3089 functions/functions.php:2027
-#: functions/functions.php:2142 functions/functions.php:2302
-msgid "Folders"
-msgstr "Carpetas"
-
-#: functions/__functions.php:2315 functions/__functions.php:2429
-#: functions/__functions.php:2588 functions/_functions.php:2286
-#: functions/_functions.php:2400 functions/_functions.php:2559
-#: functions/f-new-unctions.php:2817 functions/f-new-unctions.php:2931
-#: functions/f-new-unctions.php:3090 functions/functions.php:2030
-#: functions/functions.php:2144 functions/functions.php:2303
-msgid "File wp-config.php: 660"
-msgstr "Archivo wp-config.php: 660"
-
-#: functions/__functions.php:2320 functions/_functions.php:2291
-#: functions/f-new-unctions.php:2822 functions/functions.php:2035
-msgid "wp-config.php currently permissions:"
-msgstr " permisos del  wp-config.php actualmente:"
-
-#: functions/__functions.php:2332 functions/__functions.php:2443
-#: functions/__functions.php:2602 functions/_functions.php:2303
-#: functions/_functions.php:2414 functions/_functions.php:2573
-#: functions/f-new-unctions.php:2834 functions/f-new-unctions.php:2945
-#: functions/f-new-unctions.php:3104 functions/functions.php:2047
-#: functions/functions.php:2158 functions/functions.php:2317
-msgid "Unable to read files"
-msgstr "No se pueden leer los archivos"
-
-#: functions/__functions.php:2338 functions/__functions.php:2460
-#: functions/__functions.php:2619 functions/_functions.php:2309
-#: functions/_functions.php:2431 functions/_functions.php:2590
-#: functions/f-new-unctions.php:2840 functions/f-new-unctions.php:2962
-#: functions/f-new-unctions.php:3121 functions/functions.php:2053
-#: functions/functions.php:2175 functions/functions.php:2334
-msgid "Permissions"
-msgstr "Permisos"
-
-#: functions/__functions.php:2339 functions/__functions.php:2461
-#: functions/__functions.php:2620 functions/_functions.php:2310
-#: functions/_functions.php:2432 functions/_functions.php:2591
-#: functions/f-new-unctions.php:2841 functions/f-new-unctions.php:2963
-#: functions/f-new-unctions.php:3122 functions/functions.php:2054
-#: functions/functions.php:2176 functions/functions.php:2335
-msgid "Files / Folders"
-msgstr "Archivos / Carpetas"
-
-#: functions/__functions.php:2394 functions/_functions.php:2365
-#: functions/f-new-unctions.php:2896 functions/functions.php:2109
-msgid "Files with wrong permissions. This plugin will show max 50."
-msgstr ""
-"Archivos con permisos incorrectos. Este plugin mostrará un máximo de 50."
-
-#: functions/__functions.php:2398 functions/__functions.php:2510
-#: functions/__functions.php:2728 functions/_functions.php:2369
-#: functions/_functions.php:2481 functions/_functions.php:2699
-#: functions/f-new-unctions.php:2900 functions/f-new-unctions.php:3012
-#: functions/f-new-unctions.php:3230 functions/functions.php:2113
-#: functions/functions.php:2225 functions/functions.php:2443
-msgid "No files found with wrong permissions."
-msgstr "No se han encontrado archivos con permisos incorrectos."
-
-#: functions/__functions.php:2407 functions/_functions.php:2378
-#: functions/f-new-unctions.php:2909 functions/functions.php:2122
-msgid "Folders with wrong permissions. This plugin will show max 50."
-msgstr ""
-"Carpetas con permisos incorrectos. Este plugin mostrará un máximo de 50."
-
-#: functions/__functions.php:2412 functions/__functions.php:2523
-#: functions/__functions.php:2739 functions/_functions.php:2383
-#: functions/_functions.php:2494 functions/_functions.php:2710
-#: functions/f-new-unctions.php:2914 functions/f-new-unctions.php:3025
-#: functions/f-new-unctions.php:3241 functions/functions.php:2127
-#: functions/functions.php:2238 functions/functions.php:2454
-msgid "No folders found with wrong permissions."
-msgstr "No se han encontrado carpetas con permisos incorrectos."
-
-#: functions/__functions.php:2432 functions/__functions.php:2591
-#: functions/_functions.php:2403 functions/_functions.php:2562
-#: functions/f-new-unctions.php:2934 functions/f-new-unctions.php:3093
-#: functions/functions.php:2147 functions/functions.php:2306
-msgid "wp-config.php current permissions:"
-msgstr " permisos del  wp-config.php actualmente:"
-
-#: functions/__functions.php:2438 functions/__functions.php:2597
-#: functions/_functions.php:2409 functions/_functions.php:2568
-#: functions/f-new-unctions.php:2940 functions/f-new-unctions.php:3099
-#: functions/functions.php:2153 functions/functions.php:2312
-msgid "Visit plugin's site for details"
-msgstr "Visite el sitio del plugin para obtener más detalles"
-
-#: functions/__functions.php:2506 functions/__functions.php:2726
-#: functions/_functions.php:2477 functions/_functions.php:2697
-#: functions/f-new-unctions.php:3008 functions/f-new-unctions.php:3228
-#: functions/functions.php:2221 functions/functions.php:2441
-msgid "Files with wrong permissions."
-msgstr "Archivos con permisos incorrectos."
-
-#: functions/__functions.php:2508 functions/__functions.php:2520
-#: functions/_functions.php:2479 functions/_functions.php:2491
-#: functions/f-new-unctions.php:3010 functions/f-new-unctions.php:3022
-#: functions/functions.php:2223 functions/functions.php:2235
-msgid "This plugin will show max 50."
-msgstr "Este plugin mostrará un máximo de 50."
-
-#: functions/__functions.php:2518 functions/__functions.php:2736
-#: functions/_functions.php:2489 functions/_functions.php:2707
-#: functions/f-new-unctions.php:3020 functions/f-new-unctions.php:3238
-#: functions/functions.php:2233 functions/functions.php:2451
-msgid "Folders with wrong permissions."
-msgstr "Con permisos incorrectos."
-
-#: functions/__functions.php:2669 functions/_functions.php:2640
-#: functions/f-new-unctions.php:3171 functions/functions.php:2384
-msgid "Free version limited to a maximum of 50 files."
-msgstr "Versión gratuita limitada a un máximo de 50 archivos."
-
-#: functions/__functions.php:2775 functions/_functions.php:2746
-#: functions/f-new-unctions.php:3277 functions/functions.php:2490
-msgid ".htaccess"
-msgstr ".htaccess"
-
-#: functions/__functions.php:2786 functions/_functions.php:2757
-#: functions/f-new-unctions.php:3288 functions/functions.php:2501
-msgid "File .htaccess not found."
-msgstr "Archivo .htaccess no encontrado."
-
-#: functions/__functions.php:2791 functions/_functions.php:2762
-#: functions/f-new-unctions.php:3293 functions/functions.php:2506
-msgid "Empty file .htaccess!"
-msgstr "Archivo vacío .htaccess!"
-
-#: functions/__functions.php:3005 functions/_functions.php:3032
-#: functions/f-new-unctions.php:3543 functions/functions.php:2729
-msgid "Step 1 - Check Memory"
-msgstr "Paso 1 - Comprobar la memoria"
-
-#: functions/__functions.php:3014 functions/__functions.php:3108
-#: functions/_functions.php:3041 functions/_functions.php:3135
-#: functions/f-new-unctions.php:3552 functions/f-new-unctions.php:3646
-#: functions/functions.php:2738 functions/functions.php:2832
-msgid "General Failure (7) to get memory information."
-msgstr "Fallo general (7) para obtener información de la memoria."
-
-#: functions/__functions.php:3025 functions/_functions.php:3052
-#: functions/f-new-unctions.php:3563 functions/functions.php:2749
-msgid ""
-"Your site free memory is too low and can happens memory fault error, also "
-"without install our plugin."
-msgstr ""
-"La memoria libre de su sitio es demasiado baja y puede ocurrir un error de "
-"memoria, también sin instalar nuestro plugin."
-
-#: functions/__functions.php:3029 functions/_functions.php:3056
-#: functions/f-new-unctions.php:3567 functions/functions.php:2753
-msgid "The WordPress Memory Limit is"
-msgstr "El límite de memoria de WordPress es"
-
-#: functions/__functions.php:3032 functions/_functions.php:3059
-#: functions/f-new-unctions.php:3570 functions/functions.php:2756
-msgid "The WordPress Memory Usage is"
-msgstr "El uso de memoria de WordPress es"
-
-#: functions/__functions.php:3042 functions/__functions.php:3045
-#: functions/__functions.php:3117 functions/_functions.php:3069
-#: functions/_functions.php:3072 functions/_functions.php:3144
-#: functions/f-new-unctions.php:3580 functions/f-new-unctions.php:3583
-#: functions/f-new-unctions.php:3655 functions/functions.php:2766
-#: functions/functions.php:2769 functions/functions.php:2841
-msgid "The free memory now is"
-msgstr "La memoria libre ahora es"
-
-#: functions/__functions.php:3055 functions/__functions.php:3093
-#: functions/__functions.php:3125 functions/_functions.php:3082
-#: functions/_functions.php:3120 functions/_functions.php:3152
-#: functions/f-new-unctions.php:3593 functions/f-new-unctions.php:3631
-#: functions/f-new-unctions.php:3663 functions/functions.php:2779
-#: functions/functions.php:2817 functions/functions.php:2849
-msgid "For more details, visit our site"
-msgstr "Para más detalles, visite nuestro sitio"
-
-#: functions/__functions.php:3058 functions/__functions.php:3096
-#: functions/__functions.php:3128 functions/_functions.php:3085
-#: functions/_functions.php:3123 functions/_functions.php:3155
-#: functions/f-new-unctions.php:3596 functions/f-new-unctions.php:3634
-#: functions/f-new-unctions.php:3666 functions/functions.php:2782
-#: functions/functions.php:2820 functions/functions.php:2852
-msgid "WP MEMORY (Free WordPress Plugin to Fix Low Memory Limit)"
-msgstr ""
-"WP MEMORY (Plugin gratuito de WordPress para arreglar el límite de memoria "
-"baja)"
-
-#: functions/__functions.php:3066 functions/_functions.php:3093
-#: functions/f-new-unctions.php:3604 functions/functions.php:2790
-msgid "Unable to get ini_get('memory_limit')"
-msgstr "No se puede obtener ini_get('memory_limit')"
-
-#: functions/__functions.php:3071 functions/_functions.php:3098
-#: functions/f-new-unctions.php:3609 functions/functions.php:2795
-msgid "Unable to get memory_get_usage() "
-msgstr "No se puede obtener memory_get_usage()"
-
-#: functions/__functions.php:3075 functions/_functions.php:3102
-#: functions/f-new-unctions.php:3613 functions/functions.php:2799
-msgid "Memory Usage is not Numeric (3)"
-msgstr "El uso de la memoria no es numérico (3)"
-
-#: functions/__functions.php:3079 functions/_functions.php:3106
-#: functions/f-new-unctions.php:3617 functions/functions.php:2803
-msgid "Memory Usage < than 1'"
-msgstr "Uso de memoria < de 1'"
-
-#: functions/__functions.php:3084 functions/_functions.php:3111
-#: functions/f-new-unctions.php:3622 functions/functions.php:2808
-msgid ""
-"Possible error: On file wp-config.php memory symbol should be M or MB or G "
-"or GB."
-msgstr ""
-"Posible error: En el archivo wp-config.php el símbolo de memoria debe ser M."
-
-#: functions/__functions.php:3089 functions/_functions.php:3116
-#: functions/f-new-unctions.php:3627 functions/functions.php:2813
-msgid "For example,  define(\"WP_MEMORY_LIMIT\", \"256M\"); "
-msgstr "Por ejemplo, define(\"WP_MEMORY_LIMIT\", \"256M\");"
-
-#: functions/__functions.php:3103 functions/_functions.php:3130
-#: functions/f-new-unctions.php:3641 functions/functions.php:2827
-msgid "Memory Limit out of range. (6)"
-msgstr "Límite de memoria fuera de rango. (6)"
-
-#: functions/__functions.php:3115 functions/_functions.php:3142
-#: functions/f-new-unctions.php:3653 functions/functions.php:2839
-msgid "No Memory Problems found."
-msgstr "No se han encontrado problemas de memoria."
-
-#: functions/__functions.php:3137 functions/_functions.php:3164
-#: functions/f-new-unctions.php:3675 functions/functions.php:2861
-msgid "Step 2 - Check for Javascript Errors"
-msgstr "Paso 2 - Comprobar si hay errores en Javascript"
-
-#: functions/__functions.php:3141 functions/_functions.php:3168
-#: functions/f-new-unctions.php:3679 functions/functions.php:2865
-msgid "Javascript is NOT working in your site and/or with your browser!"
-msgstr "¡Javascript NO está funcionando en su sitio y/o con su navegador!"
-
-#: functions/__functions.php:3148 functions/_functions.php:3175
-#: functions/f-new-unctions.php:3686 functions/functions.php:2872
-msgid "Step 3 - Check for Hosting Resources"
-msgstr "Paso 3 - Comprobar los recursos de alojamiento"
-
-#: functions/__functions.php:3151 functions/_functions.php:3178
-#: functions/f-new-unctions.php:3689 functions/functions.php:2875
-msgid "Maybe Your server is not Linux"
-msgstr "Tal vez su servidor no sea Linux"
-
-#: functions/__functions.php:3153 functions/__functions.php:3167
-#: functions/_functions.php:3180 functions/_functions.php:3194
-#: functions/f-new-unctions.php:3691 functions/f-new-unctions.php:3706
-#: functions/functions.php:2877 functions/functions.php:2892
-msgid "and this plugin requires Linux."
-msgstr "y este plugin requiere Linux."
-
-#: functions/__functions.php:3156 functions/_functions.php:3183
-#: functions/f-new-unctions.php:3694 functions/functions.php:2880
-msgid "Your Hosting Company dont have the constant: PHP_OS_FAMILY defined."
-msgstr "Su empresa de hosting no tiene definida la constante: PHP_OS_FAMILY."
-
-#: functions/__functions.php:3165 functions/_functions.php:3192
-#: functions/f-new-unctions.php:3704 functions/functions.php:2890
-msgid "Your server is not Linux"
-msgstr "Su servidor no es Linux"
-
-#: functions/__functions.php:3169 functions/_functions.php:3196
-#: functions/f-new-unctions.php:3708 functions/functions.php:2894
-msgid "Your server is:"
-msgstr "Su servidor es:"
-
-#: functions/__functions.php:3179 functions/__functions.php:3196
-#: functions/__functions.php:3215 functions/__functions.php:3276
-#: functions/__functions.php:3297 functions/_functions.php:3206
-#: functions/_functions.php:3223 functions/_functions.php:3242
-#: functions/_functions.php:3303 functions/_functions.php:3324
-#: functions/f-new-unctions.php:3719 functions/f-new-unctions.php:3735
-#: functions/f-new-unctions.php:3753 functions/f-new-unctions.php:3811
-#: functions/f-new-unctions.php:3831 functions/functions.php:2905
-#: functions/functions.php:2921 functions/functions.php:2939
-#: functions/functions.php:2997 functions/functions.php:3017
-msgid "Plugin requirement:"
-msgstr "Requisito del plugin:"
-
-#: functions/__functions.php:3182 functions/_functions.php:3209
-#: functions/f-new-unctions.php:3722 functions/functions.php:2908
-msgid ""
-"Open_basedir restriction in effect. Talk with your hosting and request to "
-"disable it."
-msgstr ""
-"Restricción de Open_basedir en vigor. Hable con su alojamiento y solicite "
-"que se desactive."
-
-#: functions/__functions.php:3199 functions/_functions.php:3226
-#: functions/f-new-unctions.php:3738 functions/functions.php:2924
-msgid ""
-"PHP function sys_getloadavg not enabled. Talk with your hosting and request "
-"to enable it."
-msgstr ""
-"La función PHP sys_getloadavg no está habilitada. Hable con su alojamiento y "
-"solicite que se habilite."
-
-#: functions/__functions.php:3218 functions/_functions.php:3245
-#: functions/f-new-unctions.php:3756 functions/functions.php:2942
-msgid ""
-"/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
-"it."
-msgstr ""
-"/proc/cpuinfo no es legible. Habla con tu hosting y pide que lo habiliten."
-
-#: functions/__functions.php:3233 functions/_functions.php:3260
-#: functions/f-new-unctions.php:3770 functions/functions.php:2956
-msgid ""
-"Request to your Hosting enable the PHP functions disk_free_space() and "
-"disk_total_space()"
-msgstr ""
-"Solicite a su Hosting que habilite las funciones PHP disk_free_space() y "
-"disk_total_space()"
-
-#: functions/__functions.php:3257 functions/_functions.php:3284
-#: functions/f-new-unctions.php:3793 functions/functions.php:2979
-msgid ""
-"Request to your Hosting to enable the PHP function shell_exec() because is "
-"returning NULL."
-msgstr ""
-"Solicite a su Hosting que habilite la función PHP shell_exec() porque está "
-"devolviendo NULL."
-
-#: functions/__functions.php:3280 functions/_functions.php:3307
-#: functions/f-new-unctions.php:3815 functions/functions.php:3001
-msgid ""
-"/proc/stat doesn't readable. Talk with your hosting and request to enable it."
-msgstr ""
-"/proc/stat no es legible. Habla con tu alojamiento y pide que lo habiliten."
-
-#: functions/__functions.php:3300 functions/_functions.php:3327
-#: functions/f-new-unctions.php:3834 functions/functions.php:3020
-msgid ""
-"/etc/os-release doesn't readable. Talk with your hosting and request to "
-"enable it."
-msgstr ""
-"/etc/os-release no es legible. Hable con su alojamiento y solicite que lo "
-"habilite."
-
-#: functions/__functions.php:3316 functions/_functions.php:3343
-#: functions/f-new-unctions.php:3849 functions/functions.php:3035
-msgid "PHP Version 7.0 or bigger is required. My version:"
-msgstr "Se requiere la versión 7.0 o superior de PHP. Mi versión:"
-
-#: functions/__functions.php:3337 functions/_functions.php:3364
-#: functions/f-new-unctions.php:3870 functions/functions.php:3056
-msgid "Your hosting is blocking the PHP function sys_getloadavg()."
-msgstr "Su alojamiento está bloqueando la función PHP sys_getloadavg()."
-
-#: functions/__functions.php:3348 functions/_functions.php:3375
-#: functions/f-new-unctions.php:3881 functions/functions.php:3067
-msgid ""
-"if you can see warnings or empty fields on your dashboard, means your "
-"hosting company is blocking some php functions."
-msgstr ""
-"si puede ver advertencias o campos vacíos en su tablero, significa que su "
-"compañía de alojamiento está bloqueando algunas funciones de php."
-
-#: functions/__functions.php:3355 functions/_functions.php:3382
-#: functions/f-new-unctions.php:3888 functions/functions.php:3074
-msgid "Looks like our plugin can works fine with your server configuration."
-msgstr ""
-"Parece que nuestro plugin puede funcionar bien con la configuración de su "
-"servidor."
-
-#: functions/__functions.php:3363 functions/_functions.php:3390
-#: functions/f-new-unctions.php:3896 functions/functions.php:3082
-msgid ""
-"If we are wrong, please, contact our support at: https://wptoolsplugin.com"
-msgstr ""
-"Si nos equivocamos, por favor, póngase en contacto con nuestro soporte en: "
-"https://wptoolsplugin.com"
-
-#: functions/__functions.php:3529 functions/_functions.php:3556
-#: functions/f-new-unctions.php:4058 functions/functions.php:3244
-msgid ""
-"The `.maintenance` file in WordPress signals maintenance mode during "
-"updates, displaying a message to visitors. Created in the root directory, it "
-"is automatically removed after updates are completed."
-msgstr ""
-"El archivo `.maintenance` de WordPress indica el modo de mantenimiento "
-"durante las actualizaciones, mostrando un mensaje a los visitantes. Se crea "
-"en el directorio raíz y se elimina automáticamente una vez que se completan "
-"las actualizaciones."
-
-#: functions/__functions.php:3531 functions/_functions.php:3558
-#: functions/f-new-unctions.php:4060 functions/functions.php:3246
-msgid ""
-"Manual removal may be necessary if the file persists, causing the site to "
-"stay in maintenance mode."
-msgstr ""
-"Es posible que sea necesaria la eliminación manual si el archivo persiste, "
-"lo que hace que el sitio permanezca en modo de mantenimiento."
-
-#: functions/__functions.php:3535 functions/_functions.php:3562
-#: functions/f-new-unctions.php:4064 functions/functions.php:3250
-msgid "Learn more about..."
-msgstr "Leer más."
-
-#: functions/__functions.php:3542 functions/__functions.php:3568
-#: functions/_functions.php:3569 functions/_functions.php:3595
-#: functions/f-new-unctions.php:4071 functions/f-new-unctions.php:4098
-#: functions/functions.php:3257 functions/functions.php:3284
-msgid "The .maintenance file does not exist."
-msgstr "El archivo .maintenance no existe."
-
-#: functions/__functions.php:3559 functions/_functions.php:3586
-#: functions/f-new-unctions.php:4089 functions/functions.php:3275
-msgid "The .maintenance file has been successfully deleted."
-msgstr "El archivo .maintenance se ha eliminado correctamente."
-
-#: functions/__functions.php:3562 functions/_functions.php:3589
-#: functions/f-new-unctions.php:4092 functions/functions.php:3278
-msgid "'Unable to delete the .maintenance file."
-msgstr "'No se puede eliminar el archivo .maintenance."
-
-#: functions/__functions.php:3563 functions/_functions.php:3590
-#: functions/f-new-unctions.php:4093 functions/functions.php:3279
-msgid "'Permission issue or file in use."
-msgstr "'Problema de permiso o archivo en uso."
-
-#: functions/__functions.php:3581 functions/_functions.php:3608
-#: functions/f-new-unctions.php:4111 functions/functions.php:3297
-msgid "Error: Invalid nonce."
-msgstr "Error: Nonce no válido."
-
-#: functions/__functions.php:3617 functions/_functions.php:3644
-#: functions/f-new-unctions.php:4146 functions/functions.php:3332
-msgid "Robots TXT"
-msgstr "Robots TXT"
-
-#: functions/__functions.php:3625 functions/_functions.php:3652
-#: functions/f-new-unctions.php:4154 functions/functions.php:3340
-msgid "File Path"
-msgstr "Ruta del archivo"
-
-#: functions/__functions.php:3638 functions/_functions.php:3665
-#: functions/f-new-unctions.php:4167 functions/functions.php:3353
-msgid "Cannot create BKP file"
-msgstr "No se puede crear el archivo BKP"
-
-#: functions/__functions.php:3644 functions/_functions.php:3671
-#: functions/f-new-unctions.php:4173 functions/functions.php:3359
-msgid "Cannot write to BKP file"
-msgstr "No se puede escribir en el archivo BKP"
-
-#: functions/__functions.php:3650 functions/_functions.php:3677
-#: functions/f-new-unctions.php:4179 functions/functions.php:3365
-msgid "Cannot open file to save"
-msgstr "No se puede abrir el archivo para guardar"
-
-#: functions/__functions.php:3656 functions/_functions.php:3683
-#: functions/f-new-unctions.php:4185 functions/functions.php:3371
-msgid "Cannot write to file"
-msgstr "Non se pode escribir no arquivo"
-
-#: functions/__functions.php:3663 functions/_functions.php:3690
-#: functions/f-new-unctions.php:4192 functions/functions.php:3378
-msgid "Success, file robots.txt updated!"
-msgstr "¡Éxito, archivo robots.txt actualizado!"
-
-#: functions/__functions.php:3665 functions/_functions.php:3692
-#: functions/f-new-unctions.php:4194 functions/functions.php:3380
-msgid "Backup file created:"
-msgstr "Archivo de copia de seguridad creado:"
-
-#: functions/__functions.php:3670 functions/_functions.php:3697
-#: functions/f-new-unctions.php:4199 functions/functions.php:3385
-msgid "If you save again, will overwrite the backup."
-msgstr "Si guarda de nuevo, sobrescribirá la copia de seguridad."
-
-#: functions/__functions.php:3677 functions/_functions.php:3704
-#: functions/f-new-unctions.php:4206 functions/functions.php:3392
-msgid "Fail to Get Post Content!"
-msgstr "Fracaso en la obtención de contenidos para los puestos!"
-
-#: functions/__functions.php:3683 functions/_functions.php:3710
-#: functions/f-new-unctions.php:4212 functions/functions.php:3398
-msgid "File not found."
-msgstr "Archivo no encontrado."
-
-#: functions/__functions.php:3686 functions/__functions.php:3718
-#: functions/_functions.php:3713 functions/_functions.php:3745
-#: functions/f-new-unctions.php:4215 functions/f-new-unctions.php:4247
-#: functions/functions.php:3401 functions/functions.php:3433
-msgid "To create, fill out the form below and click SAVE"
-msgstr "Para crear, rellene el siguiente formulario y haga clic en GUARDAR"
-
-#: functions/__functions.php:3707 functions/_functions.php:3734
-#: functions/f-new-unctions.php:4236 functions/functions.php:3422
-msgid ""
-"File not writable. Check file permissions and user own. Unable to edit it."
-msgstr ""
-"Archivo no escribible. Compruebe los permisos del archivo y el propio "
-"usuario. No se puede editar."
-
-#: functions/__functions.php:3715 functions/_functions.php:3742
-#: functions/f-new-unctions.php:4244 functions/functions.php:3430
-msgid "Empty file robots.txt!"
-msgstr "¡Archivo vacío robots.txt!"
-
-#: functions/__functions.php:3722 functions/_functions.php:3749
-#: functions/f-new-unctions.php:4251 functions/functions.php:3437
-msgid "Edit the file and click SAVE"
-msgstr "Edite el archivo y haga clic en GUARDAR"
-
-#: functions/__functions.php:3737 functions/_functions.php:3764
-#: functions/f-new-unctions.php:4266 functions/functions.php:3452
-msgid ""
-"Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
-"in case to fail to save."
-msgstr ""
-"Sugerencia: Antes de hacer clic en GUARDAR, copie el contenido a su "
-"portapapeles. Por si acaso no se puede guardar."
-
-#: functions/__functions.php:3749 functions/_functions.php:3776
-#: functions/f-new-unctions.php:4278 functions/functions.php:3464
-msgid "(Save Option Button available in Premium Version)"
-msgstr "(Botón de opción de guardar disponible en la versión Premium)"
-
-#: functions/__functions.php:3779 functions/_functions.php:3806
-#: functions/f-new-unctions.php:4308 functions/functions.php:3494
-msgid "PHP Information"
-msgstr "Información de PHPº"
-
-#: functions/__functions.php:3787 functions/_functions.php:3814
-#: functions/f-new-unctions.php:4316 functions/functions.php:3502
-msgid "Current Modified Value"
-msgstr "Valor modificado actual"
-
-#: functions/__functions.php:3795 functions/_functions.php:3822
-#: functions/f-new-unctions.php:4324 functions/functions.php:3510
-msgid "Server Timezone"
-msgstr "Zona horaria del servidor"
-
-#: functions/__functions.php:3814 functions/_functions.php:3841
-#: functions/f-new-unctions.php:4343 functions/functions.php:3529
-msgid "Server Time"
-msgstr "Hora del Servidor"
-
-#: functions/__functions.php:3820 functions/_functions.php:3847
-#: functions/f-new-unctions.php:4349 functions/functions.php:3535
-msgid "PHP Max Memory Limit"
-msgstr "Límite de memoria máxima de PHP"
-
-#: functions/__functions.php:3829 functions/_functions.php:3856
-#: functions/f-new-unctions.php:4358 functions/functions.php:3544
-msgid "PHP Max Execution Time"
-msgstr "PHP Tiempo máximo de ejecución"
-
-#: functions/__functions.php:3832 functions/__functions.php:3836
-#: functions/_functions.php:3859 functions/_functions.php:3863
-#: functions/f-new-unctions.php:4361 functions/f-new-unctions.php:4365
-#: functions/functions.php:3547 functions/functions.php:3551
-msgid "sec"
-msgstr "seg"
-
-#: functions/__functions.php:3840 functions/_functions.php:3867
-#: functions/f-new-unctions.php:4369 functions/functions.php:3555
-msgid "PHP Max Upload Size"
-msgstr "Tamaño máximo de carga de PHP"
-
-#: functions/__functions.php:3847 functions/_functions.php:3874
-#: functions/f-new-unctions.php:4376 functions/functions.php:3562
-msgid "PHP Max Post Size"
-msgstr "Tamaño máximo de publicación de PHP"
-
-#: functions/__functions.php:3851 functions/_functions.php:3878
-#: functions/f-new-unctions.php:4380 functions/functions.php:3566
-msgid "PHP Max Input Vars"
-msgstr "PHP Max Input Vars"
-
-#: functions/__functions.php:3859 functions/_functions.php:3886
-#: functions/f-new-unctions.php:4388 functions/functions.php:3574
-msgid "Check how to do it at our blog."
-msgstr "Consulta cómo hacerlo en nuestro blog."
-
-#: functions/__functions.php:3866 functions/_functions.php:3893
-#: functions/f-new-unctions.php:4395 functions/functions.php:3581
-msgid "Disabled Functions"
-msgstr "Funciones desactivadas"
-
-#: functions/__functions.php:3872 functions/_functions.php:3899
-#: functions/f-new-unctions.php:4401 functions/functions.php:3587
-msgid "Nothing"
-msgstr "Nada"
-
-#: functions/__functions.php:3881 functions/_functions.php:3908
-#: functions/f-new-unctions.php:4410 functions/functions.php:3596
-msgid "Extensions Loaded"
-msgstr "Extensiones cargadas"
-
-#: functions/__functions.php:3896 functions/_functions.php:3923
-#: functions/f-new-unctions.php:4425 functions/functions.php:3611
-msgid "Complete Information"
-msgstr "Información completa"
-
-#: functions/__functions.php:3964 functions/_functions.php:3991
-#: functions/f-new-unctions.php:4490 functions/functions.php:3678
-msgid "WP Memory Test"
-msgstr "Prueba de memoria de WP"
-
-#: functions/__functions.php:4009 functions/_functions.php:4036
-#: functions/f-new-unctions.php:4535 functions/functions.php:3723
-msgid "Visit the"
-msgstr "Visitar el"
-
-#: functions/__functions.php:4013 functions/_functions.php:4040
-#: functions/f-new-unctions.php:4539 functions/functions.php:3727
-msgid "Site Health screen"
-msgstr "pantalla de salud del sitio"
-
-#: functions/__functions.php:4015 functions/_functions.php:4042
-#: functions/f-new-unctions.php:4541 functions/functions.php:3729
-msgid "to perform checks now."
-msgstr "para realizar comprobaciones ahora."
-
-#: functions/__functions.php:4020 functions/_functions.php:4047
-#: functions/f-new-unctions.php:4546 functions/functions.php:3734
-msgid "Great job! Your site currently passes all site health"
-msgstr "Buen trabajo Su sitio actualmente pasa todas las saludes del sitio"
-
-#: functions/__functions.php:4026 functions/_functions.php:4053
-#: functions/f-new-unctions.php:4552 functions/functions.php:3740
-msgid "checks"
-msgstr "comprueba"
-
-#: functions/__functions.php:4031 functions/_functions.php:4058
-#: functions/f-new-unctions.php:4557 functions/functions.php:3745
-msgid "Your site has"
-msgstr "Su sitio tiene"
-
-#: functions/__functions.php:4035 functions/_functions.php:4062
-#: functions/f-new-unctions.php:4561 functions/functions.php:3749
-msgid "a critical issue"
-msgstr "una cuestión crítica"
-
-#: functions/__functions.php:4038 functions/__functions.php:4051
-#: functions/_functions.php:4065 functions/_functions.php:4078
-#: functions/f-new-unctions.php:4564 functions/f-new-unctions.php:4577
-#: functions/functions.php:3752 functions/functions.php:3765
-msgid "that should be addressed as soon as possible."
-msgstr "que debe ser abordado lo antes posible."
-
-#: functions/__functions.php:4044 functions/_functions.php:4071
-#: functions/f-new-unctions.php:4570 functions/functions.php:3758
-msgid "Your site has a"
-msgstr "Su sitio tiene un"
-
-#: functions/__functions.php:4048 functions/_functions.php:4075
-#: functions/f-new-unctions.php:4574 functions/functions.php:3762
-msgid "critical issues"
-msgstr "cuestiones críticas"
-
-#: functions/__functions.php:4056 functions/__functions.php:4065
-#: functions/_functions.php:4083 functions/_functions.php:4092
-#: functions/f-new-unctions.php:4582 functions/f-new-unctions.php:4591
-#: functions/functions.php:3770 functions/functions.php:3779
-msgid "Looking good, but"
-msgstr "Se ve bien, pero"
-
-#: functions/__functions.php:4060 functions/_functions.php:4087
-#: functions/f-new-unctions.php:4586 functions/functions.php:3774
-msgid "one thing"
-msgstr "una cosa"
-
-#: functions/__functions.php:4062 functions/__functions.php:4071
-#: functions/_functions.php:4089 functions/_functions.php:4098
-#: functions/f-new-unctions.php:4588 functions/f-new-unctions.php:4597
-#: functions/functions.php:3776 functions/functions.php:3785
-msgid "can be improved."
-msgstr "se puede mejorar."
-
-#: functions/__functions.php:4069 functions/_functions.php:4096
-#: functions/f-new-unctions.php:4595 functions/functions.php:3783
-msgid "some things"
-msgstr "algunas cosas"
-
-#: functions/__functions.php:4098 functions/_functions.php:4125
-#: functions/f-new-unctions.php:4624 functions/functions.php:3812
-msgid "Memory Issue"
-msgstr "Problema  memoria"
-
-#: functions/__functions.php:4161 functions/_functions.php:4186
-#: functions/f-new-unctions.php:4687 functions/functions.php:3875
-msgid "Errors have been detected on this site. "
-msgstr "Se han detectado errores en este sitio."
-
-#: functions/__functions.php:4165 functions/__functions.php:4196
-#: functions/_functions.php:4190 functions/_functions.php:4221
-#: functions/f-new-unctions.php:4691 functions/f-new-unctions.php:4722
-#: functions/functions.php:3879 functions/functions.php:3910
-#: functions/functions_cron_manager.php:58
-msgid "Learn more"
-msgstr "Saber más"
-
-#: functions/__functions.php:4187 functions/_functions.php:4212
-#: functions/f-new-unctions.php:4713 functions/functions.php:3901
-msgid "Memory issues have been detected on this site. "
-msgstr "Se han detectado problemas de memoria en este sitio."
-
-#: functions/f-new-unctions.php:1615 functions/function_error_log.php:60
-#: includes/feedback-last/feedback-last.php:259
-msgid "Artificial Intelligence Support Chat for Issues and Solutions"
-msgstr "Chat de soporte de inteligencia artificial para problemas y soluciones"
-
-#: functions/f-new-unctions.php:1624 functions/function_error_log.php:69
-#: includes/feedback-last/feedback-last.php:269
-msgid "Enter your message..."
-msgstr "Ingrese su mensaje..."
-
-#: functions/f-new-unctions.php:1625 functions/function_error_log.php:70
-#: includes/feedback-last/feedback-last.php:270
-msgid "Send"
-msgstr "Enviar"
-
-#: functions/f-new-unctions.php:1628
-msgid ""
-"Enter a message and click 'Send', or just click 'Auto Checkup' to analyze "
-"the site's error log."
-msgstr ""
-"Ingrese un mensaje y haga clic en “Enviar”, o simplemente haga clic en "
-"“Revisión automática” para analizar el registro de errores del sitio."
-
-#: functions/f-new-unctions.php:1633
-msgid "Auto Checkup"
-msgstr "Revisión del auto"
-
-#: functions/f-new-unctions.php:1758
-msgid "The page load time is poor."
-msgstr "El tiempo de carga de la página es pobre."
-
-#: functions/f-new-unctions.php:1760
-msgid "The page load time is very poor!"
-msgstr "¡El tiempo de carga de la página es muy pobre!"
-
-#: functions/f-new-unctions.php:1765
-msgid "The Load average of yours front pages is: "
-msgstr "El promedio de carga de sus páginas de inicio es:"
-
-#: functions/f-new-unctions.php:1768
-msgid "Loading time can significantly impact your SEO."
-msgstr "El tiempo de carga puede afectar significativamente tu SEO."
-
-#: functions/f-new-unctions.php:1770
-msgid "Many users will abandon the site before it fully loads."
-msgstr ""
-"Muchos usuarios abandonarán el sitio antes de que se cargue completamente."
-
-#: functions/f-new-unctions.php:1772
-msgid ""
-"Search engines prioritize faster-loading pages, as they improve user "
-"experience and reduce bounce rates."
-msgstr ""
-"Los motores de búsqueda priorizan las páginas que se cargan más rápido, ya "
-"que mejoran la experiencia del usuario y reducen las tasas de rebote."
-
-#: functions/f-new-unctions.php:1777
-msgid "Learn more about Page Load Times and their negative impact on SEO"
-msgstr ""
-"Obtenga más información sobre los tiempos de carga de página y su impacto "
-"negativo en el SEO"
-
-#: functions/f-new-unctions.php:1802
-msgid "Errors and Site Health."
-msgstr "Errores y salud del sitio."
 
 #: functions/function_error_log.php:9
 msgid "Error Log Table"
@@ -1919,7 +561,7 @@ msgstr "Tabla de registro de errores"
 msgid "Filter by Type"
 msgstr "Filtrar por tipo"
 
-#: functions/function_error_log.php:29 wptools.php:1570
+#: functions/function_error_log.php:29 wptools.php:806
 msgid "Type"
 msgstr "Tipo"
 
@@ -1931,6 +573,21 @@ msgstr "Descripción"
 msgid "Action"
 msgstr "Acción"
 
+#: functions/function_error_log.php:60
+#: includes/feedback-last/feedback-last.php:259
+msgid "Artificial Intelligence Support Chat for Issues and Solutions"
+msgstr "Chat de soporte de inteligencia artificial para problemas y soluciones"
+
+#: functions/function_error_log.php:69
+#: includes/feedback-last/feedback-last.php:269
+msgid "Enter your message..."
+msgstr "Ingrese su mensaje..."
+
+#: functions/function_error_log.php:70
+#: includes/feedback-last/feedback-last.php:270
+msgid "Send"
+msgstr "Enviar"
+
 #: functions/function_error_log.php:73
 msgid ""
 "Enter a message and click 'Send', or just copy and paste the content of "
@@ -1939,9 +596,891 @@ msgstr ""
 "Ingrese un mensaje y haga clic en ‘Enviar’, o simplemente copie y pegue el "
 "contenido de la columna de descripción."
 
-#: functions/function_error_log.php:381
+#: functions/function_error_log.php:406
 msgid "View"
 msgstr "Vista"
+
+#: functions/functions.php:48
+msgid "Settings"
+msgstr "Ajustes"
+
+#: functions/functions.php:58
+msgid "Check mySQL Tables"
+msgstr "Check las tablas de mySQL"
+
+#: functions/functions.php:67
+msgid "Edit robots txt"
+msgstr "Editar robots txt"
+
+#: functions/functions.php:76
+msgid "Show Errors"
+msgstr "Mostrar errores "
+
+#: functions/functions.php:85
+msgid "Show PHP Info"
+msgstr "Mostrar información de PHP"
+
+#: functions/functions.php:94
+msgid "Show .htaccess"
+msgstr "Mostrar .htaccess"
+
+#: functions/functions.php:103
+msgid "Show wp-config.php"
+msgstr "Mostrar wp-config.php"
+
+#: functions/functions.php:112
+msgid "Show Cron Jobs"
+msgstr "Mostrar Cron Jobs"
+
+#: functions/functions.php:121
+msgid "Show File Permissions"
+msgstr "Mostrar los permisos de los archivos"
+
+#: functions/functions.php:130 functions/functions.php:1984 guide/guide.php:52
+msgid "Show Cookies"
+msgstr "Mostrar Cookies"
+
+#: functions/functions.php:148
+msgid "Database Detais"
+msgstr "Detalles de la base de datos"
+
+#: functions/functions.php:157 functions/functions_transiente_manager.php:32
+msgid "Show Transients"
+msgstr "Mostrar transitorios"
+
+#: functions/functions.php:166
+msgid "Javascrip and jQuery"
+msgstr "Javascrip y jQuery"
+
+#: functions/functions.php:176
+msgid "More Tools Same Author"
+msgstr "Más herramientas del mismo autor"
+
+#: functions/functions.php:186
+msgid "More New Tools"
+msgstr "Más herramientas nuevas"
+
+#: functions/functions.php:423
+msgid "Please wait"
+msgstr "Espere por favor"
+
+#: functions/functions.php:427
+msgid "Installing plugin"
+msgstr "Instalación del complemento"
+
+#: functions/functions.php:464
+msgid "Installed"
+msgstr "Instalado"
+
+#: functions/functions.php:470
+msgid "Install"
+msgstr "Instalar"
+
+#: functions/functions.php:497
+#| msgid "MU Plugins"
+msgid "More Plugins"
+msgstr "Más complementos"
+
+#: functions/functions.php:679
+msgid "jQuery Version"
+msgstr "versión de jQuery"
+
+#: functions/functions.php:685
+msgid "jQuery Migrate Version"
+msgstr "versión de jQuery Migrate"
+
+#: functions/functions.php:700 functions/functions.php:1940
+#: functions/functions.php:1986 functions/functions.php:2032
+#: functions/functions.php:2482 functions/functions.php:3275
+msgid "Visit plugin's site for detais"
+msgstr "Visite el sitio del plugin para obtener más detalles"
+
+#: functions/functions.php:704
+msgid "Last Javascript Errors (max 200)"
+msgstr "Últimos errores de Javascript (máximo 200)"
+
+#: functions/functions.php:715
+msgid "No Javascript errors found last entries of log_error file."
+msgstr ""
+"No se han encontrado errores de Javascript en las últimas 3000 entradas del "
+"archivo log_error."
+
+#: functions/functions.php:724
+msgid "Learn more about site code errors..."
+msgstr "Más información sobre los errores del código del sitio..."
+
+#: functions/functions.php:900
+msgid "No Javascript errors found last 3000 entries of log_error file."
+msgstr ""
+"No se han encontrado errores de Javascript en las últimas 3000 entradas del "
+"archivo log_error."
+
+#: functions/functions.php:931
+msgid "WP_ALLOW_REPAIR is defined as false on your wp-config.php"
+msgstr "WP_ALLOW_REPAIR está definido como falso en su wp-config.php"
+
+#: functions/functions.php:936
+msgid "That can disable WordPress Database Optimize and Repair Tool."
+msgstr ""
+"Eso puede desactivar la herramienta de optimización y reparación de la base "
+"de datos de WordPress."
+
+#: functions/functions.php:940
+msgid "Change that to true."
+msgstr "Cámbialo a verdadero."
+
+#: functions/functions.php:947
+msgid "Open WordPress Optimize and Repair Database Tools"
+msgstr ""
+"Abrir las herramientas de optimización y reparación de bases de datos de "
+"WordPress"
+
+#: functions/functions.php:954
+msgid "Open"
+msgstr "Abierto"
+
+#: functions/functions.php:959
+msgid "It is not necessary edit your wp-config.php file"
+msgstr "No es necesario editar su archivo wp-config.php"
+
+#: functions/functions.php:965
+msgid "(Option available in Premium Version)"
+msgstr "(Opción disponible en la versión Premium)"
+
+#: functions/functions.php:980
+msgid "Database Information"
+msgstr "Información de la base de datos"
+
+#: functions/functions.php:982 functions/functions.php:3438
+msgid "Basic Information"
+msgstr "Información básica"
+
+#: functions/functions.php:986 functions/functions.php:992
+#: functions/functions.php:1097 functions/functions.php:1103
+msgid "Variable Name"
+msgstr "Nombre de la variable"
+
+#: functions/functions.php:987 functions/functions.php:993
+#: functions/functions.php:1098 functions/functions.php:1104
+#: functions/functions.php:1994 functions/functions.php:3442
+msgid "Value"
+msgstr "Valor"
+
+#: functions/functions.php:998
+msgid "Database Software"
+msgstr "Software de base de datos"
+
+#: functions/functions.php:1002
+msgid "Database Version"
+msgstr "Versión de base de datos"
+
+#: functions/functions.php:1006
+msgid "MySQL Uptime"
+msgstr "Tiempo de actividad de MySQL"
+
+#: functions/functions.php:1016
+msgid "Mysql Time"
+msgstr "Tiempo Mysql"
+
+#: functions/functions.php:1029
+msgid "Database Name"
+msgstr "Nombre de Base de Datos"
+
+#: functions/functions.php:1037
+msgid "Database User"
+msgstr "Usuario de Base de Datos"
+
+#: functions/functions.php:1045
+msgid "Database Hosting"
+msgstr "Alojamiento de bases de datos"
+
+#: functions/functions.php:1053
+msgid "Database Charset"
+msgstr "Conjunto de caracteres de la base de datos"
+
+#: functions/functions.php:1061
+msgid "Table Prefix"
+msgstr "Prefijo de Tabla"
+
+#: functions/functions.php:1075
+msgid "Maximum No. of Connections"
+msgstr "Número máximo de conexiones"
+
+#: functions/functions.php:1079
+msgid "Maximum Packet Size"
+msgstr "Tamaño máximo de los paquetes"
+
+#: functions/functions.php:1083
+msgid "Database Disk Usage"
+msgstr "Uso del disco de la base de datos"
+
+#: functions/functions.php:1087
+msgid "Index Disk Usage"
+msgstr "Uso del disco "
+
+#: functions/functions.php:1093
+msgid "Advanced Information"
+msgstr "Información avanzada"
+
+#: functions/functions.php:1122 functions/functions.php:1124
+msgid "Something went wrong!"
+msgstr "¡Algo salió mal!"
+
+#: functions/functions.php:1142 functions/functions.php:1153
+#: functions/functions.php:1165 functions/functions.php:1179
+#: functions/functions.php:1194 functions/functions.php:1209
+#: functions/functions.php:1640 functions/functions.php:1650
+#: functions/functions.php:1660 functions/functions.php:1669
+#: functions/functions.php:1676
+msgid "N/A"
+msgstr "N/A"
+
+#: functions/functions.php:1224 functions/functions.php:1255
+msgid "PB"
+msgstr "PB"
+
+#: functions/functions.php:1228 functions/functions.php:1259
+msgid "TB"
+msgstr "TB"
+
+#: functions/functions.php:1232 functions/functions.php:1263
+msgid "GB"
+msgstr "GB"
+
+#: functions/functions.php:1236 functions/functions.php:1267
+msgid "MB"
+msgstr "MB"
+
+#: functions/functions.php:1240 functions/functions.php:1271
+msgid "KB"
+msgstr "KB"
+
+#: functions/functions.php:1242
+msgid "bytes"
+msgstr "bytes"
+
+#: functions/functions.php:1244 functions/functions.php:1273
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: functions/functions.php:1387
+msgid ""
+"This plugin can benchmarks your server's performance through a variety of "
+"PHP and MySql tests."
+msgstr ""
+"Este plugin puede evaluar el rendimiento de su servidor a través de una "
+"variedad de pruebas de PHP y MySql."
+
+#: functions/functions.php:1394
+msgid "The total time is in seconds. Lower time are better (faster)."
+msgstr ""
+"El tiempo total está en segundos. Los tiempos más bajos son mejores (más "
+"rápidos)."
+
+#: functions/functions.php:1409
+msgid "Participate in Community Server Performance."
+msgstr "Participar en el rendimiento del servidor comunitario."
+
+#: functions/functions.php:1414
+msgid ""
+"Enabling this feature causes your site to share only server performance data "
+"with WP Tools Plugin."
+msgstr ""
+"Activar esta función hace que su sitio comparta sólo los datos de "
+"rendimiento del servidor con el plugin WP Tools."
+
+#: functions/functions.php:1418
+msgid ""
+"In return your WordPress site receives Updated Aggregated Industry Average "
+"Data."
+msgstr ""
+"A cambio, su sitio de WordPress recibe datos agregados actualizados del "
+"sector."
+
+#: functions/functions.php:1423
+msgid "Update"
+msgstr "Actualizar"
+
+#: functions/functions.php:1433
+msgid "Learn more."
+msgstr "Leer más."
+
+#: functions/functions.php:1481
+msgid "Industry Average Data"
+msgstr "Datos medios del sector"
+
+#: functions/functions.php:1567
+msgid "Tables Information"
+msgstr "Información sobre las tablas"
+
+#: functions/functions.php:1573
+msgid "Open Database Page if you find errors on tables (status not ok)"
+msgstr ""
+"Abrir la página de la base de datos si encuentra errores en las tablas (el "
+"estado no es correcto)"
+
+#: functions/functions.php:1580
+msgid "Dbase Page"
+msgstr "Página de Dbase"
+
+#: functions/functions.php:1588
+msgid "Status"
+msgstr "Estado"
+
+#: functions/functions.php:1591
+msgid "Table Name"
+msgstr "Nombre de Tabla"
+
+#: functions/functions.php:1592
+msgid "Engine"
+msgstr "Motor"
+
+#: functions/functions.php:1593
+msgid "Last Update"
+msgstr "Última Actualización"
+
+#: functions/functions.php:1595
+msgid "Data Length (Aproximate)"
+msgstr "Longitud de los datos (aproximada)"
+
+#: functions/functions.php:1630
+msgid "For more info about your database, look the page SHOW PHP INFO."
+msgstr ""
+"Para más información sobre su base de datos, mire la página SHOW PHP INFO."
+
+#: functions/functions.php:1938
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: functions/functions.php:1945 functions/functions.php:2487
+msgid "File path:"
+msgstr "Ruta del archivo:"
+
+#: functions/functions.php:1950
+msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
+msgstr ""
+"Archivo wp-config.php no encontrado. Pregunte a su empresa de alojamiento si "
+"está oculto."
+
+#: functions/functions.php:1958
+msgid "Unable to read the file wp-config.php! Ask to your hosting company."
+msgstr ""
+"¡No se puede leer el archivo wp-config.php! Pregunte a su empresa de "
+"alojamiento."
+
+#: functions/functions.php:1993 functions/functions.php:3441
+#: functions/functions_transiente_manager.php:159
+msgid "Name"
+msgstr "Nombre"
+
+#: functions/functions.php:2009 functions/functions.php:2126
+#: functions/functions.php:2288
+msgid "Permission Scheme for WordPress"
+msgstr "Esquema de permisos para WordPress"
+
+#: functions/functions.php:2011 functions/functions.php:2128
+#: functions/functions.php:2290
+msgid "Typically"
+msgstr "Normalmente"
+
+#: functions/functions.php:2014 functions/functions.php:2130
+#: functions/functions.php:2291
+msgid "Files"
+msgstr "Archivos"
+
+#: functions/functions.php:2017 functions/functions.php:2132
+#: functions/functions.php:2292
+msgid "Folders"
+msgstr "Carpetas"
+
+#: functions/functions.php:2020 functions/functions.php:2134
+#: functions/functions.php:2293
+msgid "File wp-config.php: 660"
+msgstr "Archivo wp-config.php: 660"
+
+#: functions/functions.php:2025
+msgid "wp-config.php currently permissions:"
+msgstr " permisos del  wp-config.php actualmente:"
+
+#: functions/functions.php:2037 functions/functions.php:2148
+#: functions/functions.php:2307
+msgid "Unable to read files"
+msgstr "No se pueden leer los archivos"
+
+#: functions/functions.php:2043 functions/functions.php:2165
+#: functions/functions.php:2324
+msgid "Permissions"
+msgstr "Permisos"
+
+#: functions/functions.php:2044 functions/functions.php:2166
+#: functions/functions.php:2325
+msgid "Files / Folders"
+msgstr "Archivos / Carpetas"
+
+#: functions/functions.php:2099
+msgid "Files with wrong permissions. This plugin will show max 50."
+msgstr ""
+"Archivos con permisos incorrectos. Este plugin mostrará un máximo de 50."
+
+#: functions/functions.php:2103 functions/functions.php:2215
+#: functions/functions.php:2433
+msgid "No files found with wrong permissions."
+msgstr "No se han encontrado archivos con permisos incorrectos."
+
+#: functions/functions.php:2112
+msgid "Folders with wrong permissions. This plugin will show max 50."
+msgstr ""
+"Carpetas con permisos incorrectos. Este plugin mostrará un máximo de 50."
+
+#: functions/functions.php:2117 functions/functions.php:2228
+#: functions/functions.php:2444
+msgid "No folders found with wrong permissions."
+msgstr "No se han encontrado carpetas con permisos incorrectos."
+
+#: functions/functions.php:2137 functions/functions.php:2296
+msgid "wp-config.php current permissions:"
+msgstr " permisos del  wp-config.php actualmente:"
+
+#: functions/functions.php:2143 functions/functions.php:2302
+msgid "Visit plugin's site for details"
+msgstr "Visite el sitio del plugin para obtener más detalles"
+
+#: functions/functions.php:2211 functions/functions.php:2431
+msgid "Files with wrong permissions."
+msgstr "Archivos con permisos incorrectos."
+
+#: functions/functions.php:2213 functions/functions.php:2225
+msgid "This plugin will show max 50."
+msgstr "Este plugin mostrará un máximo de 50."
+
+#: functions/functions.php:2223 functions/functions.php:2441
+msgid "Folders with wrong permissions."
+msgstr "Con permisos incorrectos."
+
+#: functions/functions.php:2374
+msgid "Free version limited to a maximum of 50 files."
+msgstr "Versión gratuita limitada a un máximo de 50 archivos."
+
+#: functions/functions.php:2480
+msgid ".htaccess"
+msgstr ".htaccess"
+
+#: functions/functions.php:2491
+msgid "File .htaccess not found."
+msgstr "Archivo .htaccess no encontrado."
+
+#: functions/functions.php:2496
+msgid "Empty file .htaccess!"
+msgstr "Archivo vacío .htaccess!"
+
+#: functions/functions.php:2766
+msgid "Step 1 - Check Memory"
+msgstr "Paso 1 - Comprobar la memoria"
+
+#: functions/functions.php:2772 functions/functions.php:2866
+msgid "General Failure (7) to get memory information."
+msgstr "Fallo general (7) para obtener información de la memoria."
+
+#: functions/functions.php:2783
+msgid ""
+"Your site free memory is too low and can happens memory fault error, also "
+"without install our plugin."
+msgstr ""
+"La memoria libre de su sitio es demasiado baja y puede ocurrir un error de "
+"memoria, también sin instalar nuestro plugin."
+
+#: functions/functions.php:2787
+msgid "The WordPress Memory Limit is"
+msgstr "El límite de memoria de WordPress es"
+
+#: functions/functions.php:2790
+msgid "The WordPress Memory Usage is"
+msgstr "El uso de memoria de WordPress es"
+
+#: functions/functions.php:2800 functions/functions.php:2803
+#: functions/functions.php:2875
+msgid "The free memory now is"
+msgstr "La memoria libre ahora es"
+
+#: functions/functions.php:2813 functions/functions.php:2851
+#: functions/functions.php:2883
+msgid "For more details, visit our site"
+msgstr "Para más detalles, visite nuestro sitio"
+
+#: functions/functions.php:2816 functions/functions.php:2854
+#: functions/functions.php:2886
+msgid "WP MEMORY (Free WordPress Plugin to Fix Low Memory Limit)"
+msgstr ""
+"WP MEMORY (Plugin gratuito de WordPress para arreglar el límite de memoria "
+"baja)"
+
+#: functions/functions.php:2824
+msgid "Unable to get ini_get('memory_limit')"
+msgstr "No se puede obtener ini_get('memory_limit')"
+
+#: functions/functions.php:2829
+msgid "Unable to get memory_get_usage() "
+msgstr "No se puede obtener memory_get_usage()"
+
+#: functions/functions.php:2833
+msgid "Memory Usage is not Numeric (3)"
+msgstr "El uso de la memoria no es numérico (3)"
+
+#: functions/functions.php:2837
+msgid "Memory Usage < than 1'"
+msgstr "Uso de memoria < de 1'"
+
+#: functions/functions.php:2842
+#| msgid ""
+#| "Possible error: On file wp-config.php memory symbol should be M or MB or "
+#| "G or GB."
+msgid "Possible error: On file wp-config.php memory symbol should be M."
+msgstr ""
+"Posible error: En el archivo wp-config.php el símbolo de memoria debe ser M."
+
+#: functions/functions.php:2847
+msgid "For example,  define(\"WP_MEMORY_LIMIT\", \"256M\"); "
+msgstr "Por ejemplo, define(\"WP_MEMORY_LIMIT\", \"256M\");"
+
+#: functions/functions.php:2861
+msgid "Memory Limit out of range. (6)"
+msgstr "Límite de memoria fuera de rango. (6)"
+
+#: functions/functions.php:2873
+msgid "No Memory Problems found."
+msgstr "No se han encontrado problemas de memoria."
+
+#: functions/functions.php:2895
+msgid "Step 2 - Check for Javascript Errors"
+msgstr "Paso 2 - Comprobar si hay errores en Javascript"
+
+#: functions/functions.php:2899
+msgid "Javascript is NOT working in your site and/or with your browser!"
+msgstr "¡Javascript NO está funcionando en su sitio y/o con su navegador!"
+
+#: functions/functions.php:2906
+msgid "Step 3 - Check for Hosting Resources"
+msgstr "Paso 3 - Comprobar los recursos de alojamiento"
+
+#: functions/functions.php:2909
+msgid "Maybe Your server is not Linux"
+msgstr "Tal vez su servidor no sea Linux"
+
+#: functions/functions.php:2911 functions/functions.php:2926
+msgid "and this plugin requires Linux."
+msgstr "y este plugin requiere Linux."
+
+#: functions/functions.php:2914
+msgid "Your Hosting Company dont have the constant: PHP_OS_FAMILY defined."
+msgstr "Su empresa de hosting no tiene definida la constante: PHP_OS_FAMILY."
+
+#: functions/functions.php:2924
+msgid "Your server is not Linux"
+msgstr "Su servidor no es Linux"
+
+#: functions/functions.php:2928
+msgid "Your server is:"
+msgstr "Su servidor es:"
+
+#: functions/functions.php:2939 functions/functions.php:2955
+#: functions/functions.php:2973 functions/functions.php:3031
+#: functions/functions.php:3051
+msgid "Plugin requirement:"
+msgstr "Requisito del plugin:"
+
+#: functions/functions.php:2942
+msgid ""
+"Open_basedir restriction in effect. Talk with your hosting and request to "
+"disable it."
+msgstr ""
+"Restricción de Open_basedir en vigor. Hable con su alojamiento y solicite "
+"que se desactive."
+
+#: functions/functions.php:2958
+msgid ""
+"PHP function sys_getloadavg not enabled. Talk with your hosting and request "
+"to enable it."
+msgstr ""
+"La función PHP sys_getloadavg no está habilitada. Hable con su alojamiento y "
+"solicite que se habilite."
+
+#: functions/functions.php:2976
+msgid ""
+"/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
+"it."
+msgstr ""
+"/proc/cpuinfo no es legible. Habla con tu hosting y pide que lo habiliten."
+
+#: functions/functions.php:2990
+msgid ""
+"Request to your Hosting enable the PHP functions disk_free_space() and "
+"disk_total_space()"
+msgstr ""
+"Solicite a su Hosting que habilite las funciones PHP disk_free_space() y "
+"disk_total_space()"
+
+#: functions/functions.php:3013
+msgid ""
+"Request to your Hosting to enable the PHP function shell_exec() because is "
+"returning NULL."
+msgstr ""
+"Solicite a su Hosting que habilite la función PHP shell_exec() porque está "
+"devolviendo NULL."
+
+#: functions/functions.php:3035
+msgid ""
+"/proc/stat doesn't readable. Talk with your hosting and request to enable it."
+msgstr ""
+"/proc/stat no es legible. Habla con tu alojamiento y pide que lo habiliten."
+
+#: functions/functions.php:3054
+msgid ""
+"/etc/os-release doesn't readable. Talk with your hosting and request to "
+"enable it."
+msgstr ""
+"/etc/os-release no es legible. Hable con su alojamiento y solicite que lo "
+"habilite."
+
+#: functions/functions.php:3069
+msgid "PHP Version 7.0 or bigger is required. My version:"
+msgstr "Se requiere la versión 7.0 o superior de PHP. Mi versión:"
+
+#: functions/functions.php:3090
+msgid "Your hosting is blocking the PHP function sys_getloadavg()."
+msgstr "Su alojamiento está bloqueando la función PHP sys_getloadavg()."
+
+#: functions/functions.php:3101
+msgid ""
+"if you can see warnings or empty fields on your dashboard, means your "
+"hosting company is blocking some php functions."
+msgstr ""
+"si puede ver advertencias o campos vacíos en su tablero, significa que su "
+"compañía de alojamiento está bloqueando algunas funciones de php."
+
+#: functions/functions.php:3108
+msgid "Looks like our plugin can works fine with your server configuration."
+msgstr ""
+"Parece que nuestro plugin puede funcionar bien con la configuración de su "
+"servidor."
+
+#: functions/functions.php:3116
+msgid ""
+"If we are wrong, please, contact our support at: https://wptoolsplugin.com"
+msgstr ""
+"Si nos equivocamos, por favor, póngase en contacto con nuestro soporte en: "
+"https://wptoolsplugin.com"
+
+#: functions/functions.php:3273
+msgid "Robots TXT"
+msgstr "Robots TXT"
+
+#: functions/functions.php:3281
+msgid "File Path"
+msgstr "Ruta del archivo"
+
+#: functions/functions.php:3294
+msgid "Cannot create BKP file"
+msgstr "No se puede crear el archivo BKP"
+
+#: functions/functions.php:3300
+msgid "Cannot write to BKP file"
+msgstr "No se puede escribir en el archivo BKP"
+
+#: functions/functions.php:3306
+msgid "Cannot open file to save"
+msgstr "No se puede abrir el archivo para guardar"
+
+#: functions/functions.php:3312
+msgid "Cannot write to file"
+msgstr "Non se pode escribir no arquivo"
+
+#: functions/functions.php:3319
+msgid "Success, file robots.txt updated!"
+msgstr "¡Éxito, archivo robots.txt actualizado!"
+
+#: functions/functions.php:3321
+msgid "Backup file created:"
+msgstr "Archivo de copia de seguridad creado:"
+
+#: functions/functions.php:3326
+msgid "If you save again, will overwrite the backup."
+msgstr "Si guarda de nuevo, sobrescribirá la copia de seguridad."
+
+#: functions/functions.php:3333
+msgid "Fail to Get Post Content!"
+msgstr "Fracaso en la obtención de contenidos para los puestos!"
+
+#: functions/functions.php:3339
+msgid "File not found."
+msgstr "Archivo no encontrado."
+
+#: functions/functions.php:3342 functions/functions.php:3374
+msgid "To create, fill out the form below and click SAVE"
+msgstr "Para crear, rellene el siguiente formulario y haga clic en GUARDAR"
+
+#: functions/functions.php:3363
+msgid ""
+"File not writable. Check file permissions and user own. Unable to edit it."
+msgstr ""
+"Archivo no escribible. Compruebe los permisos del archivo y el propio "
+"usuario. No se puede editar."
+
+#: functions/functions.php:3371
+msgid "Empty file robots.txt!"
+msgstr "¡Archivo vacío robots.txt!"
+
+#: functions/functions.php:3378
+msgid "Edit the file and click SAVE"
+msgstr "Edite el archivo y haga clic en GUARDAR"
+
+#: functions/functions.php:3393
+msgid ""
+"Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
+"in case to fail to save."
+msgstr ""
+"Sugerencia: Antes de hacer clic en GUARDAR, copie el contenido a su "
+"portapapeles. Por si acaso no se puede guardar."
+
+#: functions/functions.php:3405
+msgid "(Save Option Button available in Premium Version)"
+msgstr "(Botón de opción de guardar disponible en la versión Premium)"
+
+#: functions/functions.php:3435
+msgid "PHP Information"
+msgstr "Información de PHPº"
+
+#: functions/functions.php:3443
+msgid "Current Modified Value"
+msgstr "Valor modificado actual"
+
+#: functions/functions.php:3451
+msgid "Server Timezone"
+msgstr "Zona horaria del servidor"
+
+#: functions/functions.php:3470
+msgid "Server Time"
+msgstr "Hora del Servidor"
+
+#: functions/functions.php:3476
+msgid "PHP Max Memory Limit"
+msgstr "Límite de memoria máxima de PHP"
+
+#: functions/functions.php:3485
+msgid "PHP Max Execution Time"
+msgstr "PHP Tiempo máximo de ejecución"
+
+#: functions/functions.php:3488 functions/functions.php:3492
+msgid "sec"
+msgstr "seg"
+
+#: functions/functions.php:3496
+msgid "PHP Max Upload Size"
+msgstr "Tamaño máximo de carga de PHP"
+
+#: functions/functions.php:3503
+msgid "PHP Max Post Size"
+msgstr "Tamaño máximo de publicación de PHP"
+
+#: functions/functions.php:3507
+msgid "PHP Max Input Vars"
+msgstr "PHP Max Input Vars"
+
+#: functions/functions.php:3515
+msgid "Check how to do it at our blog."
+msgstr "Consulta cómo hacerlo en nuestro blog."
+
+#: functions/functions.php:3522
+msgid "Disabled Functions"
+msgstr "Funciones desactivadas"
+
+#: functions/functions.php:3528
+msgid "Nothing"
+msgstr "Nada"
+
+#: functions/functions.php:3537
+msgid "Extensions Loaded"
+msgstr "Extensiones cargadas"
+
+#: functions/functions.php:3552
+msgid "Complete Information"
+msgstr "Información completa"
+
+#: functions/functions.php:3610
+msgid "WP Memory Test"
+msgstr "Prueba de memoria de WP"
+
+#: functions/functions.php:3655
+msgid "Visit the"
+msgstr "Visitar el"
+
+#: functions/functions.php:3659
+msgid "Site Health screen"
+msgstr "pantalla de salud del sitio"
+
+#: functions/functions.php:3661
+msgid "to perform checks now."
+msgstr "para realizar comprobaciones ahora."
+
+#: functions/functions.php:3666
+msgid "Great job! Your site currently passes all site health"
+msgstr "Buen trabajo Su sitio actualmente pasa todas las saludes del sitio"
+
+#: functions/functions.php:3672
+msgid "checks"
+msgstr "comprueba"
+
+#: functions/functions.php:3677
+msgid "Your site has"
+msgstr "Su sitio tiene"
+
+#: functions/functions.php:3681
+msgid "a critical issue"
+msgstr "una cuestión crítica"
+
+#: functions/functions.php:3684 functions/functions.php:3697
+msgid "that should be addressed as soon as possible."
+msgstr "que debe ser abordado lo antes posible."
+
+#: functions/functions.php:3690
+msgid "Your site has a"
+msgstr "Su sitio tiene un"
+
+#: functions/functions.php:3694
+msgid "critical issues"
+msgstr "cuestiones críticas"
+
+#: functions/functions.php:3702 functions/functions.php:3711
+msgid "Looking good, but"
+msgstr "Se ve bien, pero"
+
+#: functions/functions.php:3706
+msgid "one thing"
+msgstr "una cosa"
+
+#: functions/functions.php:3708 functions/functions.php:3717
+msgid "can be improved."
+msgstr "se puede mejorar."
+
+#: functions/functions.php:3715
+msgid "some things"
+msgstr "algunas cosas"
+
+#: functions/functions.php:3744
+msgid "Memory Issue"
+msgstr "Problema  memoria"
+
+#: functions/functions.php:3805
+msgid "Errors have been detected on this site. "
+msgstr "Se han detectado errores en este sitio."
+
+#: functions/functions.php:3809 functions/functions.php:3840
+#: functions/functions_cron_manager.php:58
+msgid "Learn more"
+msgstr "Saber más"
+
+#: functions/functions.php:3831
+msgid "Memory issues have been detected on this site. "
+msgstr "Se han detectado problemas de memoria en este sitio."
 
 #: functions/functions_cron_manager.php:35
 msgid "Cron Jobs"
@@ -2487,33 +2026,33 @@ msgstr ""
 msgid "CONTINUE"
 msgstr "CONTINUAR"
 
-#: includes/help/help.php:46
+#: includes/help/help.php:45
 msgid ""
 "In the DASHBOARD screen you will find useful information about your server."
 msgstr ""
 "En la pantalla Escritorio encontrará información útil sobre su servidor."
 
-#: includes/help/help.php:49
+#: includes/help/help.php:48
 msgid ""
 "Here are the link to the Dashboard Plugin Page with more useful information"
 msgstr ""
 "Aquí está el enlace a la página del plugin del panel de control con más "
 "información útil"
 
-#: includes/help/help.php:53
+#: includes/help/help.php:52
 msgid "You will find also links to "
 msgstr "También encontrará enlaces a"
 
-#: includes/help/help.php:55
+#: includes/help/help.php:54
 msgid "StartUp Guide"
 msgstr "Guía de inicio"
 
-#: includes/help/help.php:56
+#: includes/help/help.php:55
 msgid "and Settings, Troubleshooting Guide Page and Support Page."
 msgstr ""
 "y Ajustes, Página de la Guía de Solución de Problemas y Página de Soporte."
 
-#: includes/help/help.php:60
+#: includes/help/help.php:59
 msgid ""
 "Here are the link to our free blog with a lot of tips and tricks and about "
 "how to use this tool."
@@ -2521,12 +2060,12 @@ msgstr ""
 "Aquí está el enlace a nuestro blog gratuito con un montón de consejos y "
 "trucos y sobre cómo utilizar esta herramienta."
 
-#: includes/help/help.php:65 includes/help/help.php:87
-#: includes/help/help.php:125
+#: includes/help/help.php:64 includes/help/help.php:86
+#: includes/help/help.php:124
 msgid "Overview"
 msgstr "Resumen"
 
-#: includes/help/help.php:74
+#: includes/help/help.php:73
 msgid ""
 "In the SETTINGS screen you will find many tabs, with useful information as "
 "StartUP Guide."
@@ -2534,7 +2073,7 @@ msgstr ""
 "En la pantalla de AJUSTES encontrará muchas pestañas, con información útil "
 "como la Guía de Inicio."
 
-#: includes/help/help.php:77
+#: includes/help/help.php:76
 msgid ""
 "You will find also fields and controls to configurate the plugin. Take some "
 "time to open each tab and mark that you want."
@@ -2542,14 +2081,14 @@ msgstr ""
 "También encontrarás campos y controles para configurar el plugin. Tómate un "
 "tiempo para abrir cada pestaña y marcar la que quieras."
 
-#: includes/help/help.php:81 includes/help/help.php:117
+#: includes/help/help.php:80 includes/help/help.php:116
 msgid ""
 "Here are the link to the Dashboard Plugin Page with more useful information."
 msgstr ""
 "Aquí está el enlace a la página del plugin del panel de control con más "
 "información útil."
 
-#: includes/help/help.php:100
+#: includes/help/help.php:99
 msgid ""
 "This is a table with the history of errors logged on your site. You can sort "
 "the table by clicking on each header field. For example, date, type, and so "
@@ -2559,7 +2098,7 @@ msgstr ""
 "ordenar la tabla haciendo clic en cada campo del encabezado. Por ejemplo, "
 "fecha, tipo, etc."
 
-#: includes/help/help.php:101
+#: includes/help/help.php:100
 msgid ""
 "In the setup button, at the top right corner, you can choose which log file "
 "to display in the table, from the possible files our plugin has found."
@@ -2568,7 +2107,7 @@ msgstr ""
 "qué archivo de registro mostrar en la tabla, de los posibles archivos que "
 "nuestro complemento ha encontrado."
 
-#: includes/help/help.php:102
+#: includes/help/help.php:101
 msgid ""
 "There should be at least one log file; otherwise, consult your hosting "
 "provider."
@@ -2576,7 +2115,7 @@ msgstr ""
 "Debe haber al menos un archivo de registro; de lo contrario, consulte con su "
 "proveedor de alojamiento."
 
-#: includes/help/help.php:103
+#: includes/help/help.php:102
 msgid ""
 "Click the view button for more details and to better understand the issue "
 "and what is causing it. In the window that opens, click on AI Analysis to "
@@ -2588,7 +2127,7 @@ msgstr ""
 "para conversar con la inteligencia artificial y profundizar, si es "
 "necesario, para comprender mejor el problema y las posibles soluciones."
 
-#: includes/help/help.php:104
+#: includes/help/help.php:103
 msgid ""
 "Once you are aware of the cause, we suggest contacting the developer of the "
 "plugin or theme and informing them, providing all the details. We do not "
@@ -2600,7 +2139,7 @@ msgstr ""
 "recomendamos modificar complementos/temas ni archivos de WordPress, ya que "
 "los cambios se perderán en la próxima actualización."
 
-#: includes/help/help.php:106
+#: includes/help/help.php:105
 msgid ""
 "Visit our blog for more details on the subject: <a href=\"https://"
 "wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
@@ -2608,11 +2147,11 @@ msgstr ""
 "Visita nuestro blog para más detalles sobre el tema: <a href=\"https://"
 "wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
 
-#: includes/help/help.php:166
+#: includes/help/help.php:165
 msgid "Open WP Tools Plugin Here!"
 msgstr "¡Abra el plugin WP Tools aquí!"
 
-#: includes/help/help.php:167
+#: includes/help/help.php:166
 msgid "Just Click Over WP Tools, then Go To Settings=>StartUp Guide."
 msgstr ""
 "Simplemente haga clic en Herramientas de WP, luego vaya a Configuración => "
@@ -3178,7 +2717,7 @@ msgid "100 Folders in Premium Version"
 msgstr "100 carpetas en la versión Premium"
 
 #: settings/options/_plugin_options_tabbed.php:516
-#: settings/options/plugin_options_tabbed.php:524 wptools.php:1572
+#: settings/options/plugin_options_tabbed.php:524 wptools.php:808
 msgid "Path"
 msgstr "Ruta"
 
@@ -3383,55 +2922,51 @@ msgstr "¡Versión Premium activada!"
 msgid "Purchase Code:"
 msgstr "Código de Compra:"
 
-#: wptools.php:1494 wptools.php:1495
-msgid "MU Plugins"
-msgstr "Complementos MU"
-
-#: wptools.php:1563
+#: wptools.php:799
 msgid "Invalid error string."
 msgstr "Cadena de error no válida."
 
-#: wptools.php:1564
+#: wptools.php:800
 msgid "Error creating URL object or accessing pathname:"
 msgstr "Error al crear el objeto URL o acceder a la ruta:"
 
-#: wptools.php:1565
+#: wptools.php:801
 msgid "Incomplete data."
 msgstr "Datos incompletos."
 
-#: wptools.php:1566
+#: wptools.php:802
 msgid "No data available in table."
 msgstr "No hay datos disponibles en la tabla."
 
-#: wptools.php:1567
+#: wptools.php:803
 msgid "The DataTable instance is not available."
 msgstr "La instancia DataTable no está disponible."
 
-#: wptools.php:1568
+#: wptools.php:804
 msgid "All"
 msgstr "Todo"
 
-#: wptools.php:1571
+#: wptools.php:807
 msgid "Message"
 msgstr "Mensaje"
 
-#: wptools.php:1573
+#: wptools.php:809
 msgid "Script"
 msgstr "Guion"
 
-#: wptools.php:1574
+#: wptools.php:810
 msgid "Line"
 msgstr "Línea"
 
-#: wptools.php:1575
+#: wptools.php:811
 msgid "Plugin"
 msgstr "Complemento"
 
-#: wptools.php:1576
+#: wptools.php:812
 msgid "Note"
 msgstr "Nota"
 
-#: wptools.php:1577
+#: wptools.php:813
 msgid ""
 "Contact the plugin developer with these details and request support. "
 "However, be advised that often the cause may be external to the plugin, such "
@@ -3446,36 +2981,36 @@ msgstr ""
 "complementos (o temas), falta de espacio en disco, sobrecarga del servidor "
 "debido a piratas informáticos y robots, entre otros factores."
 
-#: wptools.php:1578
+#: wptools.php:814
 msgid "Theme"
 msgstr "Tema"
 
-#: wptools.php:1579
+#: wptools.php:815
 msgid "Details"
 msgstr "Detalles"
 
-#: wptools.php:1580
+#: wptools.php:816
 msgid "To learn more:"
 msgstr "Para saber más:"
 
-#: wptools.php:1581
+#: wptools.php:817
 msgid "Click here"
 msgstr "haga clic aquí"
 
-#: wptools.php:1582
+#: wptools.php:818
 msgid "Analyze functionality will be implemented here."
 msgstr "Aquí se implementará la funcionalidad de análisis."
 
-#: wptools.php:1583
+#: wptools.php:819
 msgid "Critical Syntax error in the code that stops script execution."
 msgstr ""
 "Error de sintaxis crítico en el código que detiene la ejecución del script."
 
-#: wptools.php:1584
+#: wptools.php:820
 msgid "Critical error that stops script execution."
 msgstr "Error crítico que detiene la ejecución del script."
 
-#: wptools.php:1585
+#: wptools.php:821
 msgid ""
 "Non-critical issue that doesn't stop execution but may eventually lead to "
 "problems."
@@ -3483,95 +3018,93 @@ msgstr ""
 "Problema no crítico que no detiene la ejecución pero que eventualmente puede "
 "generar problemas."
 
-#: wptools.php:1586
+#: wptools.php:822
 msgid "Minor issue, like using an undefined variable."
 msgstr "Problema menor, como utilizar una variable no definida."
 
-#: wptools.php:1587
+#: wptools.php:823
 msgid "Use of outdated features that may be removed in future versions."
 msgstr "Uso de funciones obsoletas que pueden eliminarse en futuras versiones."
 
-#: wptools.php:1588
+#: wptools.php:824
 msgid "Internal PHP error, often related to the engine."
 msgstr "Error interno de PHP, a menudo relacionado con el motor."
 
-#: wptools.php:1589
+#: wptools.php:825
 msgid "Error during script compilation."
 msgstr "Error durante la compilación del script."
 
-#: wptools.php:1590
+#: wptools.php:826
 msgid "Custom error/warning/notice triggered by the developer."
 msgstr "Error/advertencia/aviso personalizado activado por el desarrollador."
 
-#: wptools.php:1591
+#: wptools.php:827
 msgid "Issues that impact functionality and user experience."
 msgstr "Problemas que afectan la funcionalidad y la experiencia del usuario."
 
-#: wptools.php:1592
+#: wptools.php:828
 msgid "Unknown error type"
 msgstr "Tipo de error desconocido"
 
-#: wptools.php:1609
+#: wptools.php:2196 wptools.php:2197
+msgid "MU Plugins"
+msgstr "Complementos MU"
+
+#: wptools.php:2210
 msgid "Loaded MU Plugins"
 msgstr "Complementos MU cargados"
 
-#: wptools.php:1612
+#: wptools.php:2213
 #| msgid ""
 #| "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
 #| "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot "
-#| "be activated or deactivated through the admin panel. The premium version "
-#| "of our plugin WP Tools allows you to activate and deactivate them."
+#| "be activated or deactivated through the admin panel."
 msgid ""
 "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
 "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be "
-"activated or deactivated through the admin panel."
+"activated or deactivated through the admin panel. The premium version of our "
+"plugin WP Tools allows you to activate and deactivate them."
 msgstr ""
 "Los complementos MU (Must-Use Plugins) son complementos que se cargan "
 "automáticamente. Se almacenan en una carpeta específica (`wp-content/mu-"
 "plugins`) y no se pueden activar ni desactivar a través del panel de "
-"administración."
+"administración. La versión premium de nuestro complemento WP Tools te "
+"permite activarlos y desactivarlos."
 
-#: wptools.php:1634
+#: wptools.php:2235
 msgid "Author:"
 msgstr "Autor:"
 
-#: wptools.php:1639
+#: wptools.php:2240
 msgid "Author Site"
 msgstr "Sitio del autor"
 
-#: wptools.php:1644
+#: wptools.php:2245
 msgid "Version:"
 msgstr "Versión:"
 
-#: wptools.php:1648
+#: wptools.php:2249
 msgid "File Name:"
 msgstr "Nombre del archivo:"
 
-#: wptools.php:1652
+#: wptools.php:2253
 msgid "File Path:"
 msgstr "Ruta del archivo:"
 
-#: wptools.php:1658
+#: wptools.php:2259
 msgid "Last Modified:"
 msgstr "Última modificación:"
 
-#: wptools.php:1660
+#: wptools.php:2261
 msgid "Modification date not available."
 msgstr "Fecha de modificación no disponible."
 
-#: wptools.php:1668
-msgid "Are you sure you want to deactivate this plugin?"
-msgstr "¿Estás seguro de que deseas desactivar este complemento?"
-
-#: wptools.php:1669
+#: wptools.php:2272
 #| msgid "Just Deactivate"
-msgid "Deactivate Plugin"
-msgstr "Desactivar complemento"
+msgid "Status: Activated"
+msgstr "Estado: Activado"
 
-#: wptools.php:1676
-msgid "Are you sure you want to reactivate this plugin?"
-msgstr "¿Estás seguro de que deseas reactivar este complemento?"
-
-#: wptools.php:1677
-msgid "Reactivate Plugin"
-msgstr "Reactivar complemento"
+#: wptools.php:2280
+#| msgid "Just Deactivate"
+msgid "Status: Deactivated"
+msgstr "Estado: Desactivado"

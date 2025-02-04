@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.05
+Version:     5.06
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -1915,7 +1915,7 @@ if ($wptools_disable_ziparchive == 'yes' and function_exists('_unzip_file_pclzip
 
 
 // catch js errors...
-
+/*
 function wptools_bill_hooking_catch_errors()
 {
 	$declared_classes = get_declared_classes();
@@ -1928,6 +1928,36 @@ function wptools_bill_hooking_catch_errors()
 	require_once dirname(__FILE__) . "/includes/catch-errors/class_bill_catch_errors.php";
 }
 add_action("init", "wptools_bill_hooking_catch_errors", 15);
+*/
+
+
+function wptools_bill_hooking_catch_errors()
+{
+
+	//debug4();
+	if (function_exists('is_admin') && function_exists('current_user_can')) {
+		if (is_admin() and current_user_can("manage_options")) {
+			$declared_classes = get_declared_classes();
+			foreach ($declared_classes as $class_name) {
+				if (strpos($class_name, "bill_catch_errors") !== false) {
+					return;
+				}
+			}
+			require_once dirname(__FILE__) . "/includes/catch-errors/class_bill_catch_errors.php";
+		}
+	}
+}
+add_action("init", "wptools_bill_hooking_catch_errors", 15);
+
+//debug4();
+
+
+
+
+
+
+
+
 
 
 //     >>>>> Custom Cron Job
@@ -2318,3 +2348,37 @@ function wptools_load_settings()
 		require_once(WPTOOLSPATH . "settings/options/plugin_options_tabbed.php");
 	}
 }
+
+
+/*
+function check_bill_catch_errors_plugin()
+{
+	$plugin_name = 'bill-catch-errors.php';
+
+	// Retrieve all must-use plugins
+	$wp_mu_plugins = get_mu_plugins();
+
+	// Debug the retrieved mu-plugins (if needed)
+	//debug4($wp_mu_plugins);
+
+	// Check if the plugin exists in the list of mu-plugins
+	if (isset($wp_mu_plugins[$plugin_name])) {
+		// Get the plugin's data
+		$plugin_data = $wp_mu_plugins[$plugin_name];
+		$plugin_version = $plugin_data['Version'];
+
+		// Check the version
+		if (version_compare($plugin_version, '1.4', '<')) {
+			// A versão do plugin é menor que 1.4
+			echo "A versão do plugin é menor que 1.4.";
+		}
+
+		return;
+	} else {
+		//debug4('The Bill Catch Errors plugin is not installed or loaded.');
+		// INstall
+	}
+}
+
+add_action('admin_notices', 'check_bill_catch_errors_plugin');
+*/

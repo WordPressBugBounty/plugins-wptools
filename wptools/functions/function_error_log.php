@@ -70,7 +70,7 @@ wptools_show_logo();
                                 <button type="submit" id="wptools"><?php echo esc_attr__('Send', 'wptools'); ?></button>
                             </div>
                             <div id="action-instruction" style="text-align: center; margin-top: 10px;">
-                                <span><?php echo esc_attr__("Enter a message and click 'Send', or just copy and paste the content of description column.", 'wptools'); ?></span>
+                                <span><?php echo esc_attr__("Enter a message and click 'Send', or just copy and paste the content of type and description column.", 'wptools'); ?></span>
                             </div>
                         </form>
                     </div>
@@ -161,27 +161,25 @@ function wptools_get_error_log_data()
             }
             */
 
-              $fileObj->seek(PHP_INT_MAX); // Move para o final do arquivo
-              $totalLines = $fileObj->key(); // Obtém total de linhas
-  
-              // Calcula linha inicial
-              $startLine = max(0, $totalLines - $numLines);
-  
-              // Reinicia ponteiro para linha inicial
-              $fileObj->seek($startLine);
-  
-              // Limpa array de linhas
-              $lines = [];
-  
-              // Lê linhas até o final
-              while (!$fileObj->eof()) {
-                  $line = $fileObj->fgets();
-                  if ($line !== false) {
-                      $lines[] = rtrim($line);
-                  }
-              }
+            $fileObj->seek(PHP_INT_MAX); // Move para o final do arquivo
+            $totalLines = $fileObj->key(); // Obtém total de linhas
 
-              
+            // Calcula linha inicial
+            $startLine = max(0, $totalLines - $numLines);
+
+            // Reinicia ponteiro para linha inicial
+            $fileObj->seek($startLine);
+
+            // Limpa array de linhas
+            $lines = [];
+
+            // Lê linhas até o final
+            while (!$fileObj->eof()) {
+                $line = $fileObj->fgets();
+                if ($line !== false) {
+                    $lines[] = rtrim($line);
+                }
+            }
         } catch (Exception $e) {
             // echo "Erro ao processar o arquivo: " . $e->getMessage();
             echo '<tr><td colspan="4">Error to process error log file.';

@@ -506,7 +506,7 @@ if (!function_exists("wp_get_current_user")) {
     require_once ABSPATH . "wp-includes/pluggable.php";
 }
 if (is_admin() or is_super_admin()) {
-    add_action("admin_enqueue_scripts", "wptools_load_upsell");
+    // add_action("admin_enqueue_scripts", "wptools_load_upsell");
     add_action("wp_ajax_wptools_install_plugin", "wptools_install_plugin");
 }
 function wptools_install_plugin()

@@ -1740,6 +1740,15 @@ function wptools_read_file($file, $lines)
     $filesize = ftell($handle);
     $pos = $filesize - $bufferSize;
 
+    try {
+        fseek($handle, 0, SEEK_END);
+        $filesize = ftell($handle);
+        $pos = $filesize - $bufferSize;
+    }
+    catch(Exception $e) {
+      return "";
+    }
+
     while ($pos >= 0 && $linecounter < $lines) {
         // Se pos é menor que zero, ajusta para 0
         if ($pos < 0) {

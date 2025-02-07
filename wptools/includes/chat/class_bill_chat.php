@@ -125,7 +125,18 @@ class ChatPlugin
         $currentChunk = '';
         $linecounter = 0;
         // Move para o final do arquivo e começa a leitura para trás
-        fseek($handle, 0, SEEK_END);
+        //fseek($handle, 0, SEEK_END);
+
+
+        try {
+            fseek($handle, 0, SEEK_END);
+            //$filesize = ftell($handle);
+            //$pos = $filesize - $bufferSize;
+        } catch (Exception $e) {
+            return "Unable to read the error file, fseek doesn't work.";
+        }
+
+
         $filesize = ftell($handle); // Tamanho do arquivo
         // Ajustar bufferSize para o tamanho do arquivo se for menor que 8KB
         if ($filesize < $bufferSize) {
@@ -139,7 +150,18 @@ class ChatPlugin
             if ($pos < 0) {
                 $pos = 0;
             }
-            fseek($handle, $pos);
+
+            //fseek($handle, $pos);
+
+            try {
+                fseek($handle, $pos);
+                //$filesize = ftell($handle);
+                //$pos = $filesize - $bufferSize;
+            } catch (Exception $e) {
+                return "Unable to read the error file, fseek doesn't work.";
+            }
+
+
             $chunk = fread($handle, $bufferSize);
             $currentChunk = $chunk . $currentChunk;
             $linesInChunk = explode("\n", $currentChunk);

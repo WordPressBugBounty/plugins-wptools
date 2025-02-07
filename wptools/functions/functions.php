@@ -1736,17 +1736,16 @@ function wptools_read_file($file, $lines)
     $linecounter = 0;
 
     // Move para o final do arquivo e começa a leitura para trás
-    fseek($handle, 0, SEEK_END);
-    $filesize = ftell($handle);
-    $pos = $filesize - $bufferSize;
+    //fseek($handle, 0, SEEK_END);
+    //$filesize = ftell($handle);
+    //$pos = $filesize - $bufferSize;
 
     try {
         fseek($handle, 0, SEEK_END);
         $filesize = ftell($handle);
         $pos = $filesize - $bufferSize;
-    }
-    catch(Exception $e) {
-      return "";
+    } catch (Exception $e) {
+        return "Unable to read the error file, fseek doesn't work.";
     }
 
     while ($pos >= 0 && $linecounter < $lines) {
@@ -1756,7 +1755,16 @@ function wptools_read_file($file, $lines)
         }
 
         // Mover o ponteiro para a posição
-        fseek($handle, $pos);
+        // fseek($handle, $pos);
+
+        try {
+            fseek($handle, $pos);
+            $filesize = ftell($handle);
+            $pos = $filesize - $bufferSize;
+        } catch (Exception $e) {
+            return "Unable to read the error file, fseek doesn't work.";
+        }
+
 
         // Ler o bloco
         $chunk = fread($handle, $bufferSize);

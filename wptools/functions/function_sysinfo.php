@@ -82,13 +82,13 @@ function wptools_sysinfo_get()
 
 
 
-
+    /*
     $return .= "\n" . '-- Error Handler Information' . "\n\n";
 
     if (function_exists('set_error_handler')) {
         $return .= 'set_error_handler() Exists:   Yes' . "\n";
 
-        $current_error_handler = set_error_handler(function () { /* no-op */ }); // Obtém o manipulador atual sem alterar
+        //$current_error_handler = set_error_handler(function () { / * no-op * / }); // Obtém o manipulador atual sem alterar
         restore_error_handler(); // Restaura o manipulador anterior
 
         if ($current_error_handler) {
@@ -112,9 +112,50 @@ function wptools_sysinfo_get()
     } else {
         $return .= 'set_error_handler() Exists:   No' . "\n";
     }
+    */
 
 
+    $return .= "\n" . '-- Error Handler Information' . "\n\n";
 
+    try {
+        if (function_exists('set_error_handler')) {
+            $return .= 'set_error_handler() Exists:   Yes' . "\n";
+    
+            try { // Inner try-catch for the set_error_handler operations
+                $current_error_handler = set_error_handler(function () { /* no-op */ });
+                restore_error_handler();
+    
+                if ($current_error_handler) {
+                    $return .= 'set_error_handler() in Use:   Yes' . "\n";
+    
+                    if (is_array($current_error_handler)) {
+                        try { // Even more specific try-catch for object handler introspection
+                            if (isset($current_error_handler[0]) && is_object($current_error_handler[0]) && method_exists($current_error_handler[0], $current_error_handler[1])) {
+                                $return .= 'Handler Details:        Object: ' . get_class($current_error_handler[0]) . ', Method: ' . $current_error_handler[1] . "\n";
+                            } else {
+                                $return .= 'Handler Details:        Unknown (Class/Object Handler - Invalid)' . "\n";
+                            }
+                        } catch (Exception $e) {
+                            $return .= 'Handler Details:        Error introspecting object handler: ' . $e->getMessage() . "\n";
+                        }
+                    } elseif (is_string($current_error_handler)) {
+                        $return .= 'Handler Details:        Function: ' . $current_error_handler . "\n";
+                    } else {
+                        $return .= 'Handler Details:        Unknown (Other Handler)' . "\n";
+                    }
+                } else {
+                    $return .= 'set_error_handler() in Use:   No' . "\n";
+                }
+            } catch (Exception $e) {
+                $return .= 'Error getting current error handler: ' . $e->getMessage() . "\n";
+            }
+    
+        } else {
+            $return .= 'set_error_handler() Exists:   No' . "\n";
+        }
+    } catch (Exception $e) {
+        $return .= 'Error checking error handler functions: ' . $e->getMessage() . "\n";
+    }
 
 
     $return .= "\n" . '-- PHP Error Log Configuration' . "\n\n";

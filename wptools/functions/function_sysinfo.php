@@ -119,10 +119,12 @@ function wptools_sysinfo_get()
 
     try {
         if (function_exists('set_error_handler')) {
-            $return .= 'set_error_handler() Exists:   Yes' . "\n";
+            $return .= 'set_error_handler Exists:   Yes' . "\n";
+
+            /*
     
             try { // Inner try-catch for the set_error_handler operations
-                $current_error_handler = set_error_handler(function () { /* no-op */ });
+                $current_error_handler = set_error_handler(function () { // no-op  });
                 restore_error_handler();
     
                 if ($current_error_handler) {
@@ -149,6 +151,8 @@ function wptools_sysinfo_get()
             } catch (Exception $e) {
                 $return .= 'Error getting current error handler: ' . $e->getMessage() . "\n";
             }
+
+            */
     
         } else {
             $return .= 'set_error_handler() Exists:   No' . "\n";

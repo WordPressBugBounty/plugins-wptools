@@ -168,15 +168,19 @@ function wptools_sysinfo_get()
 
     $return .= 'Root Place:                     ' . (file_exists($error_log_path) ? 'Exists. ('.$error_log_path.')'  : 'Does Not Exist') . "\n"; // More descriptive wording
 
-    if (file_exists($error_log_path)) { // Check if the file exists before attempting to access its size, readability, or writability. This prevents warnings or errors if the file doesn't exist.
-        $return .= 'Size:                     ' . size_format(filesize($error_log_path)) . "\n"; // Use filesize() for file size and size_format() for human-readable format.  file_size() doesn't exist in PHP.
-        $return .= 'Readable:                     ' . (is_readable($error_log_path) ? 'Yes' : 'No') . "\n";  // Use is_readable() instead of file_readable(). More common and accurate.
-        $return .= 'Writable:                     ' . (is_writable($error_log_path) ? 'Yes' : 'No') . "\n"; // Use is_writable() instead of file_writable(). More common and accurate.
-    } else {
-        $return .= 'Size:                     N/A' . "\n";
-        $return .= 'Readable:                     N/A' . "\n";
-        $return .= 'Writable:                     N/A' . "\n";
-    }
+    try {
+        if (file_exists($error_log_path)) { // Check if the file exists before attempting to access its size, readability, or writability. This prevents warnings or errors if the file doesn't exist.
+            $return .= 'Size:                     ' . size_format(filesize($error_log_path)) . "\n"; // Use filesize() for file size and size_format() for human-readable format.  file_size() doesn't exist in PHP.
+            $return .= 'Readable:                     ' . (is_readable($error_log_path) ? 'Yes' : 'No') . "\n";  // Use is_readable() instead of file_readable(). More common and accurate.
+            $return .= 'Writable:                     ' . (is_writable($error_log_path) ? 'Yes' : 'No') . "\n"; // Use is_writable() instead of file_writable(). More common and accurate.
+        } else {
+            $return .= 'Size:                     N/A' . "\n";
+            $return .= 'Readable:                     N/A' . "\n";
+            $return .= 'Writable:                     N/A' . "\n";
+        }
+    } catch (Exception $e) {
+        $return .= 'Error checking error log path: ' . $e->getMessage() . "\n";
+    } 
 
 
 

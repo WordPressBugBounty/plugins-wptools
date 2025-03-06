@@ -2595,7 +2595,7 @@ function wptools_options_permissions2()
             }
 
             foreach (glob($wptools_folder) as $wptools_filename) {
-                if (strpos($wptools_filename, "backup") != true) {
+                if (strpos($wptools_filename, "backup") === false) {
                     $wptools_count++;
                     $marray = wptools_read_file($wptools_filename, 20);
 

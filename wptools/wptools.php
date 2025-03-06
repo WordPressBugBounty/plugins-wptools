@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.14
+Version:     5.16
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -1766,7 +1766,15 @@ function wptools_send_error_summary_email()
 	$message .= esc_attr__('This is a weekly summary of errors, warnings, or notices that occurred on your site assisted by the wpTools plugin.', "wptools") . "\n\n";
 	$message .= esc_attr__('Total number of issues', "wptools") . ': ' . $error_count . "\n\n";
 	$message .= esc_attr__('Please visit your site for more details:', "wptools") . "\n\n";
-	$message .= esc_attr__('Dashboard => wpTools => Dashboard', "wptools") . "\n\n";
+	// $message .= esc_attr__('Dashboard => wpTools => Dashboard', "wptools") . "\n\n";
+
+
+
+	$message .= esc_attr__('Dashboard', 'wptools') . " =>\n";
+	$message .= esc_attr__('wpTools', 'wptools') . " =>\n";
+	$message .= esc_attr__('Dashboard', 'wptools') . "\n";
+
+
 	$message .= esc_attr__('You can stop weekly emails at the Notifications Tab:', "wptools") . "\n";
 	$message .= esc_attr__('Dashboard => WP tools=> Settings', "wptools") . "\n";
 
@@ -1934,18 +1942,21 @@ add_action("init", "wptools_bill_hooking_catch_errors", 15);
 function wptools_bill_hooking_catch_errors()
 {
 
-	//debug4();
-	if (function_exists('is_admin') && function_exists('current_user_can')) {
-		if (is_admin() and current_user_can("manage_options")) {
-			$declared_classes = get_declared_classes();
-			foreach ($declared_classes as $class_name) {
-				if (strpos($class_name, "bill_catch_errors") !== false) {
-					return;
-				}
-			}
-			require_once dirname(__FILE__) . "/includes/catch-errors/class_bill_catch_errors.php";
+	global $wptools_plugin_slug;
+	global $wptools_is_admin;
+
+
+	if (!function_exists("bill_check_install_mu_plugin")) {
+		require_once dirname(__FILE__) . "/includes/catch-errors/bill_install_catch_errors.php";
+	}
+	$declared_classes = get_declared_classes();
+	foreach ($declared_classes as $class_name) {
+		if (strpos($class_name, "bill_catch_errors") !== false) {
+			return;
 		}
 	}
+	$wptools_plugin_slug = 'wp-tools';
+	require_once dirname(__FILE__) . "/includes/catch-errors/class_bill_catch_errors.php";
 }
 add_action("init", "wptools_bill_hooking_catch_errors", 15);
 

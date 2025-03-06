@@ -1,7 +1,7 @@
 <?php
-
-if (!function_exists('wptools_enqueue_scripts_with_nonce')) {
-    function wptools_enqueue_scripts_with_nonce()
+// wptools_enqueue_scripts_with_nonce
+if (!function_exists('wptools_enqueue_scripts_with_nonce') && !function_exists('wptools_enqueue_scripts_with_nonce2')) {
+    function wptools_enqueue_scripts_with_nonce2()
     {
         // Enfileirar script no frontend
         wp_enqueue_script('wptools-loading-time-admin-js', WPTOOLSURL . 'js/loading-time.js', array('jquery'), null, true);
@@ -15,28 +15,10 @@ if (!function_exists('wptools_enqueue_scripts_with_nonce')) {
         do_action('wptools_enqueue_additional_scripts');
     }
 }
-add_action('wp_enqueue_scripts', 'wptools_enqueue_scripts_with_nonce');
+add_action('wp_enqueue_scripts', 'wptools_enqueue_scripts_with_nonce2');
 
-/*
-if (!function_exists('wptools_enqueue_admin_scripts_with_nonce')) {
-    function wptools_enqueue_admin_scripts_with_nonce()
-    {
-        wp_enqueue_script('wptools-loading-time-admin-js', WPTOOLSURL . 'js/loading-time.js', array('jquery'), null, true);
-
-        // Gerar nonce
-        $nonce = substr(NONCE_SALT, 0, 10);
-
-        // Localizar script
-        wp_localize_script('wptools-loading-time-admin-js', 'wptools_ajax_object', array('ajax_nonce' => $nonce));
-
-        do_action('wptools_enqueue_additional_admin_scripts');
-    }
-}
-//add_action('admin_enqueue_scripts', 'wptools_enqueue_admin_scripts_with_nonce');
-*/
-
-if (!function_exists('wptools_register_loading_time')) {
-    function wptools_register_loading_time()
+if (!function_exists('wptools_register_loading_time') && !function_exists('wptools_register_loading_time2')) {
+    function wptools_register_loading_time2()
     {
         global $wpdb;
 
@@ -86,5 +68,5 @@ if (!function_exists('wptools_register_loading_time')) {
 }
 
 // Registrar a ação AJAX
-add_action('wp_ajax_wptools_register_loading_time', 'wptools_register_loading_time');
-add_action('wp_ajax_nopriv_wptools_register_loading_time', 'wptools_register_loading_time');
+add_action('wp_ajax_wptools_register_loading_time2', 'wptools_register_loading_time2');
+add_action('wp_ajax_nopriv_wptools_register_loading_time2', 'wptools_register_loading_time2');

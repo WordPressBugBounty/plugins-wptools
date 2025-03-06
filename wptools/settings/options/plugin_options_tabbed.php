@@ -483,7 +483,20 @@ $path = ABSPATH;
 function getDirectorySize($path)
 {
 	try {
-		$objects = new \DirectoryIterator($path);
+		//$objects = new \DirectoryIterator($path);
+
+		//. 2025
+		try {
+			$objects = new \DirectoryIterator($path);
+		} catch (UnexpectedValueException $e) {
+			error_log("Erro to open dir: " . $path . "\nDetalhes: " . $e->getMessage());
+			//die("Erro ao abrir o diretório: " . $path . "\nDetalhes: " . $e->getMessage());
+		}
+
+		// end 2025
+
+
+
 		$size = 0;
 		foreach ($objects as $object) {
 			if ($object->isFile()) {

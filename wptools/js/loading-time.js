@@ -1,5 +1,6 @@
 if (typeof jQuery !== 'undefined') {
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
+        // console.log("Carregou");
         var loadingTime = performance.now();
         // Check if loadingTime is a valid number
         if (!isNaN(loadingTime) && loadingTime > 0) {
@@ -31,29 +32,29 @@ if (typeof jQuery !== 'undefined') {
             return urlWithoutDomain;
         }
         var url = extractBaseURL(urlWithDomain);
-            // Check if the URL is valid before logging
-            if (typeof url === 'string' && url.length > 0) {
-                    // console.log("ajax: "+loadingTimeInSeconds);
-                    var data = {
-                        action: 'wptools_register_loading_time',
-                        page_url: url,
-                        loading_time: loadingTimeInSeconds,
-                        nonce: wptools_ajax_object.ajax_nonce
-                    };
-                    jQuery.ajax({
-                        url: ajaxurl,
-                        type: 'POST',
-                        data: data,
-                        success: function (data) {
-                            // This outputs the result of the ajax request
-                            // console.log(data);
-                        },
-                        error: function (errorThrown) {
-                            console.log(errorThrown);
-                        }
-                    });
-            } else {
-                console.error('Invalid URL! '+url);
-            }
+        // Check if the URL is valid before logging
+        if (typeof url === 'string' && url.length > 0) {
+            //console.log("ajax: " + loadingTimeInSeconds);
+            var data = {
+                action: 'wptools_register_loading_time2',
+                page_url: url,
+                loading_time: loadingTimeInSeconds,
+                nonce: wptools_ajax_object.ajax_nonce
+            };
+            jQuery.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: data,
+                success: function (data) {
+                    // This outputs the result of the ajax request
+                    // console.log(data);
+                },
+                error: function (errorThrown) {
+                    console.log(errorThrown);
+                }
+            });
+        } else {
+            console.error('Invalid URL! ' + url);
+        }
     });
 }

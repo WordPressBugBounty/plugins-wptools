@@ -1,8 +1,10 @@
 <?php
 // wptools_enqueue_scripts_with_nonce
-if (!function_exists('wptools_enqueue_scripts_with_nonce') && !function_exists('wptools_enqueue_scripts_with_nonce2')) {
+if (!function_exists('wptools_enqueue_scripts_with_nonce2')) {
     function wptools_enqueue_scripts_with_nonce2()
     {
+
+        //  die(var_export(__LINE__));
         // Enfileirar script no frontend
         wp_enqueue_script('wptools-loading-time-admin-js', WPTOOLSURL . 'js/loading-time.js', array('jquery'), null, true);
 
@@ -17,7 +19,7 @@ if (!function_exists('wptools_enqueue_scripts_with_nonce') && !function_exists('
 }
 add_action('wp_enqueue_scripts', 'wptools_enqueue_scripts_with_nonce2');
 
-if (!function_exists('wptools_register_loading_time') && !function_exists('wptools_register_loading_time2')) {
+if (!function_exists('wptools_register_loading_time2')) {
     function wptools_register_loading_time2()
     {
         global $wpdb;
@@ -26,7 +28,7 @@ if (!function_exists('wptools_register_loading_time') && !function_exists('wptoo
         $nonce = sanitize_text_field($_POST['nonce']);
         if ($nonce !== substr(NONCE_SALT, 0, 10)) {
             wp_send_json_error('Invalid nonce.');
-            wp_die();
+            wp_die("Nonce Fail");
         }
 
         // Verificar dados necessários

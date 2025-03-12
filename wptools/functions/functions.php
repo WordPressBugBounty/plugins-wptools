@@ -1286,7 +1286,7 @@ function wptools_change_note_submenu_order($menu_ord)
 	$submenu = wptools_str_replace_json($key, $val, $submenu);
 }
 */
-function wptools_check_memory()
+function wptools_check_memory_old()
 {
     global $wptools_memory;
     $wptools_memory["color"] = "font-weight:normal;";
@@ -1342,6 +1342,69 @@ function wptools_check_memory()
     } catch (Exception $e) {
         $bill_install_memory["msg_type"] = "notok(7)";
         return $bill_install_memory;
+    }
+}
+
+function wptools_check_memory() {
+    global $wptools_memory;
+    $wptools_memory["color"] = "font-weight:normal;";
+
+    try {
+        // Limite do PHP (memory_limit)
+        $memory_limit = ini_get("memory_limit");
+        $wptools_memory["limit"] = is_numeric($memory_limit) ? (int)$memory_limit : -1; // -1 indica ilimitado ou erro
+        $wptools_memory["usage"] = function_exists("memory_get_usage")
+            ? round(memory_get_usage() / 1024 / 1024, 0)
+            : 0;
+
+        // Se não houver uso de memória detectado, falhar
+        if ($wptools_memory["usage"] == 0) {
+            $wptools_memory["msg_type"] = "notok";
+            return $wptools_memory;
+        }
+
+        // Tratar WP_MEMORY_LIMIT
+        if (!defined("WP_MEMORY_LIMIT")) {
+            $wptools_memory["wp_limit"] = 40; // Padrão de 40 MB
+        } else {
+            $wp_limit = trim(WP_MEMORY_LIMIT);
+            $wp_limit = rtrim($wp_limit, 'MG'); // Remove sufixos como 'M' ou 'G'
+            
+            // Verifica se é numérico e pode ser convertido em inteiro válido
+            if (is_numeric($wp_limit) && (int)$wp_limit > 0) {
+                $wptools_memory["wp_limit"] = (int)$wp_limit;
+            } else {
+                $wptools_memory["wp_limit"] = 40; // Fallback para 40 MB se não for válido
+            }
+        }
+
+        // Converter para MB se o valor for muito grande (assumindo bytes)
+        if ($wptools_memory["wp_limit"] > 9999999) {
+            $wptools_memory["wp_limit"] = $wptools_memory["wp_limit"] / 1024 / 1024;
+        }
+
+        // Validar valores antes de calcular percentual
+        if ($wptools_memory["usage"] < 1 || $wptools_memory["wp_limit"] <= 0) {
+            $wptools_memory["msg_type"] = "notok";
+            return $wptools_memory;
+        }
+
+        // Calcular percentual de uso
+        $wptools_memory["percent"] = $wptools_memory["usage"] / $wptools_memory["wp_limit"];
+
+        // Definir cor com base no percentual
+        if ($wptools_memory["percent"] > 0.85) {
+            $wptools_memory["color"] = "font-weight:bold;color:red";
+        } elseif ($wptools_memory["percent"] > 0.7) {
+            $wptools_memory["color"] = "font-weight:bold;color:#E66F00";
+        }
+
+        $wptools_memory["msg_type"] = "ok";
+        return $wptools_memory;
+
+    } catch (Exception $e) {
+        $wptools_memory["msg_type"] = "notok(7)";
+        return $wptools_memory;
     }
 }
 function wptools_options_dashboard()

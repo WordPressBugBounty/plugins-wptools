@@ -1,0 +1,3092 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wptools\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-04 08:52+0000\n"
+"PO-Revision-Date: 2025-02-04 09:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Loco-Version: 2.7.1; wp-6.7.1\n"
+"X-Domain: wptools\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
+"esc_html__;esc_html_e;esc_html_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: _wptools.php:169 wptools.php:207
+msgid ""
+"Unable to remove file read.me and/or license.txt. Talk with your hosting "
+"company."
+msgstr ""
+"Impossibile rimuovere il file read.me e/o license.txt. Parla con la tua "
+"compagnia di hosting."
+
+#: _wptools.php:292 _wptools.php:342 wptools.php:383 wptools.php:433
+msgid "Site Errors"
+msgstr "Errori del sito"
+
+#: _wptools.php:843 wptools.php:1035
+msgid "Page Load Info: "
+msgstr "Informazioni sul caricamento della pagina:"
+
+#: _wptools.php:845 wptools.php:1037
+msgid "queries and loaded in"
+msgstr ""
+"richieste al DB \n"
+" e caricato in"
+
+#: _wptools.php:847 wptools.php:1039
+msgid "seconds"
+msgstr "secondi"
+
+#: _wptools.php:872 _wptools.php:875 _wptools.php:1480 _wptools.php:1483
+#: _wptools.php:1486 _wptools.php:1597 _wptools.php:1600 wptools.php:1065
+#: wptools.php:1068 wptools.php:1747 wptools.php:1750 wptools.php:1753
+#: wptools.php:1866 wptools.php:1869
+msgid "Site Name unavailable"
+msgstr "Nome del sito non disponibile"
+
+#: _wptools.php:882 wptools.php:1075
+msgid "Notification about errors and warnings at: "
+msgstr "Notifica di errori e avvertimenti a:"
+
+#: _wptools.php:883 _wptools.php:1498 _wptools.php:1616 wptools.php:1076
+#: wptools.php:1765 wptools.php:1885
+msgid "This email was sent from your website"
+msgstr "Questa e-mail è stata inviata dal vostro sito web"
+
+#: _wptools.php:884 _wptools.php:1617 wptools.php:1077 wptools.php:1886
+msgid "by the wpTools plugin."
+msgstr "dal plugin wpTools."
+
+#: _wptools.php:885 functions/function_error_log.php:28 wptools.php:805
+#: wptools.php:1078
+msgid "Date"
+msgstr "Data"
+
+#: _wptools.php:886 wptools.php:1079
+msgid "Errors and Warnings:"
+msgstr "Errori e avvisi:"
+
+#: _wptools.php:892 wptools.php:1085
+msgid "You can stop emails at the Notifications Tab."
+msgstr "Puoi interrompere le e-mail nella scheda Notifiche."
+
+#: _wptools.php:893 _wptools.php:1504 wptools.php:1086 wptools.php:1771
+msgid "Dashboard => WP tools=> Settings"
+msgstr "Dashboard => WP tools => Impostazioni"
+
+#: _wptools.php:1114 dashboard/dashboard_container.php:17 wptools.php:1296
+msgid "Dashboard"
+msgstr "Bacheca"
+
+#: _wptools.php:1346 wptools.php:1612
+msgid "WP Tools found errors on your site"
+msgstr "WP Tools ha trovato errori nel sito"
+
+#: _wptools.php:1349 wptools.php:1615
+msgid "Critical"
+msgstr "Critico"
+
+#: _wptools.php:1354 wptools.php:1620
+msgid "Code and hosting errors can destroy your site and the user experience."
+msgstr ""
+"Gli errori di codice e di hosting possono distruggere il sito e l'esperienza "
+"dell'utente."
+
+#: _wptools.php:1361 wptools.php:1627
+msgid "Visit the WP Tools show errors page"
+msgstr "Visitare la pagina degli errori degli strumenti WP"
+
+#: _wptools.php:1495 wptools.php:1762
+msgid "Hello"
+msgstr "Ciao"
+
+#: _wptools.php:1497 wptools.php:1764
+msgid "Weekly summary of issues on the site: "
+msgstr "Riepilogo settimanale dei problemi presenti sul sito:"
+
+#: _wptools.php:1499 wptools.php:1766
+msgid ""
+"This is a weekly summary of errors, warnings, or notices that occurred on "
+"your site assisted by the wpTools plugin."
+msgstr ""
+"Questo è un riepilogo settimanale di errori, avvisi o notifiche che si sono "
+"verificati sul tuo sito, assistito dal plugin wpTools."
+
+#: _wptools.php:1500 wptools.php:1767
+msgid "Total number of issues"
+msgstr "Numero totale di problemi"
+
+#: _wptools.php:1501 _wptools.php:1614 wptools.php:1768 wptools.php:1883
+msgid "Please visit your site for more details:"
+msgstr "Visita il nostro sito per maggiori dettagli."
+
+#: _wptools.php:1502 _wptools.php:1615 wptools.php:1769 wptools.php:1884
+msgid "Dashboard => wpTools => Dashboard"
+msgstr "Dashboard => Strumenti WP => Impostazioni"
+
+#: _wptools.php:1503 _wptools.php:1620 wptools.php:1770 wptools.php:1889
+msgid "You can stop weekly emails at the Notifications Tab:"
+msgstr "Puoi interrompere le e-mail settimanali nella scheda Notifiche:"
+
+#: _wptools.php:1609 wptools.php:1878
+msgid "Weekly summary of Page Load on the site: "
+msgstr "Riepilogo settimanale dei problemi presenti sul sito:"
+
+#: _wptools.php:1610 wptools.php:1879
+msgid "Hello,"
+msgstr "Ciao,"
+
+#: _wptools.php:1611 wptools.php:1880
+msgid ""
+"This is a weekly summary of Page Load seconds that occurred on your site "
+"assisted by the wpTools plugin:"
+msgstr ""
+"Questo è un riepilogo settimanale dei secondi di caricamento della pagina "
+"che si sono verificati sul tuo sito, assistito dal plugin wpTools:"
+
+#: _wptools.php:1612 wptools.php:1881
+msgid "Weekly Page Load Time:"
+msgstr "Tempo di caricamento della pagina settimanale:"
+
+#: _wptools.php:1613 wptools.php:1882
+msgid ""
+"Google recommends that the page loading time be less than 3 seconds. A "
+"faster-loading website is more likely to rank higher, potentially attracting "
+"more visitors."
+msgstr ""
+"Google consiglia che il tempo di caricamento della pagina sia inferiore a 3 "
+"secondi. Un sito web che si carica più velocemente ha maggiori probabilità "
+"di posizionarsi più in alto, attirando potenzialmente più visitatori."
+
+#: _wptools.php:1618 wptools.php:1887
+msgid "Date:"
+msgstr "Data:"
+
+#: _wptools.php:1621 wptools.php:1890
+msgid "Dashboard => WP tools => Settings"
+msgstr "Dashboard => WP tools => Impostazioni"
+
+#: assets/js/jquery.dataTables.min.js:4
+msgid "row"
+msgstr "riga"
+
+#: assets/js/jquery.dataTables.min.js:4
+msgid "column"
+msgstr "colonna"
+
+#: assets/js/jquery.dataTables.min.js:4
+msgid "cell"
+msgstr "cella"
+
+#: dashboard/dashboard.php:22
+msgid "WP Tools Server Performance"
+msgstr "Partecipa alle Community di prestazioni del  Server"
+
+#: dashboard/dashboard.php:38 functions/functions.php:139
+#: functions/functions.php:1383
+msgid "Server Benchmark"
+msgstr "Benchmark del server (prestazioni)"
+
+#: dashboard/dashboard.php:50
+msgid "For details"
+msgstr "Per i dettagli"
+
+#: dashboard/dashboard.php:54
+msgid "click here."
+msgstr "fare click qui."
+
+#: dashboard/dashboard.php:73
+msgid "Processor Usage"
+msgstr "Carico del processore"
+
+#: dashboard/dashboard.php:85
+msgid ""
+"Your hosting is blocking the PHP function sys_getloadavg(). Look the tab "
+"Server Check and Requirements"
+msgstr ""
+"L'hosting blocca la funzione PHP sys_getloadavg(). Consultare la scheda "
+"Verifica del server e requisiti"
+
+#: dashboard/dashboard.php:99
+msgid "Load average:"
+msgstr "Carico medio:"
+
+#: dashboard/dashboard.php:102
+msgid "Number Cores:"
+msgstr "Numero di core:"
+
+#: dashboard/dashboard.php:128
+msgid "WP Tools Dashboard"
+msgstr "Bacheca WP Tools"
+
+#: dashboard/dashboard.php:136 dashboard/dashboard.php:169
+#: functions/functions.php:1929 settings/options/_plugin_options_tabbed.php:594
+#: settings/options/plugin_options_tabbed.php:601
+msgid "Memory Usage"
+msgstr "Uso della memoria"
+
+#: dashboard/dashboard.php:145 includes/feedback/activated-manager.php:78
+msgid "Unable to get your Memory Info"
+msgstr "Impossibile ottenere le informazioni sulla memoria"
+
+#: dashboard/dashboard.php:175 dashboard/dashboard.php:201
+msgid "For details,"
+msgstr "Per i dettagli,"
+
+#: dashboard/dashboard.php:180 dashboard/dashboard.php:204
+#: dashboard/dashboard.php:226 dashboard/dashboard.php:281
+msgid "click"
+msgstr "clicca"
+
+#: dashboard/dashboard.php:183
+msgid "the Settings => Memory Usage Tab."
+msgstr "la scheda Impostazioni => Uso della memoria."
+
+#: dashboard/dashboard.php:192
+msgid "Site Issues (7 days)"
+msgstr "Problemi del sito (7 giorni)"
+
+#: dashboard/dashboard.php:216
+msgid "Page Load Seconds (7 days)"
+msgstr "Secondi di caricamento della pagina (7 giorni)"
+
+#: dashboard/dashboard.php:223 dashboard/dashboard.php:278
+msgid "To learn more,"
+msgstr "Scopri di più."
+
+#: dashboard/dashboard.php:238
+msgid ""
+"Top 10 Front End Pages with the Highest Average Load Time Over the Last 7 "
+"Days"
+msgstr ""
+"Le 10 pagine front-end con il tempo di caricamento medio più alto negli "
+"ultimi 7 giorni"
+
+#: dashboard/dashboard.php:258
+msgid "Page"
+msgstr "Pagina"
+
+#: dashboard/dashboard.php:260
+msgid "Load Time (seconds)"
+msgstr "Tempo di caricamento (secondi)"
+
+#: dashboard/dashboard.php:287
+msgid ""
+"No data found. Please try again later. Allow us some time to gather the "
+"information."
+msgstr ""
+"Nessun dato trovato. Riprova più tardi. Concedici un po' di tempo per "
+"raccogliere le informazioni."
+
+#: dashboard/dashboard.php:307
+msgid "OS type & version"
+msgstr "Tipo e versione del sistema operativo"
+
+#: dashboard/dashboard.php:311 functions/functions.php:3447
+msgid "PHP Version"
+msgstr "Versione PHP"
+
+#: dashboard/dashboard.php:331
+msgid "Server Uptime (since reboot)"
+msgstr "Tempo di attività del server (dal riavvio)"
+
+#: dashboard/dashboard.php:335
+msgid "Database Software and Version"
+msgstr "Software di database"
+
+#: dashboard/dashboard.php:361
+msgid "Server CPU cores and architecture"
+msgstr "Core e architettura della CPU del server"
+
+#: dashboard/dashboard.php:374
+msgid "Info about Server CPU cores and architecture blocked by hosting"
+msgstr "Core e architettura della CPU del server"
+
+#: dashboard/dashboard.php:380 dashboard/dashboard.php:396
+msgid "MySQL database uptime"
+msgstr "Tempo di attività di MySQL"
+
+#: dashboard/dashboard.php:433
+msgid "Hostname"
+msgstr "Nome Host"
+
+#: dashboard/dashboard.php:456
+msgid "Server IP"
+msgstr "IP server"
+
+#: dashboard/dashboard.php:467 dashboard/dashboard.php:478
+#: dashboard/dashboard.php:481 settings/options/_plugin_options_tabbed.php:614
+#: settings/options/plugin_options_tabbed.php:621
+msgid "Unable to get your server Ip. Probably blocked by your hosting company."
+msgstr ""
+"Impossibile leggere il file wp-config.php! Chiedi alla tua società di "
+"hosting."
+
+#: dashboard/dashboard.php:488
+msgid "Web Server Soft"
+msgstr "Software del Web Server"
+
+#: dashboard/dashboard.php:496
+msgid ""
+"Unable to get your server software. Probably blocked by your hosting company."
+msgstr ""
+"Impossibile ottenere il software del server. Probabilmente è stato bloccato "
+"dalla società di hosting."
+
+#: dashboard/dashboard.php:516
+msgid "Root Path"
+msgstr "Percorso"
+
+#: dashboard/dashboard.php:539
+msgid "Site Health"
+msgstr "Salute del sito"
+
+#: dashboard/dashboard.php:645
+msgid "Search Engine Visibility "
+msgstr "Visibilità sui motori di ricerca"
+
+#: dashboard/dashboard.php:649
+msgid "Discouraged"
+msgstr "Scoraggiato"
+
+#: dashboard/dashboard.php:649
+msgid "Encouraged"
+msgstr "Incoraggiato"
+
+#: dashboard/dashboard.php:669
+msgid "Start Up Guide and Settings"
+msgstr "Guida all'avvio e impostazioni"
+
+#: dashboard/dashboard.php:672
+msgid "Just click Settings in the left menu (WP Tools)."
+msgstr "Basta cliccare su Impostazioni nel menu a sinistra (WP Tools)."
+
+#: dashboard/dashboard.php:674
+msgid "Dashboard => WP Tools => Settings"
+msgstr "Dashboard => Strumenti WP => Impostazioni"
+
+#: dashboard/dashboard.php:677 dashboard/dashboard.php:690
+#: dashboard/requirements.php:14
+msgid "Go"
+msgstr "Vai"
+
+#: dashboard/dashboard.php:684
+msgid "Blog, Support..."
+msgstr "Blog, Supporto..."
+
+#: dashboard/dashboard.php:687
+msgid ""
+"You will find our Blog with tips about this tool, link to support and more "
+"in our site."
+msgstr ""
+"Troverete il nostro blog con consigli su questo strumento, link al supporto "
+"e altro nel nostro sito."
+
+#: dashboard/dashboard.php:696
+msgid "Troubleshooting Guide"
+msgstr "Guida alla risoluzione dei problemi"
+
+#: dashboard/dashboard.php:699
+msgid ""
+"Use old WP version, Low memory, some plugin with Javascript error are some "
+"possible problems."
+msgstr ""
+"Utilizzare una vecchia versione di WP, poca memoria, qualche plugin con "
+"errore Javascript sono alcuni possibili problemi."
+
+#: dashboard/dashboard.php:701
+msgid "Troubleshooting Page"
+msgstr "Pagina di risoluzione dei problemi"
+
+#: dashboard/dashboard_container.php:18 functions/functions.php:2756
+msgid "Server Check & Requirements"
+msgstr "Controllo del server e requisiti"
+
+#: dashboard/dashboard_container.php:19
+msgid "Debug Info"
+msgstr "Debug Info"
+
+#: dashboard/dashboard_container.php:20 dashboard/freebies.php:11
+msgid "More Tools"
+msgstr "Altri strumenti"
+
+#: dashboard/dashboard_container.php:23 functions/functions.php:198
+#: settings/options/_plugin_options_tabbed.php:715
+#: settings/options/_plugin_options_tabbed.php:732
+#: settings/options/plugin_options_tabbed.php:719
+#: settings/options/plugin_options_tabbed.php:736
+#: settings/page-builders.php:320 settings/page-builders.php:331
+msgid "Go Pro"
+msgstr "Passa a Pro"
+
+#: dashboard/errorsgraph.php:9 dashboard/loadsgraph.php:9
+msgid ""
+"No errors have been caught yet. Please bear with us as we work on it. Feel "
+"free to check back later."
+msgstr ""
+"Non è stato ancora rilevato alcun errore. Per favore, abbiate pazienza "
+"mentre ci lavoriamo. Sentiti libero di controllare più tardi."
+
+#: dashboard/mybanners.php:20
+msgid "Get More Features"
+msgstr "Ottieni più funzionalità"
+
+#: dashboard/mybanners.php:24
+msgid "Access Exclusive Tools"
+msgstr "Accedi a strumenti esclusivi"
+
+#: dashboard/mybanners.php:28
+msgid "Enhance Your Site"
+msgstr "Migliora il tuo sito"
+
+#: dashboard/mybanners.php:41
+msgid "Lifetime license: One-time payment of just $17.99!"
+msgstr "Licenza a vita: pagamento una tantum di soli $ 17,99!"
+
+#: dashboard/mybanners.php:45
+msgid "features are not included in the free version:"
+msgstr "le funzionalità non sono incluse nella versione gratuita:"
+
+#: dashboard/mybanners.php:47
+msgid "- Fix damaged tables"
+msgstr "- Riparare le tabelle danneggiate"
+
+#: dashboard/mybanners.php:49
+msgid ""
+"- Add Max Memory Limit,  Max Execution Time Limit, Max Upload File size Limit"
+msgstr ""
+"- Aggiungere limite massimo di memoria, limite massimo di tempo di "
+"esecuzione, limite massimo di dimensione del file caricato"
+
+#: dashboard/mybanners.php:52
+msgid "- Delete cron jobs without actions"
+msgstr "- Eliminare i cron job senza azioni"
+
+#: dashboard/mybanners.php:54
+msgid "- Delete expired or all transients"
+msgstr "- Eliminare tutti i transitori o quelli scaduti"
+
+#: dashboard/mybanners.php:56
+msgid "- Show the top 100 folders by disk usage"
+msgstr "- Mostra le prime 100 cartelle in base all'utilizzo del disco"
+
+#: dashboard/mybanners.php:58
+msgid "- Display all files with wrong permissions"
+msgstr " - Visualizza tutti i file con permessi errati"
+
+#: dashboard/mybanners.php:60
+msgid "- Edit and save robots.txt"
+msgstr "- Modifica e salva robots.txt"
+
+#: dashboard/mybanners.php:62
+msgid "- and more..."
+msgstr "- e altro ancora..."
+
+#: dashboard/mybanners.php:66
+msgid "Dedicated Premium Support"
+msgstr "Supporto Premium dedicato"
+
+#: dashboard/mybanners.php:68 functions/functions_transiente_manager.php:58
+#: includes/feedback/activated-manager.php:156 includes/vendor/vendor.php:42
+#: wptools.php:2217
+msgid "Learn More"
+msgstr "Per saperne di più"
+
+#: dashboard/mybanners.php:243
+msgid "Like This Plugin?"
+msgstr "Ti Piaci questo plugin?"
+
+#: dashboard/mybanners.php:246
+msgid ""
+"If you like this product, please write a few words about it. It will help "
+"other people find this useful plugin more quickly.Thank you!"
+msgstr ""
+"Se ti piace questo prodotto, per favore scrivi qualche parola a suo "
+"riguardo. Aiuterà altra gente a trovare questo utile plugin più velocemente. "
+"Grazie!"
+
+#: dashboard/mybanners.php:249
+msgid "Rate or Share"
+msgstr "Dai un punteggio o Condividi"
+
+#: dashboard/mybanners.php:252
+msgid "Please help us keep the plugin live & up-to-date!"
+msgstr "Per favore, aiutaci a mantenere il plugin vivo e aggiornato!"
+
+#: dashboard/mybanners.php:255
+msgid ""
+"If you use & enjoy WP Tools Plugin, please rate it on WordPress.org. It only "
+"takes a second and helps us keep the plugin live and maintained. Thank you!"
+msgstr ""
+"Se usi e ti piace WP Tools Plugin, per favore votalo su WordPress.org. Ci "
+"vuole solo un secondo e ci aiuta a mantenere il plugin vivo e mantenuto. "
+"Grazie!"
+
+#: dashboard/mybanners.php:258
+msgid "Rate"
+msgstr "Tasso"
+
+#: dashboard/requirements.php:9
+msgid "Go to Plugin Dashboard:"
+msgstr "Vai alla dashboard del plugin:"
+
+#: dashboard/requirements.php:11
+msgid "Dashboard => WP Tools => Dashboard"
+msgstr "Dashboard => Strumenti WP => Impostazioni"
+
+#: dashboard/tools.php:20
+msgid "If you need support, please, copy and paste the info below in our"
+msgstr ""
+"Se hai bisogno di supporto, per favore, copia e incolla le informazioni qui "
+"sotto nel nostro"
+
+#: dashboard/tools.php:22
+msgid "Support Site"
+msgstr "Sito di supporto"
+
+#: functions/function_error_log.php:9
+msgid "Error Log Table"
+msgstr "Tabella del registro degli errori"
+
+#: functions/function_error_log.php:19
+msgid "Filter by Type"
+msgstr "Filtra per tipo"
+
+#: functions/function_error_log.php:29 wptools.php:806
+msgid "Type"
+msgstr "Tipo"
+
+#: functions/function_error_log.php:30
+msgid "Description"
+msgstr "Descrizione"
+
+#: functions/function_error_log.php:31 functions/functions_cron_manager.php:65
+msgid "Action"
+msgstr "Azione"
+
+#: functions/function_error_log.php:60
+#: includes/feedback-last/feedback-last.php:259
+msgid "Artificial Intelligence Support Chat for Issues and Solutions"
+msgstr ""
+"Chat di supporto per l'intelligenza artificiale per problemi e soluzioni"
+
+#: functions/function_error_log.php:69
+#: includes/feedback-last/feedback-last.php:269
+msgid "Enter your message..."
+msgstr "Inserisci il tuo messaggio..."
+
+#: functions/function_error_log.php:70
+#: includes/feedback-last/feedback-last.php:270
+msgid "Send"
+msgstr "Inviare"
+
+#: functions/function_error_log.php:73
+msgid ""
+"Enter a message and click 'Send', or just copy and paste the content of "
+"description column."
+msgstr ""
+"Inserisci un messaggio e clicca su \"Invia\" oppure clicca semplicemente su "
+"\"Controllo automatico\" per analizzare il registro degli errori del sito."
+
+#: functions/function_error_log.php:406
+msgid "View"
+msgstr "Visualizzazione"
+
+#: functions/functions.php:48
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: functions/functions.php:58
+msgid "Check mySQL Tables"
+msgstr "Controllare le tabelle mySQL"
+
+#: functions/functions.php:67
+msgid "Edit robots txt"
+msgstr "Modifica robots txt"
+
+#: functions/functions.php:76
+msgid "Show Errors"
+msgstr "Mostra gli errori"
+
+#: functions/functions.php:85
+msgid "Show PHP Info"
+msgstr "Mostra informazioni PHP"
+
+#: functions/functions.php:94
+msgid "Show .htaccess"
+msgstr "Mostra .htaccess"
+
+#: functions/functions.php:103
+msgid "Show wp-config.php"
+msgstr "Mostra wp-config.php"
+
+#: functions/functions.php:112
+msgid "Show Cron Jobs"
+msgstr "Mostra Cron Jobs"
+
+#: functions/functions.php:121
+msgid "Show File Permissions"
+msgstr "Mostra i permessi dei file"
+
+#: functions/functions.php:130 functions/functions.php:1984 guide/guide.php:52
+msgid "Show Cookies"
+msgstr "Mostra i Cookies"
+
+#: functions/functions.php:148
+msgid "Database Detais"
+msgstr "Database Dettaglio"
+
+#: functions/functions.php:157 functions/functions_transiente_manager.php:32
+msgid "Show Transients"
+msgstr "Mostra i transitori"
+
+#: functions/functions.php:166
+msgid "Javascrip and jQuery"
+msgstr "Javascrip e jQuery"
+
+#: functions/functions.php:176
+msgid "More Tools Same Author"
+msgstr "Altri strumenti Stesso autore"
+
+#: functions/functions.php:186
+msgid "More New Tools"
+msgstr "Altri nuovi strumenti"
+
+#: functions/functions.php:423
+msgid "Please wait"
+msgstr "attendere prego"
+
+#: functions/functions.php:427
+msgid "Installing plugin"
+msgstr "Installazione del plugin"
+
+#: functions/functions.php:464
+msgid "Installed"
+msgstr "Installato"
+
+#: functions/functions.php:470
+msgid "Install"
+msgstr "Installare"
+
+#: functions/functions.php:497
+#| msgid "MU Plugins"
+msgid "More Plugins"
+msgstr "Altri plugin"
+
+#: functions/functions.php:679
+msgid "jQuery Version"
+msgstr "versione jQuery"
+
+#: functions/functions.php:685
+msgid "jQuery Migrate Version"
+msgstr "jQuery Migrate versione"
+
+#: functions/functions.php:700 functions/functions.php:1940
+#: functions/functions.php:1986 functions/functions.php:2032
+#: functions/functions.php:2482 functions/functions.php:3275
+msgid "Visit plugin's site for detais"
+msgstr "Visita il sito del plugin per i dettagli"
+
+#: functions/functions.php:704
+msgid "Last Javascript Errors (max 200)"
+msgstr "Ultimi errori Javascript (max 200)"
+
+#: functions/functions.php:715
+msgid "No Javascript errors found last entries of log_error file."
+msgstr "Nessun errore Javascript trovato nelle ultime voci del file log_error."
+
+#: functions/functions.php:724
+msgid "Learn more about site code errors..."
+msgstr "Per saperne di più sugli errori del codice del sito..."
+
+#: functions/functions.php:900
+msgid "No Javascript errors found last 3000 entries of log_error file."
+msgstr ""
+"Nessun errore Javascript trovato nelle ultime 3000 voci del file log_error."
+
+#: functions/functions.php:931
+msgid "WP_ALLOW_REPAIR is defined as false on your wp-config.php"
+msgstr "WP_ALLOW_REPAIR è definito come falso nel tuo wp-config.php"
+
+#: functions/functions.php:936
+msgid "That can disable WordPress Database Optimize and Repair Tool."
+msgstr ""
+"Questo può disattivare WordPress Strumento di ottimizzazione e riparazione "
+"dei Database."
+
+#: functions/functions.php:940
+msgid "Change that to true."
+msgstr "Cambiatelo in vero (true)."
+
+#: functions/functions.php:947
+msgid "Open WordPress Optimize and Repair Database Tools"
+msgstr "Aprire WordPress ottimizza e ripara gli strumenti del database"
+
+#: functions/functions.php:954
+msgid "Open"
+msgstr "Aperto"
+
+#: functions/functions.php:959
+msgid "It is not necessary edit your wp-config.php file"
+msgstr "Non è necessario modificare il file wp-config.php"
+
+#: functions/functions.php:965
+msgid "(Option available in Premium Version)"
+msgstr "(Opzione disponibile nella versione Premium)"
+
+#: functions/functions.php:980
+msgid "Database Information"
+msgstr "Informazioni sul database"
+
+#: functions/functions.php:982 functions/functions.php:3438
+msgid "Basic Information"
+msgstr "Informazioni di base"
+
+#: functions/functions.php:986 functions/functions.php:992
+#: functions/functions.php:1097 functions/functions.php:1103
+msgid "Variable Name"
+msgstr "Nome Variabile"
+
+#: functions/functions.php:987 functions/functions.php:993
+#: functions/functions.php:1098 functions/functions.php:1104
+#: functions/functions.php:1994 functions/functions.php:3442
+msgid "Value"
+msgstr "Valore"
+
+#: functions/functions.php:998
+msgid "Database Software"
+msgstr "Software di database"
+
+#: functions/functions.php:1002
+msgid "Database Version"
+msgstr "Versione del database"
+
+#: functions/functions.php:1006
+msgid "MySQL Uptime"
+msgstr "Tempo di attività di MySQL"
+
+#: functions/functions.php:1016
+msgid "Mysql Time"
+msgstr "Tempo Mysql"
+
+#: functions/functions.php:1029
+msgid "Database Name"
+msgstr "Nome Database"
+
+#: functions/functions.php:1037
+msgid "Database User"
+msgstr "Database Utente"
+
+#: functions/functions.php:1045
+msgid "Database Hosting"
+msgstr "Hosting di database"
+
+#: functions/functions.php:1053
+msgid "Database Charset"
+msgstr "Set di caratteri del database"
+
+#: functions/functions.php:1061
+msgid "Table Prefix"
+msgstr "Prefisso tabella"
+
+#: functions/functions.php:1075
+msgid "Maximum No. of Connections"
+msgstr "Numero massimo di connessioni"
+
+#: functions/functions.php:1079
+msgid "Maximum Packet Size"
+msgstr "Dimensione massima dei pacchetti"
+
+#: functions/functions.php:1083
+msgid "Database Disk Usage"
+msgstr "Uso del disco del database"
+
+#: functions/functions.php:1087
+msgid "Index Disk Usage"
+msgstr "Utilizzo del disco"
+
+#: functions/functions.php:1093
+msgid "Advanced Information"
+msgstr "Informazioni avanzate"
+
+#: functions/functions.php:1122 functions/functions.php:1124
+msgid "Something went wrong!"
+msgstr "Qualcosa è andato storto!"
+
+#: functions/functions.php:1142 functions/functions.php:1153
+#: functions/functions.php:1165 functions/functions.php:1179
+#: functions/functions.php:1194 functions/functions.php:1209
+#: functions/functions.php:1640 functions/functions.php:1650
+#: functions/functions.php:1660 functions/functions.php:1669
+#: functions/functions.php:1676
+msgid "N/A"
+msgstr "N/A"
+
+#: functions/functions.php:1224 functions/functions.php:1255
+msgid "PB"
+msgstr "PB"
+
+#: functions/functions.php:1228 functions/functions.php:1259
+msgid "TB"
+msgstr "TB"
+
+#: functions/functions.php:1232 functions/functions.php:1263
+msgid "GB"
+msgstr "GB"
+
+#: functions/functions.php:1236 functions/functions.php:1267
+msgid "MB"
+msgstr "MB"
+
+#: functions/functions.php:1240 functions/functions.php:1271
+msgid "KB"
+msgstr "KB"
+
+#: functions/functions.php:1242
+msgid "bytes"
+msgstr "byte"
+
+#: functions/functions.php:1244 functions/functions.php:1273
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+#: functions/functions.php:1387
+msgid ""
+"This plugin can benchmarks your server's performance through a variety of "
+"PHP and MySql tests."
+msgstr ""
+"Questo plugin può valutare le prestazioni del tuo server attraverso una "
+"varietà di test PHP e MySql."
+
+#: functions/functions.php:1394
+msgid "The total time is in seconds. Lower time are better (faster)."
+msgstr ""
+"Il tempo totale è in secondi. Tempi più bassi sono migliori (più veloci)."
+
+#: functions/functions.php:1409
+msgid "Participate in Community Server Performance."
+msgstr "Partecipa alle Community di prestazioni del  Server."
+
+#: functions/functions.php:1414
+msgid ""
+"Enabling this feature causes your site to share only server performance data "
+"with WP Tools Plugin."
+msgstr ""
+"Abilitare questa funzione fa sì che il tuo sito condivida solo i dati sulle "
+"prestazioni del server con WP Tools Plugin."
+
+#: functions/functions.php:1418
+msgid ""
+"In return your WordPress site receives Updated Aggregated Industry Average "
+"Data."
+msgstr ""
+"In cambio, il tuo sito WordPress riceve dati medi di settore aggregati "
+"aggiornati."
+
+#: functions/functions.php:1423
+msgid "Update"
+msgstr "Aggiorna"
+
+#: functions/functions.php:1433
+msgid "Learn more."
+msgstr "Scopri di più."
+
+#: functions/functions.php:1481
+msgid "Industry Average Data"
+msgstr "Dati medi del settore"
+
+#: functions/functions.php:1567
+msgid "Tables Information"
+msgstr "Informazioni sulle tabelle"
+
+#: functions/functions.php:1573
+msgid "Open Database Page if you find errors on tables (status not ok)"
+msgstr ""
+"Aprire la pagina del database se si trovano errori nelle tabelle (stato non "
+"ok)"
+
+#: functions/functions.php:1580
+msgid "Dbase Page"
+msgstr "Pagina Dbase"
+
+#: functions/functions.php:1588
+msgid "Status"
+msgstr "Stato"
+
+#: functions/functions.php:1591
+msgid "Table Name"
+msgstr "Nome tabella"
+
+#: functions/functions.php:1592
+msgid "Engine"
+msgstr "Motore"
+
+#: functions/functions.php:1593
+msgid "Last Update"
+msgstr "Ultimo aggiornamento"
+
+#: functions/functions.php:1595
+msgid "Data Length (Aproximate)"
+msgstr "Lunghezza dei dati (approssimativa)"
+
+#: functions/functions.php:1630
+msgid "For more info about your database, look the page SHOW PHP INFO."
+msgstr ""
+"Per maggiori informazioni sul tuo database, guarda la pagina SHOW PHP INFO."
+
+#: functions/functions.php:1938
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: functions/functions.php:1945 functions/functions.php:2487
+msgid "File path:"
+msgstr "Percorso del file:"
+
+#: functions/functions.php:1950
+msgid "File wp-config.php not found. Ask to your hosting company if is hidden."
+msgstr ""
+"File wp-config.php non trovato. Chiedi alla tua compagnia di hosting se è "
+"nascosto."
+
+#: functions/functions.php:1958
+msgid "Unable to read the file wp-config.php! Ask to your hosting company."
+msgstr ""
+"Impossibile leggere il file wp-config.php! Chiedi alla tua società di "
+"hosting."
+
+#: functions/functions.php:1993 functions/functions.php:3441
+#: functions/functions_transiente_manager.php:159
+msgid "Name"
+msgstr "Nome"
+
+#: functions/functions.php:2009 functions/functions.php:2126
+#: functions/functions.php:2288
+msgid "Permission Scheme for WordPress"
+msgstr "Schema di permesso per WordPress"
+
+#: functions/functions.php:2011 functions/functions.php:2128
+#: functions/functions.php:2290
+msgid "Typically"
+msgstr "Tipicamente"
+
+#: functions/functions.php:2014 functions/functions.php:2130
+#: functions/functions.php:2291
+msgid "Files"
+msgstr "Files"
+
+#: functions/functions.php:2017 functions/functions.php:2132
+#: functions/functions.php:2292
+msgid "Folders"
+msgstr "Cartelle"
+
+#: functions/functions.php:2020 functions/functions.php:2134
+#: functions/functions.php:2293
+msgid "File wp-config.php: 660"
+msgstr "File wp-config.php: 660"
+
+#: functions/functions.php:2025
+msgid "wp-config.php currently permissions:"
+msgstr "wp-config.php attualmente permessi:"
+
+#: functions/functions.php:2037 functions/functions.php:2148
+#: functions/functions.php:2307
+msgid "Unable to read files"
+msgstr "Impossibile leggere i file"
+
+#: functions/functions.php:2043 functions/functions.php:2165
+#: functions/functions.php:2324
+msgid "Permissions"
+msgstr "Permessi"
+
+#: functions/functions.php:2044 functions/functions.php:2166
+#: functions/functions.php:2325
+msgid "Files / Folders"
+msgstr "File / Cartelle"
+
+#: functions/functions.php:2099
+msgid "Files with wrong permissions. This plugin will show max 50."
+msgstr "File con permessi sbagliati. Questo plugin ne mostrerà al massimo 50."
+
+#: functions/functions.php:2103 functions/functions.php:2215
+#: functions/functions.php:2433
+msgid "No files found with wrong permissions."
+msgstr "Nessun file trovato con permessi errati."
+
+#: functions/functions.php:2112
+msgid "Folders with wrong permissions. This plugin will show max 50."
+msgstr ""
+"Cartelle con permessi sbagliati. Questo plugin ne mostrerà al massimo 50."
+
+#: functions/functions.php:2117 functions/functions.php:2228
+#: functions/functions.php:2444
+msgid "No folders found with wrong permissions."
+msgstr "Nessuna cartella trovata con permessi errati."
+
+#: functions/functions.php:2137 functions/functions.php:2296
+msgid "wp-config.php current permissions:"
+msgstr "wp-config.php attualmente permessi:"
+
+#: functions/functions.php:2143 functions/functions.php:2302
+msgid "Visit plugin's site for details"
+msgstr "Visita il sito del plugin per i dettagli"
+
+#: functions/functions.php:2211 functions/functions.php:2431
+msgid "Files with wrong permissions."
+msgstr "File con permessi errati."
+
+#: functions/functions.php:2213 functions/functions.php:2225
+msgid "This plugin will show max 50."
+msgstr "Questo plugin ne mostrerà al massimo 50."
+
+#: functions/functions.php:2223 functions/functions.php:2441
+msgid "Folders with wrong permissions."
+msgstr "Cartella trovata con permessi errati."
+
+#: functions/functions.php:2374
+msgid "Free version limited to a maximum of 50 files."
+msgstr "Versione gratuita limitata a un massimo di 50 file."
+
+#: functions/functions.php:2480
+msgid ".htaccess"
+msgstr ".htaccess"
+
+#: functions/functions.php:2491
+msgid "File .htaccess not found."
+msgstr "File .htaccess non trovato."
+
+#: functions/functions.php:2496
+msgid "Empty file .htaccess!"
+msgstr "File .htaccess vuoto!"
+
+#: functions/functions.php:2766
+msgid "Step 1 - Check Memory"
+msgstr "Passo 1 - Controllare la memoria"
+
+#: functions/functions.php:2772 functions/functions.php:2866
+msgid "General Failure (7) to get memory information."
+msgstr "Fallimento generale (7) per ottenere informazioni sulla memoria."
+
+#: functions/functions.php:2783
+msgid ""
+"Your site free memory is too low and can happens memory fault error, also "
+"without install our plugin."
+msgstr ""
+"La memoria libera del tuo sito è troppo bassa e può capitare un errore di "
+"memoria, anche senza installare il nostro plugin."
+
+#: functions/functions.php:2787
+msgid "The WordPress Memory Limit is"
+msgstr "Il limite di memoria di WordPress è"
+
+#: functions/functions.php:2790
+msgid "The WordPress Memory Usage is"
+msgstr "L'uso della memoria di WordPress è"
+
+#: functions/functions.php:2800 functions/functions.php:2803
+#: functions/functions.php:2875
+msgid "The free memory now is"
+msgstr "La memoria libera ora è"
+
+#: functions/functions.php:2813 functions/functions.php:2851
+#: functions/functions.php:2883
+msgid "For more details, visit our site"
+msgstr "Per maggiori dettagli, visitate il nostro sito"
+
+#: functions/functions.php:2816 functions/functions.php:2854
+#: functions/functions.php:2886
+msgid "WP MEMORY (Free WordPress Plugin to Fix Low Memory Limit)"
+msgstr ""
+"WP MEMORY (Plugin gratuito per WordPress per fissare il limite di memoria "
+"bassa)"
+
+#: functions/functions.php:2824
+msgid "Unable to get ini_get('memory_limit')"
+msgstr "Impossibile ottenere ini_get('memory_limit')"
+
+#: functions/functions.php:2829
+msgid "Unable to get memory_get_usage() "
+msgstr "Impossibile ottenere memory_get_usage()"
+
+#: functions/functions.php:2833
+msgid "Memory Usage is not Numeric (3)"
+msgstr "L'uso della memoria non è numerico (3)"
+
+#: functions/functions.php:2837
+msgid "Memory Usage < than 1'"
+msgstr "Utilizzo della memoria < di 1"
+
+#: functions/functions.php:2842
+#| msgid ""
+#| "Possible error: On file wp-config.php memory symbol should be M or MB or "
+#| "G or GB."
+msgid "Possible error: On file wp-config.php memory symbol should be M."
+msgstr ""
+"Possibile errore: nel file wp-config.php il simbolo di memoria dovrebbe "
+"essere M."
+
+#: functions/functions.php:2847
+msgid "For example,  define(\"WP_MEMORY_LIMIT\", \"256M\"); "
+msgstr "Per esempio, define(\"WP_MEMORY_LIMIT\", \"256M\")"
+
+#: functions/functions.php:2861
+msgid "Memory Limit out of range. (6)"
+msgstr "Limite di memoria fuori portata. (6)"
+
+#: functions/functions.php:2873
+msgid "No Memory Problems found."
+msgstr "Nessun problema di memoria trovato."
+
+#: functions/functions.php:2895
+msgid "Step 2 - Check for Javascript Errors"
+msgstr "Passo 2 - Controllare gli errori Javascript"
+
+#: functions/functions.php:2899
+msgid "Javascript is NOT working in your site and/or with your browser!"
+msgstr "Javascript NON funziona nel tuo sito e/o con il tuo browser!"
+
+#: functions/functions.php:2906
+msgid "Step 3 - Check for Hosting Resources"
+msgstr "Passo 3 - Controllare le risorse di hosting"
+
+#: functions/functions.php:2909
+msgid "Maybe Your server is not Linux"
+msgstr "Forse il tuo server non è Linux"
+
+#: functions/functions.php:2911 functions/functions.php:2926
+msgid "and this plugin requires Linux."
+msgstr "e questo plugin richiede Linux."
+
+#: functions/functions.php:2914
+msgid "Your Hosting Company dont have the constant: PHP_OS_FAMILY defined."
+msgstr "La tua società di hosting non ha definito la costante: PHP_OS_FAMILY."
+
+#: functions/functions.php:2924
+msgid "Your server is not Linux"
+msgstr "Il tuo server non è Linux"
+
+#: functions/functions.php:2928
+msgid "Your server is:"
+msgstr "Il tuo server è:"
+
+#: functions/functions.php:2939 functions/functions.php:2955
+#: functions/functions.php:2973 functions/functions.php:3031
+#: functions/functions.php:3051
+msgid "Plugin requirement:"
+msgstr "Requisito del plugin:"
+
+#: functions/functions.php:2942
+msgid ""
+"Open_basedir restriction in effect. Talk with your hosting and request to "
+"disable it."
+msgstr ""
+"La restrizione Open_basedir è in vigore. Parlate con il vostro hosting e "
+"chiedete di disabilitarla."
+
+#: functions/functions.php:2958
+msgid ""
+"PHP function sys_getloadavg not enabled. Talk with your hosting and request "
+"to enable it."
+msgstr ""
+"Funzione PHP sys_getloadavg non abilitata. Parla con il tuo hosting e chiedi "
+"di abilitarla."
+
+#: functions/functions.php:2976
+msgid ""
+"/proc/cpuinfo doesn't readable. Talk with your hosting and request to enable "
+"it."
+msgstr ""
+"/proc/cpuinfo non è leggibile. Parla con il tuo hosting e chiedi di "
+"abilitarlo."
+
+#: functions/functions.php:2990
+msgid ""
+"Request to your Hosting enable the PHP functions disk_free_space() and "
+"disk_total_space()"
+msgstr ""
+"Richiedi al tuo Hosting di abilitare le funzioni PHP disk_free_space() e "
+"disk_total_space()"
+
+#: functions/functions.php:3013
+msgid ""
+"Request to your Hosting to enable the PHP function shell_exec() because is "
+"returning NULL."
+msgstr ""
+"Chiedi al tuo Hosting di abilitare la funzione PHP shell_exec() perché sta "
+"restituendo NULL."
+
+#: functions/functions.php:3035
+msgid ""
+"/proc/stat doesn't readable. Talk with your hosting and request to enable it."
+msgstr ""
+"/proc/stat non è leggibile. Parla con il tuo hosting e chiedi di abilitarlo."
+
+#: functions/functions.php:3054
+msgid ""
+"/etc/os-release doesn't readable. Talk with your hosting and request to "
+"enable it."
+msgstr ""
+"/etc/os-release non è leggibile. Parla con il tuo hosting e chiedi di "
+"abilitarlo."
+
+#: functions/functions.php:3069
+msgid "PHP Version 7.0 or bigger is required. My version:"
+msgstr "È richiesta la versione 7.0 o superiore di PHP. La mia versione:"
+
+#: functions/functions.php:3090
+msgid "Your hosting is blocking the PHP function sys_getloadavg()."
+msgstr "L'hosting blocca la funzione PHP sys_getloadavg()."
+
+#: functions/functions.php:3101
+msgid ""
+"if you can see warnings or empty fields on your dashboard, means your "
+"hosting company is blocking some php functions."
+msgstr ""
+"se puoi vedere avvertimenti o campi vuoti sulla tua bacheca, significa che "
+"la tua compagnia di hosting sta bloccando alcune funzioni php."
+
+#: functions/functions.php:3108
+msgid "Looks like our plugin can works fine with your server configuration."
+msgstr ""
+"Sembra che il nostro plugin possa funzionare bene con la configurazione del "
+"tuo server."
+
+#: functions/functions.php:3116
+msgid ""
+"If we are wrong, please, contact our support at: https://wptoolsplugin.com"
+msgstr ""
+"Se ci siamo sbagliati, per favore, contattate il nostro supporto a: https://"
+"wptoolsplugin.com"
+
+#: functions/functions.php:3273
+msgid "Robots TXT"
+msgstr "Robot TXT"
+
+#: functions/functions.php:3281
+msgid "File Path"
+msgstr "Percorso del file"
+
+#: functions/functions.php:3294
+msgid "Cannot create BKP file"
+msgstr "Impossibile creare il file BKP"
+
+#: functions/functions.php:3300
+msgid "Cannot write to BKP file"
+msgstr "Impossibile scrivere sul file BKP"
+
+#: functions/functions.php:3306
+msgid "Cannot open file to save"
+msgstr "Impossibile aprire il file per salvare"
+
+#: functions/functions.php:3312
+msgid "Cannot write to file"
+msgstr "Impossibilie scrivere al file"
+
+#: functions/functions.php:3319
+msgid "Success, file robots.txt updated!"
+msgstr "Successo, file robots.txt aggiornato!"
+
+#: functions/functions.php:3321
+msgid "Backup file created:"
+msgstr "File di backup creato:"
+
+#: functions/functions.php:3326
+msgid "If you save again, will overwrite the backup."
+msgstr "Se si salva di nuovo, sovrascriverà il backup."
+
+#: functions/functions.php:3333
+msgid "Fail to Get Post Content!"
+msgstr "Non riusci a ottenere il contenuto dei post!"
+
+#: functions/functions.php:3339
+msgid "File not found."
+msgstr "File non trovato."
+
+#: functions/functions.php:3342 functions/functions.php:3374
+msgid "To create, fill out the form below and click SAVE"
+msgstr "Per creare, compila il modulo qui sotto e clicca su SALVA"
+
+#: functions/functions.php:3363
+msgid ""
+"File not writable. Check file permissions and user own. Unable to edit it."
+msgstr ""
+"File non scrivibile. Controlla i permessi del file e l'utente stesso. "
+"Impossibile modificarlo."
+
+#: functions/functions.php:3371
+msgid "Empty file robots.txt!"
+msgstr "File robots.txt vuoto!"
+
+#: functions/functions.php:3378
+msgid "Edit the file and click SAVE"
+msgstr "Modifica il file e clicca su SAVE"
+
+#: functions/functions.php:3393
+msgid ""
+"Suggestion: Before to click SAVE, copy the content to your clipboard. Just "
+"in case to fail to save."
+msgstr ""
+"Suggerimento: Prima di cliccare su SALVARE, copiate il contenuto negli "
+"appunti. Solo nel caso in cui non si riesca a salvare."
+
+#: functions/functions.php:3405
+msgid "(Save Option Button available in Premium Version)"
+msgstr "(Pulsante opzione di salvataggio disponibile nella versione Premium)"
+
+#: functions/functions.php:3435
+msgid "PHP Information"
+msgstr "Informazioni PHP"
+
+#: functions/functions.php:3443
+msgid "Current Modified Value"
+msgstr "Valore corrente modificato"
+
+#: functions/functions.php:3451
+msgid "Server Timezone"
+msgstr "Fuso orario del server"
+
+#: functions/functions.php:3470
+msgid "Server Time"
+msgstr "Ora del server"
+
+#: functions/functions.php:3476
+msgid "PHP Max Memory Limit"
+msgstr "Limite massimo di memoria di PHP"
+
+#: functions/functions.php:3485
+msgid "PHP Max Execution Time"
+msgstr "Tempo massimo esecuzione PHP"
+
+#: functions/functions.php:3488 functions/functions.php:3492
+msgid "sec"
+msgstr "sec"
+
+#: functions/functions.php:3496
+msgid "PHP Max Upload Size"
+msgstr "PHP Massima dimensione di Carico"
+
+#: functions/functions.php:3503
+msgid "PHP Max Post Size"
+msgstr "PHP Massima Dimensione Post"
+
+#: functions/functions.php:3507
+msgid "PHP Max Input Vars"
+msgstr "PHP Max Input Vars"
+
+#: functions/functions.php:3515
+msgid "Check how to do it at our blog."
+msgstr "Controlla come farlo sul nostro blog."
+
+#: functions/functions.php:3522
+msgid "Disabled Functions"
+msgstr "Funzioni disabilitate"
+
+#: functions/functions.php:3528
+msgid "Nothing"
+msgstr "Niente"
+
+#: functions/functions.php:3537
+msgid "Extensions Loaded"
+msgstr "Estensioni caricate"
+
+#: functions/functions.php:3552
+msgid "Complete Information"
+msgstr "Informazioni complete"
+
+#: functions/functions.php:3610
+msgid "WP Memory Test"
+msgstr "WP Memory Test"
+
+#: functions/functions.php:3655
+msgid "Visit the"
+msgstr "Visita il"
+
+#: functions/functions.php:3659
+msgid "Site Health screen"
+msgstr "Schermata Salute del sito"
+
+#: functions/functions.php:3661
+msgid "to perform checks now."
+msgstr "per eseguire subito i controlli."
+
+#: functions/functions.php:3666
+msgid "Great job! Your site currently passes all site health"
+msgstr ""
+"Ottimo lavoro! Il vostro sito attualmente supera tutti gli standard di "
+"salute del sito"
+
+#: functions/functions.php:3672
+msgid "checks"
+msgstr "controlli"
+
+#: functions/functions.php:3677
+msgid "Your site has"
+msgstr "Il vostro sito ha un"
+
+#: functions/functions.php:3681
+msgid "a critical issue"
+msgstr "una questione critica"
+
+#: functions/functions.php:3684 functions/functions.php:3697
+msgid "that should be addressed as soon as possible."
+msgstr "che dovrebbe essere affrontato il prima possibile."
+
+#: functions/functions.php:3690
+msgid "Your site has a"
+msgstr "Il vostro sito ha un"
+
+#: functions/functions.php:3694
+msgid "critical issues"
+msgstr "questioni critiche"
+
+#: functions/functions.php:3702 functions/functions.php:3711
+msgid "Looking good, but"
+msgstr "L'aspetto è buono, ma"
+
+#: functions/functions.php:3706
+msgid "one thing"
+msgstr "una cosa"
+
+#: functions/functions.php:3708 functions/functions.php:3717
+msgid "can be improved."
+msgstr "può essere migliorato."
+
+#: functions/functions.php:3715
+msgid "some things"
+msgstr "alcune cose"
+
+#: functions/functions.php:3744
+msgid "Memory Issue"
+msgstr "Problema nella memoria"
+
+#: functions/functions.php:3805
+msgid "Errors have been detected on this site. "
+msgstr "Sono stati rilevati errori su questo sito."
+
+#: functions/functions.php:3809 functions/functions.php:3840
+#: functions/functions_cron_manager.php:58
+msgid "Learn more"
+msgstr "Scopri di più"
+
+#: functions/functions.php:3831
+msgid "Memory issues have been detected on this site. "
+msgstr "Sono stati rilevati problemi di memoria su questo sito."
+
+#: functions/functions_cron_manager.php:35
+msgid "Cron Jobs"
+msgstr "Cron Jobs"
+
+#: functions/functions_cron_manager.php:38
+msgid "Do you really want delete all Cron Jobs Without Actions?"
+msgstr "Vuoi davvero cancellare tutti i Cron Jobs senza Actions?"
+
+#: functions/functions_cron_manager.php:44
+msgid ""
+"Option to delete inactive Cron Jobs (without actions) available in Premium "
+"Version."
+msgstr ""
+"Opzione per eliminare i Cron Jobs inattivi (senza azioni) disponibile nella "
+"versione Premium."
+
+#: functions/functions_cron_manager.php:48
+msgid "Delete All Cron Jobs Without Actions"
+msgstr "Cancellare tutti i Cron Job senza azioni"
+
+#: functions/functions_cron_manager.php:53
+msgid ""
+"Cron Jobs Without action means no corresponding functionality that will be "
+"triggered when the event runs."
+msgstr ""
+"Cron Jobs Senza azione significa nessuna funzionalità corrispondente che "
+"sarà attivata quando l'evento viene eseguito."
+
+#: functions/functions_cron_manager.php:55
+msgid ""
+"This is often caused by plugins that don't clean up their cron events when "
+"you deactivate them."
+msgstr ""
+"Questo è spesso causato da plugin che non puliscono i loro eventi cron "
+"quando li disattivate."
+
+#: functions/functions_cron_manager.php:63
+msgid "Cron Job"
+msgstr "Cron Job"
+
+#: functions/functions_cron_manager.php:64
+msgid "Schedulle"
+msgstr "Schedulle"
+
+#: functions/functions_cron_manager.php:66
+msgid "Protected"
+msgstr "Protetto"
+
+#: functions/functions_error_log_page.php:35
+msgid "Setup"
+msgstr "Impostare"
+
+#: functions/functions_error_log_page.php:36
+msgid "Close"
+msgstr "Vicino"
+
+#: functions/functions_error_log_page.php:37
+msgid "Loading logs..."
+msgstr "Caricamento dei registri..."
+
+#: functions/functions_error_log_page.php:38
+msgid "Error loading logs."
+msgstr "Errore durante il caricamento dei registri."
+
+#: functions/functions_error_log_page.php:39
+msgid "An error occurred while loading logs."
+msgstr "Si è verificato un errore durante il caricamento dei registri."
+
+#: functions/functions_error_log_page.php:40
+#: functions/functions_error_log_page.php:168
+msgid ""
+"No log files found, but there should be some. Please consult your hosting "
+"provider."
+msgstr ""
+"Nessun file di log trovato, ma dovrebbero essercene alcuni. Consulta il tuo "
+"provider di hosting."
+
+#: functions/functions_error_log_page.php:41
+msgid "Save"
+msgstr "Salva"
+
+#: functions/functions_error_log_page.php:42
+msgid "Log saved successfully!"
+msgstr "Registro salvato con successo!"
+
+#: functions/functions_error_log_page.php:43
+msgid "Error saving log."
+msgstr "Errore durante il salvataggio del registro."
+
+#: functions/functions_error_log_page.php:44
+msgid "AJAX error. Please try again."
+msgstr "Errore AJAX. Riprova."
+
+#: functions/functions_error_log_page.php:45
+msgid "Please select a log file."
+msgstr "Seleziona un file di registro."
+
+#: functions/functions_error_log_page.php:46
+msgid "Log Files"
+msgstr "File di registro"
+
+#: functions/functions_transiente_manager.php:33
+msgid "Do you really want delete all transients?"
+msgstr "Vuoi davvero cancellare tutti i transitori?"
+
+#: functions/functions_transiente_manager.php:39
+msgid ""
+"Option to delete all Transients or expired Transients available in Premium "
+"Version."
+msgstr ""
+"Opzione per cancellare tutti i transitori o i transitori scaduti disponibile "
+"nella versione Premium."
+
+#: functions/functions_transiente_manager.php:44
+msgid "Delete All Transients"
+msgstr "Cancellare tutti i transitori"
+
+#: functions/functions_transiente_manager.php:47
+msgid "Do you really want delete all expired?"
+msgstr "Vuoi davvero cancellare tutto scaduto?"
+
+#: functions/functions_transiente_manager.php:54
+msgid "Delete All Expired"
+msgstr "Cancellare tutti gli scaduti#, php-format"
+
+#: functions/functions_transiente_manager.php:63
+#: functions/functions_transiente_manager.php:185
+#, php-format
+msgid "%d Transient"
+msgstr "%d Transitorio"
+
+#: functions/functions_transiente_manager.php:158
+msgid "ID"
+msgstr "ID"
+
+#: functions/functions_transiente_manager.php:160
+msgid "Expires In"
+msgstr "Scade entro"
+
+#: functions/functions_transiente_manager.php:175
+msgid "No transients found"
+msgstr "Nessun transitorio trovato"
+
+#: functions/functions_transiente_manager.php:268
+msgid "Does not expire"
+msgstr "Non scade"
+
+#: functions/functions_transiente_manager.php:271
+msgid "Expired"
+msgstr "Scaduto"
+
+#: guide/guide.php:9
+msgid ""
+"This plugin has currently more than 48 tools to help you to manage your "
+"WordPress site, included the dashboard with CPU/Disk/Memory usage charts and "
+"more info."
+msgstr ""
+"Questo plugin ha attualmente più di 44 strumenti per aiutarti a gestire il "
+"tuo sito WordPress, incluso la bacheca con grafici di utilizzo di CPU/Disk/"
+"Memoria e altre informazioni."
+
+#: guide/guide.php:12
+msgid ""
+"Show the PHP errors, limited to 200 last errors (to avoid freeze your "
+"browser). Just click Show PHP Erros voice at the menu"
+msgstr ""
+"Mostra gli errori PHP, limitati agli ultimi 200 errori (per evitare di "
+"congelare il tuo browser). Basta cliccare sulla voce Mostra PHP Errori nel "
+"menu"
+
+#: guide/guide.php:14
+msgid ""
+"Increase the memory limit, time limit and max upload file size limit without "
+"editing any WordPress or PHP files. Just Click General Settings Tab"
+msgstr ""
+"Aumenta il limite di memoria, il limite di tempo e il limite massimo di "
+"dimensione del file di caricamento senza modificare alcun file WordPress o "
+"PHP. Basta fare clic sulla scheda Impostazioni generali"
+
+#: guide/guide.php:16
+msgid ""
+"Show the PHPINFO (PHP info) with a lot of info about your PHP server "
+"configuration, also server IP."
+msgstr ""
+"Mostra il PHPINFO (PHP info) con molte informazioni sulla configurazione del "
+"tuo server PHP, anche l'IP del server."
+
+#: guide/guide.php:18
+msgid ""
+"Show Percentage Server Load (CPU Usage) Average for the last minute at top "
+"admin bar."
+msgstr ""
+"Mostra il carico percentuale del server (uso della CPU) medio per l'ultimo "
+"minuto nella barra amministrativa superiore."
+
+#: guide/guide.php:20
+msgid ""
+"Disable WordPress Native Sitemap Automatic Creation (or only user's sitemap)."
+msgstr ""
+"Disabilita la creazione automatica della Sitemap nativa di WordPress (o solo "
+"la sitemap dell'utente)."
+
+#: guide/guide.php:22 settings/options/_plugin_options_tabbed.php:209
+#: settings/options/plugin_options_tabbed.php:218
+msgid ""
+"Disables the default notification email sent by a site after an automatic "
+"core, theme or plugin update."
+msgstr ""
+"Disabilita l'email di notifica predefinita inviata da un sito dopo un "
+"aggiornamento automatico del nucleo, del tema o del plugin."
+
+#: guide/guide.php:24
+msgid "Add Google Analytics GA Tracking ID (Univeral Analytics) on footer."
+msgstr ""
+"Aggiungere Google Analytics GA Tracking ID (Univeral Analytics) nel footer."
+
+#: guide/guide.php:26
+msgid ""
+"Add Google Search Central (formerly Google Webmasters) HTML TAG and Bing "
+"Meta Name"
+msgstr "Aggiungi il TAG HTML di Google Search Central (ex Google Webmasters)"
+
+#: guide/guide.php:28 settings/options/_plugin_options_tabbed.php:251
+#: settings/options/plugin_options_tabbed.php:262
+msgid "Alert on Top Admin Bar if WordPress Debug is active."
+msgstr ""
+"Avviso sulla barra amministrativa superiore se WordPress Debug è attivo."
+
+#: guide/guide.php:30 settings/options/_plugin_options_tabbed.php:260
+#: settings/options/plugin_options_tabbed.php:271
+msgid "Hide Admin Bar from non Administrators."
+msgstr "Nascondi la barra di amministrazione ai non amministratori."
+
+#: guide/guide.php:32
+msgid "Deactivate Lazy Load functionality (added in WP version 5.5)"
+msgstr ""
+"Disattivare la funzionalità Lazy Load (aggiunta nella versione 5.5 di WP)"
+
+#: guide/guide.php:34
+msgid "Deactivate Emojis functionality (support for emoji's in older browsers)"
+msgstr ""
+"Disattivare la funzionalità Emojis (supporto per le emoji nei vecchi browser)"
+
+#: guide/guide.php:36
+msgid "Page Load Info: Number of SQL queries per page and page load time."
+msgstr ""
+"Informazioni sul caricamento della pagina: Numero di query SQL per pagina e "
+"tempo di caricamento della pagina."
+
+#: guide/guide.php:38
+msgid ""
+"Record and send emails notifications when PHP notices, warnings and errors "
+"happens."
+msgstr ""
+"Registra e invia notifiche via e-mail quando si verificano avvisi, "
+"avvertenze ed errori di PHP."
+
+#: guide/guide.php:40
+msgid "Show and edit rebots.txt."
+msgstr "Mostra e modifica rebots.txt."
+
+#: guide/guide.php:42
+msgid "Show and test mySQL tables (name, status, size and last update)."
+msgstr ""
+"Mostra e testa le tabelle mySQL (nome, stato, dimensione e ultimo "
+"aggiornamento)."
+
+#: guide/guide.php:44
+msgid ""
+"Bypass WordPress debug (if WP_DEBUG = false) and show errors and warnings on "
+"screen. (Don't use in production!)"
+msgstr ""
+"Bypassare il debug di WordPress (se WP_DEBUG = false) e mostrare errori e "
+"avvertimenti sullo schermo. (Non usare in produzione!)"
+
+#: guide/guide.php:46
+msgid "Show Cron Jobs table."
+msgstr "Mostra la tabella Cron Jobs."
+
+#: guide/guide.php:48
+msgid "Show file .htaccess"
+msgstr "Mostra il file .htaccess"
+
+#: guide/guide.php:50
+msgid "Show file wp-config.php"
+msgstr "Mostra il file wp-config.php"
+
+#: guide/guide.php:54
+msgid ""
+"Restores the previous (\"classic\") widgets settings screens and disables "
+"the block editor from managing widgets."
+msgstr ""
+"Ripristina le schermate precedenti (\"classiche\") delle impostazioni dei "
+"widget e disabilita l'editor di blocchi dalla gestione dei widget."
+
+#: guide/guide.php:56
+msgid ""
+"Disable the WP Admin Bar / Toolbar on the frontend of sites. (it does not "
+"affect the dashboard)"
+msgstr ""
+"Disattivare la barra amministrativa WP / Toolbar sul frontend dei siti. (non "
+"influisce sulla dashboard)"
+
+#: guide/guide.php:58
+msgid "Button to Show Errors on Admin Bar (Also Javascript errors!)"
+msgstr ""
+"Pulsante per mostrare gli errori sulla Admin Bar (anche errori Javascript!)"
+
+#: guide/guide.php:60
+msgid "Show File and Folders Permissions"
+msgstr "Mostra i permessi di file e cartelle"
+
+#: guide/guide.php:62
+msgid "Show JQuery and Migrate Versions (look Javascript and JQuery)."
+msgstr "Mostra JQuery e Migrate Versioni (guarda Javascript e JQuery)."
+
+#: guide/guide.php:64
+msgid "Erase readme.html and licence.txt files at root folder."
+msgstr "Cancellare i file readme.html e licence.txt nella cartella principale."
+
+#: guide/guide.php:66
+msgid "Show disk size, disk used, disk free and Top Bigger Folders."
+msgstr ""
+"Mostra la dimensione del disco, il disco usato, il disco libero e le Top "
+"Maggiore Cartelle."
+
+#: guide/guide.php:68
+msgid "Remove WP icon from admin toolbar (top left)."
+msgstr ""
+"Rimuovere l'icona WP dalla barra degli strumenti di amministrazione (in alto "
+"a sinistra)."
+
+#: guide/guide.php:70
+msgid "Replace WordPress logo at Login Page."
+msgstr "Sostituisci il logo di WordPress alla pagina di accesso."
+
+#: guide/guide.php:72
+msgid "Server Benchmark (performance)."
+msgstr "Server Benchmark (prestazioni)."
+
+#: guide/guide.php:74
+msgid ""
+"Show the mySQL  (database info) with a lot of info about your mySQL server "
+"configuration."
+msgstr ""
+"Mostra il mySQL (informazioni sul database) con molte informazioni sulla "
+"configurazione del tuo server mySQL."
+
+#: guide/guide.php:76
+msgid "Disable javascript console logs for non administrators."
+msgstr "Disattivare i log della console javascript per i non amministratori."
+
+#: guide/guide.php:78
+msgid "Show and check file permissions (included wp-config.php)."
+msgstr "Mostra e controlla i permessi dei file (incluso wp-config.php)."
+
+#: guide/guide.php:80
+msgid "Show and delete transients."
+msgstr "Mostra e cancella i transienti."
+
+#: guide/guide.php:82
+msgid ""
+"Enables the WordPress database tools to optimize and repair InnoDB and "
+"MyISAM database tables."
+msgstr ""
+"Permette agli strumenti del database di WordPress di ottimizzare e riparare "
+"le tabelle del database InnoDB e MyISAM."
+
+#: guide/guide.php:84
+msgid "Disable Self PingBack."
+msgstr "Disattivare Self PingBack."
+
+#: guide/guide.php:88
+msgid "Show Search Engine Visibility WordPress Setup."
+msgstr "Mostra visibilità sui motori di ricerca."
+
+#: guide/guide.php:90
+msgid "Show Server Rooth Path."
+msgstr "Mostra il percorso root del server."
+
+#: guide/guide.php:92
+msgid "Site Health Alert."
+msgstr "Salute del sito."
+
+#: guide/guide.php:94
+msgid "Show PHP Extensions Loaded."
+msgstr "PHP Estensioni caricate."
+
+#: guide/guide.php:96
+msgid "Show PHP Disabled Functions."
+msgstr "PHP funzioni disabilitate."
+
+#: guide/guide.php:98
+msgid "Show MYSQL Table Prefix."
+msgstr "Mostra prefisso tabella MYSQL."
+
+#: guide/guide.php:100
+msgid "Show Database charset (character_set_system)."
+msgstr "Mostra il set di caratteri del database (character_set_system)."
+
+#: guide/guide.php:103
+msgid "Show Robots.txt."
+msgstr "Mostra e modifica rebots.txt."
+
+#: guide/guide.php:105
+msgid "Erase file .maintenance."
+msgstr "Cancella il file .maintenance."
+
+#: guide/guide.php:107
+msgid "Fix Incompatible Archive issue when installing plugins from zip files."
+msgstr ""
+"Risolto il problema dell'archivio incompatibile durante l'installazione di "
+"plugin da file zip."
+
+#: guide/guide.php:109
+msgid "Improve Dashboard Performance and Clean up WordPress admin dashboard."
+msgstr ""
+"Migliora le prestazioni della dashboard e pulisci la dashboard di "
+"amministrazione di WordPress."
+
+#: guide/guide.php:117
+msgid "Go to other TABS and enable that you want."
+msgstr "Andate in altri TAB e abilitate quello che volete."
+
+#: guide/guide.php:120
+msgid "Check also the left menu for more tools (Dashboard => WP Tools)."
+msgstr ""
+"Controlla anche il menu a sinistra per altri strumenti (Bacheca => WP Tools)."
+
+#: guide/guide.php:123
+msgid "Visit our site for more details."
+msgstr "Visita il nostro sito per maggiori dettagli."
+
+#: guide/guide.php:128
+msgid "That is all. Enjoy."
+msgstr "Questo è tutto. Buon divertimento."
+
+#: includes/chat/class_bill_chat.php:48
+msgid "Chat messages reset successfully."
+msgstr "I messaggi della chat sono stati reimpostati correttamente."
+
+#: includes/chat/class_bill_chat.php:49
+msgid "Error resetting chat messages."
+msgstr "Errore durante la reimpostazione dei messaggi della chat."
+
+#: includes/chat/class_bill_chat.php:50
+msgid "Invalid message received:"
+msgstr "Messaggio non valido ricevuto:"
+
+#: includes/chat/class_bill_chat.php:51
+msgid "Invalid response format:"
+msgstr "Formato di risposta non valido:"
+
+#: includes/chat/class_bill_chat.php:52
+msgid "Error processing server response:"
+msgstr "Errore durante l'elaborazione della risposta del server:"
+
+#: includes/chat/class_bill_chat.php:53
+msgid "Response is not valid JSON."
+msgstr "La risposta non è un JSON valido."
+
+#: includes/chat/class_bill_chat.php:54
+msgid "AJAX request failed:"
+msgstr "Richiesta AJAX fallita:"
+
+#: includes/chat/class_bill_chat.php:55
+msgid "Error sending the message. Please try again later."
+msgstr "Errore durante l'invio del messaggio. Riprova più tardi."
+
+#: includes/chat/class_bill_chat.php:56
+msgid "Please enter a message!"
+msgstr "Inserisci un messaggio!"
+
+#: includes/chat/class_bill_chat.php:291
+msgid ""
+"Error contacting the Artificial Intelligence (API). Please try again later."
+msgstr ""
+"Errore durante il contatto con l'intelligenza artificiale (API). Riprova più "
+"tardi."
+
+#: includes/chat/class_bill_chat.php:318
+msgid "Error to get response from AI source!"
+msgstr "Errore durante l'ottenimento della risposta dalla fonte AI!"
+
+#: includes/feedback-last/feedback-last.php:250
+msgid "What can we do to resolve the problem you're facing?"
+msgstr "Cosa possiamo fare per risolvere il problema che stai affrontando?"
+
+#: includes/feedback-last/feedback-last.php:254
+msgid ""
+"Depending on your response, we can help keep the plugin running smoothly for "
+"you immediately!"
+msgstr ""
+"A seconda della tua risposta, possiamo aiutarti a mantenere il plugin "
+"funzionante correttamente per te immediatamente!"
+
+#: includes/feedback-last/feedback-last.php:277
+msgid "Discover New FREE Plugins"
+msgstr "Scopri nuovi plugin GRATUITI"
+
+#: includes/feedback-last/feedback-last.php:280
+msgid "Support Page"
+msgstr "Pagina di Supporto"
+
+#: includes/feedback-last/feedback-last.php:283
+msgid "Cancel"
+msgstr "Annulla"
+
+#: includes/feedback-last/feedback-last.php:286
+msgid "Just Deactivate"
+msgstr "Disattiva solo"
+
+#: includes/feedback/activated-manager.php:64
+msgid "PRE-INSTALLATION CHECKUP"
+msgstr "CONTROLLO PRE-INSTALLAZIONE"
+
+#: includes/feedback/activated-manager.php:69
+msgid "Welcome!"
+msgstr "Benvenuto!"
+
+#: includes/feedback/activated-manager.php:146
+msgid ""
+"Your WordPress Memory Limit is too low, which can lead to critical issues on "
+"your site due to insufficient resources. Promptly address this issue before "
+"continuing."
+msgstr ""
+"Il limite di memoria di WordPress è troppo basso, il che può causare "
+"problemi critici sul tuo sito a causa di risorse insufficienti. Risolvi "
+"subito questo problema prima di continuare."
+
+#: includes/feedback/activated-manager.php:217
+msgid "CONTINUE"
+msgstr "CONTINUARE"
+
+#: includes/help/help.php:45
+msgid ""
+"In the DASHBOARD screen you will find useful information about your server."
+msgstr "Nella schermata Bacheca troverai informazioni utili sul tuo server."
+
+#: includes/help/help.php:48
+msgid ""
+"Here are the link to the Dashboard Plugin Page with more useful information"
+msgstr ""
+"Ecco il link alla pagina del plugin Dashboard con più informazioni utili"
+
+#: includes/help/help.php:52
+msgid "You will find also links to "
+msgstr "Troverete anche dei link a "
+
+#: includes/help/help.php:54
+msgid "StartUp Guide"
+msgstr "Guida di avvio"
+
+#: includes/help/help.php:55
+msgid "and Settings, Troubleshooting Guide Page and Support Page."
+msgstr ""
+"e impostazioni, pagina della guida alla risoluzione dei problemi e pagina "
+"del supporto."
+
+#: includes/help/help.php:59
+msgid ""
+"Here are the link to our free blog with a lot of tips and tricks and about "
+"how to use this tool."
+msgstr ""
+"Ecco il link al nostro blog gratuito con un sacco di consigli e trucchi e su "
+"come utilizzare questo strumento."
+
+#: includes/help/help.php:64 includes/help/help.php:86
+#: includes/help/help.php:124
+msgid "Overview"
+msgstr "Panoramica"
+
+#: includes/help/help.php:73
+msgid ""
+"In the SETTINGS screen you will find many tabs, with useful information as "
+"StartUP Guide."
+msgstr ""
+"Nella schermata IMPOSTAZIONI troverete molte schede, con informazioni utili "
+"come Guida all'avvio."
+
+#: includes/help/help.php:76
+msgid ""
+"You will find also fields and controls to configurate the plugin. Take some "
+"time to open each tab and mark that you want."
+msgstr ""
+"Troverete anche campi e controlli per configurare il plugin. Prendetevi un "
+"po' di tempo per aprire ogni scheda e segnare quello che volete."
+
+#: includes/help/help.php:80 includes/help/help.php:116
+msgid ""
+"Here are the link to the Dashboard Plugin Page with more useful information."
+msgstr ""
+"Ecco il link alla pagina della Bacheca del plugin con più informazioni utili."
+
+#: includes/help/help.php:99
+msgid ""
+"This is a table with the history of errors logged on your site. You can sort "
+"the table by clicking on each header field. For example, date, type, and so "
+"on."
+msgstr ""
+"Questa è una tabella con la cronologia degli errori registrati sul tuo sito. "
+"Puoi ordinare la tabella cliccando su ogni campo di intestazione. Ad "
+"esempio, data, tipo e così via."
+
+#: includes/help/help.php:100
+msgid ""
+"In the setup button, at the top right corner, you can choose which log file "
+"to display in the table, from the possible files our plugin has found."
+msgstr ""
+"Nel pulsante di configurazione, nell'angolo in alto a destra, puoi scegliere "
+"quale file di registro visualizzare nella tabella, tra i possibili file che "
+"il nostro plugin ha trovato."
+
+#: includes/help/help.php:101
+msgid ""
+"There should be at least one log file; otherwise, consult your hosting "
+"provider."
+msgstr ""
+"Dovrebbe essere presente almeno un file di registro; in caso contrario, "
+"consulta il tuo provider di hosting."
+
+#: includes/help/help.php:102
+msgid ""
+"Click the view button for more details and to better understand the issue "
+"and what is causing it. In the window that opens, click on AI Analysis to "
+"chat with the artificial intelligence and delve deeper, if necessary, to "
+"better understand the problem and possible solutions."
+msgstr ""
+"Fai clic sul pulsante Visualizza per maggiori dettagli e per comprendere "
+"meglio il problema e la causa. Nella finestra che si apre, fai clic su "
+"Analisi AI per chattare con l'intelligenza artificiale e approfondire, se "
+"necessario, per comprendere meglio il problema e le possibili soluzioni."
+
+#: includes/help/help.php:103
+msgid ""
+"Once you are aware of the cause, we suggest contacting the developer of the "
+"plugin or theme and informing them, providing all the details. We do not "
+"recommend modifying plugins/themes or WordPress files, as your changes will "
+"be lost in their next update."
+msgstr ""
+"Una volta che sei a conoscenza della causa, ti consigliamo di contattare lo "
+"sviluppatore del plugin o del tema e di informarlo, fornendo tutti i "
+"dettagli. Non ti consigliamo di modificare plugin/temi o file WordPress, "
+"poiché le tue modifiche andranno perse nel loro prossimo aggiornamento."
+
+#: includes/help/help.php:105
+msgid ""
+"Visit our blog for more details on the subject: <a href=\"https://"
+"wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+msgstr ""
+"Visita il nostro blog per maggiori dettagli sull&#39;argomento: <a href="
+"\"https://wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+
+#: includes/help/help.php:165
+msgid "Open WP Tools Plugin Here!"
+msgstr "Apri il plugin WP Tools qui!"
+
+#: includes/help/help.php:166
+msgid "Just Click Over WP Tools, then Go To Settings=>StartUp Guide."
+msgstr ""
+"Basta cliccare su WP Tools, quindi andare su Impostazioni=>Guida "
+"introduttiva."
+
+#: includes/vendor/vendor.php:37
+msgid "Please, wait...  Dismissing..."
+msgstr "Per favore, aspetta...  Rimuovendo..."
+
+#: includes/vendor/vendor.php:43
+msgid "Watch Again"
+msgstr "Guarda di nuovo"
+
+#: includes/vendor/vendor.php:44
+msgid "Dismiss"
+msgstr "Nascondi"
+
+#: settings/options/_plugin_options_tabbed.php:22
+#: settings/options/_plugin_options_tabbed.php:24
+#: settings/options/plugin_options_tabbed.php:37
+#: settings/options/plugin_options_tabbed.php:39 settings/page-builders.php:330
+msgid "Startup Guide"
+msgstr "Guida di avvio"
+
+#: settings/options/_plugin_options_tabbed.php:26
+#: settings/options/plugin_options_tabbed.php:41
+msgid ""
+"You can increase the memory limit, time limit and max upload filesize "
+"without editing any PHP or WordPress files. If your PHP init define a bigger "
+"amount, our plugin doesn't reduce it. Choose Select to don't change it."
+msgstr ""
+"È possibile aumentare il limite di memoria, il limite di tempo e la "
+"dimensione massima dei file da caricare senza modificare alcun file PHP o "
+"WordPress. Se il tuo PHP init definisce una quantità maggiore, il nostro "
+"plugin non la riduce. Scegliete Select per non cambiarlo."
+
+#: settings/options/_plugin_options_tabbed.php:28
+#: settings/options/plugin_options_tabbed.php:43
+msgid "Then click SAVE CHANGES."
+msgstr "Fare clic su SALVA MODIFICHE."
+
+#: settings/options/_plugin_options_tabbed.php:32
+#: settings/options/_plugin_options_tabbed.php:412
+#: settings/options/plugin_options_tabbed.php:47
+#: settings/options/plugin_options_tabbed.php:423
+#: settings/page-builders.php:317
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: settings/options/_plugin_options_tabbed.php:32
+#: settings/options/_plugin_options_tabbed.php:444
+#: settings/options/_plugin_options_tabbed.php:536
+#: settings/options/_plugin_options_tabbed.php:628
+#: settings/options/plugin_options_tabbed.php:47
+#: settings/options/plugin_options_tabbed.php:454
+#: settings/options/plugin_options_tabbed.php:544
+#: settings/options/plugin_options_tabbed.php:635
+msgid "Instructions"
+msgstr "Istruzioni"
+
+#: settings/options/_plugin_options_tabbed.php:41
+#: settings/options/_plugin_options_tabbed.php:56
+#: settings/options/_plugin_options_tabbed.php:73
+#: settings/options/plugin_options_tabbed.php:56
+#: settings/options/plugin_options_tabbed.php:71
+#: settings/options/plugin_options_tabbed.php:84
+msgid "Add Max Memory Limit"
+msgstr "Aggiungere il limite massimo di memoria"
+
+#: settings/options/_plugin_options_tabbed.php:45
+#: settings/options/_plugin_options_tabbed.php:60
+#: settings/options/_plugin_options_tabbed.php:77
+#: settings/options/_plugin_options_tabbed.php:92
+#: settings/options/_plugin_options_tabbed.php:106
+#: settings/options/_plugin_options_tabbed.php:123
+#: settings/options/_plugin_options_tabbed.php:137
+#: settings/options/plugin_options_tabbed.php:60
+#: settings/options/plugin_options_tabbed.php:75
+#: settings/options/plugin_options_tabbed.php:88
+#: settings/options/plugin_options_tabbed.php:103
+#: settings/options/plugin_options_tabbed.php:116
+#: settings/options/plugin_options_tabbed.php:133
+#: settings/options/plugin_options_tabbed.php:146
+msgid "Select"
+msgstr "Seleziona"
+
+#: settings/options/_plugin_options_tabbed.php:46
+#: settings/options/_plugin_options_tabbed.php:61
+#: settings/options/_plugin_options_tabbed.php:78
+#: settings/options/_plugin_options_tabbed.php:141
+#: settings/options/plugin_options_tabbed.php:61
+#: settings/options/plugin_options_tabbed.php:76
+#: settings/options/plugin_options_tabbed.php:89
+#: settings/options/plugin_options_tabbed.php:150
+msgid "128 MB"
+msgstr "128 MB"
+
+#: settings/options/_plugin_options_tabbed.php:47
+#: settings/options/_plugin_options_tabbed.php:62
+#: settings/options/plugin_options_tabbed.php:62
+#: settings/options/plugin_options_tabbed.php:77
+msgid "Go Pro for More"
+msgstr "Go Pro per sapere di piú"
+
+#: settings/options/_plugin_options_tabbed.php:79
+#: settings/options/_plugin_options_tabbed.php:142
+#: settings/options/plugin_options_tabbed.php:90
+#: settings/options/plugin_options_tabbed.php:151
+msgid "256 MB"
+msgstr "256 MB"
+
+#: settings/options/_plugin_options_tabbed.php:80
+#: settings/options/_plugin_options_tabbed.php:143
+#: settings/options/plugin_options_tabbed.php:91
+#: settings/options/plugin_options_tabbed.php:152
+msgid "512 MB"
+msgstr "512 MB"
+
+#: settings/options/_plugin_options_tabbed.php:88
+#: settings/options/_plugin_options_tabbed.php:102
+#: settings/options/plugin_options_tabbed.php:99
+#: settings/options/plugin_options_tabbed.php:112
+msgid "Add Max Execution Time Limit"
+msgstr "Aggiungere il limite massimo di tempo di esecuzione"
+
+#: settings/options/_plugin_options_tabbed.php:93
+#: settings/options/_plugin_options_tabbed.php:107
+#: settings/options/plugin_options_tabbed.php:104
+#: settings/options/plugin_options_tabbed.php:117
+msgid "120 Sec"
+msgstr "120 Sec"
+
+#: settings/options/_plugin_options_tabbed.php:94
+#: settings/options/_plugin_options_tabbed.php:125
+#: settings/options/plugin_options_tabbed.php:105
+#: settings/options/plugin_options_tabbed.php:135
+msgid "Go Pro For More"
+msgstr "Go Pro per sapere di piú"
+
+#: settings/options/_plugin_options_tabbed.php:108
+#: settings/options/plugin_options_tabbed.php:118
+msgid "180 Sec"
+msgstr "180 Sec"
+
+#: settings/options/_plugin_options_tabbed.php:109
+#: settings/options/plugin_options_tabbed.php:119
+msgid "240 Sec"
+msgstr "240 Sec"
+
+#: settings/options/_plugin_options_tabbed.php:110
+#: settings/options/plugin_options_tabbed.php:120
+msgid "300 Sec"
+msgstr "300 Sec"
+
+#: settings/options/_plugin_options_tabbed.php:111
+#: settings/options/plugin_options_tabbed.php:121
+msgid "360 Sec"
+msgstr "360 Sec"
+
+#: settings/options/_plugin_options_tabbed.php:119
+#: settings/options/_plugin_options_tabbed.php:133
+#: settings/options/plugin_options_tabbed.php:129
+#: settings/options/plugin_options_tabbed.php:142
+msgid "Add Max Upload File size Limit"
+msgstr "Aggiungere il limite massimo di dimensione del file da caricare"
+
+#: settings/options/_plugin_options_tabbed.php:124
+#: settings/options/_plugin_options_tabbed.php:138
+#: settings/options/plugin_options_tabbed.php:134
+#: settings/options/plugin_options_tabbed.php:147
+msgid "16 MB"
+msgstr "16 MB"
+
+#: settings/options/_plugin_options_tabbed.php:139
+#: settings/options/plugin_options_tabbed.php:148
+msgid "32 MB"
+msgstr "32 MB"
+
+#: settings/options/_plugin_options_tabbed.php:140
+#: settings/options/plugin_options_tabbed.php:149
+msgid "64 MB"
+msgstr "64 MB"
+
+#: settings/options/_plugin_options_tabbed.php:144
+#: settings/options/plugin_options_tabbed.php:153
+msgid "1 GB"
+msgstr "1 GB"
+
+#: settings/options/_plugin_options_tabbed.php:175
+#: settings/options/plugin_options_tabbed.php:184
+msgid "Disable WordPress Native Sitemap Automatic Creation."
+msgstr "Disattivare la creazione automatica della Sitemap nativa di WordPress."
+
+#: settings/options/_plugin_options_tabbed.php:177
+#: settings/options/plugin_options_tabbed.php:186
+msgid "Yes, disable all"
+msgstr "Sì, disabilitare tutti"
+
+#: settings/options/_plugin_options_tabbed.php:178
+#: settings/options/plugin_options_tabbed.php:187
+msgid "Disable Only Users Sitemap"
+msgstr "Disabilita solo  il Sitemap degli utenti"
+
+#: settings/options/_plugin_options_tabbed.php:179
+#: settings/options/_plugin_options_tabbed.php:212
+#: settings/options/_plugin_options_tabbed.php:263
+#: settings/options/_plugin_options_tabbed.php:272
+#: settings/options/_plugin_options_tabbed.php:281
+#: settings/options/_plugin_options_tabbed.php:290
+#: settings/options/_plugin_options_tabbed.php:308
+#: settings/options/_plugin_options_tabbed.php:317
+#: settings/options/_plugin_options_tabbed.php:326
+#: settings/options/_plugin_options_tabbed.php:350
+#: settings/options/_plugin_options_tabbed.php:359
+#: settings/options/_plugin_options_tabbed.php:368
+#: settings/options/_plugin_options_tabbed.php:379
+#: settings/options/_plugin_options_tabbed.php:392
+#: settings/options/_plugin_options_tabbed.php:405
+#: settings/options/plugin_options_tabbed.php:188
+#: settings/options/plugin_options_tabbed.php:221
+#: settings/options/plugin_options_tabbed.php:274
+#: settings/options/plugin_options_tabbed.php:283
+#: settings/options/plugin_options_tabbed.php:292
+#: settings/options/plugin_options_tabbed.php:301
+#: settings/options/plugin_options_tabbed.php:319
+#: settings/options/plugin_options_tabbed.php:328
+#: settings/options/plugin_options_tabbed.php:337
+#: settings/options/plugin_options_tabbed.php:361
+#: settings/options/plugin_options_tabbed.php:370
+#: settings/options/plugin_options_tabbed.php:379
+#: settings/options/plugin_options_tabbed.php:390
+#: settings/options/plugin_options_tabbed.php:403
+#: settings/options/plugin_options_tabbed.php:416
+msgid "No"
+msgstr "No"
+
+#: settings/options/_plugin_options_tabbed.php:199
+#: settings/options/plugin_options_tabbed.php:208
+msgid "Enable Auto Update Plugin? (default Yes)"
+msgstr "Abilitare il plugin di aggiornamento automatico? (predefinito Sì)"
+
+#: settings/options/_plugin_options_tabbed.php:201
+#: settings/options/plugin_options_tabbed.php:210
+msgid "Yes, enable WP Tools Auto Update"
+msgstr "Sì, abilita solo WP Tools"
+
+#: settings/options/_plugin_options_tabbed.php:203
+#: settings/options/plugin_options_tabbed.php:212
+msgid "No (unsafe)"
+msgstr "No (non sicuro)"
+
+#: settings/options/_plugin_options_tabbed.php:211
+#: settings/options/plugin_options_tabbed.php:220
+msgid "Yes, disable"
+msgstr "Sì, disabilitare"
+
+#: settings/options/_plugin_options_tabbed.php:219
+#: settings/options/plugin_options_tabbed.php:228
+msgid "Please paste the Meta Name From Bing Page"
+msgstr "Incolla il meta nome dalla pagina Bing"
+
+#: settings/options/_plugin_options_tabbed.php:225
+#: settings/options/plugin_options_tabbed.php:235
+msgid "Please paste the Meta Name Content from Bing Page"
+msgstr "Incolla il contenuto del meta nome dalla pagina Bing"
+
+#: settings/options/_plugin_options_tabbed.php:237
+#: settings/options/plugin_options_tabbed.php:248
+msgid "Please paste only the value in the contents = "
+msgstr "Si prega di incollare solo il valore nel contenuto = "
+
+#: settings/options/_plugin_options_tabbed.php:238
+#: settings/options/plugin_options_tabbed.php:249
+msgid "of the supplied meta tag. For example"
+msgstr "del meta tag fornito. Per esempio"
+
+#: settings/options/_plugin_options_tabbed.php:244
+#: settings/options/plugin_options_tabbed.php:255
+msgid "Add Google Analytics GA Tracking ID."
+msgstr "Aggiungi il GA Tracking ID di Google Analytics."
+
+#: settings/options/_plugin_options_tabbed.php:245
+#: settings/options/plugin_options_tabbed.php:256
+msgid "(format: XX-XXXXXXXX-X)"
+msgstr "(formato: XX-XXXXXXXX-X)"
+
+#: settings/options/_plugin_options_tabbed.php:246
+#: settings/options/plugin_options_tabbed.php:257
+msgid "(or format: G-XXXXXXXXXX)"
+msgstr "(oppure formato: G-XXXXXXXXXXXX)"
+
+#: settings/options/_plugin_options_tabbed.php:253
+#: settings/options/_plugin_options_tabbed.php:262
+#: settings/options/_plugin_options_tabbed.php:271
+#: settings/options/_plugin_options_tabbed.php:280
+#: settings/options/_plugin_options_tabbed.php:289
+#: settings/options/_plugin_options_tabbed.php:307
+#: settings/options/_plugin_options_tabbed.php:316
+#: settings/options/_plugin_options_tabbed.php:325
+#: settings/options/_plugin_options_tabbed.php:349
+#: settings/options/_plugin_options_tabbed.php:358
+#: settings/options/_plugin_options_tabbed.php:367
+#: settings/options/_plugin_options_tabbed.php:378
+#: settings/options/_plugin_options_tabbed.php:391
+#: settings/options/_plugin_options_tabbed.php:404
+#: settings/options/plugin_options_tabbed.php:264
+#: settings/options/plugin_options_tabbed.php:273
+#: settings/options/plugin_options_tabbed.php:282
+#: settings/options/plugin_options_tabbed.php:291
+#: settings/options/plugin_options_tabbed.php:300
+#: settings/options/plugin_options_tabbed.php:318
+#: settings/options/plugin_options_tabbed.php:327
+#: settings/options/plugin_options_tabbed.php:336
+#: settings/options/plugin_options_tabbed.php:360
+#: settings/options/plugin_options_tabbed.php:369
+#: settings/options/plugin_options_tabbed.php:378
+#: settings/options/plugin_options_tabbed.php:389
+#: settings/options/plugin_options_tabbed.php:402
+#: settings/options/plugin_options_tabbed.php:415
+msgid "Yes"
+msgstr "Si"
+
+#: settings/options/_plugin_options_tabbed.php:254
+#: settings/options/plugin_options_tabbed.php:265
+msgid "No,"
+msgstr "No,"
+
+#: settings/options/_plugin_options_tabbed.php:269
+#: settings/options/plugin_options_tabbed.php:280
+msgid "Deactivate Lazy Load functionality (added in WP version 5.5)."
+msgstr ""
+"Disattivare la funzionalità Lazy Load (aggiunta nella versione 5.5 di WP)."
+
+#: settings/options/_plugin_options_tabbed.php:278
+#: settings/options/plugin_options_tabbed.php:289
+msgid ""
+"Deactivate Emojis functionality (support for emoji's in older browsers)?"
+msgstr ""
+"Disattivare la funzionalità Emojis (supporto per le emoji nei vecchi "
+"browser)?"
+
+#: settings/options/_plugin_options_tabbed.php:287
+#: settings/options/plugin_options_tabbed.php:298
+msgid "Show Page Load Info at footer this page?"
+msgstr "Mostrare le informazioni sul caricamento della pagina a piè di pagina?"
+
+#: settings/options/_plugin_options_tabbed.php:296
+#: settings/options/plugin_options_tabbed.php:307
+msgid ""
+"Bypass WordPress debug (if WP_DEBUG = false) and show errors, warnings and "
+"notices on screen? (Don't use in production)"
+msgstr ""
+"Bypassare il debug di WordPress (se WP_DEBUG = false) e mostrare errori e "
+"avvertimenti sullo schermo? (Non usare in produzione)"
+
+#: settings/options/_plugin_options_tabbed.php:298
+#: settings/options/plugin_options_tabbed.php:309
+msgid "Yes, show errors, warnings and notices."
+msgstr "Sì, mostra gli errori, le avvertenze e gli avvisi."
+
+#: settings/options/_plugin_options_tabbed.php:299
+#: settings/options/plugin_options_tabbed.php:310
+msgid "No, lets WordPress handle it."
+msgstr "No, lasciamo che se ne occupi WordPress."
+
+#: settings/options/_plugin_options_tabbed.php:305
+#: settings/options/plugin_options_tabbed.php:316
+msgid ""
+"Disables the Admin Bar from the frontend only? (it does not affect the "
+"dashboard)"
+msgstr ""
+"Disabilita la barra amministrativa solo dal frontend? (non influisce sulla "
+"dashboard)"
+
+#: settings/options/_plugin_options_tabbed.php:314
+#: settings/options/plugin_options_tabbed.php:325
+msgid "Restores the previous (\"classic\") WordPress widgets settings screens?"
+msgstr ""
+"Ripristina le precedenti (\"classiche\") schermate di impostazioni dei "
+"widget di WordPress?"
+
+#: settings/options/_plugin_options_tabbed.php:323
+#: settings/options/plugin_options_tabbed.php:334
+msgid "Show Errors Button (also Javascript errors) on Admin Toolbar?"
+msgstr ""
+"Mostrare il pulsante degli errori (anche errori Javascript) sulla barra "
+"degli strumenti dell'amministrazione?"
+
+#: settings/options/_plugin_options_tabbed.php:332
+#: settings/options/plugin_options_tabbed.php:343
+msgid "Replace WordPress logo at login form. Just paste a URL of the new logo."
+msgstr ""
+"Sostituisci il logo di WordPress al modulo di login. Basta incollare un URL "
+"del nuovo logo."
+
+#: settings/options/_plugin_options_tabbed.php:337
+#: settings/options/plugin_options_tabbed.php:348
+msgid "Logo Width in pixels."
+msgstr "Larghezza del logo in pixel."
+
+#: settings/options/_plugin_options_tabbed.php:342
+#: settings/options/plugin_options_tabbed.php:353
+msgid "Logo Height in pixels."
+msgstr "Altezza del logo in pixel."
+
+#: settings/options/_plugin_options_tabbed.php:347
+#: settings/options/plugin_options_tabbed.php:358
+msgid "Erase WP readme and license file of root folder?"
+msgstr "Cancellare i file readme e di licenza di WP dalla cartella principale?"
+
+#: settings/options/_plugin_options_tabbed.php:356
+#: settings/options/plugin_options_tabbed.php:367
+msgid "Remove WP icon on top left position of admin bar?"
+msgstr ""
+"Rimuovere l'icona WP nella posizione in alto a sinistra della barra di "
+"amministrazione?"
+
+#: settings/options/_plugin_options_tabbed.php:365
+#: settings/options/plugin_options_tabbed.php:376
+msgid "Disable javascript console log for non administrators."
+msgstr "Disattivare il log della console javascript per i non amministratori."
+
+#: settings/options/_plugin_options_tabbed.php:376
+#: settings/options/plugin_options_tabbed.php:387
+msgid "Disable Pingbacks to Your own Site (Self Pingback)."
+msgstr "Disattivare i Pingback al proprio sito (Self Pingback)."
+
+#: settings/options/_plugin_options_tabbed.php:389
+#: settings/options/plugin_options_tabbed.php:400
+msgid ""
+"Resolve 'Incompatible Archive' issue when installing plugins from zip files "
+"by using PclZip instead of ZipArchive. Consider using this option only for "
+"new plugin installations."
+msgstr ""
+"Risolvi il problema \"Archivio incompatibile\" quando installi plugin da "
+"file zip utilizzando PclZip anziché ZipArchive. Considera di utilizzare "
+"questa opzione solo per le nuove installazioni di plugin."
+
+#: settings/options/_plugin_options_tabbed.php:402
+#: settings/options/plugin_options_tabbed.php:413
+msgid ""
+"Improve Dashboard Performance by prevent WordPress from fetching news and "
+"Clean up WordPress admin dashboard."
+msgstr ""
+"Migliora le prestazioni della dashboard impedendo a WordPress di recuperare "
+"notizie e Pulisci la dashboard di amministrazione di WordPress."
+
+#: settings/options/_plugin_options_tabbed.php:427
+#: settings/options/plugin_options_tabbed.php:437
+msgid ""
+"Show Server Load Average (CPU Usage) for the last minute at top admin bar."
+msgstr ""
+"Mostra la media del carico del server (uso della CPU) per l'ultimo minuto "
+"nella barra amministrativa superiore."
+
+#: settings/options/_plugin_options_tabbed.php:429
+#: settings/options/_plugin_options_tabbed.php:447
+#: settings/options/plugin_options_tabbed.php:439
+#: settings/options/plugin_options_tabbed.php:457
+msgid "Use this option only in Linux Servers."
+msgstr "Usate questa opzione solo nei server Linux."
+
+#: settings/options/_plugin_options_tabbed.php:431
+#: settings/options/plugin_options_tabbed.php:441
+msgid "This information is refreshed each 5 seconds."
+msgstr "Queste informazioni vengono aggiornate ogni 5 secondi."
+
+#: settings/options/_plugin_options_tabbed.php:433
+#: settings/options/plugin_options_tabbed.php:443
+msgid ""
+"If you can see always 0 (zero) or wait is because we are unable to get this "
+"info from your server. Server requirements:"
+msgstr ""
+"Se puoi vedere sempre 0 (zero) o aspettare è perché non siamo in grado di "
+"ottenere queste informazioni dal tuo server. Requisiti del server:"
+
+#: settings/options/_plugin_options_tabbed.php:435
+#: settings/options/plugin_options_tabbed.php:445
+msgid ""
+"shell_exec enabled on your PHP (ask for your hosting to enable it if "
+"necessary."
+msgstr ""
+"shell_exec abilitato sul vostro PHP (chiedete al vostro hosting di "
+"abilitarlo se necessario."
+
+#: settings/options/_plugin_options_tabbed.php:437
+#: settings/options/plugin_options_tabbed.php:447
+msgid "Server Files Readable: /proc/cpuinfo and /proc/stat."
+msgstr "File del server leggibili: /proc/cpuinfo e /proc/stat."
+
+#: settings/options/_plugin_options_tabbed.php:440
+#: settings/options/plugin_options_tabbed.php:450
+msgid "Lower numbers are better."
+msgstr "I numeri più bassi sono meglio."
+
+#: settings/options/_plugin_options_tabbed.php:441
+#: settings/options/plugin_options_tabbed.php:451
+msgid "Higher numbers represent a problem or an overloaded machine."
+msgstr "Numeri più alti rappresentano un problema o una macchina sovraccarica."
+
+#: settings/options/_plugin_options_tabbed.php:444
+#: settings/options/_plugin_options_tabbed.php:547
+#: settings/options/plugin_options_tabbed.php:454
+#: settings/options/plugin_options_tabbed.php:555
+#: settings/page-builders.php:318
+msgid "Processor Load"
+msgstr "Carico del processore"
+
+#: settings/options/_plugin_options_tabbed.php:445
+#: settings/options/plugin_options_tabbed.php:455
+msgid "Show Disk Usage."
+msgstr "Mostra l'uso del disco."
+
+#: settings/options/_plugin_options_tabbed.php:449
+#: settings/options/plugin_options_tabbed.php:459
+msgid ""
+"We use the PHP function disk_total_space(). Talk with your hosting if "
+"doesn't work."
+msgstr ""
+"Usiamo la funzione PHP disk_total_space(). Parla con il tuo hosting se non "
+"funziona."
+
+#: settings/options/_plugin_options_tabbed.php:460
+#: settings/options/plugin_options_tabbed.php:470
+msgid "Disk Total: "
+msgstr "Spazio Disco totale: "
+
+#: settings/options/_plugin_options_tabbed.php:462
+#: settings/options/plugin_options_tabbed.php:472
+msgid "Disk Used: "
+msgstr "Spazio Disco usato: "
+
+#: settings/options/_plugin_options_tabbed.php:464
+#: settings/options/plugin_options_tabbed.php:474
+msgid "Disk Free: "
+msgstr "Spazio Disponibile: "
+
+#: settings/options/_plugin_options_tabbed.php:472
+#: settings/options/plugin_options_tabbed.php:480
+msgid ""
+"We need to use the PHP functions disk_total_space() and disk_free_space(). "
+"Talk with your hosting to enable them."
+msgstr ""
+"Abbiamo bisogno di usare le funzioni PHP disk_total_space() e "
+"disk_free_space(). Parla con il tuo hosting per abilitarle."
+
+#: settings/options/_plugin_options_tabbed.php:508
+#: settings/options/plugin_options_tabbed.php:516
+msgid "Top"
+msgstr "In alto"
+
+#: settings/options/_plugin_options_tabbed.php:508
+#: settings/options/plugin_options_tabbed.php:516
+msgid "Bigger Folders"
+msgstr "Cartelle più grandi"
+
+#: settings/options/_plugin_options_tabbed.php:511
+#: settings/options/plugin_options_tabbed.php:519
+msgid "100 Folders in Premium Version"
+msgstr "100 Cartelle (Opzione disponibile nella versione Premium)"
+
+#: settings/options/_plugin_options_tabbed.php:516
+#: settings/options/plugin_options_tabbed.php:524 wptools.php:808
+msgid "Path"
+msgstr "Percorso"
+
+#: settings/options/_plugin_options_tabbed.php:517
+#: settings/options/plugin_options_tabbed.php:525
+msgid "Size"
+msgstr "Dimensione"
+
+#: settings/options/_plugin_options_tabbed.php:536
+#: settings/options/plugin_options_tabbed.php:544
+msgid "Disk Usage"
+msgstr "Utilizzo disco"
+
+#: settings/options/_plugin_options_tabbed.php:541
+#: settings/options/plugin_options_tabbed.php:549
+msgid "Enable to show Server Percentage Load at Top Admin Bar?"
+msgstr ""
+"Permettere di mostrare il carico percentuale del server nella barra "
+"amministrativa superiore?"
+
+#: settings/options/_plugin_options_tabbed.php:543
+#: settings/options/_plugin_options_tabbed.php:640
+#: settings/options/_plugin_options_tabbed.php:649
+#: settings/options/_plugin_options_tabbed.php:658
+#: settings/options/plugin_options_tabbed.php:551
+#: settings/options/plugin_options_tabbed.php:647
+#: settings/options/plugin_options_tabbed.php:656
+#: settings/options/plugin_options_tabbed.php:665
+msgid "yes"
+msgstr "sì"
+
+#: settings/options/_plugin_options_tabbed.php:544
+#: settings/options/_plugin_options_tabbed.php:641
+#: settings/options/_plugin_options_tabbed.php:650
+#: settings/options/_plugin_options_tabbed.php:659
+#: settings/options/plugin_options_tabbed.php:552
+#: settings/options/plugin_options_tabbed.php:648
+#: settings/options/plugin_options_tabbed.php:657
+#: settings/options/plugin_options_tabbed.php:666
+msgid "no"
+msgstr "no"
+
+#: settings/options/_plugin_options_tabbed.php:559
+#: settings/options/plugin_options_tabbed.php:567
+msgid "WordPress Memory Limit"
+msgstr "Wordpress Memory Limit"
+
+#: settings/options/_plugin_options_tabbed.php:564
+#: settings/options/plugin_options_tabbed.php:572
+msgid "Your usage now"
+msgstr "Il tuo utilizzo ora"
+
+#: settings/options/_plugin_options_tabbed.php:568
+#: settings/options/plugin_options_tabbed.php:576
+msgid "Total Php Server Memory"
+msgstr "Memoria totale del server Php"
+
+#: settings/options/_plugin_options_tabbed.php:571
+#: settings/options/plugin_options_tabbed.php:579
+msgid "Total Hardware Memory"
+msgstr "Memoria hardware totale"
+
+#: settings/options/_plugin_options_tabbed.php:580
+#: settings/options/plugin_options_tabbed.php:588
+msgid "You can use our complimentary free plugin"
+msgstr "Puoi utilizzare il nostro plugin gratuito"
+
+#: settings/options/_plugin_options_tabbed.php:583
+#: settings/options/plugin_options_tabbed.php:591
+msgid ""
+"to receive tips about how enhance your website's memory performance and "
+"address any issues that may arise."
+msgstr ""
+"per ricevere suggerimenti su come migliorare le prestazioni della memoria "
+"del tuo sito web e risolvere eventuali problemi che potrebbero sorgere."
+
+#: settings/options/_plugin_options_tabbed.php:586
+#: settings/options/plugin_options_tabbed.php:594
+msgid "Click here to learn more."
+msgstr "Clicca qui per saperne di più."
+
+#: settings/options/_plugin_options_tabbed.php:594
+#: settings/options/plugin_options_tabbed.php:601
+msgid "Information"
+msgstr "Informazioni"
+
+#: settings/options/_plugin_options_tabbed.php:610
+#: settings/options/plugin_options_tabbed.php:617
+msgid "Your Server IP Address:"
+msgstr "Il endirizzo IP del tuo server è:"
+
+#: settings/options/_plugin_options_tabbed.php:619
+#: settings/options/plugin_options_tabbed.php:626
+msgid "WordPress will send email only when PHP fatal errors happens."
+msgstr "WordPress invierà un'email solo quando si verificano degli errori."
+
+#: settings/options/_plugin_options_tabbed.php:621
+#: settings/options/plugin_options_tabbed.php:628
+msgid ""
+"Do you want receive email alerts when notices/warnings and javascript errors "
+"happens? "
+msgstr ""
+"Vuoi ricevere avvisi via email quando succedono avvisi/notizia ed errori? "
+
+#: settings/options/_plugin_options_tabbed.php:623
+#: settings/options/plugin_options_tabbed.php:630
+msgid ""
+"For the weekly email, the default setting is \"Yes.\" Choose \"No\" if you "
+"prefer not to receive it."
+msgstr ""
+"Per l'e-mail settimanale, l'impostazione predefinita è \"Sì\". Scegli \"No\" "
+"se preferisci non riceverlo."
+
+#: settings/options/_plugin_options_tabbed.php:625
+#: settings/options/plugin_options_tabbed.php:632
+msgid ""
+"Left Blank to use your default Wordpress email.Then, click save changes."
+msgstr ""
+"Lasciare vuoto per utilizzare l'email predefinita di Wordpress, quindi fare "
+"clic su Salva modifiche."
+
+#: settings/options/_plugin_options_tabbed.php:628
+#: settings/options/_plugin_options_tabbed.php:664
+#: settings/options/plugin_options_tabbed.php:635
+#: settings/options/plugin_options_tabbed.php:671
+#: settings/page-builders.php:319
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: settings/options/_plugin_options_tabbed.php:638
+#: settings/options/plugin_options_tabbed.php:645
+msgid ""
+"Send email notification when notices/warnings or erros occurs? (limited at 1 "
+"email each 15 minutes)"
+msgstr ""
+"Inviare email di notifica quando si verificano avvisi/notizie o errori? "
+"(limitato a 10 email ogni 5 minuti)"
+
+#: settings/options/_plugin_options_tabbed.php:647
+#: settings/options/plugin_options_tabbed.php:654
+msgid ""
+"Receive a weekly email notification providing a summary of the number of "
+"notices, warnings, or errors that occurred?"
+msgstr ""
+"Ricevi una notifica email settimanale che fornisce un riepilogo del numero "
+"di avvisi, avvisi o errori che si sono verificati?"
+
+#: settings/options/_plugin_options_tabbed.php:656
+#: settings/options/plugin_options_tabbed.php:663
+msgid ""
+"Receive a weekly email with a summary of my website's page load times?  "
+"(Alert only if average exceeds 3 seconds.)"
+msgstr ""
+"Vuoi ricevere un'e-mail settimanale con un riepilogo dei tempi di "
+"caricamento delle pagine del mio sito web? (Avviso solo se la media supera i "
+"3 secondi.)"
+
+#: settings/options/_plugin_options_tabbed.php:678
+#: settings/options/plugin_options_tabbed.php:684
+msgid "More Useful Tools"
+msgstr "Altri strumenti utili"
+
+#: settings/options/_plugin_options_tabbed.php:690
+#: settings/options/plugin_options_tabbed.php:696
+msgid "Premium Features"
+msgstr "Funzioni Premium"
+
+#: settings/options/_plugin_options_tabbed.php:694
+#: settings/options/plugin_options_tabbed.php:700
+msgid "Visit our Premium Page for more details."
+msgstr "Visita la nostra pagina Premium per maggiori dettagli."
+
+#: settings/options/_plugin_options_tabbed.php:696
+#: settings/options/plugin_options_tabbed.php:702
+msgid "Premium Page"
+msgstr "Pagina Premium"
+
+#: settings/options/_plugin_options_tabbed.php:702
+#: settings/options/plugin_options_tabbed.php:708
+msgid ""
+"Paste below the Item Purchase Code received by email from us when you bought "
+"the premium version."
+msgstr ""
+"Incolla qui sotto il codice d'acquisto del plugin ricevuto via e-mail da noi "
+"quando hai comprato la versione premium."
+
+#: settings/options/_plugin_options_tabbed.php:705
+#: settings/options/plugin_options_tabbed.php:711
+msgid "After that, click SAVE CHANGES Button."
+msgstr "Dopodiché, clicca su Pulsante  Salva (SAVE CHANGES)."
+
+#: settings/options/_plugin_options_tabbed.php:712
+#: settings/options/plugin_options_tabbed.php:716
+msgid "Premium Version activated!"
+msgstr "Versione Premium attivata!"
+
+#: settings/options/_plugin_options_tabbed.php:724
+#: settings/options/plugin_options_tabbed.php:728
+msgid "Purchase Code:"
+msgstr "Codice di Acquisto:"
+
+#: wptools.php:799
+msgid "Invalid error string."
+msgstr "Stringa di errore non valida."
+
+#: wptools.php:800
+msgid "Error creating URL object or accessing pathname:"
+msgstr "Errore durante la creazione dell'oggetto URL o l'accesso al percorso:"
+
+#: wptools.php:801
+msgid "Incomplete data."
+msgstr "Dati incompleti."
+
+#: wptools.php:802
+msgid "No data available in table."
+msgstr "Nessun dato disponibile nella tabella."
+
+#: wptools.php:803
+msgid "The DataTable instance is not available."
+msgstr "L'istanza DataTable non è disponibile."
+
+#: wptools.php:804
+msgid "All"
+msgstr "Tutto"
+
+#: wptools.php:807
+msgid "Message"
+msgstr "Messaggio"
+
+#: wptools.php:809
+msgid "Script"
+msgstr "Sceneggiatura"
+
+#: wptools.php:810
+msgid "Line"
+msgstr "Linea"
+
+#: wptools.php:811
+msgid "Plugin"
+msgstr "Collegare"
+
+#: wptools.php:812
+msgid "Note"
+msgstr "Nota"
+
+#: wptools.php:813
+msgid ""
+"Contact the plugin developer with these details and request support. "
+"However, be advised that often the cause may be external to the plugin, such "
+"as insufficient server memory (or insufficient WordPress Memory Limit), "
+"conflicts with other plugins (or theme), lack of disk space, server overload "
+"due to hacker and bot spiders among other factors."
+msgstr ""
+"Contatta lo sviluppatore del plugin con questi dettagli e richiedi supporto. "
+"Tuttavia, tieni presente che spesso la causa potrebbe essere esterna al "
+"plugin, come memoria del server insufficiente (o limite di memoria WordPress "
+"insufficiente), conflitti con altri plugin (o temi), mancanza di spazio su "
+"disco, sovraccarico del server dovuto a hacker e bot spider tra gli altri "
+"fattori."
+
+#: wptools.php:814
+msgid "Theme"
+msgstr "Tema"
+
+#: wptools.php:815
+msgid "Details"
+msgstr "Per i dettagli"
+
+#: wptools.php:816
+msgid "To learn more:"
+msgstr "Scopri di più."
+
+#: wptools.php:817
+msgid "Click here"
+msgstr "fare click qui."
+
+#: wptools.php:818
+msgid "Analyze functionality will be implemented here."
+msgstr "Qui verrà implementata la funzionalità di analisi."
+
+#: wptools.php:819
+msgid "Critical Syntax error in the code that stops script execution."
+msgstr ""
+"Errore di sintassi critico nel codice che interrompe l'esecuzione dello "
+"script."
+
+#: wptools.php:820
+msgid "Critical error that stops script execution."
+msgstr "Errore critico che interrompe l'esecuzione dello script."
+
+#: wptools.php:821
+msgid ""
+"Non-critical issue that doesn't stop execution but may eventually lead to "
+"problems."
+msgstr ""
+"Problema non critico che non interrompe l'esecuzione ma che potrebbe causare "
+"problemi."
+
+#: wptools.php:822
+msgid "Minor issue, like using an undefined variable."
+msgstr "Problema minore, come l'utilizzo di una variabile non definita."
+
+#: wptools.php:823
+msgid "Use of outdated features that may be removed in future versions."
+msgstr ""
+"Utilizzo di funzionalità obsolete che potrebbero essere rimosse nelle "
+"versioni future."
+
+#: wptools.php:824
+msgid "Internal PHP error, often related to the engine."
+msgstr "Errore PHP interno, spesso correlato al motore."
+
+#: wptools.php:825
+msgid "Error during script compilation."
+msgstr "Errore durante la compilazione dello script."
+
+#: wptools.php:826
+msgid "Custom error/warning/notice triggered by the developer."
+msgstr "Errore/avviso/nota personalizzati attivati dallo sviluppatore."
+
+#: wptools.php:827
+msgid "Issues that impact functionality and user experience."
+msgstr "Problemi che incidono sulla funzionalità e sull'esperienza utente."
+
+#: wptools.php:828
+msgid "Unknown error type"
+msgstr "Tipo di errore sconosciuto"
+
+#: wptools.php:2196 wptools.php:2197
+msgid "MU Plugins"
+msgstr "Plugin MU"
+
+#: wptools.php:2210
+msgid "Loaded MU Plugins"
+msgstr "Plugin MU caricati"
+
+#: wptools.php:2213
+#| msgid ""
+#| "MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
+#| "They are stored in a specific folder (`wp-content/mu-plugins`) and cannot "
+#| "be activated or deactivated through the admin panel."
+msgid ""
+"MU-plugins (Must-Use Plugins) are plugins that are loaded automatically. "
+"They are stored in a specific folder (`wp-content/mu-plugins`) and cannot be "
+"activated or deactivated through the admin panel. The premium version of our "
+"plugin WP Tools allows you to activate and deactivate them."
+msgstr ""
+"I MU-plugins (Must-Use Plugins) sono plugin che vengono caricati "
+"automaticamente. Sono archiviati in una cartella specifica (`wp-content/mu-"
+"plugins`) e non possono essere attivati o disattivati tramite il pannello di "
+"amministrazione. La versione premium del nostro plugin WP Tools ti consente "
+"di attivarli e disattivarli."
+
+#: wptools.php:2235
+msgid "Author:"
+msgstr "Autore:"
+
+#: wptools.php:2240
+msgid "Author Site"
+msgstr "Sito dell'autore"
+
+#: wptools.php:2245
+msgid "Version:"
+msgstr "Versione:"
+
+#: wptools.php:2249
+msgid "File Name:"
+msgstr "Nome file:"
+
+#: wptools.php:2253
+msgid "File Path:"
+msgstr "Percorso del file:"
+
+#: wptools.php:2259
+msgid "Last Modified:"
+msgstr "Ultima modifica:"
+
+#: wptools.php:2261
+msgid "Modification date not available."
+msgstr "Data di modifica non disponibile."
+
+#: wptools.php:2272
+#| msgid "Just Deactivate"
+msgid "Status: Activated"
+msgstr "Stato: Attivato"
+
+#: wptools.php:2280
+#| msgid "Just Deactivate"
+msgid "Status: Deactivated"
+msgstr "Stato: Disattivato"

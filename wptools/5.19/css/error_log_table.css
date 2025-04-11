@@ -1,0 +1,318 @@
+#wptools-loadingIndicator {
+    display: flex;
+    /* Alinha as bolinhas horizontalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 10px;
+    /* Espaço entre as bolinhas */
+    height: 100vh;
+    /* Altura total da tela (opcional) */
+}
+
+/* Estilo das bolinhas */
+.wptools-loadingIndicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* Torna as bolinhas redondas */
+    background-color: #3498db;
+    /* Cor azul */
+    opacity: 0;
+    /* Inicialmente invisíveis */
+    animation: appear 1s infinite;
+    /* Animação de aparecer */
+}
+
+/* Animação de aparecer e desaparecer */
+@keyframes appear {
+
+    0%,
+    100% {
+        opacity: 0;
+        /* Invisível no início e no fim */
+    }
+
+    50% {
+        opacity: 1;
+        /* Visível no meio da animação */
+    }
+}
+
+/* Atrasos para cada bolinha */
+.wptools-loadingIndicator:nth-child(1) {
+    animation-delay: 0s;
+    /* Primeira bolinha sem atraso */
+}
+
+.wptools-loadingIndicator:nth-child(2) {
+    animation-delay: 0.3s;
+    /* Segunda bolinha com atraso */
+}
+
+.wptools-loadingIndicator:nth-child(3) {
+    animation-delay: 0.6s;
+    /* Terceira bolinha com atraso */
+}
+
+#error-detail-modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escurecido */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* Centraliza o modal */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajusta o espaçamento interno do seletor "Show entries" 
+.dataTables_length select {
+    padding-right: 20px;
+}
+*/
+/* Ajusta o espaçamento entre o número e o ícone da seta no seletor "Show entries" */
+.dataTables_length select {
+    padding-right: 40px;
+    padding-left: 10px;
+    min-width: 40px;
+    max-width: 40px;
+}
+
+/*
+.dataTables_wrapper .dataTables_length select {
+    padding-right: 40px;
+padding-left: 10px;
+min-width: 40px;
+max-width: 40px;
+color: gray;
+}
+*/
+/* Ajusta o espaçamento entre o texto "Show entries" e o select */
+.dataTables_length label {
+    margin-right: 10px;
+    /* Espaço entre o label e o seletor */
+}
+
+/* Ajuste adicional para o ícone de seta, se necessário */
+.dataTables_length select {
+    /* background-image: url('your-icon-url.png'); */
+    /* Caso queira mudar o ícone */
+    background-position: right center;
+    /* Ajusta a posição do ícone */
+    background-repeat: no-repeat;
+}
+
+#error-detail-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#error-detail-table th,
+#error-detail-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#error-detail-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+#error-detail-table td {
+    text-align: left;
+}
+
+#wptools-error-log-table {
+    width: 100% !important;
+    /* Garante que a tabela ocupe 100% da largura */
+    border-collapse: collapse;
+    /* Remove espaços entre as células */
+}
+
+#wptools-error-log-table thead,
+#wptools-error-log-table tbody {
+    width: 100% !important;
+    /* Garante que o thead e tbody acompanhem a largura da tabela */
+}
+
+#wptools-error-log-table th,
+#wptools-error-log-table td {
+    padding: 8px;
+    /* Espaçamento interno das células */
+    text-align: left;
+    /* Alinhamento do texto */
+    border: 1px solid #ddd;
+    /* Bordas das células */
+}
+
+#wptools-error-log-table th {
+    background-color: #f2f2f2;
+    /* Cor de fundo do cabeçalho */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    margin-top: 0px;
+    padding-right: 50px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    text-align: center !important;
+    float: none
+}
+
+#wptools-error-log-table {
+    margin-top: 10px;
+}
+
+#wptools-error-log-table tbody tr:nth-child(odd) {
+    background-color: #d1d1d1;
+    /* Cor para linhas ímpares */
+}
+
+#wptools-error-log-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+    /* Cor para linhas pares */
+}
+
+#wptools-settings-button {
+    background-color: #007bff;
+    /* Cor inicial do botão */
+    color: #fff;
+    /* Cor do texto */
+    border: none;
+    /* Remova a borda, se necessário */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Mostra o cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave */
+}
+
+#wptools-settings-button:hover {
+    background-color: #004186 !important;
+    /* Cor do botão quando o mouse está sobre ele */
+}
+
+/*
+#wptools_setup_ajax {
+    margin-top: 20px;
+    padding: 8px 12px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+*/
+#wptools_setup_ajax:hover {
+    background-color: #0056b3 !important;
+    /* Cor ao passar o mouse */
+}
+
+/* Tabs Pop Up */
+/* Default styles */
+#analysis-content {
+    display: none;
+}
+
+/* Show content based on :checked pseudo-class */
+#tab-details:checked~#tab-content #details-content {
+    display: block;
+}
+
+#tab-analysis:checked~#tab-content #analysis-content {
+    display: block;
+}
+
+/* Update active tab styles */
+#tab-details:checked+label,
+#tab-analysis:checked+label {
+    border-bottom: 2px solid #0073aa;
+    color: #000;
+}
+
+/* Defina uma altura fixa para o modal */
+/* Modal container */
+#error-detail-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    /* Ajuste conforme necessário */
+    overflow: hidden;
+    /* Impede que o modal cresça além da altura definida */
+}
+
+/* Container das abas e conteúdo */
+#tab-content {
+    flex-grow: 1;
+    /* Garante que o conteúdo das abas ocupe o máximo de espaço disponível */
+    overflow-y: auto;
+    /* Permite rolar o conteúdo, se necessário */
+}
+
+/* Botões no rodapé */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+/* Alinha os botões */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    /* Coloca os botões nas extremidades */
+    padding: 10px;
+}
+
+/* Adiciona um pequeno espaço entre os botões, se necessário */
+.modal-footer button {
+    margin-right: 10px;
+    /* Adiciona margem ao botão da direita (Close) */
+}

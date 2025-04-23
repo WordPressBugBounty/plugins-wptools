@@ -2,8 +2,8 @@
 Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
-Tested up to: 6.7
-Stable tag: 5.19
+Tested up to: 6.8
+Stable tag: 5.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

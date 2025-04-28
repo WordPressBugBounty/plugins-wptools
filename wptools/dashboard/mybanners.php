@@ -89,7 +89,7 @@ if ($cached_news_data === false && $cached_coupon_data === false) {
         // Make the POST request
         $response = wp_remote_post($url, array(
             'method' => 'POST',
-            'timeout' => 5,
+            'wptools_timeout' => 5,
             'redirection' => 5,
             'httpversion' => '1.0',
             'blocking' => true,

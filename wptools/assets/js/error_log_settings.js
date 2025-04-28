@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 
-    console.warn("Carregou js setup");
+    // // console.warn("Carregou js setup");
 
     const $lastNotice = $('.notice').last();
     const $settingsButton = $('<button>', {
@@ -22,10 +22,10 @@ jQuery(document).ready(function ($) {
     });
     if ($lastNotice.length) {
         $lastNotice.after($settingsButton);
-        // console.log('Botão inserido após a última notificação.');
+        // // console.log('Botão inserido após a última notificação.');
     } else {
         $('#wpbody-content').prepend($settingsButton.css({ position: 'absolute' }));
-        // console.log('Botão inserido no início do conteúdo como fallback.');
+        // // console.log('Botão inserido no início do conteúdo como fallback.');
     }
     const $settingsPanel = $('<div>', {
         id: 'settings-panel',
@@ -74,38 +74,52 @@ jQuery(document).ready(function ($) {
         isPanelOpen = !isPanelOpen;
     });
     function wptools_loadLogs() {
-        $settingsPanel.html('<p>' + wptoolsTranslations.loadingMessage + '</p>'); // Texto traduzido
-        $settingsPanel.append($closeButton);
+        // Cria o spinner e a mensagem de carregamento
+        const $loadingContainer = $('<div>', {
+            css: {
+                display: 'flex',
+                alignItems: 'center',
+                marginTop: '30px'
+            }
+        });
+        const $spinner = $('<span>', {
+            class: 'spinner is-active',
+            css: {
+                marginRight: '10px',
+                float: 'none' // Garante que o spinner não use float padrão do WP
+            }
+        });
+        const $loadingMessage = $('<p>', {
+            text: wptoolsTranslations.loadingMessage,
+            css: {
+                margin: '0'
+            }
+        });
+        $loadingContainer.append($spinner).append($loadingMessage);
+        $settingsPanel.html($loadingContainer).append($closeButton);
+
         $.ajax({
             url: ajaxurl,
             type: 'POST',
             data: {
                 action: 'wptools_find_logs',
-                _ajax_nonce: wptoolsTranslations.nonce, // Nonce adicionado aqui
+                _ajax_nonce: wptoolsTranslations.nonce
             },
             success: function (response) {
                 if (response.success) {
-                    // wptools_displayLogs(response.data, response.data.selected_log);
-
-                    if (response.data.data.length === 0) {
-                        // Exibe uma mensagem de erro (usando tradução, se disponível)
-                        $settingsPanel.html('<p>' + wptoolsTranslations.noLogsFound + '</p>').append($closeButton);
-                    } else {
-                        // Se houver logs, exibe-os
-                        wptools_displayLogs(response.data, response.data.selected_log);
-                    }
-
-
+                    wptools_displayLogs(response.data, response.data.selected_log);
                 } else {
-                    $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs + '</p>').append($closeButton); // Texto traduzido
+                    $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs + '</p>').append($closeButton);
                 }
             },
             error: function () {
-                $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs2 + '</p>').append($closeButton); // Texto traduzido
-            },
+                $settingsPanel.html('<p>' + wptoolsTranslations.errorLoadingLogs2 + '</p>').append($closeButton);
+            }
         });
     }
+
     function wptools_displayLogs(logs, selectedLog) {
+        // console.log('Logs recebidos:', logs.data); // Depuração
         if (logs.data.length === 0) {
             $settingsPanel.html('<p><strong>' + wptoolsTranslations.noLogsFound + '</strong></p>')
                 .find('p')
@@ -123,17 +137,18 @@ jQuery(document).ready(function ($) {
             const $radio = $('<input>', {
                 type: 'radio',
                 name: 'logfile',
-                value: log.path,
+                value: log.path
             });
             if (log.path === selectedLog) {
                 $radio.prop('checked', true);
             }
-            $label.append($radio).append(` ${log.name} (${log.size}) - ${log.path}`);
+            const dateDisplay = log.date ? log.date : 'Data não disponível';
+            $label.append($radio).append(` ${log.name} (${log.size}, ${dateDisplay}) - ${log.path}`);
             $list.append($label);
         });
         const $viewButton = $('<button>', {
             id: 'wptools_setup_ajax',
-            text: wptoolsTranslations.saveButton, // Texto traduzido
+            text: wptoolsTranslations.saveButton,
             css: {
                 marginTop: '20px',
                 padding: '8px 12px',
@@ -141,55 +156,52 @@ jQuery(document).ready(function ($) {
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer',
-            },
+                cursor: 'pointer'
+            }
         }).on('click', function (e) {
             e.preventDefault();
             const $button = $('#wptools_setup_ajax');
             $button.attr('disabled', true);
             $button.css({
                 backgroundColor: '#d3d3d3',
-                cursor: 'not-allowed',
+                cursor: 'not-allowed'
             });
             const selectedLog = $('input[name="logfile"]:checked').val();
             if (selectedLog) {
-                // console.log('Log selecionado:', selectedLog);
                 $.ajax({
                     url: ajaxurl,
                     type: 'POST',
                     data: {
                         action: 'wptools_save_log_option',
                         log_file: selectedLog,
-                        _ajax_nonce: wptoolsTranslations.nonce, // Nonce adicionado aqui
+                        _ajax_nonce: wptoolsTranslations.nonce
                     },
                     success: function (response) {
                         if (response.success) {
-                            // console.log('Resposta do servidor:', response.data);
-                            alert(wptoolsTranslations.logSavedSuccess); // Texto traduzido
+                            alert(wptoolsTranslations.logSavedSuccess);
                             if (typeof table !== 'undefined' && table) {
                                 table.ajax.reload(null, false);
-                                // console.log('Tabela recarregada com sucesso.');
-                            } else {
-                                // console.error('Tabela não inicializada.');
                             }
                             location.reload();
                         } else {
-                            // console.error('Erro na resposta:', response.data);
-                            alert(wptoolsTranslations.logSaveError); // Texto traduzido
+                            alert(wptoolsTranslations.logSaveError);
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
-                        // console.error('Erro na requisição AJAX:', textStatus, errorThrown);
-                        alert(wptoolsTranslations.ajaxError); // Texto traduzido
+                        alert(wptoolsTranslations.ajaxError);
                     }
                 });
             } else {
-                alert(wptoolsTranslations.selectLogAlert); // Texto traduzido
+                alert(wptoolsTranslations.selectLogAlert);
             }
         });
-        $settingsPanel.html('<h3>' + wptoolsTranslations.logFilesHeader + '</h3>') // Texto traduzido
+        $settingsPanel.html('<h3>' + wptoolsTranslations.logFilesHeader + '</h3>')
             .append($list)
             .append($viewButton)
             .append($closeButton);
     }
+
+
+
 });
+

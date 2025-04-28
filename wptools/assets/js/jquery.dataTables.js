@@ -7834,9 +7834,9 @@ jQuery.fn.delay = function( time, type ) {
 	type = type || "fx";
 
 	return this.queue( type, function( next, hooks ) {
-		var timeout = window.setTimeout( next, time );
+		var wptools_timeout = window.setTimeout( next, time );
 		hooks.stop = function() {
-			window.clearTimeout( timeout );
+			window.clearTimeout( wptools_timeout );
 		};
 	} );
 };
@@ -9133,7 +9133,7 @@ jQuery.extend( {
 		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 
 		/*
-		timeout: 0,
+		wptools_timeout: 0,
 		data: null,
 		dataType: null,
 		username: null,
@@ -9228,7 +9228,7 @@ jQuery.extend( {
 			responseHeadersString,
 			responseHeaders,
 
-			// timeout handle
+			// wptools_timeout handle
 			timeoutTimer,
 
 			// Url cleanup var
@@ -9512,10 +9512,10 @@ jQuery.extend( {
 			}
 
 			// Timeout
-			if ( s.async && s.timeout > 0 ) {
+			if ( s.async && s.wptools_timeout > 0 ) {
 				timeoutTimer = window.setTimeout( function() {
-					jqXHR.abort( "timeout" );
-				}, s.timeout );
+					jqXHR.abort( "wptools_timeout" );
+				}, s.wptools_timeout );
 			}
 
 			try {
@@ -9545,7 +9545,7 @@ jQuery.extend( {
 
 			completed = true;
 
-			// Clear timeout if it exists
+			// Clear wptools_timeout if it exists
 			if ( timeoutTimer ) {
 				window.clearTimeout( timeoutTimer );
 			}
@@ -9917,7 +9917,7 @@ jQuery.ajaxTransport( function( options ) {
 				} else {
 					xhr.onreadystatechange = function() {
 
-						// Check readyState before timeout as it changes
+						// Check readyState before wptools_timeout as it changes
 						if ( xhr.readyState === 4 ) {
 
 							// Allow onerror to be called first,
@@ -12160,7 +12160,7 @@ return jQuery;
 		 * @param {integer} freq Call frequency in mS
 		 * @return {function} Wrapped function
 		 */
-		debounce: function ( fn, timeout ) {
+		debounce: function ( fn, wptools_timeout ) {
 			var timer;
 	
 			return function () {
@@ -12171,7 +12171,7 @@ return jQuery;
 	
 				timer = setTimeout( function () {
 					fn.apply(that, args);
-				}, timeout || 250 );
+				}, wptools_timeout || 250 );
 			};
 		},
 	

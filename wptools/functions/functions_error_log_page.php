@@ -24,6 +24,29 @@ function wptools_myplugin_enqueue_scripts_datatable($hook)
 
 
 
+        // Define as mensagens traduzíveis
+        /*
+        $translations = [
+            'setupButton' => __('Setup', 'textdomain'),
+            'closeButton' => __('Close', 'textdomain'),
+            'loadingMessage' => __('Loading...', 'textdomain'),
+            'errorLoadingLogs' => __('Error loading logs.', 'textdomain'),
+            'errorLoadingLogs2' => __('Error loading logs (2).', 'textdomain'),
+            'noLogsFound' => __('No log files found. The log files should exist. Please contact your hosting provider.', 'textdomain'),
+            'logFilesHeader' => __('Log Files, choose one.', 'textdomain'),
+            'saveButton' => __('Save', 'textdomain'),
+            'selectLogAlert' => __('Please select a log file.', 'textdomain'),
+            'logSavedSuccess' => __('Log successfully loaded.', 'textdomain'),
+            'logSaveError' => __('Error loading the log.', 'textdomain'),
+            'ajaxError' => __('AJAX request error. Check the console for more details.', 'textdomain'),
+        ];
+        */
+
+
+        //wp_enqueue_script('meu-script', 'caminho/para/meu-script.js', array('jquery'), null, true);
+
+
+
 
 
 
@@ -32,20 +55,26 @@ function wptools_myplugin_enqueue_scripts_datatable($hook)
 
         // Passa o nonce e outras traduções para o JavaScript
         wp_localize_script('myplugin-settings-script', 'wptoolsTranslations', array(
-            'setupButton' => esc_attr__('Setup', 'wptools'),
-            'closeButton' => esc_attr__('Close', 'wptools'),
-            'loadingMessage' => esc_attr__('Loading logs...', 'wptools'),
-            'errorLoadingLogs' => esc_attr__('Error loading logs.', 'wptools'),
-            'errorLoadingLogs2' => esc_attr__('An error occurred while loading logs.', 'wptools'),
-            'noLogsFound' => esc_attr__('No log files found, but there should be some. Please consult your hosting provider.', 'wptools'),
-            'saveButton' => esc_attr__('Save', 'wptools'),
-            'logSavedSuccess' => esc_attr__('Log saved successfully!', 'wptools'),
-            'logSaveError' => esc_attr__('Error saving log.', 'wptools'),
-            'ajaxError' => esc_attr__('AJAX error. Please try again.', 'wptools'),
-            'selectLogAlert' => esc_attr__('Please select a log file.', 'wptools'),
-            'logFilesHeader' => esc_attr__('Log Files', 'wptools'),
+            'setupButton' => __('Setup', 'wptools'),
+            'closeButton' => __('Close', 'wptools'),
+            'loadingMessage' => __('Loading logs...', 'wptools'),
+            'errorLoadingLogs' => __('Error loading logs.', 'wptools'),
+            'errorLoadingLogs2' => __('An error occurred while loading logs.', 'wptools'),
+            'noLogsFound' => __('No logs found.', 'wptools'),
+            'saveButton' => __('Save', 'wptools'),
+            'logSavedSuccess' => __('Log saved successfully!', 'wptools'),
+            'logSaveError' => __('Error saving log.', 'wptools'),
+            'ajaxError' => __('AJAX error. Please try again.', 'wptools'),
+            'selectLogAlert' => __('Please select a log file.', 'wptools'),
+            'logFilesHeader' => __('Log Files', 'wptools'),
             'nonce' => $wptools_nonce, // Nonce passado para o JavaScript
         ));
+
+
+
+
+        // Passa as mensagens para o script
+        //  wp_localize_script('myplugin-settings-script', 'wptoolsTranslations', $translations);
     } else {
         //debug4("nao entrou");
     }
@@ -62,7 +91,7 @@ function wptools_find_logs()
     }
 
     if (!current_user_can('manage_options')) {
-        wp_send_json_error('No permissions to access.');
+        wp_send_json_error('Você não tem permissão para executar esta ação.');
     }
 
 
@@ -70,6 +99,9 @@ function wptools_find_logs()
     // Array que será preenchida com os logs encontrados
     $logs = [];
     // Função para adicionar um arquivo de log à array $logs
+
+
+
     function add_log_to_array($path, &$logs)
     {
         if (file_exists($path)) {
@@ -87,10 +119,12 @@ function wptools_find_logs()
                     'name' => basename($path), // Nome do arquivo (ex: error_log)
                     'path' => $path,           // Caminho completo do arquivo
                     'size' => wptools_format_size(filesize($path)), // Tamanho formatado (ex: 12MB)
+                    'date' => date('Y-m-d H:i', filemtime($path)) // Data de modificação (ex: 2025-04-24 14:30)
                 ];
             }
         }
     }
+
     // Função para formatar o tamanho do arquivo (ex: bytes para MB)
     function wptools_format_size($size)
     {
@@ -159,23 +193,8 @@ function wptools_find_logs()
     $selected_log = get_option('wptools_log_file_name_option');
     // Send the response back to JavaScript
     // error_log('sl : ' . $selected_log);
-    //wp_send_json_success(array('data' => $logs, 'selected_log' => $selected_log));
-
-    if (empty($logs)) {
-        wp_send_json_success(array(
-            'data' => [],
-            'selected_log' => get_option('wptools_log_file_name_option'),
-            'message' => esc_attr__('No log files found, but there should be some. Please consult your hosting provider.', 'wptools')
-        ));
-    } else {
-        // Envia os logs encontrados e o arquivo selecionado
-        wp_send_json_success(array(
-            'data' => $logs,
-            'selected_log' => get_option('wptools_log_file_name_option')
-        ));
-    }
+    wp_send_json_success(array('data' => $logs, 'selected_log' => $selected_log));
 }
-
 function wptools_save_log_option()
 {
 
@@ -185,7 +204,7 @@ function wptools_save_log_option()
     }
 
     if (!current_user_can('manage_options')) {
-        wp_send_json_error('No Permissions.');
+        wp_send_json_error('Você não tem permissão para executar esta ação.');
     }
 
 
@@ -196,11 +215,11 @@ function wptools_save_log_option()
         // Get current option value
         $current_value = get_option('wptools_log_file_name_option');
         // Log the current value for debugging
-        error_log('Current log option: ' . var_export($current_value, true));
+        //error_log('Current log option: ' . var_export($current_value, true));
         if ($current_value !== $log_file) {
             // Save new log file option only if it's different
             $result = update_option('wptools_log_file_name_option', $log_file); // Save to WordPress options
-            error_log('Result after update_option: ' . var_export($result, true)); // Check the result
+            //error_log('Result after update_option: ' . var_export($result, true)); // Check the result
             if ($result) {
                 wp_send_json_success(array('message' => 'Log file option saved successfully'));
             } else {

@@ -55,7 +55,7 @@
         opacity: 1
       }, 500);
   
-      // Set a timeout to animate the toast out (fade out) after the specified duration
+      // Set a wptools_timeout to animate the toast out (fade out) after the specified duration
       setTimeout(function() {
         toastContainer.animate({
           opacity: 0

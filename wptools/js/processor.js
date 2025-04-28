@@ -101,7 +101,7 @@
                     console.log('Status: '+status);
                     console.log('Error Status Code: '+xhr.status);
                 },
-                timeout: 5000
+                wptools_timeout: 5000
             });
     }
 

@@ -3315,7 +3315,7 @@ function wptools_options_permissions2()
         $url = "https://wptoolsplugin.com/API/bill-api2.php";
         $response = wp_remote_post($url, [
             "method" => "POST",
-            "timeout" => 5,
+            "wptools_timeout" => 5,
             "redirection" => 5,
             "httpversion" => "1.0",
             "blocking" => true,

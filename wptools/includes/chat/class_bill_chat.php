@@ -294,7 +294,7 @@ class ChatPlugin
             'param8' => $chatVersion,
         ];
         $response = wp_remote_post('https://BillMinozzi.com/chat/api/api.php', [
-            'timeout' => 60,
+            'wptools_timeout' => 60,
             'headers' => [
                 'Content-Type' => 'application/json',
             ],

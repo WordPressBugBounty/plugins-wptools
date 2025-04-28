@@ -35,7 +35,7 @@ function wptools_performance_share($benchmarkResult)
     $url = "https://wptoolsplugin.com/API/bill-api.php";
     $response = wp_remote_post($url, array(
         'method' => 'POST',
-        'timeout' => 5,
+        'wptools_timeout' => 5,
         'redirection' => 5,
         'httpversion' => '1.0',
         'blocking' => true,

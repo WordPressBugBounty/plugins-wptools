@@ -158,7 +158,7 @@ jQuery(document).ready(function ($) {
                     chat_type: chatType,
                     chat_version: chatVersion
                 },
-                timeout: 60000,
+                wptools_timeout: 60000,
                 success: function () {
                     //billChatInput.val('');
                     setTimeout(function () {

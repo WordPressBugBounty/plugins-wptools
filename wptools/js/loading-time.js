@@ -35,8 +35,13 @@ if (typeof jQuery !== 'undefined') {
         // Check if the URL is valid before logging
         if (typeof url === 'string' && url.length > 0) {
             //console.log("ajax: " + loadingTimeInSeconds);
+
+
+            console.log('Nonce:', wptools_ajax_object.ajax_nonce);
+            console.log('url:', url);
+
             var data = {
-                action: 'wptools_register_loading_time2',
+                action: 'wptools_register_loading_time3',
                 page_url: url,
                 loading_time: loadingTimeInSeconds,
                 nonce: wptools_ajax_object.ajax_nonce
@@ -49,8 +54,13 @@ if (typeof jQuery !== 'undefined') {
                     // This outputs the result of the ajax request
                     // console.log(data);
                 },
-                error: function (errorThrown) {
-                    console.log(errorThrown);
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.group("AJAX Error");
+                    console.error("Status textual:", textStatus);
+                    console.error("Código HTTP:", jqXHR.status);
+                    console.error("Erro lançado:", errorThrown);
+                    console.error("Resposta do servidor:", jqXHR.responseText);
+                    console.groupEnd();
                 }
             });
         } else {

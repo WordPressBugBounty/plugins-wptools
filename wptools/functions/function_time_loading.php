@@ -26,8 +26,8 @@ add_action('admin_enqueue_scripts', 'wptools_enqueue_admin_scripts_with_nonce3')
 
 
 // Function to register loading time in the database
-if (!function_exists("wptools_register_loading_time")) {
-    function wptools_register_loading_time()
+if (!function_exists("wptools_register_loading_time3")) {
+    function wptools_register_loading_time3()
     {
         global $wpdb;
         //   Verify nonce
@@ -68,5 +68,5 @@ if (!function_exists("wptools_register_loading_time")) {
     }
 }
 // Register the AJAX action in WordPress
-add_action('wp_ajax_wptools_register_loading_time', 'wptools_register_loading_time');
-add_action('wp_ajax_nopriv_wptools_register_loading_time', 'wptools_register_loading_time');
+add_action('wp_ajax_wptools_register_loading_time3', 'wptools_register_loading_time3');
+add_action('wp_ajax_nopriv_wptools_register_loading_time3', 'wptools_register_loading_time3');

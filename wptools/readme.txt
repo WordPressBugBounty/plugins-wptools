@@ -1,9 +1,9 @@
-=== WP Tools Increase Maximum Limits, Repair, Server PHP Info, Javascript errors, File Permissions, Transients, Error Log ==
+=== WP Tools Repair, Javascript errors, Jquery errors, Increase Maximum Limits, File Permissions, Transients, Error Log ==
 Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 5.22
+Stable tag: 5.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 > The WP Tools plugin (wp-tools) features a comprehensive dashboard showcasing server statistics, including a chart of errors, page load time also by page and boasts over 49 tools designed to simplify your WordPress management tasks. It serves as a versatile Swiss army knife for your WordPress needs.
-Catch and alert about Javascript Errors (and also PHP/MYSQL errors). Block notification email of updates, Hide Admin Bar, Disable Lazy Load, Displays the folders that are taking up more disk space and a lot more... 
+Catch and alert about Javascript Errors (also jquery errors, javascript errors, jquery migrate) and PHP/MYSQL errors. Block notification email of updates, Hide Admin Bar, Disable Lazy Load, Displays the folders that are taking up more disk space and a lot more... 
 Translation ready. Files included: Dutch, English, French, Italian, Portuguese, Spanish, and German.
 
 A must have plugin also by cloud hosting as AWS Amazon Lightsail, EC2 instance, Bitnami, Contabo, Azure, Google Cloud, Digital Ocean and others. 
@@ -74,6 +74,22 @@ With the last tool, now you can monitor your server load (CPU Usage), in real ti
 * Server Files Readable: /proc/cpuinfo and /proc/stat
 * php functions enabled: sys_getloadavg(), disk_total_space(), disk_free_space()
 
+
+
+**Effortlessly log jQuery Migrate warnings directly to your WordPress error log**. 
+
+This **WordPress plugin** intercepts the **jQuery Migrate warnings** that WordPress outputs (usually in the browser **console**) and **captures** them, writing the details to your `error_log` file.
+
+Why is this useful? It helps **administrators** **find** and **identify** problematic **outdated** or **deprecated jQuery** code used by **WordPress themes** or other **plugins**. 
+Instead of hunting through the browser console, you get a centralized **jQuery Migrate log** on your server. This makes it much easier to **debug jQuery** issues, locate the source of **JavaScript errors** flagged by Migrate, and ensure smoother updates or transitions if you plan to disable jQuery Migrate in the future. Use this tool to proactively manage **WordPress jQuery Migrate** compatibility.
+
+
+**Capturing and handling JavaScript errors**
+Silent JavaScript errors can break essential site features, such as sections, menus, forms, or sliders, leading to a poor user experience. These errors can also **destroy your SEO**, as they slow down page loading times and cause parts of the front page to become invisible to search engine crawlers. The WPTools plugin is a jQuery helper and logs these errors directly to the error log, enabling site owners and developers to quickly identify and fix issues. By addressing JavaScript errors, you ensure functionality, enhance user experience, maintain SEO performance, and safeguard compatibility with modern browsers and WordPress updates.
+
+Understanding and resolving WordPress jQuery errors(as jQuery is not defined or $ is not a function or jQuery error after update) is crucial. Our plugin provides a significant advantage in tackling jQuery migrate WordPress issues and WordPress jQuery compatibility. By capturing jQuery warnings and errors and logging them centrally, WPTools helps you pinpoint the source of jQuery update issues and effectively fix jQuery errors from themes or plugins. This proactive approach to managing WordPress plugin jQuery migrate compatibility ensures a more stable site and smoother transitions. WPTools can illuminate potential problems that could impact your site's performance and SEO.
+
+
 == Lifetime license with premium enhancements: One-time payment of just $17.99! ==
 
 <a href="https://wptoolsplugin.com/help/index.php">Online Documentation</a>
@@ -95,7 +111,7 @@ With the last tool, now you can monitor your server load (CPU Usage), in real ti
 == PHP INFO DETAILS ==
 
 On PHP INFO page, you can get, for example:
-
+* Server PHP Inf
 * Display PHP Version
 * Operating System details
 * PHP.INI path (Configuration File (php.ini) Path )
@@ -310,6 +326,10 @@ The free "WPTools" plugin can help by offering tools to troubleshoot JavaScript 
 
 This question also addresses the following issues: check your browser's console, fixing JavaScript problems, how to troubleshoot JavaScript issues, JavaScript console errors, JavaScript error, JavaScript issues, troubleshoot JavaScript errors.
 
+
+= Why the Menu stopped working on my WordPress site? =
+This is likely a JavaScript issue. JavaScript is a fundamental language for WordPress, and its error messages typically don't get logged in the standard error log, appearing only in the browser's developer console. Consequently, if the console is closed, as it usually is for most users, you won't see these messages. Install our free WPTools plugin, which will capture these JavaScript errors and record them in your error_log. It will also alert you in your WordPress dashboard (admin toolbar), providing detailed information such as the error message, the script file, the line number, the severity, and more.
+This question also answers: slider stopped working, image slider not rotating, mobile menu not opening, hamburger menu not working, dropdown menu stopped working, contact form submit button not working, contact form 7 not sending, woocommerce add to cart not working, woocommerce product gallery broken, lightbox not working, image popup stopped working, accordion not opening, toggle not opening, tabs not switching, button click not working, admin not working, cannot click buttons in admin, media library not loading, add media button not working, visual editor not working, classic editor problems, theme options not saving
 
 == 3rd party as a service == 
 

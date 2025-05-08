@@ -37,8 +37,8 @@ if (typeof jQuery !== 'undefined') {
             //console.log("ajax: " + loadingTimeInSeconds);
 
 
-            console.log('Nonce:', wptools_ajax_object.ajax_nonce);
-            console.log('url:', url);
+            //console.log('Nonce:', wptools_ajax_object.ajax_nonce);
+            //console.log('url:', url);
 
             var data = {
                 action: 'wptools_register_loading_time3',

@@ -159,7 +159,7 @@ jQuery(document).ready(function ($) {
             return;
         }
         if (table.rows().count() === 0) {
-            console.log(wptools_vars.empty_table);
+            //console.log(wptools_vars.empty_table);
             return;
         }
         var currentFilterValue = $('#type-filter').val();
@@ -273,7 +273,8 @@ jQuery(document).ready(function ($) {
         alert(wptools_vars.analyze_functionality);
     });
 
-    $('#type-filter').change(function () {
+    // $('#type-filter').change(function () {
+    $('#type-filter').on('change', function () {
         const typeValue = $(this).val();
         if (typeValue === "all") {
             table.column(1).search('').draw();

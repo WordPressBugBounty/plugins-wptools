@@ -1345,7 +1345,8 @@ function wptools_check_memory_old()
     }
 }
 
-function wptools_check_memory() {
+function wptools_check_memory()
+{
     global $wptools_memory;
     $wptools_memory["color"] = "font-weight:normal;";
 
@@ -1369,7 +1370,7 @@ function wptools_check_memory() {
         } else {
             $wp_limit = trim(WP_MEMORY_LIMIT);
             $wp_limit = rtrim($wp_limit, 'MG'); // Remove sufixos como 'M' ou 'G'
-            
+
             // Verifica se é numérico e pode ser convertido em inteiro válido
             if (is_numeric($wp_limit) && (int)$wp_limit > 0) {
                 $wptools_memory["wp_limit"] = (int)$wp_limit;
@@ -1401,7 +1402,6 @@ function wptools_check_memory() {
 
         $wptools_memory["msg_type"] = "ok";
         return $wptools_memory;
-
     } catch (Exception $e) {
         $wptools_memory["msg_type"] = "notok(7)";
         return $wptools_memory;
@@ -1413,6 +1413,8 @@ function wptools_options_dashboard()
     require_once WPTOOLSPATH . "dashboard/dashboard_container.php";
     return;
 }
+
+
 function wptools_options_benchmark()
 {
     if (isset($_GET["page"])) {
@@ -1421,27 +1423,49 @@ function wptools_options_benchmark()
             return;
         }
     }
+
+
+
     if (
-        isset($_REQUEST["wptools_action"]) and
-        $_REQUEST["wptools_action"] == "wptools_update_performance_permissions"
+        isset($_REQUEST["wptools_action"]) &&
+        sanitize_text_field($_REQUEST["wptools_action"]) === "wptools_update_performance_permissions" &&
+        isset($_REQUEST["page"]) &&
+        sanitize_text_field($_REQUEST["page"]) === "wptools_options30"
     ) {
-        if (
-            isset($_REQUEST["wptools_exchange"]) and
-            $_REQUEST["wptools_exchange"] == "yes"
-        ) {
-            update_option("wptools_server_performance", "yes");
-        } else {
-            update_option("wptools_server_performance", "no");
+
+
+        // Verify nonce
+        if (!isset($_REQUEST["_wpnonce"]) || !wp_verify_nonce($_REQUEST["_wpnonce"], "performance_permissions")) {
+            wp_die("Security check failed.", "CSRF Error", ["response" => 403]);
+            // die(var_dump($_REQUEST["_wpnonce"]));
         }
+
+        // Check user permissions
+        if (!current_user_can("manage_options")) {
+            wp_die("Unauthorized access.", "Permission Denied", ["response" => 403]);
+        }
+
+        // Sanitize and update option
+        $wptools_exchange = isset($_REQUEST["wptools_exchange"]) && sanitize_text_field($_REQUEST["wptools_exchange"]) === "yes" ? "yes" : "no";
+
+        update_option("wptools_server_performance", $wptools_exchange);
     }
+
+
+
     $wptools_server_performance = trim(
         sanitize_text_field(get_option("wptools_server_performance", "no"))
     );
+
     if ($wptools_server_performance == "yes") {
         $wptools_checkbox = "checked";
     } else {
         $wptools_checkbox = "";
     }
+
+
+
+
     wptools_show_logo();
     echo "<h1>" . esc_attr(__("Server Benchmark", "wptools")) . "</h1>";
     echo '<div id="wptools_exchange" style="min-width:100%">';
@@ -2073,7 +2097,7 @@ function wptools_options_cookies()
                 <th><?php echo esc_attr(__("Name", "wptools")); ?></th>
                 <th><?php echo esc_attr(__("Value", "wptools")); ?></th>
             </thead>
-            <?php foreach ($_COOKIE as $name => $value): ?>
+            <?php foreach ($_COOKIE as $name => $value) : ?>
                 <tr>
                     <td><?php echo esc_html($name); ?></td>
                     <td><?php echo esc_html($value); ?></td>
@@ -3930,7 +3954,7 @@ function wptools_options_permissions2()
     }
     function wptools_get_ua()
     {
-        if (! isset($_SERVER['HTTP_USER_AGENT'])) {
+        if (!isset($_SERVER['HTTP_USER_AGENT'])) {
             return '';
         }
         $ua = sanitize_text_field($_SERVER['HTTP_USER_AGENT']);

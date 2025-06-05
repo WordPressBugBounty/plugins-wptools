@@ -4,88 +4,273 @@ if (!defined("ABSPATH")) {
 }
 // register_tick_function('meu_tick_function');
 // declare(ticks=1);
-wptools_show_logo();
+// wptools_show_logo();
+
+
+
+
+
+
+// =======================
+
+if (current_user_can('manage_options')) {
+    wptools_render_tabs_page();
+}
+
+return;
+
+
+
+
+
+// Função que será chamada na primeira aba
+
+
+
+
+
+// Função que será chamada na segunda aba
+
+
+
+
+// Função que renderiza a página com as abas
+function wptools_render_tabs_page()
+{
 ?>
-<h1 style="color: gray; text-align: center;"><?php esc_attr_e("Error Log Table", 'wptools'); ?></h1>
-<div id="error-log-wrapper">
-    <!-- Indicador de carregamento -->
-    <div id="wptools-loadingIndicator">
-        <div class="wptools-loadingIndicator"></div>
-        <div class="wptools-loadingIndicator"></div>
-        <div class="wptools-loadingIndicator"></div>
+    <div class="wrap">
+
+
+        <?php wptools_show_logo();
+
+        // <h1 style="color: gray; text-align: center;"><?php esc_attr_e("Show Site Errors", 'wptools'); 
+        // </h1>
+        ?>
+
+
+
+        <?php
+        //$active_tab = isset($_GET['tab']) ? sanitize_key($_GET['tab']) : 'table';
+        $active_tab = isset($_GET['tab']) && in_array($_GET['tab'], ['table', 'chat']) ? sanitize_key($_GET['tab']) : 'table';
+        $page_slug = 'wptools_options21'; // O slug do menu que você definiu em add_options_page
+        ?>
+
+        <h2 class="nav-tab-wrapper">
+            <a href="?page=<?php echo esc_attr($page_slug); ?>&tab=table" class="nav-tab <?php echo $active_tab == 'table' ? 'nav-tab-active' : ''; ?>">
+                <?php esc_html_e('Error Table', 'wptools'); // 'wptools' é o text domain para tradução 
+                ?>
+            </a>
+            <a href="?page=<?php echo esc_attr($page_slug); ?>&tab=chat" class="nav-tab <?php echo $active_tab == 'chat' ? 'nav-tab-active' : ''; ?>">
+                <?php esc_html_e('Chat With AI and Server Errors Checkup', 'wptools'); ?>
+            </a>
+        </h2>
+
+        <div class="tab-content" style="margin-top: 20px;">
+            <?php
+            if ($active_tab == 'table') {
+                wptools_show_error_table();
+            } elseif ($active_tab == 'chat') {
+                wptools_chat();
+            }
+            ?>
+        </div>
+
+
     </div>
-    <!-- Filtro por tipo -->
-    <div class="filter-options">
-        <label for="type-filter"><?php esc_attr_e("Filter by Type", 'wptools'); ?>:</label>
-        <select id="type-filter">
-            <option value="all">All</option>
-        </select>
-    </div>
-    <!-- Tabela de logs -->
-    <table id="wptools-error-log-table" class="display">
-        <thead>
-            <tr>
-                <th><?php esc_attr_e("Date", 'wptools'); ?></th>
-                <th><?php esc_attr_e("Type", 'wptools'); ?></th>
-                <th><?php esc_attr_e("Description", 'wptools'); ?></th>
-                <th><?php esc_attr_e("Action", 'wptools'); ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php echo wptools_get_error_log_data(); ?>
-        </tbody>
-    </table>
-    <div id="error-detail-modal" style="display: none;">
-        <div class="modal-content">
-            <!-- Tab Headers -->
-            <div id="tab-header" style="display: flex; border-bottom: 2px solid #ccc;">
-                <input type="radio" id="tab-details" name="tabs" checked style="display: none;">
-                <label for="tab-details" style="flex: 1; text-align: center; padding: 10px; cursor: pointer; font-weight: bold; color: #333; border-bottom: 2px solid #0073aa;">Details</label>
-                <input type="radio" id="tab-analysis" name="tabs" style="display: none;">
-                <label for="tab-analysis" style="flex: 1; text-align: center; padding: 10px; cursor: pointer; font-weight: bold; color: #333; border-bottom: 2px solid transparent;">AI Analysis</label>
+<?php
+}
+
+function wptools_chat()
+{
+
+?>
+
+
+
+
+
+    <!-- chat -->
+    <div id="chat-box" style="margin-top: -10px !important; max-height: 400px !important;">
+        <div id="chat-header" style="padding: 10px !important;">
+            <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools"); ?></h2>
+        </div>
+        <div id="gif-container">
+            <div class="spinner999"></div>
+        </div> <!-- Onde o efeito será exibido -->
+        <div id="chat-messages" style="max-height: 180px !important;></div>
+        <div id=" error-message" style="display:none;"></div> <!-- Mensagem de erro -->
+
+
+
+        <form id="chat-form">
+            <div id="input-group">
+                <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', "wp-memory"); ?>" />
+                <button type="submit"><?php echo esc_attr__('Send', "wp-memory"); ?></button>
             </div>
-            <!-- Tab Content -->
-            <div id="tab-content" style="padding: 20px;">
-                <!-- Details Tab Content -->
-                <div id="details-content">
-                    <table id="error-detail-table">
-                        <tbody></tbody>
-                    </table>
+            <div id="action-instruction" style="text-align: center; margin-top: 10px;">
+                <span><?php echo esc_attr__("Enter a message and click 'Send', or just click 'Auto Checkup' to analyze error log ou server info configuration.", "wp-memory"); ?></span>
+            </div>
+            <div class="auto-checkup-container" style="text-align: center; margin-top: 10px;">
+
+                <button type="button" id="auto-checkup">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . 'robot2.png'; ?>" alt="" width="35" height="30">
+                    <?php echo esc_attr__('Auto Checkup for Errors', "wp-memory"); ?>
+                </button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="button" id="auto-checkup2">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . 'robot2.png'; ?>" alt="" width="35" height="30">
+                    <?php echo esc_attr__('Auto Checkup Server ', "wp-memory"); ?>
+                </button>
+
+
+            </div>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- end chat -->
+
+<?php
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =================================================================
+
+
+
+
+
+
+
+
+
+
+function wptools_show_error_table()
+{
+?>
+
+    <h1 style="color: gray; text-align: center;"><?php esc_attr_e("Error Log Table", 'wptools'); ?></h1>
+    <div id="error-log-wrapper">
+        <!-- Indicador de carregamento -->
+        <div id="wptools-loadingIndicator">
+            <div class="wptools-loadingIndicator"></div>
+            <div class="wptools-loadingIndicator"></div>
+            <div class="wptools-loadingIndicator"></div>
+        </div>
+        <!-- Filtro por tipo -->
+        <div class="filter-options">
+            <label for="type-filter"><?php esc_attr_e("Filter by Type", 'wptools'); ?>:</label>
+            <select id="type-filter">
+                <option value="all">All</option>
+            </select>
+        </div>
+        <!-- Tabela de logs -->
+        <table id="wptools-error-log-table" class="display">
+            <thead>
+                <tr>
+                    <th><?php esc_attr_e("Date", 'wptools'); ?></th>
+                    <th><?php esc_attr_e("Type", 'wptools'); ?></th>
+                    <th><?php esc_attr_e("Description", 'wptools'); ?></th>
+                    <th><?php esc_attr_e("Action", 'wptools'); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php echo wptools_get_error_log_data(); ?>
+            </tbody>
+        </table>
+        <div id="error-detail-modal" style="display: none;">
+            <div class="modal-content">
+                <!-- Tab Headers -->
+                <div id="tab-header" style="display: flex; border-bottom: 2px solid #ccc;">
+                    <input type="radio" id="tab-details" name="tabs" checked style="display: none;">
+                    <label for="tab-details" style="flex: 1; text-align: center; padding: 10px; cursor: pointer; font-weight: bold; color: #333; border-bottom: 2px solid #0073aa;">Details</label>
+                    <input type="radio" id="tab-analysis" name="tabs" style="display: none;">
+                    <label for="tab-analysis" style="flex: 1; text-align: center; padding: 10px; cursor: pointer; font-weight: bold; color: #333; border-bottom: 2px solid transparent;">AI Analysis</label>
                 </div>
-                <!-- AI Analysis Tab Content -->
-                <div id="analysis-content" style="display: none;">
-                    <!-- chat -->
-                    <div id="chat-box" style="margin-top: -10px !important; max-height: 400px !important;">
-                        <div id="chat-header" style="padding: 10px !important;">
-                            <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools"); ?></h2>
-                        </div>
-                        <div id="gif-container">
-                            <div class="spinner999"></div>
-                        </div> <!-- Onde o efeito será exibido -->
-                        <div id="chat-messages" style="max-height: 180px !important;></div>
-                        <div id=" error-message" style="display:none;"></div> <!-- Mensagem de erro -->
-                        <form id="chat-form">
-                            <div id="input-group">
-                                <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
-                                <button type="submit" id="wptools"><?php echo esc_attr__('Send', 'wptools'); ?></button>
-                            </div>
-                            <div id="action-instruction" style="text-align: center; margin-top: 10px;">
-                                <span><?php echo esc_attr__("Enter a message and click 'Send', or just copy and paste the content of type and description column.", 'wptools'); ?></span>
-                            </div>
-                        </form>
+                <!-- Tab Content -->
+                <div id="tab-content" style="padding: 20px;">
+                    <!-- Details Tab Content -->
+                    <div id="details-content">
+                        <table id="error-detail-table">
+                            <tbody></tbody>
+                        </table>
                     </div>
-                    <!-- end chat -->
+                    <!-- AI Analysis Tab Content -->
+                    <div id="analysis-content" style="display: none;">
+                        <!-- chat -->
+                        <div id="chat-box" style="margin-top: -10px !important; max-height: 400px !important;">
+                            <div id="chat-header" style="padding: 10px !important;">
+                                <h2><?php echo esc_attr__("Artificial Intelligence Support Chat for Issues and Solutions", "wptools"); ?></h2>
+                            </div>
+                            <div id="gif-container">
+                                <div class="spinner999"></div>
+                            </div> <!-- Onde o efeito será exibido -->
+                            <div id="chat-messages" style="max-height: 180px !important;></div>
+                        <div id=" error-message" style="display:none;"></div> <!-- Mensagem de erro -->
+                            <form id="chat-form">
+                                <div id="input-group">
+                                    <input type="text" id="chat-input" placeholder="<?php echo esc_attr__('Enter your message...', 'wptools'); ?>" />
+                                    <button type="submit" id="wptools"><?php echo esc_attr__('Send', 'wptools'); ?></button>
+                                </div>
+                                <div id="action-instruction" style="text-align: center; margin-top: 10px;">
+                                    <span><?php echo esc_attr__("Enter a message and click 'Send', or just copy and paste the content of type and description column.", 'wptools'); ?></span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end chat -->
+                    </div>
                 </div>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button id="open-ai-analysis">AI Analysis</button>
-                <button id="close-modal">Close</button>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button id="open-ai-analysis">AI Analysis</button>
+                    <button id="close-modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 <?php
+}
+
+
 function wptools_get_error_log_data()
 {
     $default =    $file_path = ABSPATH . 'error_log';

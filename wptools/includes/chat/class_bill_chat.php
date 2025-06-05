@@ -293,6 +293,9 @@ class ChatPlugin
             'param7' => $chatType,
             'param8' => $chatVersion,
         ];
+
+        //debug4();
+
         $response = wp_remote_post('https://BillMinozzi.com/chat/api/api.php', [
             'wptools_timeout' => 60,
             'headers' => [
@@ -310,7 +313,8 @@ class ChatPlugin
         if (isset($data['success']) && $data['success'] === true) {
             $message = $data['message'];
         } else {
-            $message = esc_attr__("Error contacting the Artificial Intelligence (API). Please try again later.", "wptools");
+            $message = $message = $data['error'];
+            // $message = esc_attr__("Error contacting the Artificial Intelligence (API). Please try again later.", "wptools");
         }
         // debug2($message);
         return $message;

@@ -6,7 +6,7 @@ if (!defined('ABSPATH'))
  * @copyright 2021
  */
 $wptools_help = '';
-$wptools_help .= '<h4>' . esc_attr__("This plugin has currently more than 48 tools to help you to manage your WordPress site, included the dashboard with CPU/Disk/Memory usage charts and more info.", "wptools");
+$wptools_help .= '<h4>' . esc_attr__("This plugin has currently more than 50 tools to help you to manage your WordPress site, included the dashboard with CPU/Disk/Memory usage charts and more info.", "wptools");
 $wptools_help .= '<br>';
 $wptools_help .= '<br>';
 $wptools_help .=  '1) ' . esc_attr__("Show the PHP errors, limited to 200 last errors (to avoid freeze your browser). Just click Show PHP Erros voice at the menu", "wptools");
@@ -107,10 +107,11 @@ $wptools_help .= '<br>';
 $wptools_help .= '47) ' .   esc_attr__("Fix Incompatible Archive issue when installing plugins from zip files.", "wptools");
 $wptools_help .= '<br>';
 $wptools_help .= '48) ' .   esc_attr__("Improve Dashboard Performance and Clean up WordPress admin dashboard.", "wptools");
-
-
 $wptools_help .= '<br>';
-
+$wptools_help .= '49) ' .   esc_attr__("Allow reinstalling WordPress plugins without deleting them or modifying database details.", "wptools");
+$wptools_help .= '<br>';
+$wptools_help .= '50) ' .   esc_attr__("Allow reinstalling WordPress core files without modify database details.", "wptools");
+$wptools_help .= '<br>';
 
 
 $wptools_help .= '<br>';

@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     // console.log("Loaded Chat");
-    let chatVersion = "2.00"; // This can be updated as needed.
+    let chatVersion = "102.00"; // This can be updated as needed.
     const billChatMessages = $('#chat-messages'); // Div where messages are displayed
     const billChatForm = $('#chat-form');        // Submission form
     const billChatInput = $('#chat-input');      // Message input field

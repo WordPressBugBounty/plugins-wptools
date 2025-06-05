@@ -418,7 +418,25 @@ $fields[] = array(
 );
 
 
+$fields[] = array(
+	'type' 	=> 'radio',
+	'name' 	=> 'wptools_enable_reinstall',
+	'label' => esc_attr__("Allow the administrator to reinstall plugins without modifying the database.(Only Premium)", "wptools"),
+	'radio_options' => array(
+		array('value' => 'yes', 'label' => esc_attr__('Yes, enable reinstall', "wptools")),
+		array('value' => 'no', 'label' => esc_attr__('No', "wptools")),
+	)
+);
 
+$fields[] = array(
+	'type' 	=> 'radio',
+	'name' 	=> 'wptools_enable_reinstall_core',
+	'label' => esc_attr__("Allow the administrator to reinstall WordPress core without modifying the database.(Only Premium)", "wptools"),
+	'radio_options' => array(
+		array('value' => 'yes', 'label' => esc_attr__('Yes, enable reinstall core', "wptools")),
+		array('value' => 'no', 'label' => esc_attr__('No', "wptools")),
+	)
+);
 
 $settings[remove_accents(esc_attr__('General Settings', 'wptools'))]['']['fields'] = $fields;
 // It contains three values, first one is the load average for last 15 minutes, second one is for 5 minutes, third one is for last 1 minute.
@@ -783,11 +801,11 @@ function wptools_findip2()
 			} else {
 				$ip = filter_var($ip, FILTER_VALIDATE_IP);
 			}
-			if (! empty($ip)) {
+			if (!empty($ip)) {
 				break;
 			}
 		}
-		if (! empty($ip)) {
+		if (!empty($ip)) {
 			break;
 		}
 	}

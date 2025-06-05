@@ -19,7 +19,10 @@ function wptools_options_go_settings()
 
 function wptools_menu()
 {
-    global $wptools_checkversion;
+    global $wptools_checkversion, $wptools_enable_reinstall;
+
+    // debug4($wptools_enable_reinstall);
+
     add_menu_page(
         "WP Tools",
         "WP Tools",
@@ -169,6 +172,32 @@ function wptools_menu()
         "wptools_javacript", // callable function
         5 // position
     );
+
+
+
+    add_submenu_page(
+        "wp-tools", // $parent_slug
+        "Show Transients", // string $page_title
+        esc_attr__("Reinstall Core WP ", "wptools"), // string $menu_title
+        "manage_options", // string $capability
+        "wptools_options50", // menu slug
+        "wptools_transients_admin", // callable function
+        30 // position
+    );
+
+    if ($wptools_enable_reinstall == 'yes') {
+        add_submenu_page(
+            "wp-tools", // $parent_slug
+            "Show Transients", // string $page_title
+            esc_attr__("Reinstall Plugins", "wptools"), // string $menu_title
+            "manage_options", // string $capability
+            "wptools_options51", // menu slug
+            "wptools_add_reinstall_link", // callable function
+            30 // position
+        );
+    }
+
+
     if (is_multisite()) {
         add_submenu_page(
             "wp-tools", // $parent_slug
@@ -3963,4 +3992,93 @@ function wptools_options_permissions2()
         else
             return "";
     }
+
+    if ($wptools_enable_reinstall == 'yes') {
+        // Add "Reinstall Files" link to plugin actions
+        function wptools_add_reinstall_link($actions, $plugin_file, $plugin_data, $context)
+        {
+            if (wptools_is_plugin_from_wporg($plugin_file) && current_user_can('install_plugins')) {
+                $plugin = sanitize_text_field(wp_unslash($plugin_file));
+                $reinstall_url = wp_nonce_url(
+                    admin_url('plugins.php?action=wptools_reinstall_plugin&plugin=' . urlencode($plugin)),
+                    'wptools_reinstall_plugin_' . $plugin
+                );
+                $actions['wptools_reinstall'] = '<a href="' . esc_url($reinstall_url) . '">' . esc_html__('Reinstall Files', 'wptools') . '</a>';
+            }
+            return $actions;
+        }
+        add_filter('plugin_action_links', 'wptools_add_reinstall_link', 10, 4);
+
+        // Handle reinstall action
+        function wptools_handle_reinstall_plugin()
+        {
+            global $pagenow;
+            if ($pagenow === 'plugins.php' && isset($_GET['action']) && $_GET['action'] === 'wptools_reinstall_plugin' && !empty($_GET['plugin']) && current_user_can('install_plugins')) {
+                $plugin = sanitize_text_field(wp_unslash($_GET['plugin']));
+                check_admin_referer('wptools_reinstall_plugin_' . $plugin);
+
+                require_once ABSPATH . 'wp-admin/includes/plugin.php';
+                $plugin_slug = dirname($plugin);
+                $plugin_file = WP_PLUGIN_DIR . '/' . $plugin;
+                $plugin_data = get_plugin_data($plugin_file);
+                $plugin_name = sanitize_text_field($plugin_data['Name']);
+
+                // Get plugin info from WordPress.org
+                $api = plugins_api('plugin_information', [
+                    'slug' => $plugin_slug,
+                    'fields' => ['sections' => false],
+                ]);
+
+                if (is_wp_error($api)) {
+                    wp_die(esc_html($api->get_error_message()));
+                }
+
+                // Reinstall without deleting
+                $upgrader = new Plugin_Upgrader(new WP_Ajax_Upgrader_Skin());
+                $upgrader->init();
+                $upgrader->upgrade_strings();
+
+                $options = [
+                    'package' => $api->download_link,
+                    'destination' => WP_PLUGIN_DIR . '/' . $plugin_slug,
+                    'clear_destination' => false,
+                    'abort_if_destination_exists' => false,
+                    'is_multi' => false,
+                    'hook_extra' => ['plugin' => $plugin]
+                ];
+
+                $result = $upgrader->run($options);
+
+                if (is_wp_error($result)) {
+                    wp_die(esc_html__('Failed to reinstall the plugin: ', 'wptools') . esc_html($result->get_error_message()));
+                }
+
+                wp_safe_redirect(add_query_arg('reinstalled_name', urlencode($plugin_name), wp_get_referer()));
+                exit;
+            }
+        }
+        add_action('admin_init', 'wptools_handle_reinstall_plugin');
+
+        // Check if plugin is from WordPress.org
+        function wptools_is_plugin_from_wporg($plugin_file)
+        {
+            $plugin_slug = dirname(sanitize_text_field($plugin_file));
+            $api = plugins_api('plugin_information', [
+                'slug' => $plugin_slug,
+                'fields' => ['sections' => false],
+            ]);
+            return !is_wp_error($api);
+        }
+
+        // Show success message
+        function wptools_show_reinstall_message()
+        {
+            if (!empty($_GET['reinstalled_name']) && current_user_can('install_plugins')) {
+                $plugin_name = sanitize_text_field(wp_unslash($_GET['reinstalled_name']));
+                echo '<div class="updated"><p>' . esc_html(sprintf(__('The plugin %s files have been reinstalled successfully.', 'wptools'), $plugin_name)) . '</p></div>';
+            }
+        }
+        add_action('admin_notices', 'wptools_show_reinstall_message');
+    }
+
     ?>

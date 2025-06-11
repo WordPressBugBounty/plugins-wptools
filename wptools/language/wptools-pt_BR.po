@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wptools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 14:55+0100\n"
-"PO-Revision-Date: 2025-06-05 13:59+0000\n"
+"POT-Creation-Date: 2025-06-11 08:55+0100\n"
+"PO-Revision-Date: 2025-06-11 08:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.6\n"
 "X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.10\n"
 "X-Domain: wptoolsX-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;"
 "esc_attr_e;esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;"
@@ -1219,8 +1219,8 @@ msgstr ""
 msgid ""
 "If we are wrong, please, contact our support at: https://wptoolsplugin.com"
 msgstr ""
-"Se estivermos errados, por favor, contate nosso suporte em: https:"
-"//wptoolsplugin.com"
+"Se estivermos errados, por favor, contate nosso suporte em: https://"
+"wptoolsplugin.com"
 
 #: functions/_functions.php:3268 functions/functions.php:3406
 msgid "Robots TXT"
@@ -1441,7 +1441,6 @@ msgid "Memory issues have been detected on this site. "
 msgstr "Problemas de memória foram detectados neste site. "
 
 #: functions/function_error_log.php:60
-#| msgid "Error Log Table"
 msgid "Error Table"
 msgstr "Tabela de Erro"
 
@@ -1465,9 +1464,6 @@ msgid "Send"
 msgstr "Enviar"
 
 #: functions/function_error_log.php:111
-#| msgid ""
-#| "Enter a message and click 'Send', or just copy and paste the content of "
-#| "description column."
 msgid ""
 "Enter a message and click 'Send', or just click 'Auto Checkup' to analyze "
 "error log ou server info configuration."
@@ -1476,7 +1472,6 @@ msgstr ""
 "Automático\" para analisar o log do erro ou configuração do Info do servidor."
 
 #: functions/function_error_log.php:117
-#| msgid "Step 2 - Check for Javascript Errors"
 msgid "Auto Checkup for Errors"
 msgstr "Verificação automática por erros"
 
@@ -1505,9 +1500,6 @@ msgid "Action"
 msgstr "Ação"
 
 #: functions/function_error_log.php:255
-#| msgid ""
-#| "Enter a message and click 'Send', or just copy and paste the content of "
-#| "description column."
 msgid ""
 "Enter a message and click 'Send', or just copy and paste the content of type "
 "and description column."
@@ -1524,7 +1516,6 @@ msgid "Reinstall Core WP "
 msgstr "Reinstalação de Core WP"
 
 #: functions/functions.php:192
-#| msgid "Installing plugin"
 msgid "Reinstall Plugins"
 msgstr "Instalação de Plugins"
 
@@ -1539,8 +1530,8 @@ msgstr ""
 #: functions/functions.php:1510
 msgid "The total time is in seconds. Lower time are better (faster)."
 msgstr ""
-"O tempo total é em segundos. Os tempos mais curtos são melhores (mais rápido)"
-"."
+"O tempo total é em segundos. Os tempos mais curtos são melhores (mais "
+"rápido)."
 
 #: functions/functions.php:1525
 msgid "Participate in Community Server Performance."
@@ -1656,7 +1647,6 @@ msgid "An error occurred while loading logs."
 msgstr "Ocorreu um erro ao carregar os logs."
 
 #: functions/functions_error_log_page.php:63
-#| msgid "File not found."
 msgid "No logs found."
 msgstr "Não há logs encontrados."
 
@@ -1735,10 +1725,6 @@ msgid "Expired"
 msgstr "Expirado"
 
 #: guide/guide.php:9
-#| msgid ""
-#| "This plugin has currently more than 48 tools to help you to manage your "
-#| "WordPress site, included the dashboard with CPU/Disk/Memory usage charts "
-#| "and more info."
 msgid ""
 "This plugin has currently more than 50 tools to help you to manage your "
 "WordPress site, included the dashboard with CPU/Disk/Memory usage charts and "
@@ -2074,9 +2060,17 @@ msgstr "Erro ao enviar a mensagem. Tente novamente mais tarde."
 msgid "Please enter a message!"
 msgstr "Por favor, insira uma mensagem!"
 
-#: includes/_chat/class_bill_chat.php:341 includes/chat/class_bill_chat.php:344
+#: includes/_chat/class_bill_chat.php:341 includes/chat/class_bill_chat.php:381
 msgid "Error to get response from AI source!"
 msgstr "Erro ao obter resposta da fonte de IA!"
+
+#: includes/chat/class_bill_chat.php:325
+msgid "Unknown error from API."
+msgstr "Tipo de erro desconhecido from API"
+
+#: includes/chat/class_bill_chat.php:329
+msgid "Invalid API response format."
+msgstr "Formato de resposta inválido from API."
 
 #: includes/feedback-last/feedback-last.php:250
 msgid "What can we do to resolve the problem you're facing?"
@@ -2243,11 +2237,11 @@ msgstr ""
 
 #: includes/help/help.php:105
 msgid ""
-"Visit our blog for more details on the subject: <a href=\"https:"
-"//wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+"Visit our blog for more details on the subject: <a href=\"https://"
+"wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
 msgstr ""
-"Visite nosso blog para mais detalhes sobre o assunto: <a href=\"https:"
-"//wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
+"Visite nosso blog para mais detalhes sobre o assunto: <a href=\"https://"
+"wpToolsPlugin.com\" target=\"_blank\">https://wpToolsPlugin.com</a>"
 
 #: includes/help/help.php:165
 msgid "Open WP Tools Plugin Here!"
@@ -3027,7 +3021,6 @@ msgstr ""
 "dados.(Só com prémios)"
 
 #: settings/options/plugin_options_tabbed.php:426
-#| msgid "Yes, disable all"
 msgid "Yes, enable reinstall"
 msgstr "Sim, permite reinstalação"
 
@@ -3040,7 +3033,6 @@ msgstr ""
 "banco de dados.(Só com prémios)"
 
 #: settings/options/plugin_options_tabbed.php:436
-#| msgid "Yes, disable all"
 msgid "Yes, enable reinstall core"
 msgstr "Sim, permite a reinstalação do núcleo"
 
@@ -3090,9 +3082,9 @@ msgstr "Observação"
 
 #: wptools.php:822
 msgid ""
-"Contact the plugin developer with these details and request support. However,"
-" be advised that often the cause may be external to the plugin, such as "
-"insufficient server memory (or insufficient WordPress Memory Limit), "
+"Contact the plugin developer with these details and request support. "
+"However, be advised that often the cause may be external to the plugin, such "
+"as insufficient server memory (or insufficient WordPress Memory Limit), "
 "conflicts with other plugins (or theme), lack of disk space, server overload "
 "due to hacker and bot spiders among other factors."
 msgstr ""
@@ -3187,10 +3179,11 @@ msgid ""
 "activated or deactivated through the admin panel. The premium version of our "
 "plugin WP Tools allows you to activate and deactivate them."
 msgstr ""
-"MU-plugins (Must-Use Plugins) são plugins que são carregados automaticamente."
-" Eles são armazenados em uma pasta específica (`wp-content/mu-plugins`) e "
-"não podem ser ativados ou desativados através do painel de administração. A "
-"versão premium do nosso plugin WP Tools permite que você os ative e desative."
+"MU-plugins (Must-Use Plugins) são plugins que são carregados "
+"automaticamente. Eles são armazenados em uma pasta específica (`wp-content/"
+"mu-plugins`) e não podem ser ativados ou desativados através do painel de "
+"administração. A versão premium do nosso plugin WP Tools permite que você os "
+"ative e desative."
 
 #: wptools.php:2255
 msgid "Author:"

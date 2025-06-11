@@ -3,14 +3,14 @@ Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 5.25
+Stable tag: 5.28
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-49 Tools, Increase Max upload file size limit, Maximum Execution Time, Folder Permissions, show PHP Version, Server Stats, Server Benchmark, PHP Info 
+50 Tools, Increase Max upload file size limit, Maximum Execution Time, Folder Permissions, show PHP Version, Server Stats, Server Benchmark, PHP Info 
 
 == Description ==
-> The WP Tools plugin (wp-tools) features a comprehensive dashboard showcasing server statistics, including a chart of errors, page load time also by page and boasts over 49 tools designed to simplify your WordPress management tasks. It serves as a versatile Swiss army knife for your WordPress needs.
+> The WP Tools plugin (wp-tools) features a comprehensive dashboard showcasing server statistics, including a chart of errors, page load time also by page and boasts over 50 tools designed to simplify your WordPress management tasks. It serves as a versatile Swiss army knife for your WordPress needs.
 Catch and alert about Javascript Errors (also jquery errors, javascript errors, jquery migrate) and PHP/MYSQL errors. Block notification email of updates, Hide Admin Bar, Disable Lazy Load, Displays the folders that are taking up more disk space and a lot more... 
 Translation ready. Files included: Dutch, English, French, Italian, Portuguese, Spanish, and German.
 
@@ -64,8 +64,12 @@ A must have plugin also by cloud hosting as AWS Amazon Lightsail, EC2 instance, 
 * Improve Dashboard Performance by prevent WordPress from fetching news and Clean up WordPress admin dashboard.
 * Resolve 'Incompatible Archive' issue when installing plugins from zip files by using PclZip instead of ZipArchive. Consider using this option only for new plugin installations.
 * Show Server Load Average percentage for the last minute at top admin bar. **
-* Show MU Plugins (Must-Use Plugins or Must Use Plugins)
+
 With the last tool, now you can monitor your server load (CPU Usage), in real time, from your wordpress admin panel.
+* Show MU Plugins (Must-Use Plugins or Must Use Plugins)
+
+* Allows you to reinstall plugins (force reinstall plugins) without having to delete them or modify the database.(Premium feature)
+* Allows you to reinstall WordPress core files (force reinstall) without modifying the database.(Premium feature)
 
 **Requirements for use Show Server Load Tool and Dashboard**
 

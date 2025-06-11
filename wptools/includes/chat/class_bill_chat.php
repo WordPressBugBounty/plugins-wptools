@@ -181,6 +181,9 @@ class ChatPlugin
         fclose($handle);
         return $text;
     }
+
+
+
     /**
      * Função para chamar a API do ChatGPT.
      */
@@ -297,12 +300,41 @@ class ChatPlugin
         //debug4();
 
         $response = wp_remote_post('https://BillMinozzi.com/chat/api/api.php', [
-            'wptools_timeout' => 60,
+            'timeout' => 60,
             'headers' => [
                 'Content-Type' => 'application/json',
             ],
             'body' => json_encode($data2),
         ]);
+
+
+        // new 2025
+        if (is_wp_error($response)) {
+            $error_message = sanitize_text_field($response->get_error_message());
+            $message = esc_attr__("Error contacting the API: $error_message", "wptools");
+        } else {
+            $body = wp_remote_retrieve_body($response);
+            $data = json_decode($body, true);
+
+            // Check if json_decode was successful and $data is an array
+            if (json_last_error() === JSON_ERROR_NONE && is_array($data)) {
+                if (isset($data['success']) && $data['success'] === true) {
+                    $message = $data['message'];
+                } else {
+                    // Safely access 'error' key or provide a fallback
+                    $message = isset($data['error']) ? sanitize_text_field($data['error']) : esc_attr__("Unknown error from API.", "wptools");
+                }
+            } else {
+                // Handle JSON decode failure or non-array response
+                $message = esc_attr__("Invalid API response format.", "wptools");
+                // Optionally log the raw $body for debugging
+                error_log("Invalid JSON response: " . $body);
+            }
+        }
+        return $message;
+        // end new 
+
+        /*
         if (is_wp_error($response)) {
             $error_message = sanitize_text_field($response->get_error_message());
         } else {
@@ -318,7 +350,12 @@ class ChatPlugin
         }
         // debug2($message);
         return $message;
+        */
     }
+
+
+
+
     /**
      * Função para enviar a mensagem do usuário e obter a resposta do ChatGPT.
      */

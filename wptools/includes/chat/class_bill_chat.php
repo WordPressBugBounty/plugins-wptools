@@ -1,6 +1,6 @@
 <?php
  
-namespace stopbadbots_BillChat;
+namespace wptools_BillChat;
 // 2024-12=18 // 2025-01-04
 if (!defined('ABSPATH')) {
     die('Invalid request.');
@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) {
 if (function_exists('is_multisite') && is_multisite()) {
     return;
 }
+ 
 
 class ChatPlugin
 {
@@ -42,15 +43,15 @@ class ChatPlugin
         wp_localize_script('chat-script', 'bill_data', array(
             'ajax_url'                 => admin_url('admin-ajax.php'),
             'reset_nonce'              => wp_create_nonce('bill_chat_reset_messages_nonce'), // Linha adicionada
-            'reset_success'            => esc_attr__('Chat messages reset successfully.', 'stopbadbots'),
-            'reset_error'              => esc_attr__('Error resetting chat messages.', 'stopbadbots'),
-            'invalid_message'          => esc_attr__('Invalid message received:', 'stopbadbots'),
-            'invalid_response_format'  => esc_attr__('Invalid response format:', 'stopbadbots'),
-            'response_processing_error' => esc_attr__('Error processing server response:', 'stopbadbots'),
-            'not_json'                 => esc_attr__('Response is not valid JSON.', 'stopbadbots'),
-            'ajax_error'               => esc_attr__('AJAX request failed:', 'stopbadbots'),
-            'send_error'               => esc_attr__('Error sending the message. Please try again later.', 'stopbadbots'),
-            'empty_message_error'      => esc_attr__('Please enter a message!', 'stopbadbots'),
+            'reset_success'            => esc_attr__('Chat messages reset successfully.', 'wptools'),
+            'reset_error'              => esc_attr__('Error resetting chat messages.', 'wptools'),
+            'invalid_message'          => esc_attr__('Invalid message received:', 'wptools'),
+            'invalid_response_format'  => esc_attr__('Invalid response format:', 'wptools'),
+            'response_processing_error' => esc_attr__('Error processing server response:', 'wptools'),
+            'not_json'                 => esc_attr__('Response is not valid JSON.', 'wptools'),
+            'ajax_error'               => esc_attr__('AJAX request failed:', 'wptools'),
+            'send_error'               => esc_attr__('Error sending the message. Please try again later.', 'wptools'),
+            'empty_message_error'      => esc_attr__('Please enter a message!', 'wptools'),
         ));
     }
     /**
@@ -248,10 +249,10 @@ class ChatPlugin
             $bill_chat_erros = 'No errors found!';
         }
         //2025
-        $stopbadbots_checkup = \stopbadbots_sysinfo_get();
+        $wptools_checkup = \wptools_sysinfo_get();
         $data2 = [
             'param1' => $data,
-            'param2' => $stopbadbots_checkup,
+            'param2' => $wptools_checkup,
             'param3' => $bill_chat_erros,
             'param4' => $language,
             'param5' => $plugin_slug,
@@ -275,7 +276,7 @@ class ChatPlugin
         if (isset($data['success']) && $data['success'] === true) {
             $message = $data['message'];
         } else {
-            $message = esc_attr__("Error contacting the Artificial Intelligence (API). Please try again later.", 'stopbadbots');
+            $message = esc_attr__("Error contacting the Artificial Intelligence (API). Please try again later.", 'wptools');
         }
         return $message;
     }
@@ -390,13 +391,13 @@ class ChatPlugin
         $chatType = isset($_POST['chat_type']) ? sanitize_text_field($_POST['chat_type']) : 'default';
         if (empty($message)) {
             if ($chatType == 'auto-checkup') {
-                $message = esc_attr("Auto Checkup for Erros button clicked...", 'stopbadbots');
+                $message = esc_attr("Auto Checkup for Erros button clicked...", 'wptools');
             } elseif ($chatType == 'auto-checkup2') {
-                $message = esc_attr("Auto Checkup Server button clicked...", 'stopbadbots');
+                $message = esc_attr("Auto Checkup Server button clicked...", 'wptools');
             }
         }
         //  if (empty($message)) {
-        //    $message = esc_attr("Auto Checkup button clicked...", 'stopbadbots');
+        //    $message = esc_attr("Auto Checkup button clicked...", 'wptools');
         // }
         // error_log(var_export($chatType));
         $chatVersion = isset($_POST['chat_version']) ? sanitize_text_field($_POST['chat_version']) : '1.00';
@@ -408,7 +409,7 @@ class ChatPlugin
             $resposta_formatada = $output;
         } else {
             $output = "Error to get response from AI source!";
-            $output = esc_attr__("Error to get response from AI source!", 'stopbadbots');
+            $output = esc_attr__("Error to get response from AI source!", 'wptools');
         }
         // Prepara as mensagens
         $messages = get_option('chat_messages', []);

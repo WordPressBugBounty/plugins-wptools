@@ -3,7 +3,7 @@ Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 5.28
+Stable tag: 5.29
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,9 @@ Catch and alert about Javascript Errors (also jquery errors, javascript errors, 
 Translation ready. Files included: Dutch, English, French, Italian, Portuguese, Spanish, and German.
 
 A must have plugin also by cloud hosting as AWS Amazon Lightsail, EC2 instance, Bitnami, Contabo, Azure, Google Cloud, Digital Ocean and others. 
+
+== "Exploring the Key Features of Our Plugin": ==
+[youtube https://youtu.be/EuDHUGfNcWg?si=Eu253Thjmumb32Oq autoplay=0]
 
 * Increase the PHP memory limit, Increase Maximum Execution Time limit, and Increase maximum upload file size limit without editing any WordPress or PHP files.
 * Show the WordPress errors (PHP errors error_log, error log or error reporting), limited to 200 last WordPress errors to Help you fix issues.
@@ -361,12 +364,31 @@ These are the terms of use for <a href="https://siterightaway.net/terms-of-use-o
 
 To learn more details about the wptools plugin, visit the <a href="https://wptoolsplugin.com/">plugin site</a>.
 
-== External service ==
-When using our chat, only some information about issues, such as your language and data from the Diagnose tab, may be sent to our server. We do not share, publish, or disclose any information with third parties.
+
 
 == External service (1) ==
-The Stop Bad Bots plugin will retrieve tips and news from our site BillMinozzi.com. This information will be displayed in the plugin dashboard, in the right-hand column under the title "Tips and News." No data is sent to our server. Learn about the terms of use for our plugins and themes at this link:
-https://siterightaway.net/terms-of-use-of-our-plugins-and-themes/
+When using our chat, only some information about issues, such as your language and data from the Diagnose tab, may be sent to our server. We do not share, publish, or disclose any information with third parties.
+domain: https://BillMinozzi.com/chat/api/api.php
+
+== External service (2) ==
+The plugin will retrieve tips and news from our site BillMinozzi.com. This information will be displayed in the plugin dashboard, in the right-hand column under the title "Tips and News." No data is sent to our server. 
+domain: https://billminozzi.com/API/bill-api.php
+
+
+== Advanced Site Health ==
+
+WordPresss built-in Site Health feature provides a great baseline for your sites well-being. However, in todays digital landscape, true health goes beyond server configuration. A site can have a perfect score and still be slow, vulnerable, or plagued by critical errors.
+
+Our plugin extends the core Site Health concept to provide a truly holistic analysis of what keeps your site fast, stable, and secure. We dont just check the basics; we diagnose critical issues that directly impact your visitors experience and your sites operational integrity.
+
+Our enhanced checks include:Performance & Memory Analysis, Proactive Error Detection, Modern Security Monitoring.
+That  involves querying public, authoritative services like rdap.db.ripe.net with visitor IP addresses for security analysis.
+domain: https://rdap.db.ripe.net/ip/
+
+For a complete overview of all features, our data handling practices, and the full terms governing our software, please visit our official website: 
+https://siterightaway.net/terms-of-use-of-our-plugins-and-themes/  
+
+
 
 === changelog ===
 This file contains changelog entries.

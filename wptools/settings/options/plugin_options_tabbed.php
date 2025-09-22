@@ -12,6 +12,7 @@ $mypage = new Page('Settings WPTools', array(
 	'capability' => 'manage_options',
 	'slug' => 'settings-wptools', // Slug único para esta página de submenu
 	'icon' => 'icon-options-general', // Ícone para o menu
+	'page_title' => 'Settings WPTools' // ← Isso resolve o problema
 ));
 
 

@@ -57,6 +57,7 @@ class OptionPageBuilder {
                     array($this, 'render'));
                 break;
 			case 'submenu':
+				/*
 				add_submenu_page( 
                 $this->page->parent_slug, 
                 $this->page->title, 
@@ -64,7 +65,20 @@ class OptionPageBuilder {
                 $this->page->capability, 
                 $this->page->slug, 
                 array($this, 'render') );
-				break;
+				break
+				*/
+
+
+				add_submenu_page( 
+					$this->page->parent_slug, 
+					$this->page->title, 
+					$this->page->menu_title, 
+					$this->page->capability, 
+					$this->page->slug, 
+					array($this, 'render') );
+					break;
+
+
 			case 'settings':
 				add_options_page( $this->page->title, $this->page->menu_title, $this->page->capability, $this->page->slug, array($this, 'render') );
 				$this->page->set_hook('settings_page_');
@@ -212,131 +226,86 @@ class OptionPageBuilderTabbed extends OptionPageBuilder {
 		}
 	}
 	public function render()
-	{
-		global $wptools_checkversion;
-		$allowed_atts = array(
-			'align'      => array(),
-			'class'      => array(),
-			'type'       => array(),
-			'id'         => array(),
-			'dir'        => array(),
-			'lang'       => array(),
-			'style'      => array(),
-			'xml:lang'   => array(),
-			'src'        => array(),
-			'alt'        => array(),
-			'href'       => array(),
-			'rel'        => array(),
-			'rev'        => array(),
-			'target'     => array(),
-			'novalidate' => array(),
-			'type'       => array(),
-			'value'      => array(),
-			'name'       => array(),
-			'tabindex'   => array(),
-			'action'     => array(),
-			'method'     => array(),
-			'for'        => array(),
-			'width'      => array(),
-			'height'     => array(),
-			'data'       => array(),
-			'title'      => array(),
-			'checked' => array(),
-			'selected' => array(),
-		);
-		$my_allowed['form'] = $allowed_atts;
-		$my_allowed['select'] = $allowed_atts;
-		// select options
-		$my_allowed['option'] = $allowed_atts;
-		$my_allowed['style'] = $allowed_atts;
-		$my_allowed['label'] = $allowed_atts;
-		$my_allowed['input'] = $allowed_atts;
-		$my_allowed['textarea'] = $allowed_atts;
-        //more...future...
-		$my_allowed['form']     = $allowed_atts;
-		$my_allowed['label']    = $allowed_atts;
-		$my_allowed['input']    = $allowed_atts;
-		$my_allowed['textarea'] = $allowed_atts;
-		$my_allowed['iframe']   = $allowed_atts;
-		$my_allowed['script']   = $allowed_atts;
-		$my_allowed['style']    = $allowed_atts;
-		$my_allowed['strong']   = $allowed_atts;
-		$my_allowed['small']    = $allowed_atts;
-		$my_allowed['table']    = $allowed_atts;
-		$my_allowed['span']     = $allowed_atts;
-		$my_allowed['abbr']     = $allowed_atts;
-		$my_allowed['code']     = $allowed_atts;
-		$my_allowed['pre']      = $allowed_atts;
-		$my_allowed['div']      = $allowed_atts;
-		$my_allowed['img']      = $allowed_atts;
-		$my_allowed['h1']       = $allowed_atts;
-		$my_allowed['h2']       = $allowed_atts;
-		$my_allowed['h3']       = $allowed_atts;
-		$my_allowed['h4']       = $allowed_atts;
-		$my_allowed['h5']       = $allowed_atts;
-		$my_allowed['h6']       = $allowed_atts;
-		$my_allowed['ol']       = $allowed_atts;
-		$my_allowed['ul']       = $allowed_atts;
-		$my_allowed['li']       = $allowed_atts;
-		$my_allowed['em']       = $allowed_atts;
-		$my_allowed['hr']       = $allowed_atts;
-		$my_allowed['br']       = $allowed_atts;
-		$my_allowed['tr']       = $allowed_atts;
-		$my_allowed['td']       = $allowed_atts;
-		$my_allowed['p']        = $allowed_atts;
-		$my_allowed['a']        = $allowed_atts;
-		$my_allowed['b']        = $allowed_atts;
-		$my_allowed['i']        = $allowed_atts;
-		$active_tab_id = (isset($_GET['tab'])) ? sanitize_text_field($_GET['tab']) : $this->tabs[0]->id;
-		do_action('wptools_pcs_render_option_page');
-		//echo $this->page->markup_top;
-		echo wp_kses($this->page->markup_top, $my_allowed);
-		// echo esc_attr($this->page->markup_top);
+    {
+        global $wptools_checkversion;
+
+        // Simplified allowed HTML attributes array
+        $allowed_atts = array(
+            'align' => array(), 'class' => array(), 'type' => array(), 'id' => array(),
+            'dir' => array(), 'lang' => array(), 'style' => array(), 'xml:lang' => array(),
+            'src' => array(), 'alt' => array(), 'href' => array(), 'rel' => array(),
+            'rev' => array(), 'target' => array(), 'novalidate' => array(), 'value' => array(),
+            'name' => array(), 'tabindex' => array(), 'action' => array(), 'method' => array(),
+            'for' => array(), 'width' => array(), 'height' => array(), 'data' => array(),
+            'title' => array(), 'checked' => array(), 'selected' => array(),
+        );
+
+        $my_allowed_tags = array(
+            'form'     => $allowed_atts, 'select' => $allowed_atts, 'option' => $allowed_atts,
+            'label'    => $allowed_atts, 'input' => $allowed_atts, 'textarea' => $allowed_atts,
+            'iframe'   => $allowed_atts, 'script' => $allowed_atts, 'style' => $allowed_atts,
+            'strong'   => $allowed_atts, 'small' => $allowed_atts, 'table' => $allowed_atts,
+            'span'     => $allowed_atts, 'abbr' => $allowed_atts, 'code' => $allowed_atts,
+            'pre'      => $allowed_atts, 'div' => $allowed_atts, 'img' => $allowed_atts,
+            'h1' => $allowed_atts, 'h2' => $allowed_atts, 'h3' => $allowed_atts,
+            'h4' => $allowed_atts, 'h5' => $allowed_atts, 'h6' => $allowed_atts,
+            'ol' => $allowed_atts, 'ul' => $allowed_atts, 'li' => $allowed_atts,
+            'em' => $allowed_atts, 'hr' => $allowed_atts, 'br' => $allowed_atts,
+            'tr' => $allowed_atts, 'td' => $allowed_atts, 'p' => $allowed_atts,
+            'a' => $allowed_atts, 'b' => $allowed_atts, 'i' => $allowed_atts,
+        );
+
+        $active_tab_id = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : null;
+        $active_tab = null;
+
+        // Render Page Markup
+        echo wp_kses($this->page->markup_top, $my_allowed_tags);
         echo '<div id="containerleft">';
-		echo '<form method="post" action="options.php">';
-		settings_errors();
-		// Output all tab headings
-		echo '<h2 class="nav-tab-wrapper">';
-		foreach($this->tabs as $tab) {
-			// Outbut Tabs
-			if( $tab->active ) {
-				//echo $tab->get_anchor(true);
-				echo wp_kses($tab->get_anchor(true), $my_allowed);
-				// Cache active tab to reneder sections later
-				$active_tab = $tab;
-			} else {
-				echo wp_kses($tab->get_anchor(true), $my_allowed);	
-			}
-		}
-		echo '</h2>';
-		settings_fields( $this->page->slug );
-		do_settings_sections( $this->page->slug );
+        echo '<form method="post" action="options.php">';
 
+        settings_errors();
 
-	$wptools_setting_with_button = array(
-		remove_accents(__('General Settings','wptools')),
-	    remove_accents(__('Processor Load','wptools')),
-		remove_accents(__('Notifications','wptools')),
-		remove_accents(__('Go Pro','wptools'))
+        // Output all tab headings
+        echo '<h2 class="nav-tab-wrapper">';
+        foreach($this->tabs as $tab) {
+            // Find the active tab based on ID or default to the first
+            if (is_null($active_tab_id)) {
+                $is_active = $tab->active;
+            } else {
+                $is_active = ($tab->id === $active_tab_id);
+            }
+            
+            // Render the tab anchor
+            if ($is_active) {
+                echo wp_kses($tab->get_anchor(true), $my_allowed_tags);
+                $active_tab = $tab; // Cache the active tab for rendering sections
+            } else {
+                echo wp_kses($tab->get_anchor(false), $my_allowed_tags);
+            }
+        }
+        echo '</h2>';
 
-	);
-	for($i = 0; $i < count($wptools_setting_with_button); $i++){
-       if(str_replace(' ','_', trim(strtolower($wptools_setting_with_button[$i]))) == trim($active_tab_id))
-	    submit_button();
-	}
-	echo '</form>';
-	echo '</div>'; //containerleft
-		   $wptools_setting_with_button = array(
-			trim(str_replace(' ','_',remove_accents(__('Startup Guide','wptools')))),
-			trim(str_replace(' ','_',remove_accents(__('Go Pro','wptools')))),
-		);
-		   
-		
-			// echo $this->page->markup_bottom;
-			 echo wp_kses($this->page->markup_bottom, $my_allowed);	
+        // Render settings fields for the active tab
+        if ($active_tab) {
+            settings_fields($this->page->slug);
+            do_settings_sections($this->page->slug);
+        }
 
+        $wptools_setting_with_button = array(
+            remove_accents(__('General Settings','wptools')),
+            remove_accents(__('Processor Load','wptools')),
+            remove_accents(__('Notifications','wptools')),
+            remove_accents(__('Go Pro','wptools'))
+        );
 
+        for($i = 0; $i < count($wptools_setting_with_button); $i++){
+           if(str_replace(' ','_', trim(strtolower($wptools_setting_with_button[$i]))) == trim($active_tab_id))
+            submit_button();
+        }
 
+        echo '</form>';
+        echo '</div>'; //containerleft
+        echo wp_kses($this->page->markup_bottom, $my_allowed_tags); 
+    }
 
-	}
 }

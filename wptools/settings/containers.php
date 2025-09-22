@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Settings container entity classes.
  * 
- */
+ */ 
 /**
  * Options page entity.
  */
@@ -20,7 +20,9 @@ class Page {
 	protected $parent_slug;
 	public function __construct ( $menu_title, $settings = array() ) 
 	{
-		$this->menu_title = $menu_title;
+		//$this->menu_title = $menu_title;
+		$this->menu_title = $menu_title ?: 'WP Tools Settings'; // Garante que menu_title não seja null
+
 		$default_settings = array(
 			'slug' => (isset($settings['slug'])) ? $settings['slug'] : sanitize_title_with_dashes($menu_title),
 			'page_title' => (isset($settings['page_title'])) ? $settings['page_title'] : $menu_title,
@@ -39,12 +41,23 @@ class Page {
 		$this->set_markup_top();
 		$this->set_markup_bottom();
 	}
+	/*
 	public function __get($key)
 	{
 		if(property_exists($this, $key)) {
 			return $this->$key;
 		}
 	}
+	*/
+
+	// 2025 Resolve warning page title...
+	public function __get($key)
+{
+    if (property_exists($this, $key)) {
+        return $this->$key ?? ''; // Retorna string vazia se a propriedade for null
+    }
+    return ''; // Retorna string vazia para propriedades inexistentes
+}
 	public function set_hook( $value ) {
 		$this->hook = $value . $this->slug;
 	}

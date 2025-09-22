@@ -151,11 +151,22 @@ class SettingsFactory {
 		}
 	}
 
+	/*
 	public function sanitize_wptools_fieldfeatures($value)
 	{
 		// Sanitize the value of the 'cardealer_fieldfeatures' field here
 		return strip_tags($value);
 	}
+	*/
+	
+	public function sanitize_wptools_fieldfeatures($value)
+{
+    // Ensure $value is a string before sanitizing
+    $value = (string) $value;
+
+    // Sanitize the value of the 'cardealer_fieldfeatures' field here
+    return strip_tags($value);
+}
 
 
 

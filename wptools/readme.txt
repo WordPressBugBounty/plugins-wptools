@@ -1,15 +1,48 @@
-=== WP Tools Repair, Javascript errors, Jquery errors, Increase Maximum Limits, File Permissions, Transients, Error Log ==
+=== WP Tools Debug Log, Repair, Javascript errors, Jquery errors, Increase Maximum Limits, File Permissions, Transients, Error Log ==
 Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 5.30
+Stable tag: 5.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 50 Tools, Increase Max upload file size limit, Maximum Execution Time, Folder Permissions, show PHP Version, Server Stats, Server Benchmark, PHP Info 
 
 == Description ==
+
+**🚀 Short on Time? Here's Your WordPress Swiss Army Knife!**
+
+**What it does:**
+It's the ultimate all-in-one WordPress utilities plugin that replaces dozens of separate tools. While others focus on just one function, we give you complete server monitoring, error tracking (debug log), and optimization in a single lightweight package.
+
+**Why it matters:**
+Why install multiple plugins when one does it all? **Your time is valuable—stop plugin hopping and start managing.**
+Most WordPress problems are interconnected: a PHP error causes slow performance, which leads to security vulnerabilities. Unlike single-purpose tools, WP Tools solves the root causes, not just the symptoms.
+
+**Why Choose Us Over Single-Function Plugins:**
+* **More Comprehensive:** 50+ tools vs. competitors' limited feature sets
+* **Better Integrated:** All tools work seamlessly together in one dashboard
+* **Lightweight Performance:** Consolidated codebase uses fewer resources than multiple plugins
+* **Unified Support:** One team for all your needs, not scattered support channels
+
+**Key Advantages Over Competitors:**
+* **Real-time Error Detection:** Catch PHP, MySQL, AND JavaScript errors simultaneously
+* **Complete Server Insights:** From disk space to load averages - see everything that matters
+* **Proactive Security:** File permission checks + security hardening + maintenance controls
+* **Cloud-Optimized:** Specifically engineered for AWS, Digital Ocean, Azure environments
+
+**Most Popular Tools:**
+* **Unified Error Console:** PHP, JavaScript, and database errors in one place
+* **Live Server Metrics:** Real-time load monitoring directly in your admin bar
+* **Smart Cleanup:** Remove unnecessary files and optimize database with one click
+* **Safe Configuration Editor:** Modify critical settings without touching code files
+
+**🔎 Want to Explore All 50+ Tools? Continue Reading Below**
+
+
+
+
 > The WP Tools plugin (wp-tools) features a comprehensive dashboard showcasing server statistics, including a chart of errors, page load time also by page and boasts over 50 tools designed to simplify your WordPress management tasks. It serves as a versatile Swiss army knife for your WordPress needs.
 Catch and alert about Javascript Errors (also jquery errors, javascript errors, jquery migrate) and PHP/MYSQL errors. Block notification email of updates, Hide Admin Bar, Disable Lazy Load, Displays the folders that are taking up more disk space and a lot more... 
 Translation ready. Files included: Dutch, English, French, Italian, Portuguese, Spanish, and German.

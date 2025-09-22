@@ -1,6 +1,7 @@
 === WP TOOLS ===
 
 This file contains changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
+5.31 2025-08-27 - Improved security.
 5.29/30 2025-07-05 - Improved chat security.
 5.26/28 2025-06-11 - Added option to reinstall wordpress core files and plugins without delete them.
 5.25 2025-05-29 - Improved Loading time.

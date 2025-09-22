@@ -1,6 +1,8 @@
 <?PHP
 
-
+if ( !defined('NONCE_SALT') ) {
+    return false;
+}
 
 function wptools_enqueue_scripts_with_nonce3()
 {

@@ -3,7 +3,7 @@
 Plugin Name: wptools
 Plugin URI:  https://BillMinozzi.com
 Description: WP Tools Increase PHP memory limit, time limit, max upload file size limit without editing any files.Show PHP info, PHP and Javascript errors, Server info and more tools. 
-Version:     5.35
+Version:     5.40
 Author:      Bill Minozzi
 Plugin URI:  https://BillMinozzi.com
 Domain Path: /language
@@ -362,7 +362,8 @@ if (is_admin()) {
 
 
 	$plugin = plugin_basename(__FILE__);
-	function wptools_add_action_links($links) {
+	function wptools_add_action_links($links)
+	{
 		$mylinks = array(
 			'<a href="' . admin_url('admin.php?page=wp-tools') . '">Dashboard</a>',
 			'<a href="' . admin_url('admin.php?page=settings-wptools') . '">Settings</a>',
@@ -370,7 +371,6 @@ if (is_admin()) {
 		return array_merge($links, $mylinks);
 	}
 	add_filter("plugin_action_links_" . plugin_basename(__FILE__), "wptools_add_action_links");
-
 }
 
 add_action('wp_head', 'wptools_ajaxurl');
@@ -917,7 +917,7 @@ function wptools_load_chat()
 {
 	if (function_exists('is_admin') && function_exists('current_user_can')) {
 		if (is_admin() and current_user_can("manage_options")) {
-			if (! class_exists('wptools_BillChat\ChatPlugin')) {
+			if (!class_exists('wptools_BillChat\ChatPlugin')) {
 				require_once dirname(__FILE__) . "/includes/chat/class_bill_chat.php";
 			}
 		}
@@ -1437,7 +1437,7 @@ if (is_admin()) {
 	$BILLCLASS = 'ACTIVATED_WPTOOLS';
 	if (!isset($_COOKIE[$BILLCLASS]) and $wptools_activated_notice == '1') {
 
-		if (! is_multisite()) {
+		if (!is_multisite()) {
 			add_action('wp_loaded', 'wptools_load_feedback3');
 			add_action('admin_notices', 'wptools_include_file_more_plugins');
 		}

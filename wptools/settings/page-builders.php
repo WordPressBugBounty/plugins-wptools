@@ -1,17 +1,21 @@
-<?php  namespace wptools_wpsettings;
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+<?php
+
+namespace wptools_wpsettings;
+
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /**
  * Page builder classes that register and render the settings pages.
  */
 /**
  * Base class for optons page builders.
  */
-class OptionPageBuilder {
+class OptionPageBuilder
+{
 	protected $page;
 	protected $tabs;
 	protected $scripts;
 	protected $styles;
-	public function __construct (  $page, $scripts = array(), $styles = array() ) 
+	public function __construct($page, $scripts = array(), $styles = array())
 	{
 		// Initialize page and register page action
 		$this->page = $page;
@@ -23,39 +27,43 @@ class OptionPageBuilder {
 		global $wptools_pcs_settings_config;
 		global $wptools_setting_with_button;
 		// Load PCS Settings stylesheet.
-				//'src'=> $wptools_pcs_settings_config['base_uri'] . 'styles/admin-settings.css', 
-		$this->styles[] = array('handle' => 'pcs-admin-settings', 
-		'src' => WPTOOLSURL . 'settings/styles/admin-settings.css',
-		'enqueue' => TRUE);
+		//'src'=> $wptools_pcs_settings_config['base_uri'] . 'styles/admin-settings.css', 
+		$this->styles[] = array(
+			'handle' => 'pcs-admin-settings',
+			'src' => WPTOOLSURL . 'settings/styles/admin-settings.css',
+			'enqueue' => TRUE
+		);
 
-        // passei par wptools.php 2022-05
+		// passei par wptools.php 2022-05
 		// add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
-	
+
 	}
 
 
 	public function register_page()
 	{
-		switch($this->page->type) {
+		switch ($this->page->type) {
 			case 'menu':
 				// TODO: Add icon url and postion configuration values
-                add_menu_page( 
-                $this->page->title, 
-                $this->page->menu_title, 
-                $this->page->capability, 
-                $this->page->slug, 
-                array($this, 'render') );
-                $this->page->set_hook('toplevel_page_');
+				add_menu_page(
+					$this->page->title,
+					$this->page->menu_title,
+					$this->page->capability,
+					$this->page->slug,
+					array($this, 'render')
+				);
+				$this->page->set_hook('toplevel_page_');
 				break;
- 			case 'submenu2222':        
-                   add_submenu_page(
-                   'stop_bad_bots_plugin', // parent slug
-                   'Settings', // title
-                   'Settings', // menu title
-                   $this->page->capability, 
-                   $this->page->slug, // menu slug stop-bad-bots
-                    array($this, 'render'));
-                break;
+			case 'submenu2222':
+				add_submenu_page(
+					'stop_bad_bots_plugin', // parent slug
+					'Settings', // title
+					'Settings', // menu title
+					$this->page->capability,
+					$this->page->slug, // menu slug stop-bad-bots
+					array($this, 'render')
+				);
+				break;
 			case 'submenu':
 				/*
 				add_submenu_page( 
@@ -69,22 +77,23 @@ class OptionPageBuilder {
 				*/
 
 
-				add_submenu_page( 
-					$this->page->parent_slug, 
-					$this->page->title, 
-					$this->page->menu_title, 
-					$this->page->capability, 
-					$this->page->slug, 
-					array($this, 'render') );
-					break;
+				add_submenu_page(
+					$this->page->parent_slug,
+					$this->page->title,
+					$this->page->menu_title,
+					$this->page->capability,
+					$this->page->slug,
+					array($this, 'render')
+				);
+				break;
 
 
 			case 'settings':
-				add_options_page( $this->page->title, $this->page->menu_title, $this->page->capability, $this->page->slug, array($this, 'render') );
+				add_options_page($this->page->title, $this->page->menu_title, $this->page->capability, $this->page->slug, array($this, 'render'));
 				$this->page->set_hook('settings_page_');
 				break;
 			default:
-				add_theme_page( $this->page->title, $this->page->menu_title, $this->page->capability, $this->page->slug, array($this, 'render') );
+				add_theme_page($this->page->title, $this->page->menu_title, $this->page->capability, $this->page->slug, array($this, 'render'));
 				$this->page->set_hook('appearance_page_');
 				break;
 		}
@@ -92,37 +101,37 @@ class OptionPageBuilder {
 	public function admin_enqueue_scripts($page_hook)
 	{
 		// Only load our scripts on our page
-		if($this->page->hook == $page_hook) {
+		if ($this->page->hook == $page_hook) {
 			// Process the Scripts
-			foreach($this->scripts as $script) {
+			foreach ($this->scripts as $script) {
 				$deps = (isset($script['deps'])) ? $script['deps'] : array();
-				if(isset($script['enqueue']) && $script['enqueue'])  {
-						if(isset($script['src']) && !wp_script_is( $script['handle'], 'registered' )) {
-							wp_register_script( $script['handle'], $script['src'], $deps);
-						}
-						if(!wp_script_is( $script['handle'], 'enqueued')) {
-							wp_enqueue_script($script['handle']);
-						}	
+				if (isset($script['enqueue']) && $script['enqueue']) {
+					if (isset($script['src']) && !wp_script_is($script['handle'], 'registered')) {
+						wp_register_script($script['handle'], $script['src'], $deps);
+					}
+					if (!wp_script_is($script['handle'], 'enqueued')) {
+						wp_enqueue_script($script['handle']);
+					}
 				} else {
-						if(isset($script['src']) && !wp_script_is( $script['handle'], 'registered' )) {
-							wp_register_script( $script['handle'], $script['src'], $script['deps']);
-						}
+					if (isset($script['src']) && !wp_script_is($script['handle'], 'registered')) {
+						wp_register_script($script['handle'], $script['src'], $script['deps']);
+					}
 				}
 			}
 			// Process the Styles
-			foreach($this->styles as $style) {
+			foreach ($this->styles as $style) {
 				$deps = (isset($style['deps'])) ? $style['deps'] : array();
-				if(isset($style['enqueue']) && $style['enqueue'])  {
-						if(isset($style['src']) && !wp_style_is( $style['handle'], 'registered' )) {
-							wp_register_style( $style['handle'], $style['src'], $deps);
-						}
-						if(!wp_style_is( $style['handle'], 'enqueued')) {
-							wp_enqueue_style($style['handle']);
-						}	
+				if (isset($style['enqueue']) && $style['enqueue']) {
+					if (isset($style['src']) && !wp_style_is($style['handle'], 'registered')) {
+						wp_register_style($style['handle'], $style['src'], $deps);
+					}
+					if (!wp_style_is($style['handle'], 'enqueued')) {
+						wp_enqueue_style($style['handle']);
+					}
 				} else {
-						if(isset($style['src']) && !wp_style_is( $style['handle'], 'registered' )) {
-							wp_register_style( $style['handle'], $style['src'], $style['deps']);
-						}
+					if (isset($style['src']) && !wp_style_is($style['handle'], 'registered')) {
+						wp_register_style($style['handle'], $style['src'], $style['deps']);
+					}
 				}
 			}
 		}
@@ -134,21 +143,21 @@ class OptionPageBuilder {
 		echo '<form method="post" action="options.php">';
 		// TODO: only output errors on custom pages
 		// settings_errors();
-		settings_fields( $this->page->slug );
-		do_settings_sections( $this->page->slug );
+		settings_fields($this->page->slug);
+		do_settings_sections($this->page->slug);
 		submit_button();
 		echo '</form>';
 		$this->render_reset_form();
 		echo esc_attr($this->page->markup_bottom);
 	}
-	public function render_reset_form( $active_tab = NULL )
+	public function render_reset_form($active_tab = NULL)
 	{
 		// echo reset form
-		echo '<form method="post" action="' . str_replace( '&settings-updated=true', '', esc_url(sanitize_text_field($_SERVER["REQUEST_URI"])) ) . '" class="reset-form">';
+		echo '<form method="post" action="' . str_replace('&settings-updated=true', '', esc_url(sanitize_text_field($_SERVER["REQUEST_URI"]))) . '" class="reset-form">';
 		// Reset nonce
-		wp_nonce_field( 'pcs_reset_options', 'pcs_reset_options_nonce' );
+		wp_nonce_field('pcs_reset_options', 'pcs_reset_options_nonce');
 		echo '<input type="hidden" name="action" value="reset" />';
-		if(!is_null($active_tab)) {
+		if (!is_null($active_tab)) {
 			echo '<button type="submit" class="button secondary reset-settings" title="Reset ' . esc_attr($active_tab->title) . '">Reset ' . esc_attr($active_tab->title) . '</button>';
 		} else {
 			echo '<button type="submit" class="button secondary reset-settings" title="Reset Options">Reset Options</button>';
@@ -159,21 +168,23 @@ class OptionPageBuilder {
 /**
  * Single options page builder
  */
-class OptionPageBuilderSingle extends OptionPageBuilder {
-	public function __construct ( $page, $section_settings = array(), $scripts = array(), $styles = array() ) 
+class OptionPageBuilderSingle extends OptionPageBuilder
+{
+	public function __construct($page, $section_settings = array(), $scripts = array(), $styles = array())
 	{
-		parent::__construct( $page, $scripts, $styles );
-		new SectionFactory( $page, $section_settings );
+		parent::__construct($page, $scripts, $styles);
+		new SectionFactory($page, $section_settings);
 	}
 }
 /**
  * Tabbed options page builder.
  */
-class OptionPageBuilderTabbed extends OptionPageBuilder {
+class OptionPageBuilderTabbed extends OptionPageBuilder
+{
 	protected $tabs;
-	public function __construct ( $page, $options_settings = array(), $scripts = array(), $styles = array() ) 
+	public function __construct($page, $options_settings = array(), $scripts = array(), $styles = array())
 	{
-		parent::__construct( $page, $scripts, $styles );
+		parent::__construct($page, $scripts, $styles);
 		$this->tabs = array();
 		$counter = 0;
 		// Runs when posting to option.php
@@ -181,131 +192,149 @@ class OptionPageBuilderTabbed extends OptionPageBuilder {
 		// Do not get overwritten
 		$action = (isset($_POST['action'])) ? sanitize_text_field($_POST['action']) : FALSE;
 		$page_key = (isset($_POST['option_page'])) ? sanitize_text_field($_POST['option_page']) : FALSE;
-		if($page_key == $page->slug && $action == 'update') {
+		if ($page_key == $page->slug && $action == 'update') {
 			// Extract the tab id from the referer post
 			$referrer = (isset($_POST['_wp_http_referer'])) ? sanitize_text_field($_POST['_wp_http_referer']) : '';
 			$matches = array();
-			preg_match('/tab=([^&]*)/', $referrer , $matches );
+			preg_match('/tab=([^&]*)/', $referrer, $matches);
 			// Build the Tab Sections for the submitted tab
-			foreach( $options_settings as $title=>$section_settings ) {	
+			foreach ($options_settings as $title => $section_settings) {
 				$id = str_replace('-', '_', sanitize_title_with_dashes($title));
-				if(isset($matches[1]) && $matches[1] == $id) {
+				if (isset($matches[1]) && $matches[1] == $id) {
 					// Tab submitted was determined
-					$this->tabs[] = new Tab( $title, $id, $this->page, $section_settings, TRUE );
+					$this->tabs[] = new Tab($title, $id, $this->page, $section_settings, TRUE);
 					break;
 				}
 				// Cache first id for use if no tab match is found
-				if($counter == 0) {
+				if ($counter == 0) {
 					$first = array(
 						'id' => $id,
 						'title' => $title,
 						'settings' => $section_settings
-						);
+					);
 				}
 				$counter++;
 			}
 			// If no tab was created
 			// create the default tab with the first id
-			if(empty($this->tabs)) {
-				$this->tabs[] = new Tab( $first['title'], $first['id'], $this->page, $first['settings'], TRUE );
+			if (empty($this->tabs)) {
+				$this->tabs[] = new Tab($first['title'], $first['id'], $this->page, $first['settings'], TRUE);
 			}
 		} else {
 			// Runs when displaying the options page
 			// Show the first tab as active by default		
-			foreach( $options_settings as $title=>$section_settings ) {	
-				$id = str_replace('-', '_', sanitize_title_with_dashes($title));	
+			foreach ($options_settings as $title => $section_settings) {
+				$id = str_replace('-', '_', sanitize_title_with_dashes($title));
 				// Each Key Is Tab
 				// Set first one to active by default
-				if($counter == 0) {
-					$this->tabs[] = new Tab( $title, $id, $this->page, $section_settings, TRUE );
+				if ($counter == 0) {
+					$this->tabs[] = new Tab($title, $id, $this->page, $section_settings, TRUE);
 				} else {
-					$this->tabs[] = new Tab( $title, $id, $this->page, $section_settings );
+					$this->tabs[] = new Tab($title, $id, $this->page, $section_settings);
 				}
 				$counter++;
 			}
 		}
 	}
 	public function render()
-    {
-        global $wptools_checkversion;
+	{
+		global $wptools_checkversion;
 
-        // Simplified allowed HTML attributes array
-        $allowed_atts = array(
-            'align' => array(), 'class' => array(), 'type' => array(), 'id' => array(),
-            'dir' => array(), 'lang' => array(), 'style' => array(), 'xml:lang' => array(),
-            'src' => array(), 'alt' => array(), 'href' => array(), 'rel' => array(),
-            'rev' => array(), 'target' => array(), 'novalidate' => array(), 'value' => array(),
-            'name' => array(), 'tabindex' => array(), 'action' => array(), 'method' => array(),
-            'for' => array(), 'width' => array(), 'height' => array(), 'data' => array(),
-            'title' => array(), 'checked' => array(), 'selected' => array(),
-        );
+		// Simplified allowed HTML attributes array
+		$allowed_atts = array(
+			'align' => array(), 'class' => array(), 'type' => array(), 'id' => array(),
+			'dir' => array(), 'lang' => array(), 'style' => array(), 'xml:lang' => array(),
+			'src' => array(), 'alt' => array(), 'href' => array(), 'rel' => array(),
+			'rev' => array(), 'target' => array(), 'novalidate' => array(), 'value' => array(),
+			'name' => array(), 'tabindex' => array(), 'action' => array(), 'method' => array(),
+			'for' => array(), 'width' => array(), 'height' => array(), 'data' => array(),
+			'title' => array(), 'checked' => array(), 'selected' => array(),
+		);
 
-        $my_allowed_tags = array(
-            'form'     => $allowed_atts, 'select' => $allowed_atts, 'option' => $allowed_atts,
-            'label'    => $allowed_atts, 'input' => $allowed_atts, 'textarea' => $allowed_atts,
-            'iframe'   => $allowed_atts, 'script' => $allowed_atts, 'style' => $allowed_atts,
-            'strong'   => $allowed_atts, 'small' => $allowed_atts, 'table' => $allowed_atts,
-            'span'     => $allowed_atts, 'abbr' => $allowed_atts, 'code' => $allowed_atts,
-            'pre'      => $allowed_atts, 'div' => $allowed_atts, 'img' => $allowed_atts,
-            'h1' => $allowed_atts, 'h2' => $allowed_atts, 'h3' => $allowed_atts,
-            'h4' => $allowed_atts, 'h5' => $allowed_atts, 'h6' => $allowed_atts,
-            'ol' => $allowed_atts, 'ul' => $allowed_atts, 'li' => $allowed_atts,
-            'em' => $allowed_atts, 'hr' => $allowed_atts, 'br' => $allowed_atts,
-            'tr' => $allowed_atts, 'td' => $allowed_atts, 'p' => $allowed_atts,
-            'a' => $allowed_atts, 'b' => $allowed_atts, 'i' => $allowed_atts,
-        );
+		$my_allowed_tags = array(
+			'form'     => $allowed_atts, 'select' => $allowed_atts, 'option' => $allowed_atts,
+			'label'    => $allowed_atts, 'input' => $allowed_atts, 'textarea' => $allowed_atts,
+			'iframe'   => $allowed_atts, 'script' => $allowed_atts, 'style' => $allowed_atts,
+			'strong'   => $allowed_atts, 'small' => $allowed_atts, 'table' => $allowed_atts,
+			'span'     => $allowed_atts, 'abbr' => $allowed_atts, 'code' => $allowed_atts,
+			'pre'      => $allowed_atts, 'div' => $allowed_atts, 'img' => $allowed_atts,
+			'h1' => $allowed_atts, 'h2' => $allowed_atts, 'h3' => $allowed_atts,
+			'h4' => $allowed_atts, 'h5' => $allowed_atts, 'h6' => $allowed_atts,
+			'ol' => $allowed_atts, 'ul' => $allowed_atts, 'li' => $allowed_atts,
+			'em' => $allowed_atts, 'hr' => $allowed_atts, 'br' => $allowed_atts,
+			'tr' => $allowed_atts, 'td' => $allowed_atts, 'p' => $allowed_atts,
+			'a' => $allowed_atts, 'b' => $allowed_atts, 'i' => $allowed_atts,
+		);
 
-        $active_tab_id = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : null;
-        $active_tab = null;
+		$active_tab_id = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : null;
+		$active_tab = null;
 
-        // Render Page Markup
-        echo wp_kses($this->page->markup_top, $my_allowed_tags);
-        echo '<div id="containerleft">';
-        echo '<form method="post" action="options.php">';
+		// Render Page Markup
+		echo wp_kses($this->page->markup_top, $my_allowed_tags);
+		echo '<div id="containerleft">';
+		echo '<form method="post" action="options.php">';
 
-        settings_errors();
+		settings_errors();
 
-        // Output all tab headings
-        echo '<h2 class="nav-tab-wrapper">';
-        foreach($this->tabs as $tab) {
-            // Find the active tab based on ID or default to the first
-            if (is_null($active_tab_id)) {
-                $is_active = $tab->active;
-            } else {
-                $is_active = ($tab->id === $active_tab_id);
-            }
-            
-            // Render the tab anchor
-            if ($is_active) {
-                echo wp_kses($tab->get_anchor(true), $my_allowed_tags);
-                $active_tab = $tab; // Cache the active tab for rendering sections
-            } else {
-                echo wp_kses($tab->get_anchor(false), $my_allowed_tags);
-            }
-        }
-        echo '</h2>';
+		// Output all tab headings
+		echo '<h2 class="nav-tab-wrapper">';
+		foreach ($this->tabs as $tab) {
+			// Find the active tab based on ID or default to the first
+			if (is_null($active_tab_id)) {
+				$is_active = $tab->active;
+			} else {
+				$is_active = ($tab->id === $active_tab_id);
+			}
 
-        // Render settings fields for the active tab
-        if ($active_tab) {
-            settings_fields($this->page->slug);
-            do_settings_sections($this->page->slug);
-        }
+			// Render the tab anchor
+			if ($is_active) {
+				echo wp_kses($tab->get_anchor(true), $my_allowed_tags);
+				$active_tab = $tab; // Cache the active tab for rendering sections
+			} else {
+				echo wp_kses($tab->get_anchor(false), $my_allowed_tags);
+			}
+		}
+		echo '</h2>';
 
-        $wptools_setting_with_button = array(
-            remove_accents(__('General Settings','wptools')),
-            remove_accents(__('Processor Load','wptools')),
-            remove_accents(__('Notifications','wptools')),
-            remove_accents(__('Go Pro','wptools'))
-        );
+		// Render settings fields for the active tab
+		if ($active_tab) {
+			settings_fields($this->page->slug);
+			do_settings_sections($this->page->slug);
+		}
 
+		$wptools_setting_with_button = array(
+			remove_accents(__('General Settings', 'wptools')),
+			remove_accents(__('Processor Load', 'wptools')),
+			remove_accents(__('Notifications', 'wptools')),
+			remove_accents(__('Go Pro', 'wptools'))
+		);
+
+		/*
         for($i = 0; $i < count($wptools_setting_with_button); $i++){
            if(str_replace(' ','_', trim(strtolower($wptools_setting_with_button[$i]))) == trim($active_tab_id))
             submit_button();
         }
+		*/
+		for ($i = 0; $i < count($wptools_setting_with_button); $i++) {
+			// 1. Garante que o item do array não é NULL ou indefinido, usando '' como fallback.
+			$setting_value = $wptools_setting_with_button[$i] ?? '';
 
-        echo '</form>';
-        echo '</div>'; //containerleft
-        echo wp_kses($this->page->markup_bottom, $my_allowed_tags); 
-    }
+			// 2. Garante que $active_tab_id não é NULL, usando '' como fallback.
+			$tab_id = $active_tab_id ?? '';
 
+			// Verifica se o índice existe para evitar possíveis Notices
+			if (!isset($wptools_setting_with_button[$i])) {
+				continue;
+			}
+
+			// Agora o trim() e strtolower() recebem uma string ('') em vez de NULL.
+			if (str_replace(' ', '_', trim(strtolower($setting_value))) == trim($tab_id)) {
+				submit_button();
+			}
+		}
+
+		echo '</form>';
+		echo '</div>'; //containerleft
+		echo wp_kses($this->page->markup_bottom, $my_allowed_tags);
+	}
 }

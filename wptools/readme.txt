@@ -3,7 +3,7 @@ Contributors: sminozzi
 Tags: increase file size limit, increase upload limit, php info, error_log, server load
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 5.33
+Stable tag: 5.35
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-**🚀 Short on Time? Here's Your WordPress Swiss Army Knife!**
+### **🚀 Short on Time? Here's Your WordPress Swiss Army Knife!**
 
 **What it does:**
 It's the ultimate all-in-one WordPress utilities plugin that replaces dozens of separate tools. While others focus on just one function, we give you complete server monitoring, error tracking (debug log), and optimization in a single lightweight package.
@@ -38,10 +38,7 @@ Most WordPress problems are interconnected: a PHP error causes slow performance,
 * **Smart Cleanup:** Remove unnecessary files and optimize database with one click
 * **Safe Configuration Editor:** Modify critical settings without touching code files
 
-**🔎 Want to Explore All 50+ Tools? Continue Reading Below**
-
-
-
+### **🔎 Want to Explore All 50+ Tools? Continue Reading Below**
 
 > The WP Tools plugin (wp-tools) features a comprehensive dashboard showcasing server statistics, including a chart of errors, page load time also by page and boasts over 50 tools designed to simplify your WordPress management tasks. It serves as a versatile Swiss army knife for your WordPress needs.
 Catch and alert about Javascript Errors (also jquery errors, javascript errors, jquery migrate) and PHP/MYSQL errors. Block notification email of updates, Hide Admin Bar, Disable Lazy Load, Displays the folders that are taking up more disk space and a lot more... 

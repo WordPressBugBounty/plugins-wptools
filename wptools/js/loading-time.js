@@ -1,6 +1,16 @@
 if (typeof jQuery !== 'undefined') {
     jQuery(document).ready(function ($) {
         // console.log("Carregou");
+
+
+        if (typeof wptools_ajax_object === 'undefined') {
+            // O objeto não foi definido. Retornar impede o erro no navegador.
+            // O console.error opcional ajuda no debug.
+            // console.error('AJAX object (wptools_ajax_object) is not defined. Skipping AJAX call.');
+            return;
+        }
+
+
         var loadingTime = performance.now();
         // Check if loadingTime is a valid number
         if (!isNaN(loadingTime) && loadingTime > 0) {
@@ -47,7 +57,7 @@ if (typeof jQuery !== 'undefined') {
                 nonce: wptools_ajax_object.ajax_nonce
             };
             jQuery.ajax({
-                url: ajaxurl,
+                url: wptools_ajax_object.ajax_url,
                 type: 'POST',
                 data: data,
                 success: function (data) {
